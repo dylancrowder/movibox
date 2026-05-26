@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import wsp from "@/public/images/iconos/whatsapp.png";
 import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.jpg"
 import camion from "@/public/images/webimages/camion_blog.jpg"
