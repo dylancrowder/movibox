@@ -1,0 +1,41 @@
+/* Critical styles - inlined to prevent render blocking */
+:root {
+  --background: 200 14% 96%;
+  --foreground: 0 0% 9%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --primary: 207 82% 39%;
+  --primary-foreground: 0 0% 100%;
+  --border: 207 15% 88%;
+  --radius: 0.875rem;
+}
+
+.dark {
+  --background: 0 0% 9%;
+  --foreground: 200 14% 96%;
+  --card: 0 0% 17%;
+  --card-foreground: 200 14% 96%;
+  --primary: 207 68% 50%;
+  --primary-foreground: 0 0% 9%;
+  --border: 0 0% 22%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  transition-property: color;
+  transition-duration: 150ms;
+}

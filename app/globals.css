@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Movibox Branding: Navy Blue & Gold */
+    --brand: 217 97% 12%; /* #001A3D */
+    --brand-deep: 217 100% 7%; /* #000F24 */
+    --brand-bright: 43 100% 50%; /* #FDB913 */
+    --graphite: 0 0% 9%; /* #161616 */
+    --industrial: 0 0% 17%; /* #2B2B2B */
+    --metallic: 217 20% 35%; /* #5C6770 */
+    --soft-white: 200 14% 96%; /* #F2F4F5 */
+
+    --background: 200 14% 96%;
+    --foreground: 0 0% 9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+
+    --primary: 217 97% 12%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 43 100% 50%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 200 12% 92%;
+    --muted-foreground: 217 20% 35%;
+
+    --accent: 43 95% 90%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 217 20% 88%;
+    --input: 217 20% 88%;
+    --ring: 43 100% 50%;
+
+    --radius: 0.875rem;
+  }
+
+  .dark {
+    --background: 0 0% 9%;
+    --foreground: 200 14% 96%;
+
+    --card: 0 0% 17%;
+    --card-foreground: 200 14% 96%;
+
+    --popover: 0 0% 17%;
+    --popover-foreground: 200 14% 96%;
+
+    --primary: 43 95% 60%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 217 97% 12%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 17%;
+    --muted-foreground: 217 20% 50%;
+
+    --accent: 217 50% 20%;
+    --accent-foreground: 200 14% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 22%;
+    --input: 0 0% 22%;
+    --ring: 43 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Scroll animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Botones: hover dorado brillante */
+@layer components {
+  .btn-brand-hover:hover {
+    background-color: #E5A000;
+  }
+}

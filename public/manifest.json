@@ -1,0 +1,22 @@
+{
+  "name": "Transporte Rojo",
+  "short_name": "Rojo",
+  "description": "Servicio de Mudanzas y Transporte en Córdoba, Argentina",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F4F5",
+  "theme_color": "#1266B3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/images/iconos/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/images/iconos/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

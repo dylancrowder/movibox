@@ -1,0 +1,347 @@
+// app/layout.tsx
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "@/app/globals.css";
+import "@/app/critical.css";
+import { ThemeProvider } from "@/components/theme-provider";
+import Footer from "@/components/Footer";
+import { WhatsAppButton } from "@/components/whatsapp-button";
+import { Navbar } from "@/components/navbar";
+import { Suspense } from "react";
+import Script from "next/script";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  preload: true
+});
+
+// ✅ Metadata usando la API de Next 14
+export const metadata: Metadata = {
+  metadataBase: new URL('https://www.transporterojo.com.ar'),
+  title: {
+    default: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
+    template: "%s | Movibox Logística"
+  },
+  description: "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón. Presupuesto sin cargo ☎️ 351 2586221",
+  keywords: [
+    "mudanzas Córdoba",
+    "fletes Córdoba",
+    "guardamuebles Córdoba",
+    "mudanzas locales",
+    "almacenamiento Córdoba",
+    "depósito mercadería",
+    "empresa de mudanzas",
+    "almacenamiento seguro Córdoba",
+  ],
+  authors: [{ name: "Movibox Logística", url: "https://www.transporterojo.com.ar" }],
+  creator: "Movibox Logística",
+  publisher: "Movibox Logística",
+
+  alternates: { canonical: "https://www.transporterojo.com.ar/" },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "/",
+    title: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
+    description: "Mudanzas y guardamuebles en Córdoba Capital y provincia. Galpón y camión equipado. Presupuesto gratis.",
+    siteName: "Movibox Logística",
+    images: [
+      {
+        url: "/images/header/rua.webp",
+        width: 1200,
+        height: 630,
+        alt: "Camión de Transporte Rojo - Mudanzas en Córdoba",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
+    description: "Mudanzas y guardamuebles en Córdoba. Servicio local con depósito. Presupuesto por WhatsApp.",
+    images: ["/images/header/rua.webp"],
+  },
+
+  other: {
+    'geo.region': 'AR-X',
+    'geo.placename': 'Córdoba',
+    'geo.position': '-31.4201;-64.1888',
+  },
+
+  verification: {
+    google: "LcTeg2QxwZm1OUTwcTrIvrX6SAoNLntG0iEs7OwfTD4",
+  },
+
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
+
+  manifest: '/manifest.json',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // ✅ Structured Data JSON-LD optimizado para MovingCompany y LocalBusiness
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'LocalBusiness',
+        '@id': 'https://www.transporterojo.com.ar/#organization',
+        name: 'Movibox Logística',
+        alternateName: 'Movibox Logística - Mudanzas y Guardamuebles',
+        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia. Camión y galpón con almacenamiento seguro.',
+        url: 'https://www.transporterojo.com.ar',
+        logo: {
+          '@type': 'ImageObject',
+          url: 'https://www.transporterojo.com.ar/logo.png',
+          width: 300,
+          height: 300,
+        },
+        image: 'https://www.transporterojo.com.ar/images/header/rua.webp',
+        telephone: '+54-351-258-6221',
+        email: 'transporterojo.cba@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Camino Chacra de la Merced Km 1/2',
+          addressLocality: 'Córdoba',
+          addressRegion: 'Córdoba',
+          postalCode: '5007',
+          addressCountry: 'AR',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: -31.4201,
+          longitude: -64.1888,
+        },
+        areaServed: [
+          {
+            '@type': 'AdministrativeArea',
+            name: 'Córdoba Capital',
+          },
+          {
+            '@type': 'AdministrativeArea',
+            name: 'Córdoba Provincia',
+          },
+        ],
+        priceRange: '$$',
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+            opens: '08:00',
+            closes: '18:00',
+          },
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: 'Saturday',
+            opens: '09:00',
+            closes: '13:00',
+          },
+        ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Customer Service',
+          telephone: '+54-351-258-6221',
+          areaServed: 'AR',
+          availableLanguage: ['es'],
+        },
+        knowsAbout: ['Mudanzas residenciales', 'Mudanzas comerciales', 'Fletes', 'Guardamuebles', 'Almacenamiento seguro'],
+      },
+      {
+        '@type': 'MovingCompany',
+        '@id': 'https://www.transporterojo.com.ar/#movingcompany',
+        name: 'Movibox Logística',
+        url: 'https://www.transporterojo.com.ar',
+        telephone: '+54-351-258-6221',
+        email: 'transporterojo.cba@gmail.com',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Camino Chacra de la Merced Km 1/2',
+          addressLocality: 'Córdoba',
+          addressRegion: 'Córdoba',
+          addressCountry: 'AR',
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "2"
+        },
+      },
+      {
+        '@type': 'WebSite',
+        '@id': 'https://www.transporterojo.com.ar/#website',
+        url: 'https://www.transporterojo.com.ar',
+        name: 'Movibox Logística - Mudanzas y Guardamuebles en Córdoba',
+        inLanguage: 'es-AR',
+        publisher: {
+          '@id': 'https://www.transporterojo.com.ar/#organization',
+        },
+        sameAs: [
+          'https://www.facebook.com/transporterojo',
+          'https://www.instagram.com/transporterojo',
+          'https://www.google.com/maps/search/Transporte+Rojo+Córdoba',
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Inicio',
+            item: 'https://www.transporterojo.com.ar',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Mudanzas',
+            item: 'https://www.transporterojo.com.ar/mudanzas',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Guardamuebles',
+            item: 'https://www.transporterojo.com.ar/guardamuebles',
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: 'Blog',
+            item: 'https://www.transporterojo.com.ar/blog',
+          },
+          {
+            '@type': 'ListItem',
+            position: 5,
+            name: 'FAQ',
+            item: 'https://www.transporterojo.com.ar/faq',
+          },
+          {
+            '@type': 'ListItem',
+            position: 6,
+            name: 'Contacto',
+            item: 'https://www.transporterojo.com.ar/contacto',
+          },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <html lang="es-AR" suppressHydrationWarning>
+      <head>
+
+        <Script
+          id="gtm-script"
+          strategy="lazyOnload"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-PSBNPHZX');
+            `,
+          }}
+        />
+
+        {/* 📊 Optimize font loading - Preconnect para iniciar conexión temprano */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* ✅ DNS prefetch for analytics to reduce critical path latency */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+        {/* ✅ Prevent theme flash - set default theme before React hydration */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'light';
+                  if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `
+          }}
+        />
+
+        {/* ✅ Structured Data (mejor en head) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+      </head>
+
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Navbar />
+
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-PSBNPHZX"
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
+            />
+          </noscript>
+
+          {/* 🧠 Desbloquea render inicial */}
+          <Suspense>{children}</Suspense>
+
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
+
+
+
+
+        {/* Google Ads and Analytics Tags */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17013125582"
+          strategy="lazyOnload"
+        />
+        <Script id="google-ads-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            // Configuración de consentimiento para EEA (GDPR compliant)
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied'
+            });
+
+            // Google Ads - Account ID
+            gtag('config', 'AW-17013125582');
+
+            // Google Analytics 4
+            gtag('config', 'G-E7K55VT53P');
+          `}
+        </Script>
+      </body>
+    </html>
+  );
+}
