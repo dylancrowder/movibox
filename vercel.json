@@ -18,6 +18,5 @@
         }
       ]
     }
-  ],
-  "buildCommand": "corepack use pnpm@9.x && pnpm install && pnpm run build"
+  ]
 }
