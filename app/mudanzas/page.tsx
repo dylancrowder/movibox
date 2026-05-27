@@ -18,8 +18,9 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import wsp from "@/public/images/iconos/whatsapp.png";
+import camion from "@/public/images/camion/imagen_fish2.jpeg";
+import heroImage from "@/public/images/camion/imagen_camion2.jpeg";
 
-const heroImage = "https://images.unsplash.com/photo-1578496480871-e6b2d89d8b62?w=1200&h=600&fit=crop";
 
 export const metadata: Metadata = {
   title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
@@ -329,7 +330,7 @@ export default function MudanzasPage() {
               <article className="rounded-3xl overflow-hidden border border-primary/20 shadow-lg hover:shadow-xl transition">
                 <div className="relative w-full h-80 bg-muted">
                   <Image
-                    src="https://images.unsplash.com/photo-1578496480871-e6b2d89d8b62?w=800&h=500&fit=crop"
+                    src={camion}
                     alt="Camión de mudanzas en Córdoba - Movibox Logística"
                     fill
                     className="object-cover"

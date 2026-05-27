@@ -15,7 +15,7 @@ import HeroButtons from "@/components/HeroButtons";
 import Link from "next/link";
 import img from "../public/images/header/headerchacra.webp";
 import { Button } from "@/components/ui/button";
-import mudanza_imagen from "@/public/images/webimages/hombre_con_caja.jpg"
+import mudanza_imagen from "@/public/images/camion/imagen_camion.jpeg"
 import wsp from "@/public/images/iconos/whatsapp.png";
 import GoogleReviews from "@/components/GoogleReviews";
 
@@ -79,7 +79,7 @@ const services = [
     title: "Mudanzas y Fletes en Córdoba",
     description:
       "Mudanzas completas de viviendas, departamentos y oficinas. Fletes de objetos individuales o grandes volúmenes en Córdoba Capital y provincia.",
-    image: "/images/webimages/hombre_subiendo_caja.jpg",
+    image: "/images/camion/imagen_fish2.jpeg",
     href: "/mudanzas",
   },
   {
