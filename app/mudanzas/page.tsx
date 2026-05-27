@@ -241,7 +241,7 @@ export default function MudanzasPage() {
       </nav>
 
       {/* HERO */}
-      <section className="relative flex min-h-[60vh] items-center overflow-hidden pt-24 overflow-x-hidden">
+      <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden">
         <Image
           src={heroImage}
           alt="Mudanzas profesionales en Córdoba - Movibox Logística"
@@ -338,7 +338,7 @@ export default function MudanzasPage() {
                   />
                 </div>
                 <div className="p-8 bg-gradient-to-br from-primary/5 to-accent">
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Camión</h3>
+                 
                   <p className="text-sm text-muted-foreground font-semibold uppercase tracking-wide mb-4">Mudanzas en Córdoba</p>
                   <p className="text-foreground/80 mb-6 leading-relaxed">
                     Preparado para departamentos, casas y fletes dentro de Córdoba Capital y provincia. Coordinamos según tu volumen y disponibilidad.
