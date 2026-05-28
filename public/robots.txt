@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.transporterojo.com.ar/
+Host: https://www.movibox.com.ar/
 
 # Sitemaps
-Sitemap: https://www.transporterojo.com.ar/sitemap.xml
+Sitemap: https://www.movibox.com.ar/sitemap.xml

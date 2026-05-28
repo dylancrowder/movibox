@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   ],
 
   alternates: {
-    canonical: "https://www.transporterojo.com.ar/guardamuebles",
+    canonical: "https://www.movibox.com.ar/guardamuebles",
   },
 
   robots: {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://www.transporterojo.com.ar/guardamuebles", // ⚠️ siempre absoluta
+    url: "https://www.movibox.com.ar/guardamuebles", // ⚠️ siempre absoluta
     title:
       "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Logística",
     description:
@@ -87,9 +87,9 @@ const jsonLd = {
     // 1️⃣ EMPRESA
     {
       "@type": "LocalBusiness",
-      "@id": "https://www.transporterojo.com.ar/#localbusiness",
+      "@id": "https://www.movibox.com.ar/#localbusiness",
       name: "Movibox Logística",
-      url: "https://www.transporterojo.com.ar",
+      url: "https://www.movibox.com.ar",
       telephone: "+5493512586221",
       priceRange: "$$",
       sameAs: [
@@ -129,11 +129,11 @@ const jsonLd = {
     // 2️⃣ SERVICIO
     {
       "@type": "Service",
-      "@id": "https://www.transporterojo.com.ar/guardamuebles#service",
+      "@id": "https://www.movibox.com.ar/guardamuebles#service",
       name: "Guardamuebles en Córdoba",
       description: "Servicio de guardamuebles con vigilancia 24/7 y retiro a domicilio en Córdoba Capital.",
       provider: {
-        "@id": "https://www.transporterojo.com.ar/#localbusiness"
+        "@id": "https://www.movibox.com.ar/#localbusiness"
       },
       areaServed: {
         "@type": "City",
@@ -144,11 +144,11 @@ const jsonLd = {
     // 3️⃣ INSTALACIÓN FÍSICA
     {
       "@type": "SelfStorage",
-      "@id": "https://www.transporterojo.com.ar/guardamuebles#storage",
+      "@id": "https://www.movibox.com.ar/guardamuebles#storage",
       name: "Guardamuebles Movibox Logística",
-      url: "https://www.transporterojo.com.ar/guardamuebles",
+      url: "https://www.movibox.com.ar/guardamuebles",
       provider: {
-        "@id": "https://www.transporterojo.com.ar/#localbusiness"
+        "@id": "https://www.movibox.com.ar/#localbusiness"
       },
       address: {
         "@type": "PostalAddress",
@@ -171,13 +171,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://www.transporterojo.com.ar"
+          "item": "https://www.movibox.com.ar"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Guardamuebles en Córdoba",
-          "item": "https://www.transporterojo.com.ar/guardamuebles"
+          "item": "https://www.movibox.com.ar/guardamuebles"
         }
       ]
     }

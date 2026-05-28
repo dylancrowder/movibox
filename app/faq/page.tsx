@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "almacenamiento seguro",
     "mudanzas cordoba provincia",
   ],
-  alternates: { canonical: "https://www.transporterojo.com.ar/faq" },
+  alternates: { canonical: "https://www.movibox.com.ar/faq" },
   openGraph: {
     type: "website",
     title: "Preguntas Frecuentes | Mudanzas en Córdoba",
     description:
       "Preguntas y respuestas sobre mudanzas, guardamuebles, fletes y almacenamiento en Córdoba Capital y provincia.",
-    url: "https://www.transporterojo.com.ar/faq",
+    url: "https://www.movibox.com.ar/faq",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",

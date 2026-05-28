@@ -52,7 +52,7 @@ export function Navbar() {
       }`}
     >
       <meta itemProp="name" content="Movibox Logística" />
-      <meta itemProp="url" content="https://transporterojo.com.ar" />
+      <meta itemProp="url" content="https://www.movibox.com.ar" />
 
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between py-4">

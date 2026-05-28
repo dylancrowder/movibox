@@ -24,17 +24,17 @@ export const metadata: Metadata = {
     "almacenamiento seguro",
   ],
   alternates: {
-    canonical: "https://www.transporterojo.com.ar/blog",
+    canonical: "https://www.movibox.com.ar/blog",
   },
   openGraph: {
     type: "website",
     title: "Blog de Movibox Logística | Mudanzas, Guardamuebles y Fletes",
     description:
       "Guías y consejos sobre mudanzas en Córdoba, guardamuebles y almacenamiento seguro. Tips de expertos en logística local.",
-    url: "https://www.transporterojo.com.ar/blog",
+    url: "https://www.movibox.com.ar/blog",
     images: [
       {
-        url: "https://www.transporterojo.com.ar/logisticas.jpg",
+        url: "https://www.movibox.com.ar/logisticas.jpg",
         width: 1200,
         height: 630,
         alt: "Artículos y guías sobre mudanzas, logística y transporte",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Blog Movibox Logística",
     description:
       "Consejos prácticos sobre mudanzas, transporte y guardamuebles en Córdoba y Argentina.",
-    images: ["https://www.transporterojo.com.ar/logisticas.jpg"],
+    images: ["https://www.movibox.com.ar/logisticas.jpg"],
   },
 };
 
@@ -60,13 +60,13 @@ export default function BlogHomePage() {
     publisher: {
       "@type": "Organization",
       name: "Movibox Logística",
-      url: "https://www.transporterojo.com.ar",
+      url: "https://www.movibox.com.ar",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.transporterojo.com.ar/logo.png",
+        url: "https://www.movibox.com.ar/logo.png",
       },
     },
-    url: "https://www.transporterojo.com.ar/blog",
+    url: "https://www.movibox.com.ar/blog",
   };
 
   const posts = [

@@ -127,22 +127,22 @@ const homePageSchema = {
       name: "Movibox Logística - Mudanzas y Guardamuebles en Córdoba",
       description:
         "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón.",
-      url: "https://www.transporterojo.com.ar/",
+      url: "https://www.movibox.com.ar/",
       mainEntity: {
-        "@id": "https://www.transporterojo.com.ar/#localbusiness"
+        "@id": "https://www.movibox.com.ar/#localbusiness"
       }
     },
     {
       "@type": "MovingCompany",
-      "@id": "https://www.transporterojo.com.ar/#localbusiness",
+      "@id": "https://www.movibox.com.ar/#localbusiness",
       name: "Movibox Logística",
-      logo: "https://www.transporterojo.com.ar/logo.png",
+      logo: "https://www.movibox.com.ar/logo.png",
       telephone: "+5493512586221",
       priceRange: "$$",
       sameAs: [
         "https://maps.app.goo.gl/AcbHjSsHASLjHpY6A"
       ],
-      email: "transporterojo.cba@gmail.com",
+      email: "contacto@movibox.com.ar",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",
@@ -163,7 +163,7 @@ const homePageSchema = {
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://www.transporterojo.com.ar"
+          "item": "https://www.movibox.com.ar"
         }
       ]
     }

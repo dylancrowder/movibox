@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     "alquilar deposito cordoba",
     "presupuesto gratis mudanzas",
   ],
-  alternates: { canonical: "https://www.transporterojo.com.ar/contacto" },
+  alternates: { canonical: "https://www.movibox.com.ar/contacto" },
   openGraph: {
     type: "website",
     title: "Contacto Movibox Logística | Presupuesto Mudanzas Córdoba",
     description:
       "Contactá a Movibox Logística para solicitar presupuesto de mudanzas y guardamuebles en Córdoba. Respuesta inmediata por WhatsApp.",
-    url: "https://www.transporterojo.com.ar/contacto",
+    url: "https://www.movibox.com.ar/contacto",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",
@@ -93,9 +93,9 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "transporterojo.cba@gmail.com",
+    value: "contacto@movibox.com.ar",
     description: "Envíanos los detalles para recibir una propuesta completa.",
-    href: "mailto:transporterojo.cba@gmail.com",
+    href: "mailto:contacto@movibox.com.ar",
     action: "Enviar Email",
   },
   {
@@ -114,12 +114,12 @@ export default function ContactoPage() {
     "@type": "ContactPage",
     name: "Contacto - Movibox Logística",
     description: "Página de contacto para solicitar presupuestos de mudanzas y transporte en Córdoba",
-    url: "https://www.transporterojo.com.ar/contacto",
+    url: "https://www.movibox.com.ar/contacto",
     mainEntity: {
       "@type": "MovingCompany",
       name: "Movibox Logística",
       telephone: "+54-351-258-6221",
-      email: "transporterojo.cba@gmail.com",
+      email: "contacto@movibox.com.ar",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",

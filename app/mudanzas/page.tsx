@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "traslado de muebles Córdoba",
     "mudanzas dentro de Córdoba",
   ],
-  alternates: { canonical: "https://www.transporterojo.com.ar/mudanzas" },
+  alternates: { canonical: "https://www.movibox.com.ar/mudanzas" },
   robots: {
     index: true,
     follow: true,
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "Mudanzas en Córdoba | Rápidas, Seguras y al Mejor Precio",
     description:
       "Mudanzas profesionales en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
-    url: "https://www.transporterojo.com.ar/mudanzas",
+    url: "https://www.movibox.com.ar/mudanzas",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",
@@ -67,7 +67,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Service",
-      "@id": "https://www.transporterojo.com.ar/mudanzas#residential-moving",
+      "@id": "https://www.movibox.com.ar/mudanzas#residential-moving",
       name: "Mudanzas Residenciales en Córdoba",
       description: "Servicio completo de mudanzas para casas y departamentos en Córdoba Capital y provincia. Incluye desmontaje, embalaje, traslado y montaje.",
       serviceType: "Moving Service",
@@ -77,14 +77,14 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Transporte Rojo",
-        url: "https://www.transporterojo.com.ar"
+        name: "Movibox Logística",
+        url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
     },
     {
       "@type": "Service",
-      "@id": "https://www.transporterojo.com.ar/mudanzas#commercial-moving",
+      "@id": "https://www.movibox.com.ar/mudanzas#commercial-moving",
       name: "Mudanzas Comerciales en Córdoba",
       description: "Mudanzas de oficinas, locales y establecimientos comerciales. Personal especializado en traslado de equipamiento empresarial.",
       serviceType: "Moving Service",
@@ -94,14 +94,14 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Transporte Rojo",
-        url: "https://www.transporterojo.com.ar"
+        name: "Movibox Logística",
+        url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
     },
     {
       "@type": "Service",
-      "@id": "https://www.transporterojo.com.ar/mudanzas#freight-service",
+      "@id": "https://www.movibox.com.ar/mudanzas#freight-service",
       name: "Fletes en Córdoba",
       description: "Transporte de objetos individuales, muebles y cargas puntuales en Córdoba Capital y provincia. Vehículos adaptados para cada tipo de carga.",
       serviceType: "Freight Service",
@@ -111,17 +111,17 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Transporte Rojo",
-        url: "https://www.transporterojo.com.ar"
+        name: "Movibox Logística",
+        url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
     },
     {
       "@type": "MovingCompany",
-      "@id": "https://www.transporterojo.com.ar/mudanzas#company",
+      "@id": "https://www.movibox.com.ar/mudanzas#company",
       name: "Movibox Logística",
       description: "Mudanzas y fletes en Córdoba Capital y provincia con camión y equipo profesional.",
-      url: "https://www.transporterojo.com.ar/mudanzas",
+      url: "https://www.movibox.com.ar/mudanzas",
       telephone: "+5493512586221",
       priceRange: "$$",
       sameAs: [
@@ -132,7 +132,7 @@ const jsonLd = {
         latitude: -31.403489,
         longitude: -64.137619
       },
-      email: "transporterojo.cba@gmail.com",
+      email: "contacto@movibox.com.ar",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",
@@ -162,13 +162,13 @@ const jsonLd = {
           "@type": "ListItem",
           "position": 1,
           "name": "Inicio",
-          "item": "https://www.transporterojo.com.ar"
+          "item": "https://www.movibox.com.ar"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Mudanzas en Córdoba",
-          "item": "https://www.transporterojo.com.ar/mudanzas"
+          "item": "https://www.movibox.com.ar/mudanzas"
         }
       ]
     }
