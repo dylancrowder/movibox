@@ -93,9 +93,9 @@ const contactMethods = [
   {
     icon: Mail,
     title: "Email",
-    value: "contacto@movibox.com.ar",
+    value: "movibox.cba@gmail.com",
     description: "Envíanos los detalles para recibir una propuesta completa.",
-    href: "mailto:contacto@movibox.com.ar",
+    href: "mailto:movibox.cba@gmail.com",
     action: "Enviar Email",
   },
   {
@@ -119,7 +119,7 @@ export default function ContactoPage() {
       "@type": "MovingCompany",
       name: "Movibox Logística",
       telephone: "+54-351-258-6221",
-      email: "contacto@movibox.com.ar",
+      email: "movibox.cba@gmail.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",

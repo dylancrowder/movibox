@@ -132,7 +132,7 @@ const jsonLd = {
         latitude: -31.403489,
         longitude: -64.137619
       },
-      email: "contacto@movibox.com.ar",
+      email: "movibox.cba@gmail.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",

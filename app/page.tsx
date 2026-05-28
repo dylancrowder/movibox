@@ -142,7 +142,7 @@ const homePageSchema = {
       sameAs: [
         "https://maps.app.goo.gl/AcbHjSsHASLjHpY6A"
       ],
-      email: "contacto@movibox.com.ar",
+      email: "movibox.cba@gmail.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Camino Chacra de la Merced Km 1/2",

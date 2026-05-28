@@ -114,7 +114,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         },
         image: 'https://www.movibox.com.ar/images/header/rua.webp',
         telephone: '+54-351-258-6221',
-        email: 'contacto@movibox.com.ar',
+        email: 'movibox.cba@gmail.com',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Camino Chacra de la Merced Km 1/2',
@@ -168,7 +168,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name: 'Movibox Logística',
         url: 'https://www.movibox.com.ar',
         telephone: '+54-351-258-6221',
-        email: 'contacto@movibox.com.ar',
+        email: 'movibox.cba@gmail.com',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Camino Chacra de la Merced Km 1/2',

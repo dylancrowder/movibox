@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "contacto@movibox.com.ar",
-    href: "mailto:contacto@movibox.com.ar",
+    value: "movibox.cba@gmail.com",
+    href: "mailto:movibox.cba@gmail.com",
   },
   {
     icon: MapPin,
