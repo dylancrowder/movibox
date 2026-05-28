@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Mudanzas en Córdoba | Rápidas, Seguras y al Mejor Precio",
     description:
-      "Mudanzas profesionales en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
+      "Mudanzas  en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
     url: "https://www.movibox.com.ar/mudanzas",
     images: [
       {
@@ -244,7 +244,7 @@ export default function MudanzasPage() {
       <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden">
         <Image
           src={heroImage}
-          alt="Mudanzas profesionales en Córdoba - Movibox Logística"
+          alt="Mudanzas en Córdoba - Movibox Logística"
           fill
           className="object-cover"
           priority
@@ -285,7 +285,7 @@ export default function MudanzasPage() {
               Por qué elegirnos
             </span>
             <h2 className="text-4xl font-black sm:text-5xl leading-tight">
-              Mudanzas profesionales en todo Córdoba
+              Mudanzas  en todo Córdoba
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Servicio completo con vehículos propios. Cubrimos Nueva Córdoba, General Paz, Cerro de las Rosas, Centro y toda la provincia de Córdoba.

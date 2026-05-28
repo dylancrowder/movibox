@@ -64,7 +64,7 @@ export default function MudanzasYFletesPage() {
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden text-center">
         <Image
           src={image_header}
-          alt="Mudanzas profesionales en Córdoba Capital"
+          alt="Mudanzas en Córdoba Capital"
           fill
           priority
           fetchPriority="high"

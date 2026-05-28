@@ -63,7 +63,7 @@ export const metadata: Metadata = {
         url: "/images/header/rua.webp",
         width: 1200,
         height: 630,
-        alt: "Mudanzas profesionales en Córdoba - Movibox Logística",
+        alt: "Mudanzas en Córdoba - Movibox Logística",
       },
     ],
   },
