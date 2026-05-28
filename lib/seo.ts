@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://www.transporterojo.com.ar";
+export const SITE_URL = "https://www.movibox.com.ar";
 
 export function absoluteUrl(path: string): string {
   if (path.startsWith("http")) return path;
@@ -57,10 +57,6 @@ export function blogPostJsonLd(options: BlogPostJsonLdOptions) {
         publisher: {
           "@type": "Organization",
           name: "Movibox Logística",
-          logo: {
-            "@type": "ImageObject",
-            url: `${SITE_URL}/logo.png`,
-          },
         },
         datePublished: options.datePublished ?? "2024-01-15",
         dateModified: options.dateModified ?? "2024-12-01",

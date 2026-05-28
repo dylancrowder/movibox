@@ -179,8 +179,8 @@ export default function MudanzasPage() {
   const benefits = [
     {
       icon: Truck,
-      title: "Vehículos propios",
-      description: "Furgón para mudanzas pequeñas y camión mediano para medianas/grandes. Calidad garantizada.",
+      title: "Camión propio",
+      description: "Vehículo equipado para mudanzas y fletes en Córdoba Capital y provincia. Calidad garantizada.",
     },
     {
       icon: Clock,
@@ -338,7 +338,7 @@ export default function MudanzasPage() {
                   />
                 </div>
                 <div className="p-8 bg-gradient-to-br from-primary/5 to-accent">
-                 
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Camión</h3>
                   <p className="text-sm text-muted-foreground font-semibold uppercase tracking-wide mb-4">Mudanzas en Córdoba</p>
                   <p className="text-foreground/80 mb-6 leading-relaxed">
                     Preparado para departamentos, casas y fletes dentro de Córdoba Capital y provincia. Coordinamos según tu volumen y disponibilidad.

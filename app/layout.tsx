@@ -18,12 +18,12 @@ const inter = Inter({
 
 // ✅ Metadata usando la API de Next 14
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.transporterojo.com.ar'),
+  metadataBase: new URL('https://www.movibox.com.ar'),
   title: {
-    default: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
+    default: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
     template: "%s | Movibox Logística"
   },
-  description: "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón. Presupuesto sin cargo ☎️ 351 2586221",
+  description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto sin cargo por WhatsApp.",
   keywords: [
     "mudanzas Córdoba",
     "fletes Córdoba",
@@ -34,11 +34,11 @@ export const metadata: Metadata = {
     "empresa de mudanzas",
     "almacenamiento seguro Córdoba",
   ],
-  authors: [{ name: "Movibox Logística", url: "https://www.transporterojo.com.ar" }],
+  authors: [{ name: "Movibox Logística", url: "https://www.movibox.com.ar" }],
   creator: "Movibox Logística",
   publisher: "Movibox Logística",
 
-  alternates: { canonical: "https://www.transporterojo.com.ar/" },
+  alternates: { canonical: "https://www.movibox.com.ar/" },
 
   robots: {
     index: true,
@@ -54,24 +54,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "/",
-    title: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
-    description: "Mudanzas y guardamuebles en Córdoba Capital y provincia. Galpón y camión equipado. Presupuesto gratis.",
+    url: "https://www.movibox.com.ar/",
+    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
+    description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     siteName: "Movibox Logística",
     images: [
       {
         url: "/images/header/rua.webp",
         width: 1200,
         height: 630,
-        alt: "Camión de Transporte Rojo - Mudanzas en Córdoba",
+        alt: "Mudanzas profesionales en Córdoba - Movibox Logística",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
-    description: "Mudanzas y guardamuebles en Córdoba. Servicio local con depósito. Presupuesto por WhatsApp.",
+    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
+    description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     images: ["/images/header/rua.webp"],
   },
 
@@ -101,20 +101,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@graph': [
       {
         '@type': 'LocalBusiness',
-        '@id': 'https://www.transporterojo.com.ar/#organization',
+        '@id': 'https://www.movibox.com.ar/#organization',
         name: 'Movibox Logística',
         alternateName: 'Movibox Logística - Mudanzas y Guardamuebles',
         description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia. Camión y galpón con almacenamiento seguro.',
-        url: 'https://www.transporterojo.com.ar',
+        url: 'https://www.movibox.com.ar',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://www.transporterojo.com.ar/logo.png',
+          url: 'https://www.movibox.com.ar/logo.png',
           width: 300,
           height: 300,
         },
-        image: 'https://www.transporterojo.com.ar/images/header/rua.webp',
+        image: 'https://www.movibox.com.ar/images/header/rua.webp',
         telephone: '+54-351-258-6221',
-        email: 'transporterojo.cba@gmail.com',
+        email: 'contacto@movibox.com.ar',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Camino Chacra de la Merced Km 1/2',
@@ -164,11 +164,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       {
         '@type': 'MovingCompany',
-        '@id': 'https://www.transporterojo.com.ar/#movingcompany',
+        '@id': 'https://www.movibox.com.ar/#movingcompany',
         name: 'Movibox Logística',
-        url: 'https://www.transporterojo.com.ar',
+        url: 'https://www.movibox.com.ar',
         telephone: '+54-351-258-6221',
-        email: 'transporterojo.cba@gmail.com',
+        email: 'contacto@movibox.com.ar',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Camino Chacra de la Merced Km 1/2',
@@ -184,17 +184,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://www.transporterojo.com.ar/#website',
-        url: 'https://www.transporterojo.com.ar',
+        '@id': 'https://www.movibox.com.ar/#website',
+        url: 'https://www.movibox.com.ar',
         name: 'Movibox Logística - Mudanzas y Guardamuebles en Córdoba',
         inLanguage: 'es-AR',
         publisher: {
-          '@id': 'https://www.transporterojo.com.ar/#organization',
+          '@id': 'https://www.movibox.com.ar/#organization',
         },
         sameAs: [
-          'https://www.facebook.com/transporterojo',
-          'https://www.instagram.com/transporterojo',
-          'https://www.google.com/maps/search/Transporte+Rojo+Córdoba',
+          'https://www.facebook.com/movibox',
+          'https://www.instagram.com/movibox',
+          'https://www.google.com/maps/search/Movibox+Córdoba',
         ],
       },
       {
@@ -204,37 +204,37 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             '@type': 'ListItem',
             position: 1,
             name: 'Inicio',
-            item: 'https://www.transporterojo.com.ar',
+            item: 'https://www.movibox.com.ar',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Mudanzas',
-            item: 'https://www.transporterojo.com.ar/mudanzas',
+            item: 'https://www.movibox.com.ar/mudanzas',
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Guardamuebles',
-            item: 'https://www.transporterojo.com.ar/guardamuebles',
+            item: 'https://www.movibox.com.ar/guardamuebles',
           },
           {
             '@type': 'ListItem',
             position: 4,
             name: 'Blog',
-            item: 'https://www.transporterojo.com.ar/blog',
+            item: 'https://www.movibox.com.ar/blog',
           },
           {
             '@type': 'ListItem',
             position: 5,
             name: 'FAQ',
-            item: 'https://www.transporterojo.com.ar/faq',
+            item: 'https://www.movibox.com.ar/faq',
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'Contacto',
-            item: 'https://www.transporterojo.com.ar/contacto',
+            item: 'https://www.movibox.com.ar/contacto',
           },
         ],
       },

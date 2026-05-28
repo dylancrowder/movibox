@@ -21,9 +21,9 @@ import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata: Metadata = {
   title:
-    "Mudanzas y Guardar Muebles en Córdoba | Movibox Logística",
+    "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
   description:
-    "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión, galpón y retiro a domicilio. Presupuesto gratis por WhatsApp.",
+    "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
   keywords: [
     "mudanzas Córdoba",
     "fletes Córdoba",
@@ -32,15 +32,15 @@ export const metadata: Metadata = {
     "almacenamiento Córdoba",
     "guardamuebles vigilancia 24/7",
   ],
-  alternates: { canonical: "https://www.transporterojo.com.ar/" },
+  alternates: { canonical: "https://www.movibox.com.ar/" },
 
   openGraph: {
     type: "website",
     title:
-      "Mudanzas y Guardamuebles en Córdoba | Movibox Logística",
+      "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
     description:
-      "Mudanzas y guardamuebles en Córdoba Capital y provincia. Galpón y servicio con camión equipado.",
-    url: "https://www.transporterojo.com.ar/",
+      "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
+    url: "https://www.movibox.com.ar/",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",
@@ -52,9 +52,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas y Fletes en Córdoba | Movibox Logística",
+    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
     description:
-      "Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.",
+      "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     images: ["https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630"],
   },
   robots: { index: true, follow: true },
@@ -208,7 +208,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                En <strong>Movibox Logística</strong> especializados en mudanzas y guardamuebles
+                En <strong>Movibox Logística</strong> estamos especializados en mudanzas y guardamuebles
                 en Córdoba. Ofrecemos traslados seguros y almacenamiento con vigilancia 24/7.
               </p>
 
@@ -285,7 +285,7 @@ export default function Home() {
 
 
             <h2 className="text-4xl font-black sm:text-5xl leading-tight">
-              Mudanzas y guardar muebles - Soluciones completas en Córdoba
+              Mudanzas y guardamuebles - Soluciones completas en Córdoba
             </h2>
 
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

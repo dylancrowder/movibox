@@ -159,8 +159,7 @@ const jsonLd = {
       },
       amenityFeature: [
         { "@type": "LocationFeatureSpecification", name: "Vigilancia 24/7" },
-        { "@type": "LocationFeatureSpecification", name: "Control de acceso digital" },
-        { "@type": "LocationFeatureSpecification", name: "Inventario digitalizado" }
+        { "@type": "LocationFeatureSpecification", name: "Ambientes secos y ventilados" }
       ]
     },
 

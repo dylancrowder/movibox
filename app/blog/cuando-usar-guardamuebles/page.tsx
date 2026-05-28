@@ -218,9 +218,9 @@ export default function BlogArticle() {
                       <div className="rounded-xl border border-primary/10 bg-white p-6">
                         <h4 className="font-bold text-foreground mb-3 text-green-600">✅ Guardamuebles profesional</h4>
                         <ul className="space-y-2 text-sm text-muted-foreground">
-                          <li>• Inventario digital y actualizado</li>
+                          <li>• Acceso a tu vehículo cuando quieras</li>
                           <li>• Seguro y vigilancia 24/7</li>
-                          <li>• Control de temperatura y humedad</li>
+                          <li>• Ambientes secos y ventilados</li>
                           <li>• Responsabilidad profesional</li>
                         </ul>
                       </div>

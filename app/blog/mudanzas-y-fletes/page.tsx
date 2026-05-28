@@ -7,7 +7,6 @@ import { ScrollAnimation } from "@/components/scroll-animation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import MudanzasFletes from "@/public/mock-camion.jpg";
 import image_header from "@/public/logisticas.jpg";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
