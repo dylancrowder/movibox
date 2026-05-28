@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { ImageCarousel } from "@/components/image-carousel";
 import image_header from "@/public/galpon.webp";
-import wsp from "@/public/images/iconos/whatsapp.png";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata: Metadata = {

@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ArrowLeft, Clock, AlertCircle, CheckCircle2 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
-import image_header from "@/public/logisticas.jpg";
-import camionImage from "@/public/images/webimages/camion_blog.jpg";
+import image_header from "@/public/logisticas.webp";
+import camionImage from "@/public/images/webimages/camion_blog.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
 const SLUG = "errores-comunes-al-contratar-una-mudanza";
@@ -22,7 +22,7 @@ export const metadata: Metadata = blogArticleMetadata(SLUG, {
     "empresa mudanzas",
     "tips mudanzas córdoba",
   ],
-  ogImage: "/images/webimages/camion_blog.jpg",
+  ogImage: "/images/webimages/camion_blog.webp",
   ogImageAlt: "Errores comunes al contratar mudanzas en Córdoba",
 });
 
@@ -31,7 +31,7 @@ export default function BlogArticle() {
     slug: SLUG,
     headline: "Errores Comunes al Contratar una Mudanza",
     description: "Evita sobrecostos, daños y demoras con estos consejos clave",
-    image: "/images/webimages/camion_blog.jpg",
+    image: "/images/webimages/camion_blog.webp",
     datePublished: "2024-03-20",
     dateModified: "2024-12-01",
   });

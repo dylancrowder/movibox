@@ -4,11 +4,11 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
-import wsp from "@/public/images/iconos/whatsapp.png";
-import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.jpg"
-import camion from "@/public/images/webimages/camion_blog.jpg"
-import deposito from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.jpg"
-import image_header from "@/public/logisticas.jpg";
+import wsp from "@/public/images/iconos/whatsapp.webp";
+import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.webp"
+import camion from "@/public/images/webimages/camion_blog.webp"
+import deposito from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.webp"
+import image_header from "@/public/logisticas.webp";
 
 export const metadata: Metadata = {
   title: "Blog de Movibox Logística | Mudanzas, Guardamuebles y Fletes",

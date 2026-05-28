@@ -17,9 +17,9 @@ import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
-import wsp from "@/public/images/iconos/whatsapp.png";
-import camion from "@/public/images/camion/imagen_fish2.jpeg";
-import heroImage from "@/public/images/camion/imagen_camion2.jpeg";
+import wsp from "@/public/images/iconos/whatsapp.webp";
+import camion from "@/public/images/camion/imagen_fish2.webp";
+import heroImage from "@/public/images/camion/imagen_camion2.webp";
 
 
 export const metadata: Metadata = {

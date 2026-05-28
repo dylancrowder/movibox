@@ -37,7 +37,7 @@ export type BlogPostJsonLdOptions = {
 
 export function blogPostJsonLd(options: BlogPostJsonLdOptions) {
   const url = blogPostUrl(options.slug);
-  const image = absoluteUrl(options.image ?? "/logisticas.jpg");
+  const image = absoluteUrl(options.image ?? "/logisticas.webp");
 
   return {
     "@context": "https://schema.org",
@@ -83,7 +83,7 @@ export function blogArticleMetadata(
   options: BlogArticleMetadataOptions
 ): Metadata {
   const url = blogPostUrl(slug);
-  const ogImage = absoluteUrl(options.ogImage ?? "/logisticas.jpg");
+  const ogImage = absoluteUrl(options.ogImage ?? "/logisticas.webp");
 
   return {
     title: options.title,

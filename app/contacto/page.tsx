@@ -3,11 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import image_header from "@/public/logisticas.jpg";
+import image_header from "@/public/logisticas.webp";
 import ContactoForm from "@/components/ContactoForm";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import wsp from "@/public/images/iconos/whatsapp.png";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 
 const faqs = [
   {

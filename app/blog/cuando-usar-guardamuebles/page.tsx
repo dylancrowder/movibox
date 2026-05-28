@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ArrowLeft, Clock, Warehouse, CheckCircle2 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
-import image_header from "@/public/logisticas.jpg";
-import depositoImage from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.jpg";
+import image_header from "@/public/logisticas.webp";
+import depositoImage from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
 const SLUG = "cuando-usar-guardamuebles";

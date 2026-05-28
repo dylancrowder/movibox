@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
-import wsp from "@/public/images/iconos/whatsapp.png";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export default function HeroButtons() {
   return (

@@ -4,7 +4,7 @@ import FAQ from "@/components/FAQ";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import wsp from "@/public/images/iconos/whatsapp.png";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",

@@ -15,8 +15,8 @@ import HeroButtons from "@/components/HeroButtons";
 import Link from "next/link";
 import img from "../public/images/header/headerchacra.webp";
 import { Button } from "@/components/ui/button";
-import mudanza_imagen from "@/public/images/camion/imagen_camion.jpeg"
-import wsp from "@/public/images/iconos/whatsapp.png";
+import mudanza_imagen from "@/public/images/camion/imagen_camion.webp"
+import wsp from "@/public/images/iconos/whatsapp.webp";
 import GoogleReviews from "@/components/GoogleReviews";
 
 export const metadata: Metadata = {
