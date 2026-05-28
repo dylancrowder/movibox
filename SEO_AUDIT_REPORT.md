@@ -1,7 +1,7 @@
-# 🔍 AUDITORÍA SEO COMPLETA - Transporte Rojo
+# 🔍 AUDITORÍA SEO COMPLETA - Movibox
 
-**Fecha:** Mayo 2024  
-**Sitio:** transporterojo.com.ar  
+**Fecha:** Mayo 2024
+**Sitio:** movibox.com.ar  
 **Conclusión General:** ✅ Buen nivel de SEO, con áreas de mejora específicas
 
 ---
@@ -32,7 +32,7 @@
 - ✅ Canonical URLs correctas en todas las páginas
 
 **Ejemplo página Mudanzas:**
-- Title: `Mudanzas en Córdoba Capital y Provincia | Transporte Rojo` (61 chars) ✅
+- Title: `Mudanzas en Córdoba Capital y Provincia | Movibox` (61 chars) ✅
 - Description: 160 caracteres con keyword principal ✅
 
 ### 2. **Schema Markup completo**
@@ -94,8 +94,8 @@ openGraph: {
 
 **Solución:** Cambiar a URLs absolutas:
 ```tsx
-url: "https://www.transporterojo.com.ar/blog",
-url: "https://www.transporterojo.com.ar/faq",
+url: "https://www.movibox.com.ar/blog",
+url: "https://www.movibox.com.ar/faq",
 ```
 
 **Impacto:** Google y redes sociales pueden no indexar correctamente los OG tags.
@@ -116,8 +116,8 @@ El `metadataBase` está en `layout.tsx`, pero en algunas páginas usan rutas rel
 
 **Solución:** Usar URLs absolutas siempre:
 ```tsx
-alternates: { 
-  canonical: "https://www.transporterojo.com.ar/blog" 
+alternates: {
+  canonical: "https://www.movibox.com.ar/blog"
 }
 ```
 
@@ -132,20 +132,20 @@ alternates: {
 ```tsx
 openGraph: {
   type: "website",
-  title: "Contacto Transporte Rojo | Presupuesto Mudanzas",
-  description: "Contactá a Transporte Rojo para presupuestos de mudanzas y guardamuebles en Córdoba",
-  url: "https://www.transporterojo.com.ar/contacto",
+  title: "Contacto Movibox | Presupuesto Mudanzas",
+  description: "Contactá a Movibox para presupuestos de mudanzas y guardamuebles en Córdoba",
+  url: "https://www.movibox.com.ar/contacto",
   images: [{
     url: "https://cdn.builder.io/...",
     width: 1200,
     height: 630,
-    alt: "Contacto Transporte Rojo"
+    alt: "Contacto Movibox"
   }]
 },
 twitter: {
   card: "summary_large_image",
-  title: "Contacto Transporte Rojo",
-  description: "Contactá a Transporte Rojo para mudanzas en Córdoba"
+  title: "Contacto Movibox",
+  description: "Contactá a Movibox para mudanzas en Córdoba"
 }
 ```
 
@@ -241,7 +241,7 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 
-Sitemap: https://www.transporterojo.com.ar/sitemap.xml
+Sitemap: https://www.movibox.com.ar/sitemap.xml
 ```
 
 ---
@@ -298,7 +298,7 @@ FAQ:
 
 ### 4. **Contacto (`/contacto`)**
 - ✅ Presupuesto mudanzas
-- ✅ Contacto Transporte Rojo
+- ✅ Contacto Movibox
 - ⚠️ Podría agregar: "presupuesto sin cargo", "consulta gratuita"
 
 ### 5. **FAQ (`/faq`)**
@@ -407,4 +407,4 @@ FAQ:
 
 ---
 
-*Reporte generado para Transporte Rojo - Mayo 2024*
+*Reporte generado para Movibox - Mayo 2024*

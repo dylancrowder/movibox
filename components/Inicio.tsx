@@ -19,8 +19,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "transporterojo.cba@gmail.com",
-    href: "mailto:transporterojo.cba@gmail.com",
+    value: "movibox.cba@gmail.com",
+    href: "mailto:movibox.cba@gmail.com",
   },
 ];
 

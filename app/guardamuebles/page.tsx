@@ -888,7 +888,7 @@ export default function GuardamueblesPage() {
               Casos donde guardar muebles es la mejor opción
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Descubre cómo el guardamuebles de Transporte Rojo resuelve situaciones específicas.
+              Descubre cómo el guardamuebles de Movibox resuelve situaciones específicas.
             </p>
           </ScrollAnimation>
 

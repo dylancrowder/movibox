@@ -1,6 +1,6 @@
 {
-  "name": "Transporte Rojo",
-  "short_name": "Rojo",
+  "name": "Movibox",
+  "short_name": "Movibox",
   "description": "Servicio de Mudanzas y Transporte en Córdoba, Argentina",
   "start_url": "/",
   "display": "standalone",

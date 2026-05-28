@@ -1,4 +1,4 @@
-# 📋 PRÓXIMOS PASOS - SEO Transporte Rojo
+# 📋 PRÓXIMOS PASOS - SEO Movibox
 
 ## ✅ YA COMPLETADO (En esta sesión)
 
@@ -34,19 +34,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Inicio",
-      "item": "https://www.transporterojo.com.ar"
+      "item": "https://www.movibox.com.ar"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Blog",
-      "item": "https://www.transporterojo.com.ar/blog"
+      "item": "https://www.movibox.com.ar/blog"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "[TÍTULO DEL POST]",
-      "item": "https://www.transporterojo.com.ar/blog/[SLUG]"
+      "item": "https://www.movibox.com.ar/blog/[SLUG]"
     }
   ]
 };
@@ -94,7 +94,7 @@ Ejemplo en FAQ de mudanzas:
 **Pasos:**
 1. Hacer build: `npm run build`
 2. Verificar que existe `.next/server/sitemap.xml`
-3. Acceder a: `https://www.transporterojo.com.ar/sitemap.xml`
+3. Acceder a: `https://www.movibox.com.ar/sitemap.xml`
 4. Confirmar que incluye todas las páginas principales
 5. Si funciona, agregar a Google Search Console
 
@@ -104,9 +104,9 @@ Ejemplo en FAQ de mudanzas:
 
 **Qué hacer:**
 1. Ir a https://search.google.com/search-console
-2. Agregar propiedad: `https://www.transporterojo.com.ar`
+2. Agregar propiedad: `https://www.movibox.com.ar`
 3. Verificar dominio (opción recomendada: DNS TXT)
-4. Submeter sitemap: `https://www.transporterojo.com.ar/sitemap.xml`
+4. Submeter sitemap: `https://www.movibox.com.ar/sitemap.xml`
 5. Esperar indexación (24-48 horas)
 
 ---

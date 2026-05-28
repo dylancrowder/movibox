@@ -1,8 +1,8 @@
 # ✅ Auditoría SEO - Mejoras Implementadas
 
 **Fecha de actualización:** 2024
-**Sitio:** transporte.com.ar  
-**Empresa:** Transporte Rojo - Mudanzas, Fletes y Guardamuebles
+**Sitio:** movibox.com.ar
+**Empresa:** Movibox - Mudanzas, Fletes y Guardamuebles
 
 ---
 
@@ -154,7 +154,7 @@ Cada artículo ha sido ampliado considerablemente:
 ### 5. **Mejoradas Páginas Existentes** ✓
 
 #### Página de Servicios (`/servicios`)
-- ✅ Agregada sección "Por qué elegir Transporte Rojo" (6 puntos)
+- ✅ Agregada sección "Por qué elegir Movibox" (6 puntos)
 - ✅ Agregada sección "Información de Interés" con links a:
   - `/precios` - Precios y Tarifas
   - `/testimonios` - Testimonios de Clientes  
@@ -183,8 +183,8 @@ Cada artículo ha sido ampliado considerablemente:
 ```
 User-agent: *
 Allow: /
-Host: https://www.transporterojo.com.ar/
-Sitemap: https://www.transporterojo.com.ar/sitemap.xml
+Host: https://www.movibox.com.ar/
+Sitemap: https://www.movibox.com.ar/sitemap.xml
 ```
 
 ✅ Sitemap - Configurado con next-sitemap

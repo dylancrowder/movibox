@@ -195,7 +195,7 @@ export default function GoogleReviews({
         {/* Google Badge */}
         <div className="mt-16 flex justify-center">
           <a
-            href="https://www.google.com/search?q=Transporte+Rojo+Cordoba"
+            href="https://www.google.com/search?q=Movibox+Cordoba"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-secondary/70 bg-white shadow-sm hover:shadow-md transition text-sm font-semibold text-secondary-600 hover:text-secondary-700"
