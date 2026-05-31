@@ -317,7 +317,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         {/* Google Ads and Analytics Tags */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-17013125582"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18195477517"
           strategy="lazyOnload"
         />
         <Script id="google-ads-analytics" strategy="lazyOnload">
@@ -334,8 +334,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               'ad_personalization': 'denied'
             });
 
-            // Google Ads - Account ID
+            // Google Ads - Account IDs
             gtag('config', 'AW-17013125582');
+            gtag('config', 'AW-18195477517');
 
             // Google Analytics 4
             gtag('config', 'G-E7K55VT53P');
