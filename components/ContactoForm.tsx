@@ -56,6 +56,15 @@ export default function ContactoForm() {
         throw new Error("No se pudo enviar el mensaje");
       }
 
+      // Fire Google Ads conversion event
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        (window as any).gtag('event', 'conversion', {
+          'send_to': 'AW-18195477517/JYRfCL2bhbUcEI3oo-RD',
+          'value': 1.0,
+          'currency': 'ARS'
+        });
+      }
+
       reset();
       setStatus("success");
     } catch (error) {
