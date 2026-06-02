@@ -36,13 +36,15 @@ export default function GoogleReviews({
     const fetchReviews = async () => {
       try {
         const response = await fetch('/api/reviews');
-        if (!response.ok) {
-          throw new Error(`Failed to fetch: ${response.status}`);
-        }
         const data = await response.json();
+
+        if (!response.ok) {
+          console.error('API error response:', data);
+          throw new Error(`Failed to fetch: ${response.status} - ${data.error}`);
+        }
+
         if (data.reviews && data.reviews.length > 0) {
           setReviews(data.reviews.slice(0, maxReviews));
-        
         }
       } catch (err) {
         console.error('Error fetching Google reviews:', err);

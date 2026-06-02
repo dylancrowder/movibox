@@ -20,6 +20,7 @@ export async function GET() {
     const placeId = process.env.GOOGLE_PLACE_ID;
 
     if (!apiKey || !placeId) {
+      console.error('Missing credentials:', { apiKey: !!apiKey, placeId: !!placeId });
       return NextResponse.json(
         { error: 'Missing Google API credentials' },
         { status: 400 }
