@@ -98,7 +98,7 @@ export default function DepositoGuardamueblesPage() {
                 {/* Introducción */}
                 <div className="space-y-4">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    En <strong>Transporte Rojo</strong> brindamos un servicio integral de <strong>guardamuebles y almacenamiento seguro</strong> en Córdoba Capital. Contamos con galpones propios equipados para conservar tus pertenencias en perfectas condiciones, con vigilancia permanente y acceso controlado.
+                    En <strong>Movibox</strong> brindamos un servicio integral de <strong>guardamuebles y almacenamiento seguro</strong> en Córdoba Capital. Contamos con galpones propios equipados para conservar tus pertenencias en perfectas condiciones, con vigilancia permanente y acceso controlado.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     Nuestros depósitos son ideales para quienes realizan mudanzas temporales, reformas en el hogar o necesitan un espacio adicional para resguardar mercadería, equipos o mobiliario de oficina.

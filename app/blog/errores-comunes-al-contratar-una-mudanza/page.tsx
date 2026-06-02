@@ -208,7 +208,7 @@ export default function BlogArticle() {
                     Accidentes pasan. Un espejo roto, un sofá manchado o un vidrio roto pueden costar.
                   </p>
                   <div className="bg-accent/50 p-6 rounded-xl border border-primary/10">
-                    <p className="text-muted-foreground"><strong>Pregunta:</strong> ¿Qué incluye el seguro? ¿Cobre todo accidente o hay excepciones? ¿Cuál es el monto máximo de cobertura? En Transporte Rojo, nuestro seguro cubre daños accidentales en traslado.</p>
+                    <p className="text-muted-foreground"><strong>Pregunta:</strong> ¿Qué incluye el seguro? ¿Cobre todo accidente o hay excepciones? ¿Cuál es el monto máximo de cobertura? En Movibox, nuestro seguro cubre daños accidentales en traslado.</p>
                   </div>
                 </div>
 
@@ -287,7 +287,7 @@ export default function BlogArticle() {
                     Contratar una mudanza de calidad requiere tiempo para investigar, comparar y hacer preguntas. Los errores aquí listados cuestan dinero, estrés y dolores de cabeza.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    En Transporte Rojo priorizamos la comunicación clara, presupuestos detallados, profesionalismo y cuidado de tus pertenencias. Somos tu aliado para una mudanza segura y sin sorpresas.
+                    En Movibox priorizamos la comunicación clara, presupuestos detallados, profesionalismo y cuidado de tus pertenencias. Somos tu aliado para una mudanza segura y sin sorpresas.
                   </p>
                 </div>
               </div>
@@ -304,8 +304,8 @@ export default function BlogArticle() {
               <Button size="lg" asChild>
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
-              <Button size="lg" asChild className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
-                <Link href="https://wa.me/5493512586221" target="_blank">
+              <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
+                <Link href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20vengo%20de%20Google%20Ads.%20Necesito%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFMe%20pueden%20hacer%20presupuesto%3F" target="_blank">
                   Consultar por WhatsApp
                 </Link>
               </Button>

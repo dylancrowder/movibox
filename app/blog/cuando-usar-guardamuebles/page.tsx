@@ -104,7 +104,7 @@ export default function BlogArticle() {
                     Este es el caso más común. Entregas tu departamento actual el 30 de noviembre, pero tu nuevo hogar no está disponible hasta el 15 de diciembre. ¿Qué haces con tus muebles en esos 15 días?
                   </p>
                   <div className="bg-accent/50 p-6 rounded-xl border border-primary/10">
-                    <p className="text-muted-foreground"><strong>Solución:</strong> Alquila un guardamuebles por 15 días. Es mucho más económico que pagar hogar temporal, hotel o presionar a tu casero/vendedor para extender las fechas. En Transporte Rojo ofrecemos planes flexibles desde 7 días hasta 12 meses.</p>
+                    <p className="text-muted-foreground"><strong>Solución:</strong> Alquila un guardamuebles por 15 días. Es mucho más económico que pagar hogar temporal, hotel o presionar a tu casero/vendedor para extender las fechas. En Movibox ofrecemos planes flexibles desde 7 días hasta 12 meses.</p>
                   </div>
                 </div>
 
@@ -242,7 +242,7 @@ export default function BlogArticle() {
           <ScrollAnimation animation="fade-up" className="mt-20 rounded-3xl border-2 border-primary/15 bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">¿Necesitas un guardamuebles en Córdoba?</h3>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              En Transporte Rojo ofrecemos almacenamiento seguro con vigilancia 24/7, control de acceso digital y planes flexibles. Buscamos, guardamos y entregamos sin cargo adicional.
+              En Movibox ofrecemos almacenamiento seguro con vigilancia 24/7, control de acceso digital y planes flexibles. Buscamos, guardamos y entregamos sin cargo adicional.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>

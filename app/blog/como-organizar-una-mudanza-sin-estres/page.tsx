@@ -132,7 +132,7 @@ export default function BlogArticle() {
                     Con 3-4 semanas antes, contacta empresas de mudanzas. Solicita presupuestos de al menos 3 opciones y compara precios, servicios y referencias.
                   </p>
                   <div className="bg-accent/50 p-6 rounded-xl border border-primary/10">
-                    <p className="text-muted-foreground"><strong>Tip:</strong> En Transporte Rojo, ofrecemos presupuestos sin cargo en 24 horas. Incluimos embalaje, desmontaje y montaje según tu necesidad.</p>
+                    <p className="text-muted-foreground"><strong>Tip:</strong> En Movibox, ofrecemos presupuestos sin cargo en 24 horas. Incluimos embalaje, desmontaje y montaje según tu necesidad.</p>
                   </div>
                 </div>
 

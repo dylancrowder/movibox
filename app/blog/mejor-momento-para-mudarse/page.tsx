@@ -204,7 +204,7 @@ export default function MejorMomentoPage() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-8 text-center space-y-4">
                 <h3 className="text-2xl font-bold text-foreground">¿Ya Decidiste Cuándo Mudarte?</h3>
                 <p className="text-muted-foreground">
-                  En Transporte Rojo te ayudamos a coordinar tu mudanza en el mejor momento. Contáctanos para obtener un presupuesto personalizado.
+                  En Movibox te ayudamos a coordinar tu mudanza en el mejor momento. Contáctanos para obtener un presupuesto personalizado.
                 </p>
                 <Button asChild size="lg" className="bg-secondary hover:bg-brand-bright">
                   <Link href="/mudanzas">Solicitar presupuesto</Link>

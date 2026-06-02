@@ -362,10 +362,10 @@ export default function GuardamueblesPage() {
                   size="lg"
                   className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center justify-center gap-3 shadow-none border border-black w-full sm:w-auto"
                 >
-                  <Link
-                    href="https://wa.me/5493512586221?text=Hola%20quiero%20saber%20cuánto%20espacio%20necesito%20para%20guardar%20mis%20muebles"
-                    target="_blank"
-                  >
+                <Link
+  href="https://wa.me/5493512586221?text=Hola,%20estoy%20buscando%20un%20guardamuebles%20en%20Córdoba.%20¿Tienen%20disponibilidad?%20Me%20gustaría%20recibir%20información%20y%20ayuda%20para%20cotizar."
+  target="_blank"
+>
                     <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                     Calcular mi espacio por WhatsApp
                   </Link>

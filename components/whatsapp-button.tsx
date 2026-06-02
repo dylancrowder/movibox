@@ -9,11 +9,20 @@ declare global {
 }
 
 const whatsappMessages: Record<string, string> = {
-  "/": "Hola, estoy buscando un servicio profesional de mudanzas y fletes en Córdoba. Necesito asesoramiento para un traslado seguro.",
-  "/servicios": "Hola, quisiera conocer más sobre sus servicios de mudanzas, fletes y guardamuebles en Córdoba.",
-  "/mudanzas": "Hola, necesito una mudanza en Córdoba Capital o provincia. ¿Realizan embalaje y traslado seguro?",
-  "/fletes": "Hola, busco un servicio de fletes en Córdoba para traslado de mercadería o muebles.",
-  "/guardamuebles": "Hola, necesito información sobre guardamuebles en Córdoba.",
+  "/":
+    "Hola, necesito presupuesto para mudanza en Córdoba",
+
+  "/servicios":
+    "Hola, quiero conocer más sobre sus servicios de mudanzas, fletes y guardamuebles",
+
+  "/mudanzas":
+    "Hola, necesito mudanza en Córdoba. ¿Hacen embalaje y descarga? Presupuesto sin cargo",
+
+  "/fletes":
+    "Hola, necesito flete en Córdoba para trasladar muebles o mercadería",
+
+  "/guardamuebles":
+    "Hola, estoy buscando un guardamuebles en Córdoba. ¿Tienen disponibilidad? Me gustaría recibir información y ayuda para cotizar.",
 };
 
 export function WhatsAppButton() {
@@ -21,7 +30,7 @@ export function WhatsAppButton() {
 
   const message =
     whatsappMessages[pathname] ??
-    "Hola, estoy buscando un servicio de mudanzas y fletes en Córdoba. ¿Podrían asesorarme?";
+    "Hola, necesito presupuesto para mudanza o flete en Córdoba";
 
   const encodedMessage = encodeURIComponent(message);
 

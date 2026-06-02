@@ -208,7 +208,7 @@ export default function BlogHomePage() {
             Sabemos que cada mudanza es única, por eso brindamos atención personalizada para ayudarte a planificar cada paso. Nos enfocamos en mudanzas, fletes y guardamuebles locales con un servicio cercano y confiable.
           </p>
           <p>
-            Nuestro objetivo es simplificar tu mudanza o envío de carga, ofreciendo soluciones flexibles y económicas, sin comprometer la calidad ni la seguridad de tus pertenencias. Con Transporte Rojo, cada traslado se convierte en una experiencia segura y sin estrés.
+            Nuestro objetivo es simplificar tu mudanza o envío de carga, ofreciendo soluciones flexibles y económicas, sin comprometer la calidad ni la seguridad de tus pertenencias. Con Movibox, cada traslado se convierte en una experiencia segura y sin estrés.
           </p>
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function BlogHomePage() {
               Mudanzas y guardamuebles en Córdoba Capital y provincia. Presupuesto sin cargo.
             </p>
             <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2">
-              <Link href="https://wa.me/5493512586221?text=Hola,%20tengo%20dudas%20sobre%20un%20servicio%20de%20mudanza%20o%20guardamuebles." target="_blank">
+              <Link href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20encontr%C3%A9%20sus%20servicios%20en%20Google%20Ads.%20%C2%BFMe%20pueden%20asesorar%20sobre%20mudanzas%20o%20guardamuebles%3F" target="_blank">
                 <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                 Consultar servicios
               </Link>
