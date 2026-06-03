@@ -305,15 +305,6 @@ export default function GuardamueblesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Breadcrumb */}
-      <nav className="pt-24 pb-4 px-4 md:px-6 container max-w-7xl mx-auto" aria-label="Migas de pan">
-        <ol className="flex flex-wrap gap-2 text-sm overflow-x-auto">
-          <li><Link href="/" className="text-primary hover:underline">Inicio</Link></li>
-          <li className="text-foreground/60">/</li>
-          <li className="text-foreground/60">Guardamuebles y Mudanza</li>
-        </ol>
-      </nav>
-
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-center pt-24 overflow-hidden">
         <Image

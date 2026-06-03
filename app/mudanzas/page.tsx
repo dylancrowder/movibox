@@ -231,17 +231,8 @@ export default function MudanzasPage() {
       />
     <article className="flex min-h-screen flex-col bg-white overflow-x-hidden">
 
-      {/* Breadcrumb */}
-      <nav className="pt-24 pb-4 px-4 md:px-6 container max-w-7xl mx-auto" aria-label="Migas de pan">
-        <ol className="flex flex-wrap gap-2 text-sm overflow-x-auto">
-          <li><Link href="/" className="text-primary hover:underline">Inicio</Link></li>
-          <li className="text-foreground/60">/</li>
-          <li className="text-foreground/60">Mudanzas en Córdoba</li>
-        </ol>
-      </nav>
-
       {/* HERO */}
-      <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden">
+      <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden pt-24">
         <Image
           src={heroImage}
           alt="Mudanzas en Córdoba - Movibox Logística"
