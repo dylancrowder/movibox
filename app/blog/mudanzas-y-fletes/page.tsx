@@ -7,7 +7,7 @@ import { ScrollAnimation } from "@/components/scroll-animation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import image_header from "@/public/logisticas.jpg";
+import image_header from "@/public/logisticas.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
 const SLUG = "mudanzas-y-fletes";

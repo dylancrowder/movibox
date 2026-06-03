@@ -4,8 +4,8 @@ import Link from "next/link";
 import { ArrowLeft, Clock, MapPin, Truck, CheckCircle2 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
-import image_header from "@/public/logisticas.jpg";
-import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.jpg";
+import image_header from "@/public/logisticas.webp";
+import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
 const SLUG = "como-organizar-una-mudanza-sin-estres";
@@ -22,7 +22,7 @@ export const metadata: Metadata = blogArticleMetadata(SLUG, {
     "planificar mudanza",
     "consejos mudanzas",
   ],
-  ogImage: "/images/webimages/pexels-tima-miroshnichenko-6169181.jpg",
+  ogImage: "/images/webimages/pexels-tima-miroshnichenko-6169181.webp",
   ogImageAlt: "Cómo organizar una mudanza sin estrés en Córdoba",
 });
 
@@ -31,7 +31,7 @@ export default function BlogArticle() {
     slug: SLUG,
     headline: "Cómo Organizar una Mudanza sin Estrés en Córdoba",
     description: "Guía completa paso a paso para planificar tu mudanza de forma segura",
-    image: "/images/webimages/pexels-tima-miroshnichenko-6169181.jpg",
+    image: "/images/webimages/pexels-tima-miroshnichenko-6169181.webp",
     datePublished: "2024-01-15",
     dateModified: "2024-12-01",
   });

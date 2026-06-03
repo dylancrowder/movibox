@@ -7,7 +7,7 @@ import { ScrollAnimation } from "@/components/scroll-animation";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
-import image_header from "@/public/logisticas.jpg";
+import image_header from "@/public/logisticas.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 
 const SLUG = "deposito-guardamuebles";
@@ -24,7 +24,7 @@ export const metadata: Metadata = blogArticleMetadata(SLUG, {
     "guardamuebles cordoba",
     "bauleras en córdoba capital",
   ],
-  ogImage: "/images/webimages/galpon.jpg",
+  ogImage: "/images/webimages/galpon.webp",
   ogImageAlt: "Guardamuebles y depósitos en Córdoba Capital con seguridad 24/7",
 });
 
