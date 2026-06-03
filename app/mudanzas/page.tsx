@@ -12,6 +12,7 @@ import {
   MapPin,
   Zap,
   Shield,
+  ChevronDown,
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
@@ -244,28 +245,37 @@ export default function MudanzasPage() {
           />
         <div className="absolute inset-0 bg-black/70" />
 
-        <div className="container relative z-10 px-4 text-center w-full">
-          <ScrollAnimation animation="fade-in" className="space-y-6 max-w-3xl mx-auto overflow-hidden">
-            <span className="inline-block rounded-full bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white">
-              Mudanzas y Fletes en Córdoba
-            </span>
+        <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <div className="space-y-6 md:max-w-2xl">
+              <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90 border border-white/20">
+                Mudanzas y Fletes en Córdoba
+              </span>
 
-            <h1 className="text-4xl sm:text-6xl font-black text-white leading-tight">
-              Mudanzas en Córdoba Capital<br />
-              <span className="text-secondary-400">seguras y al mejor precio</span>
-            </h1>
+              <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
+                Mudanzas en Córdoba Capital
+                <br />
+                <span className="text-secondary-400">seguras y al mejor precio</span>
+              </h1>
 
-            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
-              Atención inmediata, precio acordado antes de empezar.
-              Cotización gratuita por WhatsApp.
-            </p>
+              <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
+                Atención inmediata, precio acordado antes de empezar.
+                Cotización gratuita por WhatsApp.
+              </p>
 
-            <HeroButtons />
+              <div className="flex flex-col sm:flex-row gap-4 items-start md:items-center">
+                <HeroButtons />
+              </div>
 
-            <p className="text-xs text-white/70">
-              Respuesta inmediata · Atención directa
-            </p>
-          </ScrollAnimation>
+              <p className="text-xs text-white/70">
+                Respuesta inmediata · Atención directa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block">
+          <ChevronDown className="h-10 w-10 text-white/60 animate-bounce" />
         </div>
       </section>
 

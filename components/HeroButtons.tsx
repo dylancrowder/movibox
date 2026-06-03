@@ -40,10 +40,10 @@ export default function HeroButtons({
         </Link>
       </Button>
 
-      {/* Llamar - Outline */}
+      {/* Llamar - Secondary (visible on dark overlay) */}
       <Button
         asChild
-        variant="outline"
+        variant="secondary"
         size="lg"
       >
         <Link href="tel:+5493512586221" className="flex items-center gap-2">

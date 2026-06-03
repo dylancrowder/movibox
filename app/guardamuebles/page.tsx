@@ -13,6 +13,8 @@ import {
   Car,
   Package,
   Ruler,
+  Phone,
+  ChevronDown,
 } from "lucide-react";
 
 
@@ -348,24 +350,41 @@ export default function GuardamueblesPage() {
               </ul>
               {/* ----------------------------------------------------- */}
 
-              <div className="flex flex-col sm:flex-row gap-4 items-start md:items-center w-full pt-4">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start md:items-center">
+                {/* WhatsApp - Verde */}
                 <Button
                   asChild
+                  variant="whatsapp"
                   size="lg"
-                  className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center justify-center gap-3 shadow-none border border-black w-full sm:w-auto"
                 >
-                <WhatsAppConversionLink
-                  href="https://wa.me/5493512586221?text=Hola,%20estoy%20buscando%20un%20guardamuebles%20en%20Córdoba.%20¿Tienen%20disponibilidad?%20Me%20gustaría%20recibir%20información%20y%20ayuda%20para%20cotizar."
-                  conversionLabel="guardamuebles_whatsapp_click"
-                >
+                  <WhatsAppConversionLink
+                    href="https://wa.me/5493512586221?text=Hola,%20estoy%20buscando%20un%20guardamuebles%20en%20Córdoba.%20¿Tienen%20disponibilidad?%20Me%20gustaría%20recibir%20información%20y%20ayuda%20para%20cotizar."
+                    conversionLabel="guardamuebles_whatsapp_click"
+                    className="flex items-center gap-3"
+                  >
                     <Image src={wsp} alt="WhatsApp" width={32} height={32} />
-                    Calcular mi espacio por WhatsApp
-                </WhatsAppConversionLink>
+                    WhatsApp
+                  </WhatsAppConversionLink>
                 </Button>
-                <p className="text-sm text-white/80">Presupuesto real • Respuesta rápida </p>
+
+                {/* Llamar - Secondary (visible on dark overlay) */}
+                <Button
+                  asChild
+                  variant="secondary"
+                  size="lg"
+                >
+                  <Link href="tel:+5493512586221" className="flex items-center gap-2">
+                    <Phone className="w-5 h-5" />
+                    Llamar ahora
+                  </Link>
+                </Button>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block">
+          <ChevronDown className="h-10 w-10 text-white/60 animate-bounce" />
         </div>
       </section>
 
@@ -641,9 +660,9 @@ export default function GuardamueblesPage() {
               <h3 className="text-xl font-bold text-foreground">¿Necesitás guardar tus cosas?</h3>
               <p className="text-sm text-muted-foreground">Galpón propio con vigilancia 24/7</p>
             </div>
-            <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2 w-full md:w-auto">
-              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20necesito%20guardar%20mis%20cosas%20en%20el%20guardamuebles.%20¿Cuál%20es%20el%20presupuesto?" conversionLabel="guardamuebles_cta_whatsapp">
-                <Image src={wsp} alt="WhatsApp" width={20} height={20} />
+            <Button asChild variant="whatsapp" size="lg" className="w-full md:w-auto">
+              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20necesito%20guardar%20mis%20cosas%20en%20el%20guardamuebles.%20¿Cuál%20es%20el%20presupuesto?" conversionLabel="guardamuebles_cta_whatsapp" className="flex items-center gap-3">
+                <Image src={wsp} alt="WhatsApp" width={32} height={32} />
                 Consultar
               </WhatsAppConversionLink>
             </Button>
@@ -652,16 +671,16 @@ export default function GuardamueblesPage() {
       </section>
 
       {/* CÓMO FUNCIONA - 3 PASOS */}
-      <section className="bg-accent py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
               Es fácil
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               3 pasos para guardar tus cosas
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Sin complicaciones. Sin sorpresas.
             </p>
           </ScrollAnimation>
@@ -753,7 +772,7 @@ export default function GuardamueblesPage() {
             <h2 className="text-4xl font-black sm:text-5xl leading-tight">
               Guardamuebles en Córdoba Capital y alrededores
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Brindamos servicio en Nueva Córdoba, General Paz, Cerro de las Rosas, Alta Córdoba, Centro, Villa Cabrera y toda la provincia de Córdoba.
             </p>
           </ScrollAnimation>
@@ -761,16 +780,16 @@ export default function GuardamueblesPage() {
       </section>
 
       {/* UBICACIÓN - MAPA */}
-      <section className="bg-muted py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
               Ubicación
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Dónde estamos ubicados
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Visita nuestro galpón en Córdoba Capital. Podés pasar a verificar tu espacio o consultar sobre nuestros servicios.
             </p>
           </ScrollAnimation>
@@ -778,7 +797,7 @@ export default function GuardamueblesPage() {
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <ScrollAnimation animation="fade-up" className="space-y-6">
               <div className="bg-white rounded-md p-8 border border-neutral-300 shadow-card">
-                <h3 className="text-2xl font-bold mb-6">Información de contacto</h3>
+                <h3 className="text-2xl font-bold mb-6 text-primary">Información de contacto</h3>
 
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start">
@@ -789,8 +808,8 @@ export default function GuardamueblesPage() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground mb-1">Dirección</p>
-                      <p className="text-sm text-muted-foreground">Camino Chacra de la Merced Km 1/2, Córdoba Capital, Córdoba, Argentina</p>
+                      <p className="font-semibold text-primary mb-1">Dirección</p>
+                      <p className="text-sm text-neutral-600">Camino Chacra de la Merced Km 1/2, Córdoba Capital, Córdoba, Argentina</p>
                     </div>
                   </div>
 
@@ -809,13 +828,13 @@ export default function GuardamueblesPage() {
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <div className="rounded-full bg-secondary/80 p-3 text-white flex-shrink-0">
+                    <div className="rounded-full bg-secondary-500 p-3 text-white flex-shrink-0">
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01M9 20h6a2 2 0 002-2V6a2 2 0 00-2-2H9a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground mb-1">WhatsApp</p>
+                      <p className="font-semibold text-primary mb-1">WhatsApp</p>
                       <a href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:text-primary-dark font-medium">
                         +54 9 351 258-6221
                       </a>
@@ -823,14 +842,14 @@ export default function GuardamueblesPage() {
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <div className="rounded-full bg-secondary/80 p-3 text-white flex-shrink-0">
+                    <div className="rounded-full bg-secondary-500 p-3 text-white flex-shrink-0">
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-foreground mb-1">Horario</p>
-                      <p className="text-sm text-muted-foreground">Consulta disponibilidad por WhatsApp</p>
+                      <p className="font-semibold text-primary mb-1">Horario</p>
+                      <p className="text-sm text-neutral-600">Consulta disponibilidad por WhatsApp</p>
                     </div>
                   </div>
                 </div>
@@ -876,7 +895,7 @@ export default function GuardamueblesPage() {
       />
 
       {/* CASOS DE USO ESPECÍFICOS */}
-      <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
@@ -885,7 +904,7 @@ export default function GuardamueblesPage() {
             <h2 className="text-4xl font-black sm:text-5xl leading-tight">
               Casos donde guardar muebles es la mejor opción
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Descubre cómo el guardamuebles de Movibox resuelve situaciones específicas.
             </p>
           </ScrollAnimation>
@@ -938,16 +957,16 @@ export default function GuardamueblesPage() {
       </section>
 
       {/* LO QUE NECESITAS SABER */}
-      <section className="bg-muted py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1.5 rounded-full">
               Dudas comunes
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Lo que necesitás saber
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Respondemos las preguntas que más importan.
             </p>
           </ScrollAnimation>
@@ -1043,7 +1062,7 @@ export default function GuardamueblesPage() {
       </section>
 
       {/* CTA FINAL */}
-      <section className="bg-accent py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-7xl">
           <ScrollAnimation animation="fade-up" className="space-y-8 max-w-3xl mx-auto">
             <h2 className="text-4xl font-black sm:text-5xl text-foreground leading-tight">
@@ -1055,8 +1074,8 @@ export default function GuardamueblesPage() {
 
             <Button
               asChild
+              variant="primary"
               size="lg"
-              className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black"
             >
               <WhatsAppConversionLink
                 href="https://wa.me/5493512586221?text=Hola%20quiero%20un%20presupuesto%20real%20para%20guardamuebles"
