@@ -227,15 +227,15 @@ export default function Home() {
       <section className="bg-white py-32">
         <div className="container px-4 md:px-6 grid gap-16 lg:grid-cols-2 items-center">
           <ScrollAnimation animation="fade-up" className="space-y-8">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
               Mucho más que un traslado
             </span>
 
 
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Mudanzas y guardamuebles en Córdoba, con galpón propio
             </h2>
-            <p className="text-lg leading-relaxed text-slate-700">
+            <p className="text-lg leading-relaxed text-neutral-600">
 
               Desde Córdoba brindamos un servicio integral que incluye{" "}
               <strong>mudanzas completas</strong>, <strong>almacenamiento seguro</strong> y{" "}
@@ -243,18 +243,18 @@ export default function Home() {
               servicio es planificado según el tipo de carga, ubicación y tiempo de entrega
               requerido.
             </p>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-neutral-600">
               Contamos con un equipo profesional que maneja cada
               traslado con cuidado.
             </p>
             <ul className="space-y-4">
               {aboutHighlights.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="mt-1 rounded-full bg-secondary/80 p-1.5 text-white shadow-md shadow-secondary/30 flex-shrink-0">
+                  <span className="mt-1 rounded-full bg-secondary-500 p-1.5 text-white shadow-md flex-shrink-0">
                     <CheckCircle2 className="h-4 w-4" />
                   </span>
 
-                  <span className="text-sm font-medium text-foreground/80">{item}</span>
+                  <span className="text-sm font-medium text-neutral-700">{item}</span>
                 </li>
               ))}
             </ul>
@@ -279,16 +279,16 @@ export default function Home() {
       <section className="bg-accent py-32">
         <div className="container px-4 md:px-6 text-center">
           <ScrollAnimation animation="fade-up" className="space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
               Nuestros servicios
             </span>
 
 
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Mudanzas y guardamuebles - Soluciones completas en Córdoba
             </h2>
 
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Cada servicio está diseñado para ofrecer seguridad, eficiencia y confiabilidad.
               Desde mudanzas residenciales hasta fletes especializados y almacenamiento, nos
               adaptamos a tus necesidades y garantizamos atención profesional en cada etapa.
@@ -378,8 +378,8 @@ export default function Home() {
             <div className="mt-6 flex justify-center">
               <Button
                 asChild
+                variant="primary"
                 size="lg"
-                className="bg-secondary text-secondary-foreground hover:bg-brand-bright focus:ring-orange-300"
               >
                 <Link href="/mudanzas">Ver mudanzas</Link>
               </Button>
@@ -400,16 +400,16 @@ export default function Home() {
       />
 
       {/* BENEFITS */}
-      <section className="bg-muted py-32">
+      <section className="bg-neutral-100 py-32">
         <div className="container px-4 md:px-6 text-center">
           <ScrollAnimation animation="fade-up" className="space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
               Por qué elegirnos
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Beneficios de mudarte y guardar muebles al mejor precio
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Nuestro compromiso es brindarte un servicio confiable y profesional. Cada traslado se ejecuta con seguridad, eficiencia y respeto por tus pertenencias. La experiencia nos permiten ofrecer soluciones adaptadas a cada cliente.
             </p>
           </ScrollAnimation>
@@ -417,12 +417,12 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2">
             {benefits.map((benefit, index) => (
               <ScrollAnimation key={benefit.title} animation="fade-up" delay={index * 120}>
-                <article className="h-full rounded-3xl border border-primary/70 bg-muted p-8 shadow-sm">
-                  <div className="rounded-full bg-secondary/80 w-fit p-3 text-white mb-4">
+                <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
+                  <div className="rounded-full bg-secondary-500 w-fit p-3 text-white mb-4">
                     <benefit.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-3">{benefit.title}</h3>
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <h3 className="text-lg font-semibold text-primary mb-3">{benefit.title}</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">
                     {benefit.description}
                   </p>
                 </article>
@@ -433,18 +433,18 @@ export default function Home() {
       </section>
 
       {/* BLOG SEO SECTION */}
-      <section className="bg-accent py-32">
+      <section className="bg-secondary-50 py-32">
         <div className="container px-4 md:px-6">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
               Blog & Consejos
             </span>
 
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Consejos útiles para mudanzas y guardamuebles en Córdoba
             </h2>
 
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Compartimos guías prácticas, recomendaciones y experiencias reales para ayudarte
               a planificar tu mudanza, reducir costos y proteger tus pertenencias.
             </p>
@@ -472,17 +472,17 @@ export default function Home() {
               },
             ].map((post, index) => (
               <ScrollAnimation key={post.title} animation="fade-up" delay={index * 120}>
-                <article className="h-full rounded-3xl bg-white p-8 shadow-sm   border border-primary/70 flex flex-col">
-                  <div className="text-lg font-semibold text-foreground mb-3">
+                <article className="h-full rounded-md bg-white p-8 shadow-card border border-neutral-300 flex flex-col hover:shadow-card-hover hover:-translate-y-1">
+                  <div className="text-lg font-semibold text-primary mb-3">
                     {post.title}
                   </div>
-                  <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-sm text-neutral-600 mb-6 leading-relaxed">
                     {post.description}
                   </p>
 
                   <Link
                     href={post.href}
-                    className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-2 transition-colors duration-200 hover:text-orange-500 hover:underline active:text-orange-700 cursor-pointer"
+                    className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary underline-offset-2 transition-colors duration-200 hover:text-secondary-600 hover:underline active:text-secondary-700 cursor-pointer"
                   >
                     Leer artículo <ArrowRight className="h-4 w-4" />
                   </Link>
@@ -493,7 +493,7 @@ export default function Home() {
 
           <ScrollAnimation animation="fade-up">
             <div className="mt-16 flex justify-center">
-              <Button asChild size="lg" className="bg-secondary text-secondary-foreground hover:bg-brand-bright focus:ring-orange-300">
+              <Button asChild variant="primary" size="lg">
                 <Link href="/blog">Ver todos los artículos</Link>
               </Button>
             </div>
@@ -511,11 +511,11 @@ export default function Home() {
             animation="fade-up"
             className="space-y-8 max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl font-black sm:text-5xl text-foreground leading-tight">
+            <h2 className="text-4xl font-black sm:text-5xl text-primary leading-tight">
               ¿Listo para coordinar tu mudanza o flete?
             </h2>
 
-            <p className="text-lg leading-relaxed text-slate-700">
+            <p className="text-lg leading-relaxed text-neutral-600">
 
               Nuestro equipo especializado te asesora en cada etapa: embalaje,
               traslado, depósito y entrega final. Recibí un presupuesto rápido,
@@ -526,31 +526,20 @@ export default function Home() {
               {/* WhatsApp */}
               <Button
                 asChild
+                variant="whatsapp"
                 size="lg"
-                className="
-            bg-[#25D366]
-            hover:bg-[#20BD5A]
-            text-white
-            font-semibold
-            rounded-lg
-            flex
-            items-center
-            gap-3
-            shadow-none
-            border
-            border-black
-          "
               >
                 <Link
                   href="https://wa.me/5493512586221"
                   target="_blank"
                   rel="noopener noreferrer"
+                  className="flex items-center gap-3"
                 >
                   <Image
                     src={wsp}
                     alt="WhatsApp"
-                    width={28}
-                    height={28}
+                    width={24}
+                    height={24}
                     priority
                   />
                   Consultar por WhatsApp
@@ -560,22 +549,10 @@ export default function Home() {
               {/* Ver ubicación */}
               <Button
                 asChild
+                variant="outline"
                 size="lg"
-                className="
-            bg-slate-100
-            hover:bg-slate-100
-            text-slate-900
-            font-semibold
-            rounded-lg
-            flex
-            items-center
-            gap-2
-            shadow-none
-            border
-            border-black
-          "
               >
-                <Link href="/contacto#ubicacion">
+                <Link href="/contacto#ubicacion" className="flex items-center gap-2">
                   <MapPin className="w-5 h-5" />
                   Ver ubicación
                 </Link>
