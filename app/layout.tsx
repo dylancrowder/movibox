@@ -318,9 +318,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Google Ads and Analytics Tags */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-18195477517"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
-        <Script id="google-ads-analytics" strategy="lazyOnload">
+        <Script id="google-ads-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

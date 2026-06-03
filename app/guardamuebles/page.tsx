@@ -20,6 +20,7 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { ImageCarousel } from "@/components/image-carousel";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import image_header from "@/public/galpon.webp";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import GoogleReviews from "@/components/GoogleReviews";
@@ -353,13 +354,13 @@ export default function GuardamueblesPage() {
                   size="lg"
                   className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center justify-center gap-3 shadow-none border border-black w-full sm:w-auto"
                 >
-                <Link
-  href="https://wa.me/5493512586221?text=Hola,%20estoy%20buscando%20un%20guardamuebles%20en%20Córdoba.%20¿Tienen%20disponibilidad?%20Me%20gustaría%20recibir%20información%20y%20ayuda%20para%20cotizar."
-  target="_blank"
->
+                <WhatsAppConversionLink
+                  href="https://wa.me/5493512586221?text=Hola,%20estoy%20buscando%20un%20guardamuebles%20en%20Córdoba.%20¿Tienen%20disponibilidad?%20Me%20gustaría%20recibir%20información%20y%20ayuda%20para%20cotizar."
+                  conversionLabel="guardamuebles_whatsapp_click"
+                >
                     <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                     Calcular mi espacio por WhatsApp
-                  </Link>
+                </WhatsAppConversionLink>
                 </Button>
                 <p className="text-sm text-white/80">Presupuesto real • Respuesta rápida </p>
               </div>
@@ -468,13 +469,13 @@ export default function GuardamueblesPage() {
                     asChild
                     className="mt-8 w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center gap-2 shadow-none border border-black justify-center text-sm"
                   >
-                    <Link
+                    <WhatsAppConversionLink
                       href={`https://wa.me/5493512586221?text=Hola%20quiero%20saber%20el%20precio%20para%20un%20espacio%20de%20${space.size}`}
-                      target="_blank"
+                      conversionLabel="guardamuebles_precio_whatsapp"
                     >
                       <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                       Consultar precio
-                    </Link>
+                    </WhatsAppConversionLink>
                   </Button>
                 </article>
               </ScrollAnimation>
@@ -523,13 +524,13 @@ export default function GuardamueblesPage() {
                 asChild
                 className="bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center gap-2 px-6 py-3 rounded-lg shadow-none border border-black justify-center text-sm w-full sm:w-auto"
               >
-                <Link
+                <WhatsAppConversionLink
                   href="https://wa.me/5493512586221?text=Hola%20necesito%20un%20espacio%20personalizado%20para%20guardamuebles"
-                  target="_blank"
+                  conversionLabel="guardamuebles_personalizado_whatsapp"
                 >
                   <Image src={wsp} alt="WhatsApp" width={18} height={18} />
                   Solicitar espacio personalizado
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </ScrollAnimation>
 
@@ -569,13 +570,13 @@ export default function GuardamueblesPage() {
                 asChild
                 className="bg-secondary hover:bg-brand-bright text-white font-semibold flex items-center gap-2 px-6 py-3 rounded-lg shadow-none border border-black justify-center text-sm w-full sm:w-auto"
               >
-                <Link
+                <WhatsAppConversionLink
                   href="https://wa.me/5493512586221?text=Hola%20quiero%20guardar%20un%20vehículo%20en%20Transporte%20Rojo"
-                  target="_blank"
+                  conversionLabel="guardamuebles_vehiculo_whatsapp"
                 >
                   <Image src={wsp} alt="WhatsApp" width={18} height={18} />
                   Cotizar guarda de vehículo
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </ScrollAnimation>
           </div>
@@ -635,10 +636,10 @@ export default function GuardamueblesPage() {
               <p className="text-sm text-muted-foreground">Galpón propio con vigilancia 24/7</p>
             </div>
             <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2 w-full md:w-auto">
-              <Link href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20necesito%20guardar%20mis%20cosas%20en%20el%20guardamuebles.%20¿Cuál%20es%20el%20presupuesto?" target="_blank">
+              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20necesito%20guardar%20mis%20cosas%20en%20el%20guardamuebles.%20¿Cuál%20es%20el%20presupuesto?" conversionLabel="guardamuebles_cta_whatsapp">
                 <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                 Consultar
-              </Link>
+              </WhatsAppConversionLink>
             </Button>
           </ScrollAnimation>
         </div>
@@ -832,13 +833,13 @@ export default function GuardamueblesPage() {
                   asChild
                   className="mt-8 w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center gap-3 shadow-none border border-black justify-center"
                 >
-                  <Link
+                  <WhatsAppConversionLink
                     href="https://wa.me/5493512586221?text=Hola%20quiero%20visitar%20el%20galpón%20de%20guardamuebles"
-                    target="_blank"
+                    conversionLabel="guardamuebles_visita_whatsapp"
                   >
                     <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                     Coordinar una visita
-                  </Link>
+                  </WhatsAppConversionLink>
                 </Button>
               </div>
             </ScrollAnimation>
@@ -1051,14 +1052,13 @@ export default function GuardamueblesPage() {
               size="lg"
               className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black"
             >
-              <Link
+              <WhatsAppConversionLink
                 href="https://wa.me/5493512586221?text=Hola%20quiero%20un%20presupuesto%20real%20para%20guardamuebles"
-                target="_blank"
-                rel="noopener noreferrer"
+                conversionLabel="guardamuebles_presupuesto_whatsapp"
               >
                 <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                 Obtener presupuesto por WhatsApp
-              </Link>
+              </WhatsAppConversionLink>
             </Button>
           </ScrollAnimation>
         </div>

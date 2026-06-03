@@ -7,6 +7,7 @@ import image_header from "@/public/logisticas.webp";
 import ContactoForm from "@/components/ContactoForm";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
 const faqs = [
@@ -349,10 +350,10 @@ export default function ContactoPage() {
                 <Link href="/mudanzas">Ver servicios de mudanzas</Link>
               </Button>
               <Button size="lg" asChild className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
-                <Link href="https://wa.me/5493512586221" target="_blank">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="contacto_whatsapp_click">
                   <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                   Consultar por WhatsApp
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </div>
           </ScrollAnimation>

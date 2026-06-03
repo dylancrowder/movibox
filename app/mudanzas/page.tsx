@@ -17,6 +17,7 @@ import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import camion from "@/public/images/camion/imagen_fish2.webp";
 import heroImage from "@/public/images/camion/imagen_camion2.webp";
@@ -353,13 +354,13 @@ export default function MudanzasPage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center justify-center gap-3 shadow-none border border-black">
-                 <Link
-  href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
-  target="_blank"
->
+                    <WhatsAppConversionLink
+                      href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
+                      conversionLabel="mudanza_whatsapp_click"
+                    >
                       <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                       Cotizar mudanza
-                    </Link>
+                    </WhatsAppConversionLink>
                   </Button>
                 </div>
               </article>

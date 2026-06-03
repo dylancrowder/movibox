@@ -63,6 +63,9 @@ export default function ContactoForm() {
           'value': 1.0,
           'currency': 'ARS'
         });
+        console.log('📊 Conversion event fired to Google Ads');
+      } else {
+        console.log('⚠️ gtag not available yet');
       }
 
       reset();
