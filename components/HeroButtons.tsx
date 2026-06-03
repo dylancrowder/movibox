@@ -4,7 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
-export default function HeroButtons() {
+interface HeroButtonsProps {
+  whatsappMessage?: string;
+}
+
+export default function HeroButtons({
+  whatsappMessage = "Hola, estoy interesado en sus servicios. ¿Podrían brindarme información y ayudarme con una cotización?",
+}: HeroButtonsProps) {
+  const whatsappUrl = `https://wa.me/5493512586221?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
   return (
     <div className="mt-8 flex justify-center gap-4">
       {/* WhatsApp */}
@@ -25,7 +35,7 @@ export default function HeroButtons() {
         "
       >
         <Link
-          href="https://wa.me/5493512586221"
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
         >

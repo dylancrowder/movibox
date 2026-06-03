@@ -362,10 +362,10 @@ export default function MudanzasPage() {
                     </li>
                   </ul>
                   <Button asChild className="w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center justify-center gap-3 shadow-none border border-black">
-                    <Link
-                      href="https://wa.me/5493512586221?text=Hola%20quiero%20cotizar%20una%20mudanza%20en%20C%C3%B3rdoba"
-                      target="_blank"
-                    >
+                 <Link
+  href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
+  target="_blank"
+>
                       <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                       Cotizar mudanza
                     </Link>
@@ -380,22 +380,7 @@ export default function MudanzasPage() {
       </section>
 
       {/* CTA STICKY SECTION */}
-      <section className="bg-white py-8 border-t border-primary/20 overflow-x-hidden">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-up" className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="space-y-2">
-              <h3 className="text-xl font-bold text-foreground">¿Listo para tu mudanza?</h3>
-              <p className="text-sm text-muted-foreground">Presupuesto gratis, sin compromiso</p>
-            </div>
-            <Button asChild size="lg" className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2 w-full md:w-auto">
-              <Link href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20quiero%20una%20cotización%20gratis%20para%20una%20mudanza%20en%20Córdoba." target="_blank">
-                <Image src={wsp} alt="WhatsApp" width={20} height={20} />
-                Cotizar
-              </Link>
-            </Button>
-          </ScrollAnimation>
-        </div>
-      </section>
+    
 
       {/* PROCESO SIMPLE */}
       <section className="bg-muted py-16 sm:py-32 overflow-x-hidden">
@@ -484,8 +469,8 @@ export default function MudanzasPage() {
                 size="lg"
                 className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center justify-center gap-3 shadow-none border border-black w-full sm:w-auto"
                 >
-               <Link
-  href="https://wa.me/5493512586221?text=Hola%20Transporte%20Rojo,%20quiero%20una%20cotizaci%C3%B3n%20gratis%20para%20una%20mudanza%20en%20C%C3%B3rdoba."
+<Link
+  href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
   target="_blank"
 >
   <Image src={wsp} alt="WhatsApp" width={24} height={24} />

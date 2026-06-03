@@ -119,6 +119,7 @@ export function Navbar() {
               aria-label="Menú móvil"
             >
               <div className="flex flex-col gap-6 mt-10">
+              
                 <Link
                   href="/"
                   onClick={handleLinkClick}

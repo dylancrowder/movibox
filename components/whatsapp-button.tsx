@@ -16,7 +16,7 @@ const whatsappMessages: Record<string, string> = {
     "Hola, quiero conocer más sobre sus servicios de mudanzas, fletes y guardamuebles",
 
   "/mudanzas":
-    "Hola, necesito mudanza en Córdoba. ¿Hacen embalaje y descarga? Presupuesto sin cargo",
+    "Hola, necesito realizar una mudanza en Córdoba. ¿Tienen disponibilidad? Me gustaría recibir información y una cotización.",
 
   "/fletes":
     "Hola, necesito flete en Córdoba para trasladar muebles o mercadería",
