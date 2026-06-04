@@ -388,7 +388,7 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
-      {/* ESPACIOS DE 5, 10 Y 15 METROS */}
+      {/* ESPACIOS DE 5, 10 Y 15 METROS CÚBICOS */}
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
@@ -396,18 +396,20 @@ export default function GuardamueblesPage() {
               Espacios disponibles
             </span>
             <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
-              Guardamuebles de 5, 10 y 15 metros
+              Guardamuebles de 5 m³, 10 m³ y 15 m³
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Elige el tamaño de espacio que necesitas. Cada metro está señalizado y separado. Consultá el precio exacto por WhatsApp.
+              Elige el tamaño de espacio que necesitas. Todos los boxes son individuales, están señalizados y cuentan con acceso controlado. Consultá disponibilidad y precio exacto por WhatsApp.
             </p>
           </ScrollAnimation>
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
               {
-                size: "5 metros",
-                dimension: "Espacio compacto",
+                size: "5 m³",
+                badge: "Ideal para monoambientes",
+                description: "Box compacto",
+                dimensions: "2 m × 1,25 m × 2 m",
                 icon: Package,
                 items: [
                   "Habitación de monoambiente",
@@ -420,12 +422,14 @@ export default function GuardamueblesPage() {
                 price: "$59.900",
               },
               {
-                size: "10 metros",
-                dimension: "Espacio estándar",
+                size: "10 m³",
+                badge: "Ideal para 1 dormitorio",
+                description: "Box estándar",
+                dimensions: "2,5 m × 2 m × 2 m",
                 icon: Warehouse,
                 items: [
                   "1 dormitorio completo",
-                  "Comedor + sillas",
+                  "Comedor con sillas",
                   "Heladera y lavarropa",
                   "Escritorio y biblioteca",
                   "Equipos y electrónica",
@@ -434,8 +438,10 @@ export default function GuardamueblesPage() {
                 price: "$109.900",
               },
               {
-                size: "15 metros",
-                dimension: "Espacio amplio",
+                size: "15 m³",
+                badge: "Ideal para mudanzas completas",
+                description: "Box amplio",
+                dimensions: "3 m × 2,5 m × 2 m",
                 icon: Truck,
                 items: [
                   "2 dormitorios completos",
@@ -449,16 +455,31 @@ export default function GuardamueblesPage() {
               },
             ].map((space, index) => (
               <ScrollAnimation key={space.size} animation="fade-up" delay={index * 120}>
-                <article className="h-full rounded-lg p-6 sm:p-8 border border-neutral-300 bg-white flex flex-col justify-between shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden">
+                <article className="h-full rounded-lg p-6 sm:p-8 border border-neutral-300 bg-white flex flex-col justify-between shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden relative">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className="rounded-full bg-primary-50 p-3 text-primary">
+                      <div className="rounded-full bg-primary-50 p-3 text-primary flex-shrink-0">
                         <space.icon className="h-6 w-6" />
                       </div>
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-2xl font-bold text-primary">{space.size}</h3>
-                        <p className="text-sm text-neutral-600">{space.dimension}</p>
+                        <p className="text-sm text-neutral-600 mt-1">{space.description}</p>
                       </div>
+                    </div>
+
+                    <div className="inline-flex items-center bg-secondary-100 text-secondary-700 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wide">
+                      {space.badge}
+                    </div>
+
+                    <div className="bg-neutral-50 rounded-lg p-4 border border-neutral-200">
+                      <p className="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">
+                        Medidas del box
+                      </p>
+                      <p className="text-sm font-medium text-neutral-800 flex items-center gap-2">
+                        <Ruler className="h-4 w-4 text-secondary-600" />
+                        {space.dimensions}
+                      </p>
+                      <p className="text-xs text-neutral-600 mt-2">Largo × Ancho × Alto</p>
                     </div>
 
                     <div className="bg-secondary-50 rounded-lg p-4 border border-secondary-200">
@@ -470,8 +491,8 @@ export default function GuardamueblesPage() {
                     </div>
 
                     <div>
-                      <p className="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-2">
-                        Aproximadamente cabe
+                      <p className="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-3">
+                        Elementos que caben
                       </p>
                       <ul className="space-y-2">
                         {space.items.map((item) => (
