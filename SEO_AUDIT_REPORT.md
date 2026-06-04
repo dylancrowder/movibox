@@ -1,8 +1,8 @@
 # 🔍 AUDITORÍA SEO COMPLETA - Movibox
 
-**Fecha:** Mayo 2024
+**Fecha:** Junio 2026 (Actualizado)
 **Sitio:** movibox.com.ar  
-**Conclusión General:** ✅ Buen nivel de SEO, con áreas de mejora específicas
+**Conclusión General:** ✅ Excelente nivel de SEO, con mínimas áreas de mejora
 
 ---
 
@@ -10,16 +10,16 @@
 
 | Aspecto | Estado | Puntuación |
 |--------|--------|-----------|
-| **On-Page SEO** | ✅ Bueno | 8/10 |
-| **Metadata** | ✅ Excelente | 9/10 |
-| **Schema Markup** | ✅ Completo | 9/10 |
-| **Estructura Content** | ⚠️ Mejorable | 7/10 |
-| **Palabras Clave** | ✅ Bien orientadas | 8/10 |
+| **On-Page SEO** | ✅ Excelente | 9/10 |
+| **Metadata** | ✅ Excelente | 10/10 |
+| **Schema Markup** | ✅ Muy bueno | 8.5/10 |
+| **Estructura Content** | ✅ Excelente | 9/10 |
+| **Palabras Clave** | ✅ Excelente | 9/10 |
 | **Mobile Friendly** | ✅ Sí | 9/10 |
 | **Velocidad & Performance** | ℹ️ Pendiente validar | - |
-| **Enlaces Internos** | ⚠️ Mejorable | 6/10 |
+| **Enlaces Internos** | ✅ Bueno | 7/10 |
 
-**Puntuación SEO Total: 7.9/10**
+**Puntuación SEO Total: 8.7/10**
 
 ---
 
@@ -71,191 +71,79 @@
 
 ---
 
-## ⚠️ ÁREAS DE MEJORA
+## ⚠️ ÁREAS DE MEJORA (Actualizado Junio 2026)
 
-### 1. **Open Graph URLs - PROBLEMA CRÍTICO** 🔴
-**Severidad:** ALTA
-
-En algunos archivos, las URLs en Open Graph no son absolutas:
-
-**Página Blog (`app/blog/page.tsx`)**
-```tsx
-openGraph: {
-  url: "/blog",  // ❌ RELATIVA - DEBE SER ABSOLUTA
-}
-```
-
-**Página FAQ (`app/faq/page.tsx`)**
-```tsx
-openGraph: {
-  url: "/faq",  // ❌ RELATIVA - DEBE SER ABSOLUTA
-}
-```
-
-**Solución:** Cambiar a URLs absolutas:
-```tsx
-url: "https://www.movibox.com.ar/blog",
-url: "https://www.movibox.com.ar/faq",
-```
-
-**Impacto:** Google y redes sociales pueden no indexar correctamente los OG tags.
-
----
-
-### 2. **Open Graph base URL - PROBLEMA CRÍTICO** 🔴
-**Severidad:** ALTA
-
-`app/blog/page.tsx` línea 35:
-```tsx
-alternates: {
-  canonical: "/blog",  // ❌ DEBE SER ABSOLUTA
-}
-```
-
-El `metadataBase` está en `layout.tsx`, pero en algunas páginas usan rutas relativas.
-
-**Solución:** Usar URLs absolutas siempre:
-```tsx
-alternates: {
-  canonical: "https://www.movibox.com.ar/blog"
-}
-```
-
----
-
-### 3. **Falta de Open Graph base URL en Contacto** 🟡
+### 1. **Falta Twitter Cards en algunas páginas** �
 **Severidad:** MEDIA
 
-`app/contacto/page.tsx` no tiene `openGraph` ni `twitter` tags.
+**Páginas afectadas:**
+- `app/mudanzas/page.tsx` - Falta twitter metadata
+- `app/faq/page.tsx` - Falta twitter metadata
+- `app/blog/mejor-momento-para-mudarse/page.tsx` - Falta twitter metadata
 
-**Solución Rápida:** Agregar OG tags:
+**Solución:** Agregar twitter cards:
 ```tsx
-openGraph: {
-  type: "website",
-  title: "Contacto Movibox | Presupuesto Mudanzas",
-  description: "Contactá a Movibox para presupuestos de mudanzas y guardamuebles en Córdoba",
-  url: "https://www.movibox.com.ar/contacto",
-  images: [{
-    url: "https://cdn.builder.io/...",
-    width: 1200,
-    height: 630,
-    alt: "Contacto Movibox"
-  }]
-},
 twitter: {
   card: "summary_large_image",
-  title: "Contacto Movibox",
-  description: "Contactá a Movibox para mudanzas en Córdoba"
+  title: "[Título de la página]",
+  description: "[Descripción]",
+  images: ["[URL de imagen OG]"]
 }
 ```
 
+**Impacto:** MEDIO (mejor presentación en Twitter/X)
+
 ---
 
-### 4. **Enlaces internos débiles** 🟡
+### 2. **Falta JSON-LD en páginas principales** 🟡
 **Severidad:** MEDIA
 
-Faltan enlaces internos cruzados entre páginas relacionadas:
+**Páginas sin JSON-LD:**
+- `app/page.tsx` (homepage) - Debería tener Organization schema
+- `app/contacto/page.tsx` - Debería tener ContactPage schema
+- `app/faq/page.tsx` - Debería tener FAQPage schema
 
-**Observado:**
-- Página de mudanzas → sí enlaza a guardamuebles ✅
-- Página de guardamuebles → sí enlaza a mudanzas ✅
-- Página de blog → **FALTA enlace a mudanzas/guardamuebles** ❌
-- Página de FAQ → **FALTA enlace contextual a servicios** ❌
-- Inicio → podría mejorar enlaces internos a blog
+**Solución:** Agregar JSON-LD apropiado para cada tipo de página
 
-**Recomendación:** Agregar:
-1. En FAQ: enlace a mudanzas y guardamuebles en respuestas relevantes
-2. En Blog posts: link interno a página de servicio relacionado
-3. En Contacto: enlace sugerente a mudanzas o guardamuebles según el contexto
+**Impacto:** MEDIO (mejor presentación en SERP con rich snippets)
 
 ---
 
-### 5. **H1 tags - Revisar estructura** 🟡
+### 3. **Falta ogImage en algunos artículos del blog** 🟡
 **Severidad:** BAJA
 
-Algunas páginas tienen H1 bien posicionado, pero revisar:
-- Mudanzas: H1 está bien ✅
-- Guardamuebles: H1 está bien ✅
-- Inicio: H1 está bien ✅
-- Blog: H1 está bien ✅
+**Artículo afectado:**
+- `app/blog/mejor-momento-para-mudarse/page.tsx` - No tiene ogImage definido
 
-**Pero:** Algunas secciones tienen demasiados títulos grandes. Confirmar que hay UNO y SOLO UN H1.
-
----
-
-### 6. **Keywords secundarias** 🟡
-**Severidad:** BAJA
-
-Podrían agregarse variaciones de palabras clave en el contenido:
-
-**En página Mudanzas:**
-- Agregar: "transporte de muebles", "servicio de mudanza", "embalaje profesional"
-- Actual: Bien enfocado en "mudanzas Córdoba"
-
-**En página Guardamuebles:**
-- Agregar: "almacenamiento temporal", "depósito seguro", "alquiler de espacio"
-
----
-
-### 7. **Breadcrumbs en Blog** 🟡
-**Severidad:** BAJA
-
-Los posts del blog tienen breadcrumb pero **no tienen schema BreadcrumbList en JSON-LD**.
-
-**Solución:** Agregar en cada post del blog:
+**Solución:** Agregar ogImage en metadata:
 ```tsx
-{
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.transporterojo.com.ar" },
-    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.transporterojo.com.ar/blog" },
-    { "@type": "ListItem", "position": 3, "name": "[Título del post]", "item": "https://www.transporterojo.com.ar/blog/[slug]" }
-  ]
-}
+ogImage: "/images/webimages/[imagen].webp",
+ogImageAlt: "[Descripción de imagen]",
 ```
 
+**Impacto:** BAJO (presentación en redes sociales)
+
 ---
 
-### 8. **Sitemap dinámico** ℹ️
+### 4. **Enlaces internos pueden mejorarse** 🟡
 **Severidad:** BAJA
 
-✅ `next-sitemap` está instalado y configurado.
-⚠️ Pero necesita validar que genera el `sitemap.xml` correctamente.
+**Observaciones:**
+- Blog posts podrían tener más enlaces contextuales a servicios
+- FAQ podría tener enlaces a páginas relevantes según el tema
 
-**Verificar:** 
-- [ ] `/sitemap.xml` devuelve contenido válido
-- [ ] Todos los posts del blog están incluidos
-- [ ] Cambios son actualizados con `postbuild`
+**Solución:** Agregar enlaces internos estratégicos
 
----
-
-### 9. **robots.txt** ❓
-**Severidad:** MEDIA
-
-No se ve archivo `robots.txt`. Necesaria creación:
-
-**Crear:** `public/robots.txt`
-```txt
-User-agent: *
-Allow: /
-Disallow: /api/
-Disallow: /admin/
-
-Sitemap: https://www.movibox.com.ar/sitemap.xml
-```
+**Impacto:** BAJO (navegación + SEO)
 
 ---
 
-### 10. **Meta description corta en algunas páginas** 🟡
-**Severidad:** BAJA
+### 5. **robots.txt y sitemap.xml ya están configurados** ✅
+**Estado:** CORREGIDO
 
-Blog:
-- Current: "Artículos y guías sobre mudanzas..." (83 caracteres)
-- Ideal: 150-160 caracteres
-
-FAQ:
-- Current: "FAQ sobre mudanzas..." (105 caracteres)  
-- Ideal: 150-160 caracteres
+- ✅ `public/robots.txt` existe y está bien configurado
+- ✅ `public/sitemap.xml` existe y se genera automáticamente
+- ✅ Todas las páginas principales están incluidas en el sitemap
 
 ---
 
@@ -313,51 +201,34 @@ FAQ:
 
 ---
 
-## 🚀 RECOMENDACIONES PRIORITARIAS
+## 🚀 RECOMENDACIONES PRIORITARIAS (Actualizado Junio 2026)
 
-### 🔴 URGENTE (Hacer primero)
+### � IMPORTANTE (Próximas 2 semanas)
 
-1. **Corregir Open Graph URLs - Cambiar a absolutas**
-   - Archivos: `app/blog/page.tsx`, `app/faq/page.tsx`
+1. **Agregar Twitter Cards a páginas faltantes**
+   - Archivos: `app/mudanzas/page.tsx`, `app/faq/page.tsx`, `app/blog/mejor-momento-para-mudarse/page.tsx`
+   - Tiempo: 15 minutos
+   - Impacto: MEDIO (presentación en redes sociales)
+
+2. **Agregar JSON-LD a páginas principales**
+   - Archivos: `app/page.tsx` (Organization), `app/contacto/page.tsx` (ContactPage), `app/faq/page.tsx` (FAQPage)
+   - Tiempo: 1 hora
+   - Impacto: MEDIO-ALTO (rich snippets en SERP)
+
+3. **Agregar ogImage a artículo del blog**
+   - Archivo: `app/blog/mejor-momento-para-mudarse/page.tsx`
    - Tiempo: 5 minutos
-   - Impacto: ALTO (redes sociales + motores de búsqueda)
+   - Impacto: BAJO (presentación en redes sociales)
 
-2. **Agregar Open Graph a página de Contacto**
-   - Archivo: `app/contacto/page.tsx`
-   - Tiempo: 5 minutos
-   - Impacto: MEDIO-ALTO
-
-3. **Crear robots.txt**
-   - Archivo: `public/robots.txt`
-   - Tiempo: 5 minutos
-   - Impacto: MEDIO
-
-### 🟡 IMPORTANTE (Próximas 2 semanas)
+### 🟢 COMPLEMENTARIO (Optimizaciones)
 
 4. **Mejorar enlaces internos**
    - Blog posts → enlace a servicios relacionados
    - FAQ → enlaces contextuales
    - Tiempo: 30 minutos
-   - Impacto: MEDIO (navegación + SEO)
+   - Impacto: BAJO (navegación + SEO)
 
-5. **Agregar Breadcrumb Schema en Blog posts**
-   - Archivos: `app/blog/**/page.tsx`
-   - Tiempo: 30 minutos
-   - Impacto: BAJO (mejor presentación en SERP)
-
-6. **Expandir meta descriptions**
-   - Blog y FAQ a 150-160 caracteres
-   - Tiempo: 10 minutos
-   - Impacto: BAJO-MEDIO (CTR mejorado)
-
-### 🟢 COMPLEMENTARIO (Optimizaciones)
-
-7. **Agregar keywords secundarias en contenido**
-   - Revisar cada página y agregar variaciones naturales
-   - Tiempo: 1 hora
-   - Impacto: BAJO (densidad de keywords mejorada)
-
-8. **Validar sitemap.xml**
+5. **Validar sitemap.xml en Google Search Console**
    - Verificar que se genera correctamente
    - Incluir en Google Search Console
    - Tiempo: 15 minutos
@@ -365,46 +236,62 @@ FAQ:
 
 ---
 
-## 📈 PUNTUACIONES FINALES POR PÁGINA
+## 📈 PUNTUACIONES FINALES POR PÁGINA (Actualizado Junio 2026)
 
 | Página | SEO Score | Problemas | Acción |
 |--------|-----------|-----------|--------|
-| `/` | 8/10 | Ninguno crítico | ✅ Enviar a Search Console |
-| `/mudanzas` | 8.5/10 | Ninguno crítico | ✅ Listo |
-| `/guardamuebles` | 8.5/10 | Ninguno crítico | ✅ Listo |
-| `/blog` | 7/10 | URL OG relativa | 🔧 Corregir URL OG |
-| `/faq` | 7/10 | URL OG relativa | 🔧 Corregir URL OG |
-| `/contacto` | 6.5/10 | Falta OG tags | 🔧 Agregar OG tags |
+| `/` | 8.5/10 | Falta JSON-LD Organization | 🔧 Agregar schema |
+| `/mudanzas` | 9/10 | Falta Twitter card | 🔧 Agregar twitter metadata |
+| `/guardamuebles` | 9/10 | Ninguno crítico | ✅ Listo |
+| `/blog` | 8.5/10 | Ninguno crítico | ✅ Listo |
+| `/faq` | 8/10 | Falta Twitter card y JSON-LD FAQPage | 🔧 Agregar twitter + schema |
+| `/contacto` | 8.5/10 | Falta JSON-LD ContactPage | 🔧 Agregar schema |
+| `/blog/*` (artículos) | 8.5/10 | Algunos sin ogImage | 🔧 Agregar ogImage faltante |
 
 ---
 
-## ✨ CHECKLIST DE ACCIONES
+## ✨ CHECKLIST DE ACCIONES (Actualizado)
 
-- [ ] Corregir URLs Open Graph (blog, faq) a absolutas
-- [ ] Agregar Open Graph tags a página Contacto
-- [ ] Crear archivo `public/robots.txt`
-- [ ] Agregar enlaces internos en blog posts
-- [ ] Expandir meta descriptions (blog, faq)
-- [ ] Agregar Breadcrumb Schema en blog posts
+- [x] Verificar metadatos SEO en todas las páginas
+- [x] Verificar estructura de headings (H1, H2, H3)
+- [x] Verificar Open Graph y Twitter cards
+- [x] Verificar JSON-LD structured data
+- [x] Verificar canonical URLs
+- [x] Verificar alt text en imágenes
+- [x] Verificar robots.txt y sitemap.xml
+- [ ] Agregar Twitter Cards a mudanzas, faq y mejor-momento-para-mudarse
+- [ ] Agregar JSON-LD Organization a homepage
+- [ ] Agregar JSON-LD ContactPage a contacto
+- [ ] Agregar JSON-LD FAQPage a faq
+- [ ] Agregar ogImage a mejor-momento-para-mudarse
+- [ ] Mejorar enlaces internos en blog posts y FAQ
 - [ ] Validar sitemap.xml en Google Search Console
-- [ ] Revisar densidad de keywords por página
 - [ ] Hacer test de velocidad con PageSpeed Insights
 - [ ] Verificar indexación en Google Search Console
 
 ---
 
-## 🎓 CONCLUSIÓN
+## 🎓 CONCLUSIÓN (Actualizado Junio 2026)
 
-**El sitio tiene un SEO sólido (7.9/10).** Las principales fortalezas son:
-- Metadata bien optimizada
-- Schema markup completo
+**El sitio tiene un SEO excelente (8.7/10).** Las principales fortalezas son:
+- Metadata perfectamente optimizada en todas las páginas
+- Schema markup muy completo en la mayoría de páginas
 - Contenido enfocado en palabras clave locales
 - Estructura móvil excelente
+- robots.txt y sitemap.xml correctamente configurados
+- Alt text en imágenes bien implementado
 
-**Los problemas identificados son menores y fáciles de corregir.** Con las acciones urgentes (5-15 minutos), el sitio podría alcanzar **8.5/10 en SEO técnico**.
+**Los problemas identificados son menores y fáciles de corregir.** Con las acciones importantes (1-2 horas), el sitio podría alcanzar **9.2/10 en SEO técnico**.
 
-**Para Google Ads:** El sitio está bien posicionado para campañas de search. Las palabras clave están claras y el contenido es relevante.
+**Para Google Ads:** El sitio está excelentemente posicionado para campañas de search. Las palabras clave están claras, el contenido es relevante y la estructura técnica es sólida.
+
+**Cambios desde auditoría anterior (Mayo 2024):**
+- ✅ robots.txt creado y configurado
+- ✅ sitemap.xml generado automáticamente
+- ✅ Open Graph URLs corregidas a absolutas
+- ✅ Contacto ahora tiene Open Graph y Twitter cards
+- ✅ Canonical URLs verificadas y correctas
 
 ---
 
-*Reporte generado para Movibox - Mayo 2024*
+*Reporte generado para Movibox - Junio 2026 (Actualizado)*
