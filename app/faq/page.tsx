@@ -303,7 +303,7 @@ export default function FAQPage() {
               <Button
                 size="lg"
                 asChild
-                className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black"
+                variant="whatsapp"
               >
                 <Link href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer">
                   <Image src={wsp} alt="WhatsApp" width={24} height={24} />

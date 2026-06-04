@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Star, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ScrollAnimation } from '@/components/scroll-animation';
+import { Button } from '@/components/ui/button';
 
 interface Review {
   id: string;
@@ -174,37 +175,48 @@ export default function GoogleReviews({
           {/* Navigation Buttons */}
           {reviews.length > 3 && (
             <div className="flex gap-2 justify-center mt-8">
-              <button
+              <Button
                 onClick={handlePrev}
-                className="p-2 rounded-full border border-secondary/70 bg-white hover:bg-secondary-50 transition"
+                variant="outline"
+                size="icon"
+                className="rounded-full border-secondary/70 bg-white hover:bg-secondary-50"
                 aria-label="Reseñas anteriores"
                 title="Reseñas anteriores"
               >
                 <ChevronLeft className="h-5 w-5 text-secondary-600" />
-              </button>
-              <button
+              </Button>
+              <Button
                 onClick={handleNext}
-                className="p-2 rounded-full border border-secondary/70 bg-white hover:bg-secondary-50 transition"
+                variant="outline"
+                size="icon"
+                className="rounded-full border-secondary/70 bg-white hover:bg-secondary-50"
                 aria-label="Siguientes reseñas"
                 title="Siguientes reseñas"
               >
                 <ChevronRight className="h-5 w-5 text-secondary-600" />
-              </button>
+              </Button>
             </div>
           )}
         </div>
 
         {/* Google Badge */}
         <div className="mt-16 flex justify-center">
-          <a
-            href="https://www.google.com/search?q=Movibox+Cordoba"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-secondary/70 bg-white shadow-sm hover:shadow-md transition text-sm font-semibold text-secondary-600 hover:text-secondary-700"
+          <Button
+            asChild
+            variant="outline"
+            size="default"
+            className="border-secondary/70 bg-white shadow-sm hover:shadow-md text-secondary-600 hover:text-secondary-700"
           >
-            <span>Ver todas las reseñas en Google</span>
-            <span>→</span>
-          </a>
+            <a
+              href="https://www.google.com/search?q=Movibox+Cordoba"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2"
+            >
+              Ver todas las reseñas en Google
+              <span>→</span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

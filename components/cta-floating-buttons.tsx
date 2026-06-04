@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import {
   Clock,
   Archive,
@@ -18,19 +19,19 @@ export function CtaFloatingButtons() {
     {
       icon: Truck,
       label: "Solicitar Mudanza",
-      color: "bg-gradient-to-r from-brand-orange to-orange-600",
+      variant: "primary" as const,
       href: "https://wa.me/5493512586221?text=Hola,%20necesito%20una%20mudanza%20en%20Córdoba.",
     },
     {
       icon: Archive,
       label: "Solicitar Guardamuebles",
-      color: "bg-gradient-to-r from-brand-darkblue to-brand-lightblue",
+      variant: "secondary" as const,
       href: "https://wa.me/5493512586221?text=Hola,%20necesito%20información%20sobre%20guardamuebles.",
     },
     {
       icon: Clock,
       label: "Servicio 24hs",
-      color: "bg-gradient-to-r from-brand-orange via-orange-600 to-brand-orange",
+      variant: "primary" as const,
       href: "https://wa.me/5493512586221?text=Hola,%20necesito%20un%20servicio%20urgente%2024hs.",
     },
   ];
@@ -55,28 +56,21 @@ export function CtaFloatingButtons() {
                 href={button.href}
                 target="_blank"
                 onClick={() => handleClick(button.label)}
-                className={`
-                  flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2
-                  px-2 md:px-4 py-2 md:py-3 rounded-lg md:rounded-lg
-                  text-white font-bold text-xs md:text-sm
-                  shadow-lg shadow-black/30
-                  transition-all duration-300
-                  hover:scale-105 md:hover:scale-108 hover:shadow-xl
-                  active:scale-95
-                  border-2 border-white/30
-                  backdrop-blur-sm
-                  relative overflow-hidden
-                  group
-                  ${button.color}
-                `}
+                className="relative overflow-hidden group"
                 title={button.label}
                 style={{
                   animation: `slideUp 0.5s ease-out ${index * 0.1}s both`,
                 }}
               >
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <Icon className="h-4 md:h-4 w-4 md:w-4 relative z-10 transition-transform group-hover:scale-125 group-hover:-translate-y-1 flex-shrink-0" />
-                <span className="relative z-10 text-center md:text-left whitespace-normal md:whitespace-nowrap">{button.label}</span>
+                <Button
+                  variant={button.variant}
+                  size="sm"
+                  className="w-full h-auto py-2 md:py-3 flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 font-bold text-xs md:text-sm shadow-lg hover:scale-105 active:scale-95 border-2 border-white/30 backdrop-blur-sm"
+                >
+                  <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  <Icon className="h-4 w-4 relative z-10 transition-transform group-hover:scale-125 group-hover:-translate-y-1 flex-shrink-0" />
+                  <span className="relative z-10 text-center md:text-left whitespace-normal md:whitespace-nowrap">{button.label}</span>
+                </Button>
               </Link>
             );
           })}

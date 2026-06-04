@@ -187,7 +187,7 @@ export default function ContactoPage() {
             animation="fade-up"
             className="mx-auto mb-16 max-w-3xl text-center space-y-6"
           >
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Canales de contacto
             </span>
             <h2 className="text-balance text-4xl font-black sm:text-5xl text-foreground leading-tight">
@@ -316,7 +316,7 @@ export default function ContactoPage() {
       <section className="bg-muted py-32">
         <div className="container px-4 md:px-6">
           <ScrollAnimation animation="fade-up" className="mx-auto mb-16 max-w-3xl text-center space-y-6">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Preguntas frecuentes
             </span>
             <h2 className="text-balance text-4xl font-black sm:text-5xl text-foreground leading-tight">
@@ -349,7 +349,7 @@ export default function ContactoPage() {
               <Button size="lg" asChild>
                 <Link href="/mudanzas">Ver servicios de mudanzas</Link>
               </Button>
-              <Button size="lg" asChild className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
+              <Button size="lg" asChild variant="whatsapp">
                 <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="contacto_whatsapp_click">
                   <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                   Consultar por WhatsApp

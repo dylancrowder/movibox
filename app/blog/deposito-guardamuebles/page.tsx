@@ -391,7 +391,7 @@ export default function DepositoGuardamueblesPage() {
                   <Button asChild className="w-full">
                     <a href="tel:+5493512586221">Llamar: 351 258-6221</a>
                   </Button>
-                  <Button asChild className="w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center justify-center gap-2 shadow-none border border-black">
+                  <Button asChild variant="whatsapp">
                     <a href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer">
                       WhatsApp
                     </a>

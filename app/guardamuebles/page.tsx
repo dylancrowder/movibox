@@ -392,10 +392,10 @@ export default function GuardamueblesPage() {
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Espacios disponibles
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Guardamuebles de 5, 10 y 15 metros
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -449,7 +449,7 @@ export default function GuardamueblesPage() {
               },
             ].map((space, index) => (
               <ScrollAnimation key={space.size} animation="fade-up" delay={index * 120}>
-                <article className="h-full rounded-md p-6 sm:p-8 border border-neutral-300 bg-white flex flex-col justify-between shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden">
+                <article className="h-full rounded-lg p-6 sm:p-8 border border-neutral-300 bg-white flex flex-col justify-between shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="rounded-full bg-primary-50 p-3 text-primary">
@@ -461,11 +461,11 @@ export default function GuardamueblesPage() {
                       </div>
                     </div>
 
-                    <div className="bg-secondary-50 rounded-md p-4 border border-secondary-200">
+                    <div className="bg-secondary-50 rounded-lg p-4 border border-secondary-200">
                       <p className="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">
                         Precio mensual
                       </p>
-                      <p className="text-2xl font-bold text-secondary-700">{space.price}</p>
+                      <p className="text-2xl font-bold text-secondary-600">{space.price}</p>
                       <p className="text-xs text-neutral-600 mt-2">*Presupuesto exacto por WhatsApp</p>
                     </div>
 
@@ -512,10 +512,10 @@ export default function GuardamueblesPage() {
             {/* Espacios Personalizados */}
             <ScrollAnimation animation="fade-up" className="space-y-8">
               <div className="space-y-4">
-                <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+                <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
                   Opción flexible
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-black leading-tight text-primary">
+                <h2 className="text-h3-mobile sm:text-h3-tablet lg:text-h3-desktop leading-tight text-primary">
                   Espacios personalizados
                 </h2>
               </div>
@@ -560,10 +560,10 @@ export default function GuardamueblesPage() {
             {/* Guarda de Vehículos */}
             <ScrollAnimation animation="fade-up" delay={100} className="space-y-8">
               <div className="space-y-4">
-                <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
+                <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-600 bg-secondary/10 px-3 py-1.5 rounded-full">
                   Servicio especial
                 </span>
-                <h2 className="text-3xl sm:text-4xl font-black leading-tight text-primary">
+                <h2 className="text-h3-mobile sm:text-h3-tablet lg:text-h3-desktop leading-tight text-primary">
                   Guardamos vehículos
                 </h2>
               </div>
@@ -612,7 +612,7 @@ export default function GuardamueblesPage() {
       <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6">
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
               Tus muebles no son solo objetos
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -626,10 +626,10 @@ export default function GuardamueblesPage() {
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Por qué elegirnos
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Lo que nos diferencia
             </h2>
           </ScrollAnimation>
@@ -637,7 +637,7 @@ export default function GuardamueblesPage() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((b, index) => (
               <ScrollAnimation key={b.title} animation="fade-up" delay={index * 120}>
-                <article className="h-full rounded-md border border-neutral-300 bg-neutral-50 p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
+                <article className="h-full rounded-lg border border-neutral-300 bg-neutral-50 p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
                   <div className="rounded-full bg-secondary-500 w-fit p-3 text-white mb-4">
                     <b.icon className="h-6 w-6" />
                   </div>
@@ -674,10 +674,10 @@ export default function GuardamueblesPage() {
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Es fácil
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
               3 pasos para guardar tus cosas
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -701,7 +701,7 @@ export default function GuardamueblesPage() {
               },
             ].map((item, index) => (
               <ScrollAnimation key={item.step} animation="fade-up" delay={index * 120}>
-                <div className="bg-white p-8 rounded-md border border-neutral-300 text-left shadow-card hover:shadow-card-hover hover:-translate-y-1">
+                <div className="bg-white p-8 rounded-lg border border-neutral-300 text-left shadow-card hover:shadow-card-hover hover:-translate-y-1">
                   <h3 className="font-bold text-lg text-primary mb-3">{item.step}</h3>
                   <p className="text-sm text-neutral-600 leading-relaxed">{item.description}</p>
                 </div>
@@ -715,11 +715,11 @@ export default function GuardamueblesPage() {
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 grid gap-8 sm:gap-16 lg:grid-cols-2 items-center max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="space-y-8">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-600 bg-secondary/10 px-3 py-1.5 rounded-full">
               Galpón propio
             </span>
 
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
               Buscamos tus cosas y las guardamos a salvo por el tiempo que necesites
             </h2>
 
@@ -766,10 +766,10 @@ export default function GuardamueblesPage() {
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Cobertura local
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Guardamuebles en Córdoba Capital y alrededores
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -783,10 +783,10 @@ export default function GuardamueblesPage() {
       <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary-700 bg-primary-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Ubicación
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
               Dónde estamos ubicados
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -796,7 +796,7 @@ export default function GuardamueblesPage() {
 
           <div className="grid gap-8 lg:grid-cols-2 items-center">
             <ScrollAnimation animation="fade-up" className="space-y-6">
-              <div className="bg-white rounded-md p-8 border border-neutral-300 shadow-card">
+              <div className="bg-white rounded-lg p-8 border border-neutral-300 shadow-card">
                 <h3 className="text-2xl font-bold mb-6 text-primary">Información de contacto</h3>
 
                 <div className="space-y-6">
@@ -856,7 +856,9 @@ export default function GuardamueblesPage() {
 
                 <Button
                   asChild
-                  className="mt-8 w-full bg-brand-deep hover:bg-brand-bright text-white font-semibold flex items-center gap-3 shadow-none border border-black justify-center"
+                  variant="whatsapp"
+                  size="lg"
+                  className="mt-8 w-full"
                 >
                   <WhatsAppConversionLink
                     href="https://wa.me/5493512586221?text=Hola%20quiero%20visitar%20el%20galpón%20de%20guardamuebles"
@@ -870,7 +872,7 @@ export default function GuardamueblesPage() {
             </ScrollAnimation>
 
             <ScrollAnimation animation="slide-in-right">
-              <div className="rounded-md overflow-hidden shadow-card-hover h-96">
+              <div className="rounded-lg overflow-hidden shadow-card-hover h-96">
                 <iframe
                   title="Ubicación de Guardamuebles Movibox Logística en Córdoba"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.386001258131!2d-64.13761962363223!3d-31.40348947426776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bdb06350fce1%3A0xfb8e2b8b3f0115a7!2sTransporte%20Rojo!5e0!3m2!1ses!2sar!4v1764611451965!5m2!1ses!2sar"
@@ -898,10 +900,10 @@ export default function GuardamueblesPage() {
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Situaciones comunes
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Casos donde guardar muebles es la mejor opción
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -960,10 +962,10 @@ export default function GuardamueblesPage() {
       <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-blue-700 bg-blue-100 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Dudas comunes
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
               Lo que necesitás saber
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
@@ -1024,10 +1026,10 @@ export default function GuardamueblesPage() {
       <section className="py-16 sm:py-32 bg-white overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-brand-deep bg-primary/10 px-3 py-1.5 rounded-full">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Preguntas frecuentes
             </span>
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Dudas sobre precio y seguridad
             </h2>
           </ScrollAnimation>
@@ -1042,7 +1044,7 @@ export default function GuardamueblesPage() {
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-6 max-w-7xl">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-12">
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               ¿También necesitás una mudanza?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -1050,8 +1052,8 @@ export default function GuardamueblesPage() {
             </p>
             <Button
               asChild
+              variant="secondary"
               size="lg"
-              className="bg-secondary/80 text-white font-semibold rounded-lg shadow-none border border-black hover:bg-brand-bright"
             >
               <Link href="/mudanzas">
                 Conocer nuestras mudanzas
@@ -1065,7 +1067,7 @@ export default function GuardamueblesPage() {
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container mx-auto px-4 md:px-6 text-center max-w-7xl">
           <ScrollAnimation animation="fade-up" className="space-y-8 max-w-3xl mx-auto">
-            <h2 className="text-4xl font-black sm:text-5xl text-foreground leading-tight">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop text-foreground leading-tight">
               Presupuesto exacto en minutos
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground">

@@ -171,7 +171,7 @@ export default function EmpacarMudanzaPage() {
                 <p className="text-muted-foreground">
                   En Movibox Logística ofrecemos servicio profesional de embalaje. Nuestro equipo conoce las mejores técnicas para proteger tus pertenencias.
                 </p>
-                <Button asChild size="lg" className="bg-secondary hover:bg-brand-bright">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary">
                   <Link href="/mudanzas">Conocer más sobre nuestros servicios</Link>
                 </Button>
               </div>

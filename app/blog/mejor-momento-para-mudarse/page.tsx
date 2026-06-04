@@ -206,7 +206,7 @@ export default function MejorMomentoPage() {
                 <p className="text-muted-foreground">
                   En Movibox te ayudamos a coordinar tu mudanza en el mejor momento. Contáctanos para obtener un presupuesto personalizado.
                 </p>
-                <Button asChild size="lg" className="bg-secondary hover:bg-brand-bright">
+                <Button asChild size="lg" className="bg-secondary hover:bg-secondary">
                   <Link href="/mudanzas">Solicitar presupuesto</Link>
                 </Button>
               </div>

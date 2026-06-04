@@ -259,7 +259,7 @@ export default function BlogArticle() {
               <Button size="lg" asChild>
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
-              <Button size="lg" asChild className="bg-brand-deep hover:bg-brand-bright text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
+              <Button size="lg" asChild variant="whatsapp">
                 <Link href="https://wa.me/5493512586221" target="_blank">
                   Consultar por WhatsApp
                 </Link>

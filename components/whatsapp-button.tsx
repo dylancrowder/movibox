@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 declare global {
   interface Window {
@@ -48,23 +49,13 @@ export function WhatsAppButton() {
   };
 
   return (
-    <button
+    <Button
       onClick={handleClick}
+      variant="whatsapp"
+      size="icon"
+      className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-lg hover:scale-110 active:scale-95"
       title="Contacto por WhatsApp – Mudanzas y fletes en Córdoba"
       aria-label="Contactar por WhatsApp para mudanzas y fletes en Córdoba"
-      className="
-        fixed bottom-6 right-6 z-50
-        flex h-16 w-16 items-center justify-center
-        rounded-full
-        bg-[#25D366]
-        text-white
-        shadow-lg shadow-black/20
-        transition-all duration-300
-        hover:bg-[#0d5635]
-        hover:scale-110
-        active:scale-95
-        border border-black
-      "
     >
       <svg
         viewBox="0 0 32 32"
@@ -74,6 +65,6 @@ export function WhatsAppButton() {
       >
         <path d="M19.11 17.46c-.28-.14-1.65-.81-1.9-.9-.26-.09-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.17.19-.33.21-.61.07-.28-.14-1.17-.43-2.23-1.38-.82-.73-1.38-1.63-1.54-1.9-.16-.28-.02-.43.12-.57.13-.13.28-.33.42-.49.14-.17.19-.28.28-.47.09-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.49-.17-.01-.36-.01-.55-.01-.19 0-.5.07-.76.36-.26.28-1 1-1 2.44 0 1.44 1.03 2.83 1.17 3.03.14.19 2.03 3.1 4.92 4.35.69.3 1.23.48 1.65.61.69.22 1.32.19 1.82.12.55-.08 1.65-.67 1.88-1.32.23-.64.23-1.2.16-1.32-.07-.12-.26-.19-.54-.33zM16.02 3.2c-6.98 0-12.65 5.67-12.65 12.65 0 2.23.58 4.32 1.6 6.13L3.2 28.8l6.98-1.83c1.74.95 3.74 1.5 5.84 1.5 6.98 0 12.65-5.67 12.65-12.65S23 3.2 16.02 3.2zm0 22.82c-1.89 0-3.64-.54-5.13-1.47l-.37-.23-4.14 1.09 1.1-4.03-.24-.39c-.97-1.55-1.52-3.39-1.52-5.33 0-5.39 4.39-9.78 9.78-9.78s9.78 4.39 9.78 9.78-4.39 9.78-9.78 9.78z" />
       </svg>
-    </button>
+    </Button>
   );
 }

@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 interface ImageCarouselProps {
   images: {
@@ -40,22 +41,26 @@ export function ImageCarousel({ images }: ImageCarouselProps) {
       </div>
 
       {/* Left Arrow */}
-      <button
+      <Button
         onClick={goToPrevious}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
+        variant="ghost"
+        size="icon"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full"
         aria-label="Previous image"
       >
         <ChevronLeft className="h-6 w-6" />
-      </button>
+      </Button>
 
       {/* Right Arrow */}
-      <button
+      <Button
         onClick={goToNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
+        variant="ghost"
+        size="icon"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full"
         aria-label="Next image"
       >
         <ChevronRight className="h-6 w-6" />
-      </button>
+      </Button>
 
       {/* Dots Indicator */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex gap-2">
