@@ -350,7 +350,7 @@ export default function GuardamueblesPage() {
               </ul>
               {/* ----------------------------------------------------- */}
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start md:items-center">
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
                 {/* WhatsApp - Verde */}
                 <Button
                   asChild
