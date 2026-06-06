@@ -5,4 +5,5 @@ module.exports = {
   generateIndexSitemap: false,
   sitemapSize: 7000,
   exclude: ["/servicios"],
+  outDir: "public",
 };
