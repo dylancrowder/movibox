@@ -193,7 +193,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         },
         sameAs: [
           'https://www.facebook.com/movibox',
-          'https://www.instagram.com/movibox',
+          'https://www.instagram.com/moviboxcba',
           'https://www.google.com/maps/search/Movibox+Córdoba',
         ],
       },

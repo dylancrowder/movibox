@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import logo from "../public/images/iconos/logo-movibox.svg";
 
 const quickLinks = [
@@ -125,17 +125,29 @@ const Footer = () => {
             . Todos los derechos reservados.
           </p>
 
-          <p>
-            Desarrollado por{" "}
+          <div className="flex items-center gap-4">
+            <p>
+              Desarrollado por{" "}
+              <a
+                href="https://www.linkedin.com/in/dylan-crowder-681226277/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-primary transition-colors hover:text-primary/80"
+              >
+                Dylan
+              </a>
+            </p>
+
             <a
-              href="https://www.linkedin.com/in/dylan-crowder-681226277/"
+              href="https://www.instagram.com/moviboxcba/"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-primary transition-colors hover:text-primary/80"
+              aria-label="Instagram de Movibox"
+              className="text-foreground/50 transition-colors hover:text-primary"
             >
-              Dylan
+              <Instagram className="h-4 w-4" />
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>
