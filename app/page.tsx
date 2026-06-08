@@ -79,7 +79,7 @@ const services = [
     title: "Mudanzas y Fletes en Córdoba",
     description:
       "Mudanzas completas de viviendas, departamentos y oficinas. Fletes de objetos individuales o grandes volúmenes en Córdoba Capital y provincia.",
-    image: "/images/camion/imagen_fish2.jpeg",
+    image: "/images/camion/imagen_camion.webp",
     href: "/mudanzas",
   },
   {
