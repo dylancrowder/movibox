@@ -147,3 +147,12 @@
     background-color: #E5A000;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  transition-property: color;
+  transition-duration: 150ms;
+}
