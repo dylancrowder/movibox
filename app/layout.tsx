@@ -258,9 +258,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
-        {/* 📊 Optimize font loading - Preconnect para iniciar conexión temprano */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* ✅ DNS prefetch for analytics to reduce critical path latency */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
