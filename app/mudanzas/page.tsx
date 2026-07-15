@@ -256,12 +256,12 @@ export default function MudanzasPage() {
               <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
                 Mudanzas en Córdoba Capital
                 <br />
-                <span className="text-secondary-400">Servicio para hogares y empresas</span>
+                <span className="text-secondary-400">Con embalaje y servicio completo.</span>
               </h1>
 
               <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                Atención inmediata, precio acordado antes de empezar.
-                Cotización gratuita por WhatsApp.
+                Atención inmediata y 
+                cotización gratuita por WhatsApp.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
