@@ -236,14 +236,23 @@ export default function MudanzasPage() {
       {/* HERO */}
       <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden pt-24">
         <Image
-          src={heroImage}
-          alt="Mudanzas en Córdoba - Movibox Logística"
+          src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
+          alt="Camión de mudanzas de Movibox Logística"
           fill
-          className="object-cover object-center md:object-center"
+          className="object-cover object-center md:hidden"
           priority
           unoptimized
           sizes="100vw"
-          />
+        />
+        <Image
+          src={heroImage}
+          alt="Mudanzas en Córdoba - Movibox Logística"
+          fill
+          className="hidden object-cover object-center md:block"
+          priority
+          unoptimized
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-black/70" />
 
         <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
