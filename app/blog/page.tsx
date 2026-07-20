@@ -9,6 +9,7 @@ import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6
 import camion from "@/public/images/webimages/camion_blog.webp"
 import deposito from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.webp"
 import image_header from "@/public/logisticas.webp";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
   title: "Blog de Movibox Logística | Mudanzas, Guardamuebles y Fletes",
@@ -227,10 +228,10 @@ export default function BlogHomePage() {
               Mudanzas y guardamuebles en Córdoba Capital y provincia. Presupuesto sin cargo.
             </p>
             <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2">
-              <Link href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20encontr%C3%A9%20sus%20servicios%20en%20Google%20Ads.%20%C2%BFMe%20pueden%20asesorar%20sobre%20mudanzas%20o%20guardamuebles%3F" target="_blank">
+              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20encontr%C3%A9%20sus%20servicios%20en%20Google%20Ads.%20%C2%BFMe%20pueden%20asesorar%20sobre%20mudanzas%20o%20guardamuebles%3F" conversionLabel="blog_whatsapp_click" className="flex items-center gap-2">
                 <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                 Consultar servicios
-              </Link>
+              </WhatsAppConversionLink>
             </Button>
           </ScrollAnimation>
         </div>

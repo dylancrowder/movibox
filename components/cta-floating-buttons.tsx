@@ -38,8 +38,10 @@ export function CtaFloatingButtons() {
 
   const handleClick = (label: string) => {
     if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "click", {
-        button_name: label,
+      window.gtag("event", "conversion", {
+        send_to: "AW-18195477517/lYdCCL2YvtMcEI3oo-RD",
+        value: 1.0,
+        currency: "ARS",
       });
     }
   };

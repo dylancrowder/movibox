@@ -39,6 +39,7 @@ export function WhatsAppButton() {
     // ✅ Evento de conversión Google Ads (seguimiento de click en WhatsApp)
     if (typeof window !== "undefined" && window.gtag) {
       window.gtag("event", "conversion", {
+        send_to: "AW-18195477517/lYdCCL2YvtMcEI3oo-RD",
         value: 1.0,
         currency: "ARS",
       });

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone, Mail, MapPin, ArrowRight, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 const contactMethods = [
   {
@@ -79,9 +80,9 @@ export default function ContactCard() {
             size="lg"
             className="border-primary/30 text-primary hover:border-primary hover:bg-primary/10"
           >
-            <Link href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer">
+            <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="inicio_whatsapp_click">
               Enviar mensaje por WhatsApp
-            </Link>
+            </WhatsAppConversionLink>
           </Button>
         </div>
       </div>

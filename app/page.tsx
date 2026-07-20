@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import mudanza_imagen from "@/public/images/camion/imagen_camion.webp"
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import GoogleReviews from "@/components/GoogleReviews";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
   title:
@@ -529,10 +530,9 @@ export default function Home() {
                 variant="whatsapp"
                 size="lg"
               >
-                <Link
+                <WhatsAppConversionLink
                   href="https://wa.me/5493512586221"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  conversionLabel="home_whatsapp_click"
                   className="flex items-center gap-3"
                 >
                   <Image
@@ -543,7 +543,7 @@ export default function Home() {
                     priority
                   />
                   Consultar por WhatsApp
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
 
               {/* Ver ubicación */}

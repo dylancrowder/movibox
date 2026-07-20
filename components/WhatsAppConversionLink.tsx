@@ -33,13 +33,12 @@ export function WhatsAppConversionLink({
 }: WhatsAppConversionLinkProps) {
   const handleClick = () => {
     if (typeof window !== "undefined" && (window as any).gtag) {
-      const sendTo = conversionMap[conversionLabel] || "AW-18195477517/JYRfCL2bhbUcEI3oo-RD";
       (window as any).gtag("event", "conversion", {
-        send_to: sendTo,
+        send_to: "AW-18195477517/lYdCCL2YvtMcEI3oo-RD",
         value: 1.0,
         currency: "ARS",
       });
-      console.log(`📱 ${conversionLabel} conversion event fired to ${sendTo}`);
+      console.log(`📱 ${conversionLabel} conversion event fired to AW-18195477517/lYdCCL2YvtMcEI3oo-RD`);
     } else {
       console.log("⚠️ gtag not available");
     }

@@ -856,9 +856,9 @@ export default function GuardamueblesPage() {
                     </div>
                     <div>
                       <p className="font-semibold text-primary mb-1">WhatsApp</p>
-                      <a href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer" className="text-sm text-primary hover:text-primary-dark font-medium">
+                      <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="guardamuebles_contact_whatsapp" className="text-sm text-primary hover:text-primary-dark font-medium">
                         +54 9 351 258-6221
-                      </a>
+                      </WhatsAppConversionLink>
                     </div>
                   </div>
 

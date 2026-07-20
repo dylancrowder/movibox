@@ -9,6 +9,8 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import image_header from "@/public/logisticas.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 
 const SLUG = "mudanzas-y-fletes";
 
@@ -308,9 +310,9 @@ export default function MudanzasYFletesPage() {
                     <a href="tel:+5493512586221">Llamar: 351 258-6221</a>
                   </Button>
                   <Button asChild variant="whatsapp">
-                    <a href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer">
+                    <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="blog_mudanzas_fletes_whatsapp_click">
                       WhatsApp
-                    </a>
+                    </WhatsAppConversionLink>
                   </Button>
                 </div>
 

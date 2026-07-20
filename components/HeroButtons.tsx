@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import wsp from "@/public/images/iconos/whatsapp.webp";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 interface HeroButtonsProps {
   whatsappMessage?: string;
@@ -23,10 +24,9 @@ export default function HeroButtons({
         variant="whatsapp"
         size="lg"
       >
-        <Link
+        <WhatsAppConversionLink
           href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
+          conversionLabel="hero_whatsapp_click"
           className="flex items-center gap-3"
         >
           <Image
@@ -37,7 +37,7 @@ export default function HeroButtons({
             priority
           />
           WhatsApp
-        </Link>
+        </WhatsAppConversionLink>
       </Button>
 
       {/* Llamar - Secondary (visible on dark overlay) */}

@@ -483,14 +483,14 @@ export default function MudanzasPage() {
                 size="lg"
                 className="w-full sm:w-auto"
                 >
-<Link
+<WhatsAppConversionLink
   href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
-  target="_blank"
+  conversionLabel="mudanzas_cta_whatsapp"
   className="flex items-center gap-3"
 >
   <Image src={wsp} alt="WhatsApp" width={32} height={32} />
   Cotizar ahora por WhatsApp
-</Link>
+</WhatsAppConversionLink>
 
               </Button>
             </div>

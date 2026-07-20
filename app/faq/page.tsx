@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import wsp from "@/public/images/iconos/whatsapp.webp";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",
@@ -305,10 +306,10 @@ export default function FAQPage() {
                 asChild
                 variant="whatsapp"
               >
-                <Link href="https://wa.me/5493512586221" target="_blank" rel="noopener noreferrer">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="faq_whatsapp_click" className="flex items-center gap-2">
                   <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                   Escribir por WhatsApp
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </div>
           </ScrollAnimation>
@@ -327,10 +328,10 @@ export default function FAQPage() {
             </p>
 
             <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2">
-              <Link href="https://wa.me/5493512586221?text=Hola,%20después%20de%20revisar%20las%20preguntas%20frecuentes,%20tengo%20más%20dudas%20y%20quiero%20solicitar%20un%20servicio." target="_blank">
+              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola,%20después%20de%20revisar%20las%20preguntas%20frecuentes,%20tengo%20más%20dudas%20y%20quiero%20solicitar%20un%20servicio." conversionLabel="faq_cta_whatsapp" className="flex items-center gap-2">
                 <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                 Habla con nosotros
-              </Link>
+              </WhatsAppConversionLink>
             </Button>
           </ScrollAnimation>
         </div>

@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import image_header from "@/public/logisticas.webp";
 import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import wsp from "@/public/images/iconos/whatsapp.webp";
 
 const SLUG = "como-organizar-una-mudanza-sin-estres";
 
@@ -260,9 +262,9 @@ export default function BlogArticle() {
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
               <Button size="lg" asChild variant="whatsapp">
-                <Link href="https://wa.me/5493512586221" target="_blank">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="blog_article_whatsapp_click">
                   Consultar por WhatsApp
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </div>
           </ScrollAnimation>
