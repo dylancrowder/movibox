@@ -8,12 +8,6 @@ import {
   Truck,
 } from "lucide-react";
 
-declare global {
-  interface Window {
-    gtag: (command: string, action: string, config?: Record<string, unknown>) => void;
-  }
-}
-
 export function CtaFloatingButtons() {
   const buttons = [
     {
@@ -36,16 +30,6 @@ export function CtaFloatingButtons() {
     },
   ];
 
-  const handleClick = (label: string) => {
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", {
-        send_to: "AW-18195477517/lYdCCL2YvtMcEI3oo-RD",
-        value: 1.0,
-        currency: "ARS",
-      });
-    }
-  };
-
   return (
     <div className="fixed bottom-4 left-4 right-4 z-40 pointer-events-none">
       <div className="container max-w-7xl mx-auto px-0">
@@ -57,7 +41,6 @@ export function CtaFloatingButtons() {
                 key={button.label}
                 href={button.href}
                 target="_blank"
-                onClick={() => handleClick(button.label)}
                 className="relative overflow-hidden group"
                 title={button.label}
                 style={{

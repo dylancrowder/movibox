@@ -3,12 +3,6 @@
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
-declare global {
-  interface Window {
-    gtag: (command: string, action: string, config?: Record<string, unknown>) => void;
-  }
-}
-
 const whatsappMessages: Record<string, string> = {
   "/":
     "Hola, necesito presupuesto para mudanza en Córdoba",
@@ -36,16 +30,6 @@ export function WhatsAppButton() {
   const encodedMessage = encodeURIComponent(message);
 
   const handleClick = () => {
-    // ✅ Evento de conversión Google Ads (seguimiento de click en WhatsApp)
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("event", "conversion", {
-        send_to: "AW-18195477517/lYdCCL2YvtMcEI3oo-RD",
-        value: 1.0,
-        currency: "ARS",
-      });
-    }
-
-    // Abrir WhatsApp
     window.open(`https://wa.me/5493512586221?text=${encodedMessage}`, "_blank");
   };
 

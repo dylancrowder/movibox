@@ -26,7 +26,6 @@ export default function HeroButtons({
       >
         <WhatsAppConversionLink
           href={whatsappUrl}
-          conversionLabel="hero_whatsapp_click"
           className="flex items-center gap-3"
         >
           <Image

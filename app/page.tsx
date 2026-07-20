@@ -532,7 +532,6 @@ export default function Home() {
               >
                 <WhatsAppConversionLink
                   href="https://wa.me/5493512586221"
-                  conversionLabel="home_whatsapp_click"
                   className="flex items-center gap-3"
                 >
                   <Image

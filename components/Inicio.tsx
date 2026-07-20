@@ -80,7 +80,7 @@ export default function ContactCard() {
             size="lg"
             className="border-primary/30 text-primary hover:border-primary hover:bg-primary/10"
           >
-            <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="inicio_whatsapp_click">
+            <WhatsAppConversionLink href="https://wa.me/5493512586221">
               Enviar mensaje por WhatsApp
             </WhatsAppConversionLink>
           </Button>

@@ -394,7 +394,7 @@ export default function DepositoGuardamueblesPage() {
                     <a href="tel:+5493512586221">Llamar: 351 258-6221</a>
                   </Button>
                   <Button asChild variant="whatsapp">
-                    <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="blog_deposito_whatsapp_click">
+                    <WhatsAppConversionLink href="https://wa.me/5493512586221">
                       WhatsApp
                     </WhatsAppConversionLink>
                   </Button>

@@ -350,7 +350,7 @@ export default function ContactoPage() {
                 <Link href="/mudanzas">Ver servicios de mudanzas</Link>
               </Button>
               <Button size="lg" asChild variant="whatsapp">
-                <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="contacto_whatsapp_click">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221">
                   <Image src={wsp} alt="WhatsApp" width={24} height={24} />
                   Consultar por WhatsApp
                 </WhatsAppConversionLink>

@@ -262,7 +262,7 @@ export default function BlogArticle() {
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
               <Button size="lg" asChild variant="whatsapp">
-                <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="blog_article_whatsapp_click">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221">
                   Consultar por WhatsApp
                 </WhatsAppConversionLink>
               </Button>

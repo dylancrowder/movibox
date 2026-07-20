@@ -310,7 +310,7 @@ export default function MudanzasYFletesPage() {
                     <a href="tel:+5493512586221">Llamar: 351 258-6221</a>
                   </Button>
                   <Button asChild variant="whatsapp">
-                    <WhatsAppConversionLink href="https://wa.me/5493512586221" conversionLabel="blog_mudanzas_fletes_whatsapp_click">
+                    <WhatsAppConversionLink href="https://wa.me/5493512586221">
                       WhatsApp
                     </WhatsAppConversionLink>
                   </Button>

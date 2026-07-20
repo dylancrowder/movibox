@@ -228,7 +228,7 @@ export default function BlogHomePage() {
               Mudanzas y guardamuebles en Córdoba Capital y provincia. Presupuesto sin cargo.
             </p>
             <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold gap-2">
-              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20encontr%C3%A9%20sus%20servicios%20en%20Google%20Ads.%20%C2%BFMe%20pueden%20asesorar%20sobre%20mudanzas%20o%20guardamuebles%3F" conversionLabel="blog_whatsapp_click" className="flex items-center gap-2">
+              <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20encontr%C3%A9%20sus%20servicios%20en%20Google%20Ads.%20%C2%BFMe%20pueden%20asesorar%20sobre%20mudanzas%20o%20guardamuebles%3F" className="flex items-center gap-2">
                 <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                 Consultar servicios
               </WhatsAppConversionLink>

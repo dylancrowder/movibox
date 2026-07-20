@@ -244,6 +244,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="es-AR" suppressHydrationWarning>
       <head>
 
+        {/* Google Tag Manager */}
         <Script
           id="gtm-script"
           strategy="afterInteractive"
@@ -253,15 +254,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-T63FK29V');
+              })(window,document,'script','dataLayer','GTM-NVGC98QB');
             `,
           }}
         />
-
-
-        {/* ✅ DNS prefetch for analytics to reduce critical path latency */}
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
 
         {/* ✅ Prevent theme flash - set default theme before React hydration */}
         <script
@@ -292,9 +288,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
 
+          {/* Google Tag Manager (noscript) */}
           <noscript>
             <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-T63FK29V"
+              src="https://www.googletagmanager.com/ns.html?id=GTM-NVGC98QB"
               height="0"
               width="0"
               style={{ display: 'none', visibility: 'hidden' }}
@@ -307,37 +304,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <WhatsAppButton />
         </ThemeProvider>
-
-
-
-
-        {/* Google Ads and Analytics Tags */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-18195477517"
-          strategy="afterInteractive"
-        />
-        <Script id="google-ads-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            // Configuración de consentimiento - habilitado para Google Ads
-            gtag('consent', 'default', {
-              'analytics_storage': 'granted',
-              'ad_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted'
-            });
-
-            // Google Ads - Account IDs
-            gtag('config', 'AW-17013125582');
-            gtag('config', 'AW-18195477517');
-
-            // Google Analytics 4
-            gtag('config', 'G-E7K55VT53P');
-          `}
-        </Script>
       </body>
     </html>
   );
