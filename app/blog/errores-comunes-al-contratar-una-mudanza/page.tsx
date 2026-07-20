@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeft, Clock, AlertCircle, CheckCircle2 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { Button } from "@/components/ui/button";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import image_header from "@/public/logisticas.webp";
 import camionImage from "@/public/images/webimages/camion_blog.webp";
 import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
@@ -305,9 +306,9 @@ export default function BlogArticle() {
                 <Link href="/contacto">Solicitar presupuesto</Link>
               </Button>
               <Button size="lg" asChild className="bg-[#25D366] hover:bg-[#1da852] text-white font-semibold rounded-lg flex items-center gap-3 shadow-none border border-black">
-                <Link href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20vengo%20de%20Google%20Ads.%20Necesito%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFMe%20pueden%20hacer%20presupuesto%3F" target="_blank">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20Movibox%2C%20vengo%20de%20Google%20Ads.%20Necesito%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFMe%20pueden%20hacer%20presupuesto%3F">
                   Consultar por WhatsApp
-                </Link>
+                </WhatsAppConversionLink>
               </Button>
             </div>
           </ScrollAnimation>

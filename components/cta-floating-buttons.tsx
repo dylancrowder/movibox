@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import { Button } from "@/components/ui/button";
 import {
   Clock,
@@ -37,10 +37,9 @@ export function CtaFloatingButtons() {
           {buttons.map((button, index) => {
             const Icon = button.icon;
             return (
-              <Link
+              <WhatsAppConversionLink
                 key={button.label}
                 href={button.href}
-                target="_blank"
                 className="relative overflow-hidden group"
                 title={button.label}
                 style={{
@@ -56,7 +55,7 @@ export function CtaFloatingButtons() {
                   <Icon className="h-4 w-4 relative z-10 transition-transform group-hover:scale-125 group-hover:-translate-y-1 flex-shrink-0" />
                   <span className="relative z-10 text-center md:text-left whitespace-normal md:whitespace-nowrap">{button.label}</span>
                 </Button>
-              </Link>
+              </WhatsAppConversionLink>
             );
           })}
         </div>
