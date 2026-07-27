@@ -236,7 +236,7 @@ export default function MudanzasPage() {
       {/* HERO */}
       <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
         <Image
-          src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Ff91b87b787eb450d9f089daeb1d45ab4?format=webp&width=800&height=1200"
+          src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
           alt="Camión de mudanzas de Movibox Logística"
           fill
           className="object-cover object-center md:hidden"
@@ -253,7 +253,7 @@ export default function MudanzasPage() {
           quality={70}
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
 
         <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
           <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
