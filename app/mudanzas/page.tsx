@@ -21,7 +21,7 @@ import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import camion from "@/public/images/camion/imagen_fish2.webp";
-import heroImage from "@/public/images/camion/imagen_camion2.webp";
+
 
 
 export const metadata: Metadata = {
@@ -234,7 +234,7 @@ export default function MudanzasPage() {
     <article className="flex min-h-screen flex-col bg-white overflow-x-hidden">
 
       {/* HERO */}
-      <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden pt-24">
+      <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
         <Image
           src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
           alt="Camión de mudanzas de Movibox Logística"
@@ -245,18 +245,18 @@ export default function MudanzasPage() {
           sizes="100vw"
         />
         <Image
-          src={heroImage}
-          alt="Mudanzas en Córdoba - Movibox Logística"
+          src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=800&height=1200"
+          alt="Camión de mudanzas de Movibox Logística"
           fill
-          className="hidden object-cover object-center md:block"
+          className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
           priority
-          unoptimized
+          quality={70}
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/70" />
 
         <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
-          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
             <div className="space-y-6 md:max-w-2xl">
               <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90 border border-white/20">
                 Mudanzas y Fletes en Córdoba
