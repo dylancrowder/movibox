@@ -418,7 +418,7 @@ export default function GuardamueblesPage() {
                   "Sillas y mesas pequeñas",
                   "Objetos personales varios",
                 ],
-                price: "$79.900",
+                price: "$59.900",
               },
               {
                 size: "10 m³",
@@ -434,7 +434,7 @@ export default function GuardamueblesPage() {
                   "Equipos y electrónica",
                   "Cajas de mudanza",
                 ],
-                price: "$129.900",
+                price: "$109.900",
               },
               {
                 size: "15 m³",
@@ -450,7 +450,7 @@ export default function GuardamueblesPage() {
                   "Equipos de oficina",
                   "Múltiples cajas y muebles",
                 ],
-                price: "$179.900",
+                price: "$159.900",
               },
             ].map((space, index) => (
               <ScrollAnimation key={space.size} animation="fade-up" delay={index * 120}>
