@@ -433,29 +433,32 @@ export default function MudanzasPage() {
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
             <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-              3 pasos fáciles para tu mudanza
+              Así trabajamos tu mudanza
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Contratar nuestro servicio de mudanzas en Córdoba es simple y rápido.
-            </p>
+
           </ScrollAnimation>
 
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-4">
             {[
               {
                 step: "1",
-                title: "Pedí tu cotización",
-                description: "Contactanos por WhatsApp o formulario con los detalles de tu mudanza dentro de Córdoba.",
+                title: "Nos contás los detalles",
+                description: "Indicamos origen, destino, cantidad de muebles y fecha estimada.",
               },
               {
                 step: "2",
-                title: "Confirmá el presupuesto",
-                description: "Te pasamos el precio exacto, sin sorpresas. Acordamos fecha y horario.",
+                title: "Evaluamos tu mudanza",
+                description: "Calculamos el servicio necesario según la cantidad de cosas y las características del traslado.",
               },
               {
                 step: "3",
-                title: "Tu mudanza lista",
-                description: "Llegamos a la hora, embalamos, trasladamos y montamos todo en tu nuevo lugar.",
+                title: "Coordinamos día y horario",
+                description: "Organizamos todo para que tu mudanza sea simple y sin complicaciones.",
+              },
+              {
+                step: "4",
+                title: "Realizamos el traslado",
+                description: "Cargamos, protegemos y trasladamos tus pertenencias con cuidado hasta su destino.",
               },
             ].map((item) => (
               <ScrollAnimation key={item.step} animation="fade-up">
