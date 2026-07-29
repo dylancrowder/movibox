@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
-import camion from "@/public/images/camion/imagen_fish2.webp";
+
 
 
 
@@ -265,7 +265,7 @@ export default function MudanzasPage() {
               <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
                 Mudanzas en Córdoba Capital
                 <br />
-                <span className="text-secondary-400">Con embalaje y servicio completo.</span>
+                <span className="text-secondary-400">Con ayudantes y trato profesional.</span>
               </h1>
 
               <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
@@ -284,9 +284,13 @@ export default function MudanzasPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block">
-          <ChevronDown className="h-10 w-10 text-white/60 animate-bounce" />
-        </div>
+        <a
+          href="#camion"
+          aria-label="Ir a la sección del camión"
+          className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:block"
+        >
+          <ChevronDown className="h-10 w-10 animate-bounce text-white/60" />
+        </a>
       </section>
 
       {/* COBERTURA GEOGRÁFICA */}
@@ -323,7 +327,7 @@ export default function MudanzasPage() {
       </section>
 
       {/* GALERÍA DE VEHÍCULOS */}
-      <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
+      <section id="camion" className="bg-white py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-16">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
@@ -339,38 +343,36 @@ export default function MudanzasPage() {
 
           <div className="max-w-3xl mx-auto">
             <ScrollAnimation animation="fade-up">
-              <article className="rounded-md overflow-hidden border border-neutral-300 shadow-card hover:shadow-card-hover transition">
-                <div className="relative w-full h-80 bg-neutral-100">
+              <article className="rounded-md border border-neutral-300 shadow-card hover:shadow-card-hover transition">
+                <div className="relative aspect-[903/763] w-full bg-neutral-100">
                   <Image
-                    src={camion}
+                    src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F676ba5d5151c479483d7f7ad5e3444af?format=webp&width=800&height=1200"
                     alt="Camión de mudanzas en Córdoba - Movibox Logística"
                     fill
-                    className="object-cover"
+                    unoptimized
+                    className="object-contain"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
                 </div>
                 <div className="p-8 bg-gradient-to-br from-primary-50 to-secondary-50">
         
-                  <h3 className="text-sm text-neutral-600 font-semibold uppercase tracking-wide mb-4">Mudanzas en Córdoba</h3>
-                  <p className="text-neutral-700 mb-6 leading-relaxed">
-                    Preparado para departamentos, casas y fletes dentro de Córdoba Capital y provincia. Coordinamos según tu volumen y disponibilidad.
-                  </p>
+                  <h3 className="text-sm text-neutral-600 font-semibold uppercase tracking-wide mb-4">Nos ocupamos de que tus pertenencias lleguen en perfecto estado.</h3>
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary-500 font-bold mt-0.5">✓</span>
-                      <span className="text-sm text-neutral-700">Mudanzas residenciales y comerciales</span>
+                      <span className="text-sm text-neutral-700">Protección para tus muebles</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary-500 font-bold mt-0.5">✓</span>
-                      <span className="text-sm text-neutral-700">Fletes y objetos puntuales</span>
+                      <span className="text-sm text-neutral-700">Herramientas adecuadas para cada mudanza</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary-500 font-bold mt-0.5">✓</span>
-                      <span className="text-sm text-neutral-700">Interior provincial</span>
+                      <span className="text-sm text-neutral-700">Carga segura durante el traslado</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary-500 font-bold mt-0.5">✓</span>
-                      <span className="text-sm text-neutral-700">Combinable con guardamuebles</span>
+                      <span className="text-sm text-neutral-700">Cuidado en cada detalle</span>
                     </li>
                   </ul>
                   <Button asChild variant="primary" size="lg" className="w-full">
@@ -439,29 +441,6 @@ export default function MudanzasPage() {
         </div>
       </section>
 
-      {/* Sección de Guardamuebles Relacionados */}
-      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
-        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-          <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-12">
-            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-              ¿También necesitás guardar tus muebles?
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Si además de mudanza necesitás almacenamiento temporal o de largo plazo, contamos con guardamuebles propio con vigilancia 24/7.
-            </p>
-            <Button
-              asChild
-              variant="primary"
-              size="lg"
-              className="w-full sm:w-auto"
-            >
-              <Link href="/guardamuebles">
-                Conocer nuestro guardamuebles
-              </Link>
-            </Button>
-          </ScrollAnimation>
-        </div>
-      </section>
 
       {/* CTA PRINCIPAL */}
       <section className="bg-gradient-to-b from-primary-700 to-primary-800 py-16 sm:py-32 overflow-x-hidden text-white">
@@ -496,6 +475,30 @@ export default function MudanzasPage() {
             <p className="text-xs text-white/70 pt-4">
               📞 351 258-6221 · Respuesta en menos de 24hs
             </p>
+          </ScrollAnimation>
+        </div>
+      </section>
+
+      {/* Sección de Guardamuebles Relacionados */}
+      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
+        <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+          <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-12">
+            <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+              ¿También necesitás guardar tus muebles?
+            </h2>
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+              Si además de mudanza necesitás almacenamiento temporal o de largo plazo, contamos con guardamuebles propio con vigilancia 24/7.
+            </p>
+            <Button
+              asChild
+              variant="primary"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              <Link href="/guardamuebles">
+                Conocer nuestro guardamuebles
+              </Link>
+            </Button>
           </ScrollAnimation>
         </div>
       </section>

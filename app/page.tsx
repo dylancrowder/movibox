@@ -15,7 +15,7 @@ import HeroButtons from "@/components/HeroButtons";
 import Link from "next/link";
 import img from "../public/images/header/headerchacra.webp";
 import { Button } from "@/components/ui/button";
-import mudanza_imagen from "@/public/images/camion/imagen_camion.webp"
+import mudanza_imagen from "@/public/images/camion/imagen_fish2.webp"
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import GoogleReviews from "@/components/GoogleReviews";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
@@ -262,7 +262,7 @@ export default function Home() {
           </ScrollAnimation>
 
           <ScrollAnimation animation="slide-in-right">
-            <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[903/763]">
               <Image
                 src={mudanza_imagen}
                 alt="Equipo profesional de Movibox Logística realizando mudanza"
