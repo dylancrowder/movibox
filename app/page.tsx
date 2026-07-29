@@ -17,7 +17,7 @@ import img from "../public/images/header/headerchacra.webp";
 import { Button } from "@/components/ui/button";
 import mudanza_imagen from "@/public/images/camion/imagen_fish2.webp"
 import wsp from "@/public/images/iconos/whatsapp.webp";
-import GoogleReviews from "@/components/GoogleReviews";
+
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
@@ -392,13 +392,7 @@ export default function Home() {
       </section>
 
 
-      {/* GOOGLE REVIEWS */}
-      <GoogleReviews
-        title="Qué dicen nuestros clientes"
-        subtitle="Reseñas verificadas de Google Business sobre nuestros servicios de mudanzas y guardamuebles"
-        showTitle={true}
-        maxReviews={6}
-      />
+
 
       {/* BENEFITS */}
       <section className="bg-neutral-100 py-32">

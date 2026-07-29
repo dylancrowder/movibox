@@ -10,7 +10,7 @@ interface HeroButtonsProps {
 }
 
 export default function HeroButtons({
-  whatsappMessage = "Hola, estoy interesado en sus servicios. ¿Podrían brindarme información y ayudarme con una cotización?",
+  whatsappMessage = "Hola 👋, quería consultar por una mudanza. ¿Me cuentan cómo trabajan y me pasan un presupuesto?",
 }: HeroButtonsProps) {
   const whatsappUrl = `https://wa.me/5493512586221?text=${encodeURIComponent(
     whatsappMessage

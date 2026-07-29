@@ -14,7 +14,7 @@ export function CtaFloatingButtons() {
       icon: Truck,
       label: "Solicitar Mudanza",
       variant: "primary" as const,
-      href: "https://wa.me/5493512586221?text=Hola,%20necesito%20una%20mudanza%20en%20Córdoba.",
+      href: "https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20cuentan%20c%C3%B3mo%20trabajan%20y%20me%20pasan%20un%20presupuesto%3F",
     },
     {
       icon: Archive,

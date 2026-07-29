@@ -25,7 +25,7 @@ import { ImageCarousel } from "@/components/image-carousel";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import image_header from "@/public/galpon.webp";
 import wsp from "@/public/images/iconos/whatsapp.webp";
-import GoogleReviews from "@/components/GoogleReviews";
+
 
 export const metadata: Metadata = {
   title: "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Logística",
@@ -904,13 +904,7 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
-      {/* GOOGLE REVIEWS */}
-      <GoogleReviews
-        title="Clientes satisfechos con nuestro guardamuebles"
-        subtitle="Lee lo que opinan nuestros clientes sobre el servicio de guardamuebles en Córdoba"
-        showTitle={true}
-        maxReviews={6}
-      />
+
 
       {/* CASOS DE USO ESPECÍFICOS */}
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">

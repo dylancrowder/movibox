@@ -210,17 +210,50 @@ export default function MudanzasPage() {
     {
       question: "¿Cuánto cuesta una mudanza?",
       answer:
-        "El precio depende de la cantidad de muebles, distancia y accesos. Te damos el valor exacto antes de comenzar mediante una cotización gratuita.",
+        "Dentro de Córdoba Capital, el precio se calcula por hora. Te informamos el valor antes de comenzar.",
     },
     {
       question: "¿La cotización tiene costo?",
       answer:
-        "No. La cotización es totalmente gratuita y la hacemos de forma inmediata por WhatsApp.",
+        "No. La cotización es totalmente gratuita y respondemos por WhatsApp en menos de 5 minutos.",
     },
     {
       question: "¿Trabajan fines de semana?",
       answer:
         "Sí. Realizamos mudanzas de lunes a domingo, incluidos feriados.",
+    },
+    {
+      question: "¿Suben muebles por escalera?",
+      answer: "Sí, nuestros ayudantes pueden subir los muebles por escalera.",
+    },
+    {
+      question: "¿Desarman y arman muebles?",
+      answer: "Sí, podemos desarmar y armar los muebles durante la mudanza.",
+    },
+    {
+      question: "¿Embalar objetos frágiles está incluido?",
+      answer: "No. El embalaje de objetos frágiles tiene un valor adicional.",
+    },
+    {
+      question: "¿Aceptan transferencias o efectivo?",
+      answer: "Sí, aceptamos transferencias bancarias y efectivo.",
+    },
+    {
+      question: "¿Qué zonas cubren?",
+      answer: "Realizamos mudanzas en toda Córdoba Capital.",
+    },
+    {
+      question: "¿Qué sucede si llueve?",
+      answer:
+        "Dependiendo del lugar y las condiciones, somos flexibles y coordinamos la mudanza con vos.",
+    },
+    {
+      question: "¿Realizan mudanzas de oficinas?",
+      answer: "Sí, realizamos mudanzas de oficinas y locales comerciales.",
+    },
+    {
+      question: "¿Pueden guardar los muebles temporalmente?",
+      answer: "Sí, contamos con servicio de guardamuebles.",
     },
   ];
 
@@ -278,7 +311,7 @@ export default function MudanzasPage() {
               </div>
 
               <p className="text-xs text-white/70">
-                Respuesta inmediata · Atención directa
+                Respuesta en menos de 5 minutos · Atención directa
               </p>
             </div>
           </div>
@@ -377,7 +410,7 @@ export default function MudanzasPage() {
                   </ul>
                   <Button asChild variant="primary" size="lg" className="w-full">
                     <WhatsAppConversionLink
-                      href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
+                      href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20cuentan%20c%C3%B3mo%20trabajan%20y%20me%20pasan%20un%20presupuesto%3F"
                     >
                       <Image src={wsp} alt="WhatsApp" width={32} height={32} />
                       Cotizar mudanza
@@ -462,7 +495,7 @@ export default function MudanzasPage() {
                 className="w-full sm:w-auto"
                 >
 <WhatsAppConversionLink
-  href="https://wa.me/5493512586221?text=Hola,%20necesito%20realizar%20una%20mudanza%20en%20C%C3%B3rdoba.%20%C2%BFTienen%20disponibilidad?%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n."
+  href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20cuentan%20c%C3%B3mo%20trabajan%20y%20me%20pasan%20un%20presupuesto%3F"
   className="flex items-center gap-3"
 >
   <Image src={wsp} alt="WhatsApp" width={32} height={32} />
@@ -473,7 +506,7 @@ export default function MudanzasPage() {
             </div>
 
             <p className="text-xs text-white/70 pt-4">
-              📞 351 258-6221 · Respuesta en menos de 24hs
+              📞 351 258-6221 · Respondemos en menos de 5 minutos
             </p>
           </ScrollAnimation>
         </div>
