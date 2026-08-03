@@ -321,7 +321,7 @@ export default function FAQPage() {
         <div className="container px-4 md:px-6">
           <ScrollAnimation animation="fade-up" className="space-y-8 text-center">
             <h2 className="text-4xl font-black text-foreground leading-tight">
-              Listo para confiar tu mudanza a Movibox Logística
+              Listo para confiar tu mudanza a Movibox Mudanzas
             </h2>
             <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
               Somos tu opción en Córdoba para mudanzas y guardamuebles con camión y galpón.

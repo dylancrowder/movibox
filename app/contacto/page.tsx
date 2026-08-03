@@ -34,11 +34,11 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Contacto Movibox Logística | Presupuesto Mudanzas y Guardamuebles",
+  title: "Contacto Movibox Mudanzas | Presupuesto Mudanzas y Guardamuebles",
   description:
-    "Contactá a Movibox Logística para mudanzas en Córdoba Capital y provincia, guardamuebles seguro. Presupuesto gratis en menos de 24 horas. WhatsApp y formulario de contacto.",
+    "Contactá a Movibox Mudanzas para mudanzas en Córdoba Capital y provincia, guardamuebles seguro. Presupuesto gratis en menos de 24 horas. WhatsApp y formulario de contacto.",
   keywords: [
-    "contacto movibox logística",
+    "contacto movibox mudanzas",
     "presupuesto mudanzas cordoba",
     "mudanzas cordoba capital",
     "guardamuebles cordoba",
@@ -48,22 +48,22 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://www.movibox.com.ar/contacto" },
   openGraph: {
     type: "website",
-    title: "Contacto Movibox Logística | Presupuesto Mudanzas Córdoba",
+    title: "Contacto Movibox Mudanzas | Presupuesto Mudanzas Córdoba",
     description:
-      "Contactá a Movibox Logística para solicitar presupuesto de mudanzas y guardamuebles en Córdoba. Respuesta inmediata por WhatsApp.",
+      "Contactá a Movibox Mudanzas para solicitar presupuesto de mudanzas y guardamuebles en Córdoba. Respuesta inmediata por WhatsApp.",
     url: "https://www.movibox.com.ar/contacto",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",
         width: 1200,
         height: 630,
-        alt: "Contacto Movibox Logística - Presupuesto mudanzas Córdoba",
+        alt: "Contacto Movibox Mudanzas - Presupuesto mudanzas Córdoba",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contacto Movibox Logística | Mudanzas Córdoba",
+    title: "Contacto Movibox Mudanzas | Mudanzas Córdoba",
     description:
       "Solicita tu presupuesto de mudanzas o guardamuebles. Respuesta inmediata por WhatsApp.",
     images: [
@@ -113,12 +113,12 @@ export default function ContactoPage() {
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Contacto - Movibox Logística",
+    name: "Contacto - Movibox Mudanzas",
     description: "Página de contacto para solicitar presupuestos de mudanzas y transporte en Córdoba",
     url: "https://www.movibox.com.ar/contacto",
     mainEntity: {
       "@type": "MovingCompany",
-      name: "Movibox Logística",
+      name: "Movibox Mudanzas",
       telephone: "+54-351-258-6221",
       email: "movibox.cba@gmail.com",
       address: {
@@ -160,7 +160,7 @@ export default function ContactoPage() {
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden text-center">
         <Image
           src={image_header}
-          alt="Oficina de Movibox Logística atendiendo consultas de mudanzas y transporte"
+          alt="Oficina de Movibox Mudanzas atendiendo consultas de mudanzas y transporte"
           fill
           priority
           fetchPriority="high"
@@ -171,7 +171,7 @@ export default function ContactoPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/75 to-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
           <h1 className="text-5xl font-black text-white drop-shadow-lg md:text-7xl leading-tight">
-            Contacto Movibox Logística
+            Contacto Movibox Mudanzas
           </h1>
           <p className="mt-6 text-lg text-white/90 md:text-xl text-left max-w-prose leading-relaxed">
             Coordiná tu mudanza, flete o guardamuebles con nuestro equipo especializado.
@@ -286,7 +286,7 @@ export default function ContactoPage() {
                   </div>
                   <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
                     <iframe
-                      title="Ubicación de Movibox Logística en Córdoba Capital"
+                      title="Ubicación de Movibox Mudanzas en Córdoba Capital"
                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.386001258131!2d-64.13761962363223!3d-31.40348947426776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bdb06350fce1%3A0xfb8e2b8b3f0115a7!2sTransporte%20Rojo!5e0!3m2!1ses!2sar!4v1764611451965!5m2!1ses!2sar"
                       className="absolute inset-0 h-full w-full"
                       style={{ border: 0 }}

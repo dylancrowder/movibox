@@ -19,8 +19,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.movibox.com.ar'),
   title: {
-    default: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
-    template: "%s | Movibox Logística"
+    default: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    template: "%s | Movibox Mudanzas"
   },
   description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto sin cargo por WhatsApp.",
   keywords: [
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     "empresa de mudanzas",
     "almacenamiento seguro Córdoba",
   ],
-  authors: [{ name: "Movibox Logística", url: "https://www.movibox.com.ar" }],
-  creator: "Movibox Logística",
-  publisher: "Movibox Logística",
+  authors: [{ name: "Movibox Mudanzas", url: "https://www.movibox.com.ar" }],
+  creator: "Movibox Mudanzas",
+  publisher: "Movibox Mudanzas",
 
   alternates: { canonical: "https://www.movibox.com.ar/" },
 
@@ -54,22 +54,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.movibox.com.ar/",
-    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
+    title: "Mudanzas en Córdoba Capital y Provincia | Mudanzas y Guardamuebles",
     description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
-    siteName: "Movibox Logística",
+    siteName: "Movibox Mudanzas",
     images: [
       {
         url: "/images/header/rua.webp",
         width: 1200,
         height: 630,
-        alt: "Mudanzas en Córdoba - Movibox Logística",
+        alt: "Mudanzas en Córdoba - Movibox Mudanzas",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Logística",
+    title: "Mudanzas en Córdoba Capital y Provincia | Mudanzas y Guardamuebles",
     description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     images: ["/images/header/rua.webp"],
   },
@@ -101,9 +101,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {
         '@type': 'LocalBusiness',
         '@id': 'https://www.movibox.com.ar/#organization',
-        name: 'Movibox Logística',
-        alternateName: 'Movibox Logística - Mudanzas y Guardamuebles',
-        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia. Camión y galpón con almacenamiento seguro.',
+        name: 'Movibox Mudanzas',
+        alternateName: 'Movibox Mudanzas - Mudanzas y Guardamuebles',
+        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
         url: 'https://www.movibox.com.ar',
         logo: {
           '@type': 'ImageObject',
@@ -164,7 +164,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       {
         '@type': 'MovingCompany',
         '@id': 'https://www.movibox.com.ar/#movingcompany',
-        name: 'Movibox Logística',
+        name: 'Movibox Mudanzas',
         url: 'https://www.movibox.com.ar',
         telephone: '+54-351-258-6221',
         email: 'movibox.cba@gmail.com',
@@ -185,7 +185,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'WebSite',
         '@id': 'https://www.movibox.com.ar/#website',
         url: 'https://www.movibox.com.ar',
-        name: 'Movibox Logística - Mudanzas y Guardamuebles en Córdoba',
+        name: 'Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba',
         inLanguage: 'es-AR',
         publisher: {
           '@id': 'https://www.movibox.com.ar/#organization',

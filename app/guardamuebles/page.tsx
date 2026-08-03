@@ -28,7 +28,7 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 
 
 export const metadata: Metadata = {
-  title: "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Logística",
+  title: "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
 
   description:
     "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.movibox.com.ar/guardamuebles", // ⚠️ siempre absoluta
     title:
-      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Logística",
+      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
     description:
       "Guardamuebles con servicio de mudanza en Córdoba Capital. Almacenamiento seguro, búsqueda y entrega. Presupuesto gratis.",
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200",
         width: 1200,
         height: 630,
-        alt: "Guardamuebles en Córdoba con vigilancia 24/7 - Movibox Logística",
+        alt: "Guardamuebles en Córdoba con vigilancia 24/7 - Movibox Mudanzas",
       },
     ],
   },
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Logística",
+      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
     description:
       "Guardamuebles seguro en Córdoba Capital con vigilancia 24/7 y servicio de mudanza.",
     images: [
@@ -91,7 +91,7 @@ const jsonLd = {
     {
       "@type": "LocalBusiness",
       "@id": "https://www.movibox.com.ar/#localbusiness",
-      name: "Movibox Logística",
+      name: "Movibox Mudanzas",
       url: "https://www.movibox.com.ar",
       telephone: "+5493512586221",
       priceRange: "$$",
@@ -148,7 +148,7 @@ const jsonLd = {
     {
       "@type": "SelfStorage",
       "@id": "https://www.movibox.com.ar/guardamuebles#storage",
-      name: "Guardamuebles Movibox Logística",
+      name: "Guardamuebles Movibox Mudanzas",
       url: "https://www.movibox.com.ar/guardamuebles",
       provider: {
         "@id": "https://www.movibox.com.ar/#localbusiness"
@@ -890,7 +890,7 @@ export default function GuardamueblesPage() {
             <ScrollAnimation animation="slide-in-right">
               <div className="rounded-lg overflow-hidden shadow-card-hover h-96">
                 <iframe
-                  title="Ubicación de Guardamuebles Movibox Logística en Córdoba"
+                  title="Ubicación de Guardamuebles Movibox Mudanzas en Córdoba"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.386001258131!2d-64.13761962363223!3d-31.40348947426776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bdb06350fce1%3A0xfb8e2b8b3f0115a7!2sTransporte%20Rojo!5e0!3m2!1ses!2sar!4v1764611451965!5m2!1ses!2sar"
                   className="w-full h-full"
                   style={{ border: 0 }}

@@ -12,7 +12,7 @@ import image_header from "@/public/logisticas.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
-  title: "Blog de Movibox Logística | Mudanzas, Guardamuebles y Fletes",
+  title: "Blog de Movibox Mudanzas | Mudanzas, Guardamuebles y Fletes",
   description:
     "Artículos, guías y consejos prácticos sobre mudanzas en Córdoba, guardamuebles seguro, fletes y transporte. Tips de expertos en logística local. Aprende cómo mudarte sin estrés.",
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Blog de Movibox Logística | Mudanzas, Guardamuebles y Fletes",
+    title: "Blog de Movibox Mudanzas | Mudanzas, Guardamuebles y Fletes",
     description:
       "Guías y consejos sobre mudanzas en Córdoba, guardamuebles y almacenamiento seguro. Tips de expertos en logística local.",
     url: "https://www.movibox.com.ar/blog",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Blog Movibox Logística",
+    title: "Blog Movibox Mudanzas",
     description:
       "Consejos prácticos sobre mudanzas, transporte y guardamuebles en Córdoba y Argentina.",
     images: ["https://www.movibox.com.ar/logisticas.jpg"],
@@ -55,12 +55,12 @@ export default function BlogHomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: "Blog de Movibox Logística",
+    name: "Blog de Movibox Mudanzas",
     description:
       "Artículos, guías y consejos sobre transporte, logística y mudanzas en Argentina.",
     publisher: {
       "@type": "Organization",
-      name: "Movibox Logística",
+      name: "Movibox Mudanzas",
       url: "https://www.movibox.com.ar",
       logo: {
         "@type": "ImageObject",
@@ -119,7 +119,7 @@ export default function BlogHomePage() {
       <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden text-center">
         <Image
           src={image_header}
-          alt="Blog de Movibox Logística - Artículos sobre mudanzas y transporte en Córdoba"
+          alt="Blog de Movibox Mudanzas - Artículos sobre mudanzas y transporte en Córdoba"
           fill
           priority
           fetchPriority="high"
@@ -130,7 +130,7 @@ export default function BlogHomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
           <h1 className="text-4xl font-bold text-white drop-shadow-lg md:text-6xl">
-            Blog de Movibox Logística
+            Blog de Movibox Mudanzas
           </h1>
           <p className="mt-4 text-lg text-white/85 md:text-xl">
             Consejos prácticos, guías completas y tips sobre <strong>mudanzas en Córdoba</strong>, <strong>guardamuebles seguro</strong> y <strong>fletes especializados</strong>.
@@ -190,9 +190,9 @@ export default function BlogHomePage() {
       {/* SEO Content Section */}
       <section className="bg-white py-16 md:py-24">
         <div className="container mx-auto max-w-4xl px-4 text-justify space-y-6">
-          <h2 className="text-2xl font-bold text-foreground">Sobre Movibox Logística</h2>
+          <h2 className="text-2xl font-bold text-foreground">Sobre Movibox Mudanzas</h2>
           <p>
-            En Movibox Logística ofrecemos soluciones integrales de{" "}
+            En Movibox Mudanzas ofrecemos soluciones integrales de{" "}
             <Link href="/mudanzas" className="text-primary font-medium hover:underline">
               mudanzas en Córdoba
             </Link>

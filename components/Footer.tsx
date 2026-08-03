@@ -42,7 +42,7 @@ const Footer = () => {
           <div className="space-y-8">
             <Image
               src={logo}
-              alt="Movibox Logística"
+              alt="Movibox Mudanzas"
               width={220}
               height={60}
               className="w-40 md:w-52 h-[60px] object-contain"
@@ -120,7 +120,7 @@ const Footer = () => {
           <p>
             © {new Date().getFullYear()}{" "}
             <span className="font-bold text-foreground">
-              Movibox Logística
+              Movibox Mudanzas
             </span>
             . Todos los derechos reservados.
           </p>

@@ -15,7 +15,7 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 const SLUG = "mudanzas-y-fletes";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Mudanzas y Fletes en Córdoba | Guía Completa 2024 | Movibox Logística",
+  title: "Mudanzas y Fletes en Córdoba | Guía Completa 2024 | Movibox Mudanzas",
   description:
     "Guía completa de mudanzas y fletes en Córdoba Capital. Servicio profesional con personal capacitado, vehículos equipados y presupuesto sin cargo. Tips para tu mudanza.",
   keywords: [
@@ -104,10 +104,10 @@ export default function MudanzasYFletesPage() {
                 {/* Introducción */}
                 <div className="space-y-4">
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    En <strong>Movibox Logística</strong> brindamos un servicio integral de <strong>mudanzas y fletes en Córdoba</strong>, adaptado tanto a hogares como a empresas. Contamos con unidades equipadas, operadores experimentados y una coordinación que garantiza puntualidad y cuidado en cada traslado.
+                    En <strong>Movibox Mudanzas</strong> brindamos un servicio integral de <strong>mudanzas y fletes en Córdoba</strong>, adaptado tanto a hogares como a empresas. Contamos con unidades equipadas, operadores experimentados y una coordinación que garantiza puntualidad y cuidado en cada traslado.
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    En Movibox Logística ofrecemos mudanzas y fletes en Córdoba Capital y provincia con atención personalizada en cada traslado.
+                    En Movibox Mudanzas ofrecemos mudanzas y fletes en Córdoba Capital y provincia con atención personalizada en cada traslado.
                   </p>
                 </div>
 

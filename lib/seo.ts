@@ -51,12 +51,12 @@ export function blogPostJsonLd(options: BlogPostJsonLdOptions) {
         mainEntityOfPage: url,
         author: {
           "@type": "Organization",
-          name: "Movibox Logística",
+          name: "Movibox Mudanzas",
           url: SITE_URL,
         },
         publisher: {
           "@type": "Organization",
-          name: "Movibox Logística",
+          name: "Movibox Mudanzas",
         },
         datePublished: options.datePublished ?? "2024-01-15",
         dateModified: options.dateModified ?? "2024-12-01",

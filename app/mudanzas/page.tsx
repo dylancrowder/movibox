@@ -57,7 +57,7 @@ export const metadata: Metadata = {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
         width: 1200,
         height: 630,
-        alt: "Camión de mudanzas de Movibox Logística en Córdoba",
+        alt: "Camión de mudanzas de Movibox Mudanzas en Córdoba",
       },
     ],
   },
@@ -79,7 +79,7 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Movibox Logística",
+        name: "Movibox Mudanzas",
         url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
@@ -96,7 +96,7 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Movibox Logística",
+        name: "Movibox Mudanzas",
         url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
@@ -113,7 +113,7 @@ const jsonLd = {
       },
       provider: {
         "@type": "MovingCompany",
-        name: "Movibox Logística",
+        name: "Movibox Mudanzas",
         url: "https://www.movibox.com.ar"
       },
       telephone: "+5493512586221",
@@ -121,7 +121,7 @@ const jsonLd = {
     {
       "@type": "MovingCompany",
       "@id": "https://www.movibox.com.ar/mudanzas#company",
-      name: "Movibox Logística",
+      name: "Movibox Mudanzas",
       description: "Mudanzas y fletes en Córdoba Capital y provincia con camión y equipo profesional.",
       url: "https://www.movibox.com.ar/mudanzas",
       telephone: "+5493512586221",
@@ -270,7 +270,7 @@ export default function MudanzasPage() {
       <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
         <Image
           src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
-          alt="Camión de mudanzas de Movibox Logística"
+          alt="Camión de mudanzas de Movibox Mudanzas"
           fill
           className="object-cover object-center md:hidden"
           priority
@@ -279,7 +279,7 @@ export default function MudanzasPage() {
         />
         <Image
           src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=800&height=1200"
-          alt="Camión de mudanzas de Movibox Logística"
+          alt="Camión de mudanzas de Movibox Mudanzas"
           fill
           className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
           priority
@@ -380,7 +380,7 @@ export default function MudanzasPage() {
                 <div className="relative aspect-[903/763] w-full bg-neutral-100">
                   <Image
                     src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F676ba5d5151c479483d7f7ad5e3444af?format=webp&width=800&height=1200"
-                    alt="Camión de mudanzas en Córdoba - Movibox Logística"
+                    alt="Camión de mudanzas en Córdoba - Movibox Mudanzas"
                     fill
                     unoptimized
                     className="object-contain"

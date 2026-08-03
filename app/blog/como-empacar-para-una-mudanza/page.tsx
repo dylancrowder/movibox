@@ -154,7 +154,7 @@ export default function EmpacarMudanzaPage() {
                 <h2 className="text-3xl font-bold text-foreground">Recomendaciones de Expertos</h2>
                 <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                   <p className="text-muted-foreground mb-4">
-                    En Movibox Logística recomendamos:
+                    En Movibox Mudanzas recomendamos:
                   </p>
                   <ul className="space-y-2 text-muted-foreground text-sm">
                     <li>• Comienza a empacar al menos una semana antes de la mudanza</li>
@@ -169,7 +169,7 @@ export default function EmpacarMudanzaPage() {
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-8 text-center space-y-4">
                 <h3 className="text-2xl font-bold text-foreground">¿Necesitas Ayuda con el Embalaje?</h3>
                 <p className="text-muted-foreground">
-                  En Movibox Logística ofrecemos servicio profesional de embalaje. Nuestro equipo conoce las mejores técnicas para proteger tus pertenencias.
+                  En Movibox Mudanzas ofrecemos servicio profesional de embalaje. Nuestro equipo conoce las mejores técnicas para proteger tus pertenencias.
                 </p>
                 <Button asChild size="lg" className="bg-secondary hover:bg-secondary">
                   <Link href="/mudanzas">Conocer más sobre nuestros servicios</Link>

@@ -51,7 +51,7 @@ export function Navbar() {
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <meta itemProp="name" content="Movibox Logística" />
+      <meta itemProp="name" content="Movibox Mudanzas" />
       <meta itemProp="url" content="https://www.movibox.com.ar" />
 
       <div className="container px-4 md:px-6">
@@ -65,7 +65,7 @@ export function Navbar() {
           >
             <Image
               src={logo}
-              alt="Movibox Logística - Empresa de mudanzas y transporte en Córdoba"
+              alt="Movibox Mudanzas - Empresa de mudanzas y transporte en Córdoba"
               width={180}
               height={45}
               className="object-contain"
