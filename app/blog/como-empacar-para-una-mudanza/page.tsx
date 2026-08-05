@@ -20,7 +20,7 @@ export const metadata: Metadata = blogArticleMetadata(SLUG, {
     "técnicas embalaje",
     "mudanza Córdoba",
   ],
-  ogImage: "/logisticas.jpg",
+  ogImage: "/logisticas.webp",
   ogImageAlt: "Cómo empacar para una mudanza en Córdoba",
 });
 
@@ -30,7 +30,7 @@ export default function EmpacarMudanzaPage() {
     headline: "Cómo Empacar para una Mudanza - Guía Completa",
     description:
       "Guía paso a paso sobre técnicas de embalaje, materiales necesarios y recomendaciones de expertos para mudanzas seguras.",
-    image: "/logisticas.jpg",
+    image: "/logisticas.webp",
     datePublished: "2024-12-01",
     dateModified: "2024-12-01",
     type: "Article",

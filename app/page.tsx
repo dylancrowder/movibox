@@ -137,7 +137,7 @@ const homePageSchema = {
       "@type": "MovingCompany",
       "@id": "https://www.movibox.com.ar/#localbusiness",
       name: "Movibox Mudanzas",
-      logo: "https://www.movibox.com.ar/logo.png",
+      logo: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
       telephone: "+5493512586221",
       priceRange: "$$",
       sameAs: [

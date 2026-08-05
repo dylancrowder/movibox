@@ -175,15 +175,27 @@ export default function FAQPage() {
 
   const faqPageSchema = {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: allFaqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://www.movibox.com.ar/faq#webpage",
+        name: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",
+        description:
+          "Preguntas frecuentes sobre mudanzas, guardamuebles, fletes y almacenamiento en Córdoba. Resuelve tus dudas sobre traslados, seguridad y precios. Respuestas de expertos.",
+        url: "https://www.movibox.com.ar/faq",
       },
-    })),
+      {
+        "@type": "FAQPage",
+        mainEntity: allFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
   };
 
   return (

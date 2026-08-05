@@ -27,7 +27,7 @@ export default function MejorMomentoPage() {
     headline: "Mejor Momento para Mudarse - Guía de Temporadas",
     description:
       "Análisis detallado de cuándo es el mejor momento para mudarse considerando costos, disponibilidad y otros factores.",
-    image: "/logisticas.jpg",
+    image: "/logisticas.webp",
     datePublished: "2024-12-01",
     dateModified: "2024-12-01",
     type: "Article",

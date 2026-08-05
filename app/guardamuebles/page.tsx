@@ -87,56 +87,23 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
 
-    // 1️⃣ EMPRESA
     {
-      "@type": "LocalBusiness",
-      "@id": "https://www.movibox.com.ar/#localbusiness",
-      name: "Movibox Mudanzas",
-      url: "https://www.movibox.com.ar",
-      telephone: "+5493512586221",
-      priceRange: "$$",
-      sameAs: [
-        "https://maps.app.goo.gl/AcbHjSsHASLjHpY6A"
-      ],
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -31.403489,
-        longitude: -64.137619
-      },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Camino Chacra de la Merced Km 1/2",
-        addressLocality: "Córdoba",
-        addressRegion: "Córdoba",
-        addressCountry: "AR"
-      },
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        opens: "09:00",
-        closes: "18:00"
-      },
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Provincia de Córdoba"
-      },
+      "@type": "WebPage",
+      "@id": "https://www.movibox.com.ar/guardamuebles#webpage",
+      name: "Guardamuebles con Servicio de Mudanza en Córdoba",
+      description: "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
+      url: "https://www.movibox.com.ar/guardamuebles",
+      primaryImageOfPage: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200"
     },
 
-    // 2️⃣ SERVICIO
+    // 1️⃣ SERVICIO
     {
       "@type": "Service",
       "@id": "https://www.movibox.com.ar/guardamuebles#service",
       name: "Guardamuebles en Córdoba",
       description: "Servicio de guardamuebles con vigilancia 24/7 y retiro a domicilio en Córdoba Capital.",
       provider: {
-        "@id": "https://www.movibox.com.ar/#localbusiness"
+        "@id": "https://www.movibox.com.ar/#organization"
       },
       areaServed: {
         "@type": "City",
@@ -144,14 +111,14 @@ const jsonLd = {
       }
     },
 
-    // 3️⃣ INSTALACIÓN FÍSICA
+    // 2️⃣ INSTALACIÓN FÍSICA
     {
       "@type": "SelfStorage",
       "@id": "https://www.movibox.com.ar/guardamuebles#storage",
       name: "Guardamuebles Movibox Mudanzas",
       url: "https://www.movibox.com.ar/guardamuebles",
       provider: {
-        "@id": "https://www.movibox.com.ar/#localbusiness"
+        "@id": "https://www.movibox.com.ar/#organization"
       },
       address: {
         "@type": "PostalAddress",
@@ -166,7 +133,7 @@ const jsonLd = {
       ]
     },
 
-    // 4️⃣ BREADCRUMB
+    // 3️⃣ BREADCRUMB
     {
       "@type": "BreadcrumbList",
       "itemListElement": [

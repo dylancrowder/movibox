@@ -90,12 +90,7 @@ export function Navbar() {
             <Link href="/guardamuebles" className={linkClass("/guardamuebles")}>
               Guardamuebles
             </Link>
-            <Link href="/blog" className={linkClass("/blog")}>
-              Blog
-            </Link>
-            <Link href="/faq" className={linkClass("/faq")}>
-              FAQ
-            </Link>
+
             <Link href="/contacto" className={linkClass("/contacto")}>
               Contacto
             </Link>
@@ -147,26 +142,6 @@ export function Navbar() {
                   }
                 >
                   Guardamuebles
-                </Link>
-                <Link
-                  href="/blog"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/blog")}
-                  aria-current={
-                    pathname === "/blog" ? "page" : undefined
-                  }
-                >
-                  Blog
-                </Link>
-                <Link
-                  href="/faq"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/faq")}
-                  aria-current={
-                    pathname === "/faq" ? "page" : undefined
-                  }
-                >
-                  FAQ
                 </Link>
                 <Link
                   href="/contacto"

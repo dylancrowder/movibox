@@ -68,6 +68,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebPage",
+      "@id": "https://www.movibox.com.ar/mudanzas#webpage",
+      name: "Mudanzas en Córdoba Capital y Provincia",
+      description: "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp.",
+      url: "https://www.movibox.com.ar/mudanzas",
+      primaryImageOfPage: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630"
+    },
+    {
       "@type": "Service",
       "@id": "https://www.movibox.com.ar/mudanzas#residential-moving",
       name: "Mudanzas Residenciales en Córdoba",
@@ -198,6 +206,11 @@ export default function MudanzasPage() {
       icon: Building,
       title: "Para todos",
       description: "Viviendas, departamentos, oficinas y locales comerciales.",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Seguro contra accidentes personales",
+      description: "Contamos con cobertura de seguros para accidentes personales durante la mudanza, para mayor tranquilidad y responsabilidad.",
     },
     {
       icon: CheckCircle2,

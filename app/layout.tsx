@@ -87,99 +87,64 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
   },
 
   manifest: '/manifest.json',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ Structured Data JSON-LD optimizado para MovingCompany y LocalBusiness
+  // ✅ Structured Data JSON-LD optimizado para Organization y WebSite
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'LocalBusiness',
+        '@type': 'Organization',
         '@id': 'https://www.movibox.com.ar/#organization',
         name: 'Movibox Mudanzas',
         alternateName: 'Movibox Mudanzas - Mudanzas y Guardamuebles',
         description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
+        foundingDate: '2025',
         url: 'https://www.movibox.com.ar',
         logo: {
           '@type': 'ImageObject',
-          url: 'https://www.movibox.com.ar/logo.png',
+          url: 'https://www.movibox.com.ar/images/iconos/logo-movibox.svg',
           width: 300,
           height: 300,
         },
-        image: 'https://www.movibox.com.ar/images/header/rua.webp',
-        telephone: '+54-351-258-6221',
-        email: 'movibox.cba@gmail.com',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Camino Chacra de la Merced Km 1/2',
-          addressLocality: 'Córdoba',
-          addressRegion: 'Córdoba',
-          postalCode: '5007',
-          addressCountry: 'AR',
-        },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: -31.4201,
-          longitude: -64.1888,
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            contactType: 'Customer Service',
+            telephone: '+54-351-258-6221',
+            areaServed: 'AR',
+            availableLanguage: ['es'],
+          },
+          {
+            '@type': 'ContactPoint',
+            contactType: 'WhatsApp',
+            telephone: '+543512586221',
+          },
+        ],
+        brand: {
+          '@type': 'Brand',
+          name: 'Movibox',
         },
         areaServed: [
           {
-            '@type': 'AdministrativeArea',
-            name: 'Córdoba Capital',
+            '@type': 'City',
+            name: 'Córdoba',
           },
           {
-            '@type': 'AdministrativeArea',
-            name: 'Córdoba Provincia',
+            '@type': 'State',
+            name: 'Provincia de Córdoba',
           },
         ],
-        priceRange: '$$',
-        openingHoursSpecification: [
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            opens: '08:00',
-            closes: '18:00',
-          },
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: 'Saturday',
-            opens: '09:00',
-            closes: '13:00',
-          },
+        paymentAccepted: [
+          'Cash',
+          'Visa',
+          'MasterCard',
+          'Transferencia',
         ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'Customer Service',
-          telephone: '+54-351-258-6221',
-          areaServed: 'AR',
-          availableLanguage: ['es'],
-        },
-        knowsAbout: ['Mudanzas residenciales', 'Mudanzas comerciales', 'Fletes', 'Guardamuebles', 'Almacenamiento seguro'],
-      },
-      {
-        '@type': 'MovingCompany',
-        '@id': 'https://www.movibox.com.ar/#movingcompany',
-        name: 'Movibox Mudanzas',
-        url: 'https://www.movibox.com.ar',
-        telephone: '+54-351-258-6221',
-        email: 'movibox.cba@gmail.com',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Camino Chacra de la Merced Km 1/2',
-          addressLocality: 'Córdoba',
-          addressRegion: 'Córdoba',
-          addressCountry: 'AR',
-        },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "2"
-        },
       },
       {
         '@type': 'WebSite',
@@ -190,51 +155,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         publisher: {
           '@id': 'https://www.movibox.com.ar/#organization',
         },
+        images: [
+          {
+            url: 'https://www.movibox.com.ar/logisticas.webp',
+            width: 1200,
+            height: 630,
+            type: 'image/webp',
+          },
+        ],
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://www.movibox.com.ar/buscar?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
         sameAs: [
           'https://www.facebook.com/movibox',
           'https://www.instagram.com/moviboxcba',
           'https://www.google.com/maps/search/Movibox+Córdoba',
-        ],
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          {
-            '@type': 'ListItem',
-            position: 1,
-            name: 'Inicio',
-            item: 'https://www.movibox.com.ar',
-          },
-          {
-            '@type': 'ListItem',
-            position: 2,
-            name: 'Mudanzas',
-            item: 'https://www.movibox.com.ar/mudanzas',
-          },
-          {
-            '@type': 'ListItem',
-            position: 3,
-            name: 'Guardamuebles',
-            item: 'https://www.movibox.com.ar/guardamuebles',
-          },
-          {
-            '@type': 'ListItem',
-            position: 4,
-            name: 'Blog',
-            item: 'https://www.movibox.com.ar/blog',
-          },
-          {
-            '@type': 'ListItem',
-            position: 5,
-            name: 'FAQ',
-            item: 'https://www.movibox.com.ar/faq',
-          },
-          {
-            '@type': 'ListItem',
-            position: 6,
-            name: 'Contacto',
-            item: 'https://www.movibox.com.ar/contacto',
-          },
         ],
       },
     ],

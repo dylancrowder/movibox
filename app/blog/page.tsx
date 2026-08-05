@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     url: "https://www.movibox.com.ar/blog",
     images: [
       {
-        url: "https://www.movibox.com.ar/logisticas.jpg",
+        url: "https://www.movibox.com.ar/logisticas.webp",
         width: 1200,
         height: 630,
         alt: "Artículos y guías sobre mudanzas, logística y transporte",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Blog Movibox Mudanzas",
     description:
       "Consejos prácticos sobre mudanzas, transporte y guardamuebles en Córdoba y Argentina.",
-    images: ["https://www.movibox.com.ar/logisticas.jpg"],
+    images: ["https://www.movibox.com.ar/logisticas.webp"],
   },
 };
 
@@ -64,7 +64,7 @@ export default function BlogHomePage() {
       url: "https://www.movibox.com.ar",
       logo: {
         "@type": "ImageObject",
-        url: "https://www.movibox.com.ar/logo.png",
+        url: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
       },
     },
     url: "https://www.movibox.com.ar/blog",
