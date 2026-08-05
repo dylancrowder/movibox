@@ -28,19 +28,6 @@ export const metadata: Metadata = {
   title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
   description:
     "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp. Servicio seguro y al mejor precio.",
-  keywords: [
-    "mudanzas Córdoba Capital",
-    "mudanzas Córdoba provincia",
-    "empresa de mudanzas Córdoba",
-
-    "mudanzas residenciales Córdoba",
-    "fletes Córdoba Capital",
-    "mudanzas urgentes Córdoba",
-    "mudanzas comerciales Córdoba",
-
-    "traslado de muebles Córdoba",
-    "mudanzas dentro de Córdoba",
-  ],
   alternates: { canonical: "https://www.movibox.com.ar/mudanzas" },
   robots: {
     index: true,
@@ -80,7 +67,7 @@ const jsonLd = {
       "@id": "https://www.movibox.com.ar/mudanzas#residential-moving",
       name: "Mudanzas Residenciales en Córdoba",
       description: "Servicio completo de mudanzas para casas y departamentos en Córdoba Capital y provincia. Incluye desmontaje, embalaje, traslado y montaje.",
-      serviceType: "Moving Service",
+      serviceType: "Mudanzas residenciales",
       areaServed: {
         "@type": "City",
         name: "Córdoba"
@@ -97,7 +84,7 @@ const jsonLd = {
       "@id": "https://www.movibox.com.ar/mudanzas#commercial-moving",
       name: "Mudanzas Comerciales en Córdoba",
       description: "Mudanzas de oficinas, locales y establecimientos comerciales. Personal especializado en traslado de equipamiento empresarial.",
-      serviceType: "Moving Service",
+      serviceType: "Mudanzas comerciales",
       areaServed: {
         "@type": "City",
         name: "Córdoba"
@@ -114,7 +101,7 @@ const jsonLd = {
       "@id": "https://www.movibox.com.ar/mudanzas#freight-service",
       name: "Fletes en Córdoba",
       description: "Transporte de objetos individuales, muebles y cargas puntuales en Córdoba Capital y provincia. Vehículos adaptados para cada tipo de carga.",
-      serviceType: "Freight Service",
+      serviceType: "Fletes",
       areaServed: {
         "@type": "City",
         name: "Córdoba"
@@ -134,9 +121,6 @@ const jsonLd = {
       url: "https://www.movibox.com.ar/mudanzas",
       telephone: "+5493512586221",
       priceRange: "$$",
-      sameAs: [
-        "https://maps.app.goo.gl/AcbHjSsHASLjHpY6A"
-      ],
       geo: {
         "@type": "GeoCoordinates",
         latitude: -31.403489,

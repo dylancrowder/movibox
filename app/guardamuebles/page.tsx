@@ -33,18 +33,6 @@ export const metadata: Metadata = {
   description:
     "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
 
-  keywords: [
-    "guardamuebles Córdoba Capital",
-    "guardar muebles Córdoba",
-    "almacenamiento seguro Córdoba",
-    "guardamuebles económico Córdoba",
-    "depósito de muebles Córdoba",
-    "almacenamiento temporal Córdoba",
-    "guardamuebles vigilancia 24/7",
-    "alquiler depósito Córdoba",
-    "guardamuebles sin contrato",
-    "almacenamiento muebles Córdoba Capital",
-  ],
 
   alternates: {
     canonical: "https://www.movibox.com.ar/guardamuebles",

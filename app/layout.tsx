@@ -22,17 +22,7 @@ export const metadata: Metadata = {
     default: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
     template: "%s | Movibox Mudanzas"
   },
-  description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto sin cargo por WhatsApp.",
-  keywords: [
-    "mudanzas Córdoba",
-    "fletes Córdoba",
-    "guardamuebles Córdoba",
-    "mudanzas locales",
-    "almacenamiento Córdoba",
-    "depósito mercadería",
-    "empresa de mudanzas",
-    "almacenamiento seguro Córdoba",
-  ],
+  description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
   authors: [{ name: "Movibox Mudanzas", url: "https://www.movibox.com.ar" }],
   creator: "Movibox Mudanzas",
   publisher: "Movibox Mudanzas",
@@ -47,6 +37,7 @@ export const metadata: Metadata = {
       follow: true,
       'max-image-preview': 'large',
       'max-snippet': -1,
+      'max-video-preview': -1,
     },
   },
 
@@ -54,30 +45,25 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.movibox.com.ar/",
-    title: "Mudanzas en Córdoba Capital y Provincia | Mudanzas y Guardamuebles",
-    description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
+    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
     siteName: "Movibox Mudanzas",
     images: [
       {
-        url: "/images/header/rua.webp",
+        url: "/images/header/headerchacra.webp",
         width: 1200,
         height: 630,
         alt: "Mudanzas en Córdoba - Movibox Mudanzas",
+        type: "image/webp",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital y Provincia | Mudanzas y Guardamuebles",
-    description: "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
-    images: ["/images/header/rua.webp"],
-  },
-
-  other: {
-    'geo.region': 'AR-X',
-    'geo.placename': 'Córdoba',
-    'geo.position': '-31.4201;-64.1888',
+    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
+    images: ["/images/header/headerchacra.webp"],
   },
 
   verification: {
@@ -101,9 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'Organization',
         '@id': 'https://www.movibox.com.ar/#organization',
         name: 'Movibox Mudanzas',
-        alternateName: 'Movibox Mudanzas - Mudanzas y Guardamuebles',
         description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
-        foundingDate: '2025',
         url: 'https://www.movibox.com.ar',
         logo: {
           '@type': 'ImageObject',
@@ -146,11 +130,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'Transferencia',
         ],
         currenciesAccepted: ['ARS'],
-        makesOffer: {
-          '@type': 'Offer',
-          name: 'Cotización de mudanzas y guardamuebles',
-          priceCurrency: 'ARS',
-        },
       },
       {
         '@type': 'WebSite',
@@ -161,23 +140,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         publisher: {
           '@id': 'https://www.movibox.com.ar/#organization',
         },
-        images: [
-          {
-            url: 'https://www.movibox.com.ar/logisticas.webp',
-            width: 1200,
-            height: 630,
-            type: 'image/webp',
-          },
-        ],
         potentialAction: {
           '@type': 'SearchAction',
           target: 'https://www.movibox.com.ar/buscar?q={search_term_string}',
           'query-input': 'required name=search_term_string',
         },
         sameAs: [
-          'https://www.facebook.com/movibox',
           'https://www.instagram.com/moviboxcba',
-          'https://www.google.com/maps/search/Movibox+Córdoba',
         ],
       },
     ],

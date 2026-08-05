@@ -11,15 +11,6 @@ export const metadata: Metadata = {
   title: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",
   description:
     "Preguntas frecuentes sobre mudanzas, guardamuebles, fletes y almacenamiento en Córdoba. Resuelve tus dudas sobre traslados, seguridad y precios. Respuestas de expertos.",
-  keywords: [
-    "preguntas frecuentes mudanzas cordoba",
-    "FAQ guardamuebles",
-    "dudas sobre mudanza",
-    "como funciona guardamuebles",
-    "mudanza en cordoba capital",
-    "almacenamiento seguro",
-    "mudanzas cordoba provincia",
-  ],
   alternates: { canonical: "https://www.movibox.com.ar/faq" },
   openGraph: {
     type: "website",

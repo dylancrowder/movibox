@@ -25,14 +25,6 @@ export const metadata: Metadata = {
     "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
   description:
     "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
-  keywords: [
-    "mudanzas Córdoba",
-    "fletes Córdoba",
-    "guardamuebles Córdoba",
-    "mudanzas locales",
-    "almacenamiento Córdoba",
-    "guardamuebles vigilancia 24/7",
-  ],
   alternates: { canonical: "https://www.movibox.com.ar/" },
 
   openGraph: {
@@ -124,25 +116,16 @@ const homePageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
-      name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
-      description:
-        "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón.",
-      url: "https://www.movibox.com.ar/",
-      mainEntity: {
-        "@id": "https://www.movibox.com.ar/#localbusiness"
-      }
-    },
-    {
-      "@type": "MovingCompany",
-      "@id": "https://www.movibox.com.ar/#localbusiness",
+      "@type": "Organization",
+      "@id": "https://www.movibox.com.ar/#organization",
       name: "Movibox Mudanzas",
+      url: "https://www.movibox.com.ar",
       logo: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
-      telephone: "+5493512586221",
-      priceRange: "$$",
       sameAs: [
-        "https://maps.app.goo.gl/AcbHjSsHASLjHpY6A"
+        "https://www.facebook.com/movibox",
+        "https://www.instagram.com/moviboxcba"
       ],
+      telephone: "+5493512586221",
       email: "movibox.cba@gmail.com",
       address: {
         "@type": "PostalAddress",
@@ -150,12 +133,32 @@ const homePageSchema = {
         addressLocality: "Córdoba",
         addressRegion: "Córdoba",
         addressCountry: "AR",
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.movibox.com.ar/#website",
+      url: "https://www.movibox.com.ar",
+      name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
+      inLanguage: "es-AR",
+      publisher: {
+        "@id": "https://www.movibox.com.ar/#organization"
       },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -31.403489,
-        longitude: -64.137619,
-      },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: "https://www.movibox.com.ar/buscar?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebPage",
+      name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
+      description:
+        "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón.",
+      url: "https://www.movibox.com.ar/",
+      mainEntity: {
+        "@id": "https://www.movibox.com.ar/#organization"
+      }
     },
     {
       "@type": "BreadcrumbList",
