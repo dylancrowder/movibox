@@ -99,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {
             '@type': 'ContactPoint',
             contactType: 'Customer Service',
-            telephone: '+54-351-258-6221',
+            telephone: '+5493512586221',
             areaServed: 'AR',
             availableLanguage: ['es'],
           },
@@ -130,6 +130,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'Transferencia',
         ],
         currenciesAccepted: ['ARS'],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Servicios Movibox',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Mudanzas en Córdoba',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Guardamuebles en Córdoba',
+              },
+            },
+          ],
+        },
       },
       {
         '@type': 'WebSite',
