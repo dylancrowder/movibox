@@ -145,6 +145,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'MasterCard',
           'Transferencia',
         ],
+        currenciesAccepted: ['ARS'],
+        makesOffer: {
+          '@type': 'Offer',
+          name: 'Cotización de mudanzas y guardamuebles',
+          priceCurrency: 'ARS',
+        },
       },
       {
         '@type': 'WebSite',
