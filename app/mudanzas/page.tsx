@@ -73,9 +73,7 @@ const jsonLd = {
         name: "Córdoba"
       },
       provider: {
-        "@type": "MovingCompany",
-        name: "Movibox Mudanzas",
-        url: "https://www.movibox.com.ar"
+        '@id': 'https://www.movibox.com.ar/#movingcompany'
       },
       telephone: "+5493512586221",
     },
@@ -90,9 +88,7 @@ const jsonLd = {
         name: "Córdoba"
       },
       provider: {
-        "@type": "MovingCompany",
-        name: "Movibox Mudanzas",
-        url: "https://www.movibox.com.ar"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       telephone: "+5493512586221",
     },
@@ -107,47 +103,13 @@ const jsonLd = {
         name: "Córdoba"
       },
       provider: {
-        "@type": "MovingCompany",
-        name: "Movibox Mudanzas",
-        url: "https://www.movibox.com.ar"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       telephone: "+5493512586221",
     },
     {
       "@type": "MovingCompany",
-      "@id": "https://www.movibox.com.ar/mudanzas#company",
-      name: "Movibox Mudanzas",
-      description: "Mudanzas y fletes en Córdoba Capital y provincia con camión y equipo profesional.",
-      url: "https://www.movibox.com.ar/mudanzas",
-      telephone: "+5493512586221",
-      priceRange: "$$",
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: -31.403489,
-        longitude: -64.137619
-      },
-      email: "movibox.cba@gmail.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Camino Chacra de la Merced Km 1/2",
-        addressLocality: "Córdoba",
-        addressRegion: "Córdoba",
-        addressCountry: "AR",
-      },
-      areaServed: [
-        {
-          "@type": "City",
-          name: "Córdoba Capital"
-        },
-        {
-          "@type": "AdministrativeArea",
-          name: "Córdoba Provincia"
-        },
-        {
-          "@type": "Country",
-          name: "Argentina"
-        }
-      ],
+      "@id": "https://www.movibox.com.ar/#movingcompany"
     },
     {
       "@type": "BreadcrumbList",

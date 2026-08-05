@@ -84,43 +84,57 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'Organization',
-        '@id': 'https://www.movibox.com.ar/#organization',
+        '@type': ['LocalBusiness', 'MovingCompany'],
+        '@id': 'https://www.movibox.com.ar/#movingcompany',
         name: 'Movibox Mudanzas',
-        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
         url: 'https://www.movibox.com.ar',
-        logo: {
-          '@type': 'ImageObject',
-          url: 'https://www.movibox.com.ar/images/iconos/logo-movibox.svg',
-          width: 300,
-          height: 300,
+        telephone: '+5493512586221',
+        email: 'movibox.cba@gmail.com',
+        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Camino Chacra de la Merced Km 1/2',
+          addressLocality: 'Córdoba',
+          addressRegion: 'Córdoba',
+          postalCode: '5000',
+          addressCountry: 'AR',
         },
-        contactPoint: [
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: -31.403489,
+          longitude: -64.137619,
+        },
+        hasMap: 'https://www.google.com/maps/place/Movibox+Mudanzas+Cordoba',
+        openingHoursSpecification: [
           {
-            '@type': 'ContactPoint',
-            contactType: 'Customer Service',
-            telephone: '+5493512586221',
-            areaServed: 'AR',
-            availableLanguage: ['es'],
-          },
-          {
-            '@type': 'ContactPoint',
-            contactType: 'WhatsApp',
-            telephone: '+543512586221',
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: [
+              'Monday',
+              'Tuesday',
+              'Wednesday',
+              'Thursday',
+              'Friday',
+              'Saturday',
+            ],
+            opens: '08:00',
+            closes: '18:00',
           },
         ],
+        contactPoint: {
+          '@type': 'ContactPoint',
+          contactType: 'Customer Service',
+          telephone: '+5493512586221',
+          areaServed: 'AR',
+          availableLanguage: ['es'],
+        },
         brand: {
           '@type': 'Brand',
           name: 'Movibox',
         },
         areaServed: [
           {
-            '@type': 'City',
-            name: 'Córdoba',
-          },
-          {
             '@type': 'State',
-            name: 'Provincia de Córdoba',
+            name: 'Córdoba',
           },
         ],
         paymentAccepted: [
@@ -130,6 +144,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           'Transferencia',
         ],
         currenciesAccepted: ['ARS'],
+        priceRange: '$$',
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Servicios Movibox',
@@ -158,7 +173,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         name: 'Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba',
         inLanguage: 'es-AR',
         publisher: {
-          '@id': 'https://www.movibox.com.ar/#organization',
+          '@id': 'https://www.movibox.com.ar/#movingcompany',
         },
         potentialAction: {
           '@type': 'SearchAction',

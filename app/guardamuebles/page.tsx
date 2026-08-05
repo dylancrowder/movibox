@@ -91,7 +91,7 @@ const jsonLd = {
       name: "Guardamuebles en Córdoba",
       description: "Servicio de guardamuebles con vigilancia 24/7 y retiro a domicilio en Córdoba Capital.",
       provider: {
-        "@id": "https://www.movibox.com.ar/#organization"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       areaServed: {
         "@type": "City",
@@ -106,7 +106,7 @@ const jsonLd = {
       name: "Guardamuebles Movibox Mudanzas",
       url: "https://www.movibox.com.ar/guardamuebles",
       provider: {
-        "@id": "https://www.movibox.com.ar/#organization"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       address: {
         "@type": "PostalAddress",

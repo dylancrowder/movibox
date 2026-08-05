@@ -116,33 +116,13 @@ const homePageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.movibox.com.ar/#organization",
-      name: "Movibox Mudanzas",
-      url: "https://www.movibox.com.ar",
-      logo: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
-      sameAs: [
-        "https://www.facebook.com/movibox",
-        "https://www.instagram.com/moviboxcba"
-      ],
-      telephone: "+5493512586221",
-      email: "movibox.cba@gmail.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Camino Chacra de la Merced Km 1/2",
-        addressLocality: "Córdoba",
-        addressRegion: "Córdoba",
-        addressCountry: "AR",
-      }
-    },
-    {
       "@type": "WebSite",
       "@id": "https://www.movibox.com.ar/#website",
       url: "https://www.movibox.com.ar",
       name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
       inLanguage: "es-AR",
       publisher: {
-        "@id": "https://www.movibox.com.ar/#organization"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       potentialAction: {
         "@type": "SearchAction",
@@ -157,7 +137,7 @@ const homePageSchema = {
         "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón.",
       url: "https://www.movibox.com.ar/",
       mainEntity: {
-        "@id": "https://www.movibox.com.ar/#organization"
+        "@id": "https://www.movibox.com.ar/#movingcompany"
       }
     },
     {
