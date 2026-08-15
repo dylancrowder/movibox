@@ -135,8 +135,8 @@ export default function MudanzasPage() {
   const benefits = [
     {
       icon: Truck,
-      title: "Camión propio",
-      description: "Vehículo equipado para mudanzas y fletes en Córdoba Capital y provincia. Calidad garantizada.",
+      title: "Protección y embalaje",
+      description: "Llevamos mantas, film, cajas, fajas y herramientas para proteger y trasladar tus pertenencias con seguridad.",
     },
     {
       icon: Clock,
@@ -147,11 +147,6 @@ export default function MudanzasPage() {
       icon: ShieldCheck,
       title: "Cuidado profesional",
       description: "Protegemos tus muebles y pertenencias con máxima responsabilidad.",
-    },
-    {
-      icon: Building,
-      title: "Para todos",
-      description: "Viviendas, departamentos, oficinas y locales comerciales.",
     },
     {
       icon: ShieldCheck,
@@ -257,7 +252,7 @@ export default function MudanzasPage() {
               <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
                 Mudanzas en Córdoba Capital
                 <br />
-                <span className="text-secondary-400">Con ayudantes y trato profesional.</span>
+                <span className="text-secondary-400">Con ayudantes y atención personalizada.</span>
               </h1>
 
               <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
@@ -293,10 +288,10 @@ export default function MudanzasPage() {
               Por qué elegirnos
             </span>
             <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-              Mudanzas  en todo Córdoba
+              Todo listo para el traslado
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-              Servicio completo con vehículos propios. Cubrimos Nueva Córdoba, General Paz, Cerro de las Rosas, Centro y toda la provincia de Córdoba.
+              Nos encargamos de principio a fin. Presupuesto rápido y atención por WhatsApp en Córdoba Capital y toda la provincia.
             </p>
           </ScrollAnimation>
 
@@ -326,10 +321,10 @@ export default function MudanzasPage() {
               Nuestro camión
             </span>
             <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-              Camión equipado para tu mudanza en Córdoba
+              Camión equipado para tu mudanza
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Un camión para mudanzas y fletes en Córdoba Capital y toda la provincia.
+              Realizamos mudanzas y fletes con un servicio pensado para que tu traslado sea simple y sin complicaciones.
             </p>
           </ScrollAnimation>
 
@@ -394,30 +389,24 @@ export default function MudanzasPage() {
             <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
               Así trabajamos tu mudanza
             </h2>
-
           </ScrollAnimation>
 
-          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-4">
+          <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
             {[
               {
                 step: "1",
-                title: "Nos contás los detalles",
-                description: "Indicamos origen, destino, cantidad de muebles y fecha estimada.",
+                title: "Nos contactás",
+                description: "Por WhatsApp o llamada. Nos contás origen, destino, qué necesitás trasladar y la fecha.",
               },
               {
                 step: "2",
-                title: "Evaluamos tu mudanza",
-                description: "Calculamos el servicio necesario según la cantidad de cosas y las características del traslado.",
+                title: "Coordinamos tu mudanza",
+                description: "Te damos el presupuesto y, si estás de acuerdo, reservamos día y horario sin pedir seña.",
               },
               {
                 step: "3",
-                title: "Coordinamos día y horario",
-                description: "Organizamos todo para que tu mudanza sea simple y sin complicaciones.",
-              },
-              {
-                step: "4",
                 title: "Realizamos el traslado",
-                description: "Cargamos, protegemos y trasladamos tus pertenencias con cuidado hasta su destino.",
+                description: "El día acordado llegamos, cargamos y trasladamos tus pertenencias hasta el destino, para que vos no tengas que preocuparte por nada.",
               },
             ].map((item) => (
               <ScrollAnimation key={item.step} animation="fade-up">
