@@ -137,26 +137,31 @@ export default function MudanzasPage() {
       icon: Truck,
       title: "Protección y embalaje",
       description: "Llevamos mantas, film, cajas, fajas y herramientas para proteger y trasladar tus pertenencias con seguridad.",
+      href: null,
     },
     {
       icon: Clock,
       title: "Puntualidad garantizada",
       description: "Llegamos a la hora acordada. Sin demoras ni sorpresas.",
+      href: null,
     },
     {
       icon: ShieldCheck,
       title: "Cuidado profesional",
       description: "Protegemos tus muebles y pertenencias con máxima responsabilidad.",
+      href: null,
     },
     {
       icon: ShieldCheck,
       title: "Seguro contra accidentes personales",
       description: "Contamos con cobertura de seguros para accidentes personales durante la mudanza, para mayor tranquilidad y responsabilidad.",
+      href: null,
     },
     {
       icon: CheckCircle2,
       title: "Precio exacto",
       description: "Te decimos el valor antes de comenzar. Sin sorpresas.",
+      href: "/precios-mudanzas",
     },
   ];
 
@@ -296,8 +301,8 @@ export default function MudanzasPage() {
           </ScrollAnimation>
 
           <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
-            {benefits.map((benefit, index) => (
-              <ScrollAnimation key={benefit.title} animation="fade-up" delay={index * 100}>
+            {benefits.map((benefit, index) => {
+              const card = (
                 <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
                   <div className="rounded-full bg-secondary-500 w-fit p-3 text-white mb-4">
                     <benefit.icon className="h-6 w-6" />
@@ -307,8 +312,24 @@ export default function MudanzasPage() {
                     {benefit.description}
                   </p>
                 </article>
-              </ScrollAnimation>
-            ))}
+              );
+
+              return (
+                <ScrollAnimation key={benefit.title} animation="fade-up" delay={index * 100}>
+                  {benefit.href ? (
+                    <Link
+                      href={benefit.href}
+                      className="block h-full"
+                      aria-label="Ver precios de mudanzas"
+                    >
+                      {card}
+                    </Link>
+                  ) : (
+                    card
+                  )}
+                </ScrollAnimation>
+              );
+            })}
           </div>
         </div>
       </section>
