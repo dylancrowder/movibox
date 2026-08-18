@@ -156,22 +156,28 @@ export default function PreciosMudanzasPage() {
               </p>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="slide-in-right">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-neutral-300 bg-primary-700 p-6 shadow-card sm:p-10">
-                <div className="absolute inset-0 opacity-25 [background-image:linear-gradient(to_right,#ffffff_1px,transparent_1px),linear-gradient(to_bottom,#ffffff_1px,transparent_1px)] [background-size:2rem_2rem]" />
-                <div className="relative flex h-full items-center justify-center rounded-full border-[18px] border-secondary-400/80 bg-primary-600/50 sm:border-[28px]">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white text-primary shadow-card sm:h-24 sm:w-24">
-                    <MapPin className="h-10 w-10 sm:h-12 sm:w-12" />
-                  </div>
-                  <span className="absolute bottom-6 rounded-full bg-primary-800 px-4 py-2 text-center text-xs font-bold uppercase tracking-widest text-white sm:bottom-8 sm:text-sm">
-                    Córdoba Capital
-                  </span>
-                </div>
-                <span className="absolute right-5 top-5 rounded-full bg-white/15 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
-                  Área de servicio
-                </span>
-              </div>
-            </ScrollAnimation>
+
+
+           <ScrollAnimation animation="slide-in-right">
+  <div className="relative overflow-hidden rounded-md border border-neutral-300 bg-white shadow-card">
+    <Image
+      src="/images/webimages/cobertura-cordoba.png"
+      alt="Zona de cobertura de mudanzas en Córdoba Capital"
+      width={1200}
+      height={900}
+      className="h-auto w-full object-cover"
+      priority
+    />
+
+    <span className="absolute bottom-6 left-1/2 -translate-x-1/2 rounded-full bg-primary-800 px-4 py-2 text-center text-xs font-bold uppercase tracking-widest text-white sm:bottom-8 sm:text-sm">
+      Córdoba Capital
+    </span>
+
+    <span className="absolute right-5 top-5 rounded-full bg-primary-800 px-3 py-1.5 text-xs font-bold uppercase tracking-widest text-white">
+      Área de servicio
+    </span>
+  </div>
+</ScrollAnimation>
           </div>
         </div>
       </section>
