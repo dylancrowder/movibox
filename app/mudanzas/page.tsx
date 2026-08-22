@@ -739,62 +739,59 @@ export default function MudanzasPage() {
             CTA PRINCIPAL
         ====================================================== */}
 
-        <section className="bg-gradient-to-b from-primary-700 to-primary-800 py-16 sm:py-32 overflow-x-hidden text-white">
+      <section className="bg-gradient-to-b from-primary-700 to-primary-800 py-16 sm:py-32 overflow-x-hidden text-white">
+  <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
 
-          <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
+    <ScrollAnimation
+      animation="fade-up"
+      className="space-y-7"
+    >
 
-            <ScrollAnimation
-              animation="fade-up"
-              className="space-y-8"
-            >
+      <h2 className="text-4xl font-black sm:text-5xl leading-tight">
+        ¿Necesitás una mudanza?
+      </h2>
 
-              <h2 className="text-4xl font-black sm:text-5xl leading-tight">
-                ¿Necesitás mudanza en Córdoba?
-              </h2>
+      <p className="text-lg leading-relaxed text-white/90 max-w-2xl mx-auto">
+        Escribinos por WhatsApp y te pasamos tu presupuesto sin compromiso.
+      </p>
 
-              <p className="text-lg leading-relaxed text-white/90">
-                Contamos con disponibilidad inmediata para mudanzas dentro de
-                toda Córdoba Capital y provincia. Presupuesto gratuito en
-                menos de 5 minutos.
-              </p>
+      <div className="flex justify-center pt-2">
 
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row w-full pt-4">
+        <Button
+          asChild
+          variant="whatsapp"
+          size="lg"
+          className="w-full sm:w-auto"
+        >
 
-                <Button
-                  asChild
-                  variant="whatsapp"
-                  size="lg"
-                  className="w-full sm:w-auto"
-                >
+          <WhatsAppConversionLink
+            href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20pasan%20un%20presupuesto%3F"
+            className="flex items-center gap-3"
+          >
 
-                  <WhatsAppConversionLink
-                    href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20cuentan%20c%C3%B3mo%20trabajan%20y%20me%20pasan%20un%20presupuesto%3F"
-                    className="flex items-center gap-3"
-                  >
+            <Image
+              src={wsp}
+              alt="WhatsApp"
+              width={32}
+              height={32}
+            />
 
-                    <Image
-                      src={wsp}
-                      alt="WhatsApp"
-                      width={32}
-                      height={32}
-                    />
+            Pedir presupuesto por WhatsApp
 
-                    Cotizar ahora por WhatsApp
+          </WhatsAppConversionLink>
 
-                  </WhatsAppConversionLink>
+        </Button>
 
-                </Button>
+      </div>
 
-              </div>
+      <p className="text-xs text-white/70 pt-2">
+        📞 351 258-6221 · Respondemos rápido
+      </p>
 
-              <p className="text-xs text-white/70 pt-4">
-                📞 351 258-6221 · Respondemos en menos de 5 minutos
-              </p>
+    </ScrollAnimation>
 
-            </ScrollAnimation>
-
-          </div>
-        </section>
+  </div>
+</section>
 
         {/* =====================================================
             GUARDAMUEBLES
