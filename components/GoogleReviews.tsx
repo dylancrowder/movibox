@@ -1,5 +1,7 @@
 'use client';
 
+"use client";
+
 import React, { useEffect, useState, useRef } from 'react';
 import { Star, User, ChevronLeft, ChevronRight } from 'lucide-react';
 import { ScrollAnimation } from '@/components/scroll-animation';
@@ -208,7 +210,7 @@ export default function GoogleReviews({
             className="border-secondary/70 bg-white shadow-sm hover:shadow-md text-secondary-600 hover:text-secondary-700"
           >
             <a
-              href="https://www.google.com/search?q=Movibox+Cordoba"
+              href="https://share.google/2gei1JchxuVVwGe5n"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2"

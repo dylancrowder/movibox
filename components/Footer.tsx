@@ -29,6 +29,7 @@ const contactInfo = [
     icon: MapPin,
     label: "Dirección",
     value: "Camino Chacra de la Merced Km 1/2, Córdoba, Argentina",
+    href: "https://maps.app.goo.gl/yBe3szNXrV9ugbWNA",
   },
 ];
 
@@ -90,6 +91,8 @@ const Footer = () => {
                   {href ? (
                     <a
                       href={href}
+                      target={href.startsWith("http") ? "_blank" : undefined}
+                      rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="flex flex-col transition-colors hover:text-primary"
                     >
                       <span className="text-xs font-semibold uppercase tracking-widest text-foreground/80">
