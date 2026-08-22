@@ -5,18 +5,15 @@ import Link from "next/link";
 import {
   CheckCircle2,
   Clock,
-  Hammer,
   ShieldCheck,
   Warehouse,
   Truck,
   Building,
   MapPin,
   MessageCircle,
-  House,
   Package,
   Ruler,
   Phone,
-  Sofa,
   ChevronDown,
 } from "lucide-react";
 
@@ -487,19 +484,7 @@ export default function GuardamueblesPage() {
       </section>
 
 
-      {/* VALOR SENTIMENTAL */}
-      <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-up" className="text-center space-y-6">
-            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
-              Tus muebles no son solo objetos
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-              Sabemos que muchas veces guardás recuerdos, herencias o cosas que tienen valor sentimental. Nuestro compromiso es cuidarlos como si fueran propios.
-            </p>
-          </ScrollAnimation>
-        </div>
-      </section>
+
 
       {/* BENEFICIOS */}
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
@@ -630,22 +615,6 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
-      {/* IDENTIDAD LOCAL - ZONAS DE SERVICIO */}
-      <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
-        <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-up" className="text-center space-y-6">
-            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
-              Cobertura local
-            </span>
-            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
-              Guardamuebles en Córdoba Capital y alrededores
-            </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-              Brindamos servicio en Nueva Córdoba, General Paz, Cerro de las Rosas, Alta Córdoba, Centro, Villa Cabrera y toda la provincia de Córdoba.
-            </p>
-          </ScrollAnimation>
-        </div>
-      </section>
 
       {/* UBICACIÓN - MAPA */}
       <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
@@ -669,8 +638,8 @@ export default function GuardamueblesPage() {
 
                 <div className="space-y-6">
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
-                      <MapPin className="h-4 w-4" aria-hidden="true" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
+                      <MapPin className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="mb-1 font-semibold text-primary">Dirección</p>
@@ -686,8 +655,8 @@ export default function GuardamueblesPage() {
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
-                      <Phone className="h-4 w-4" aria-hidden="true" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
+                      <Phone className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground mb-1">Teléfono</p>
@@ -698,8 +667,8 @@ export default function GuardamueblesPage() {
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
-                      <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
+                      <MessageCircle className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-semibold text-primary mb-1">WhatsApp</p>
@@ -710,8 +679,8 @@ export default function GuardamueblesPage() {
                   </div>
 
                   <div className="flex gap-4 items-start">
-                    <div className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
-                      <Clock className="h-4 w-4" aria-hidden="true" />
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
+                      <Clock className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-semibold text-primary mb-1">Horario</p>
@@ -720,18 +689,8 @@ export default function GuardamueblesPage() {
                   </div>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button asChild variant="primary" size="lg" className="flex-1">
-                    <a
-                      href="https://maps.app.goo.gl/yBe3szNXrV9ugbWNA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MapPin className="h-5 w-5" />
-                      Ver ubicación en Google
-                    </a>
-                  </Button>
-                  <Button asChild variant="whatsapp" size="lg" className="flex-1">
+                <div className="mt-8">
+                  <Button asChild variant="whatsapp" size="lg" className="w-full">
                     <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%20quiero%20visitar%20el%20galpón%20de%20guardamuebles">
                       <Image src={wsp} alt="WhatsApp" width={20} height={20} />
                       Coordinar una visita
@@ -745,13 +704,15 @@ export default function GuardamueblesPage() {
               <div className="overflow-hidden rounded-lg shadow-card-hover">
                 <div className="h-96">
                   <iframe
-                    title="Ubicación de Guardamuebles Movibox Mudanzas en Córdoba"
                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108977.01611261496!2d-64.1896443!3d-31.3994723!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432bdd7b0e45ee3%3A0x9ead673f81a48c44!2sMovibox%20mudanzas%20y%20guardamuebles!5e0!3m2!1ses!2sar!4v1787425038224!5m2!1ses!2sar"
-                    className="h-full w-full"
+                    width="600"
+                    height="450"
                     style={{ border: 0 }}
-                    loading="lazy"
                     allowFullScreen
+                    loading="lazy"
                     referrerPolicy="strict-origin-when-cross-origin"
+                    className="h-full w-full"
+                    title="Ubicación de Movibox Mudanzas y Guardamuebles en Córdoba"
                   />
                 </div>
               </div>
@@ -763,61 +724,61 @@ export default function GuardamueblesPage() {
 
 
       {/* CASOS DE USO ESPECÍFICOS */}
-      <section className="bg-neutral-100 py-16 sm:py-32 overflow-x-hidden">
+      <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
-          <ScrollAnimation animation="fade-up" className="mb-20 space-y-6 text-center">
-            <span className="inline-block rounded-full bg-secondary-100 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-secondary-700">
+          <ScrollAnimation animation="fade-up" className="text-center space-y-6 mb-20">
+            <span className="inline-block text-sm font-bold uppercase tracking-widest text-primary bg-primary/10 px-3 py-1.5 rounded-full">
               Situaciones comunes
             </span>
-            <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
+            <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight">
               Casos donde guardar muebles es la mejor opción
             </h2>
-            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">
+            <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
               Descubre cómo el guardamuebles de Movibox resuelve situaciones específicas.
             </p>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: Hammer,
+                icon: "🔨",
                 title: "Guardar muebles por refacción",
                 description: "Realizando trabajos en tu casa? Guardamos tus muebles el tiempo que necesites mientras se hacen las refacciones y los devolvemos al terminar.",
               },
               {
-                icon: Clock,
+                icon: "⏱️",
                 title: "Almacenamiento temporal",
                 description: "Entre mudanzas, cambio de vivienda o espacio temporal? Guardamos tus cosas días, semanas o meses sin contrato mínimo.",
               },
               {
-                icon: Package,
+                icon: "📦",
                 title: "Almacenamiento de largo plazo",
                 description: "Necesitás guardar muebles por meses o años? Nuestro depósito seguro mantiene tus pertenencias protegidas indefinidamente.",
               },
               {
-                icon: House,
+                icon: "🏠",
                 title: "Cambio de vivienda",
                 description: "Nueva casa no está lista? Guardamos todo tu contenido hasta que puedas mudarte. Buscamos, guardamos y entregamos sin cargo.",
               },
               {
-                icon: Sofa,
+                icon: "🛋️",
                 title: "Muebles de familia",
                 description: "Heredaste muebles pero no tenés lugar? Guardamos herencias, reliquias familiares y objetos especiales con máximo cuidado.",
               },
               {
-                icon: Truck,
+                icon: "🚚",
                 title: "Alojamiento en mudanza",
                 description: "Mudanza de otra provincia? Almacenamos temporalmente mientras buscás vivienda en Córdoba.",
               },
-            ].map((item) => (
-              <ScrollAnimation key={item.title} animation="fade-up">
-                <article className="h-full rounded-md border-2 border-primary-700 bg-white p-6 text-center shadow-card hover:-translate-y-1 hover:shadow-card-hover sm:p-8">
-                  <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary-500 text-white">
-                    <item.icon className="h-6 w-6" />
+            ].map((item, index) => (
+              <ScrollAnimation key={item.title} animation="fade-up" delay={index * 80}>
+                <div className="bg-accent rounded-2xl p-6 border border-primary/70 shadow-sm">
+                  <div className="flex gap-3 items-start mb-4">
+                    <span className="text-3xl flex-shrink-0">{item.icon}</span>
+                    <h3 className="font-bold text-foreground text-lg">{item.title}</h3>
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold text-primary">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-neutral-600">{item.description}</p>
-                </article>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
               </ScrollAnimation>
             ))}
           </div>

@@ -16,7 +16,6 @@ import {
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
-import GoogleReviews from "@/components/GoogleReviews";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
@@ -508,12 +507,6 @@ export default function MudanzasPage() {
           </ScrollAnimation>
         </div>
       </section>
-
-      <GoogleReviews
-        title="Opiniones de nuestros clientes"
-        subtitle="Experiencias reales de clientes de Movibox Mudanzas"
-        maxReviews={6}
-      />
 
       {/* FAQ */}
       <section className="py-16 sm:py-32 bg-neutral-100 overflow-x-hidden">
