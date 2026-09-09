@@ -18,11 +18,11 @@ import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export const metadata: Metadata = {
-  title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+  title: "Mudanzas de larga distancia | Movibox",
   description:
-    "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp. Servicio seguro y al mejor precio.",
+    "Mudanzas de larga distancia entre provincias y dentro de Argentina. Traslado de casas, departamentos, oficinas y muebles. Cotización gratuita por WhatsApp.",
   alternates: {
-    canonical: "https://www.movibox.com.ar/mudanzas",
+    canonical: "https://www.movibox.com.ar/mudanzas-larga-distancia",
   },
   robots: {
     index: true,
@@ -30,16 +30,16 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Mudanzas en Córdoba | Rápidas, Seguras y al Mejor Precio",
+    title: "Mudanzas de larga distancia | Presupuesto gratis",
     description:
-      "Mudanzas en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
-    url: "https://www.movibox.com.ar/mudanzas",
+      "Mudanzas entre provincias y dentro de Argentina. Coordinamos carga, traslado y descarga. Pedí tu presupuesto gratis por WhatsApp.",
+    url: "https://www.movibox.com.ar/mudanzas-larga-distancia",
     images: [
       {
         url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
         width: 1200,
         height: 630,
-        alt: "Camión de mudanzas de Movibox Mudanzas en Córdoba",
+        alt: "Camión de Movibox para mudanzas de larga distancia",
       },
     ],
   },
@@ -50,25 +50,25 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://www.movibox.com.ar/mudanzas#webpage",
-      name: "Mudanzas en Córdoba Capital y Provincia",
+      "@id": "https://www.movibox.com.ar/mudanzas-larga-distancia#webpage",
+      name: "Mudanzas de larga distancia",
       description:
-        "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp.",
-      url: "https://www.movibox.com.ar/mudanzas",
+        "Mudanzas de larga distancia entre provincias y dentro de Argentina. Traslado de casas, departamentos, oficinas y muebles. Cotización gratuita por WhatsApp.",
+      url: "https://www.movibox.com.ar/mudanzas-larga-distancia",
       primaryImageOfPage:
         "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
     },
     {
       "@type": "Service",
       "@id":
-        "https://www.movibox.com.ar/mudanzas#residential-moving",
-      name: "Mudanzas Residenciales en Córdoba",
+        "https://www.movibox.com.ar/mudanzas-larga-distancia#residential-moving",
+      name: "Mudanzas residenciales de larga distancia",
       description:
-        "Servicio completo de mudanzas para casas y departamentos en Córdoba Capital y provincia. Incluye desmontaje, embalaje, traslado y montaje.",
+        "Servicio de mudanzas de larga distancia para casas y departamentos. Coordinamos carga, protección, traslado y descarga según el origen y destino.",
       serviceType: "Mudanzas residenciales",
       areaServed: {
-        "@type": "City",
-        name: "Córdoba",
+        "@type": "Country",
+        name: "Argentina",
       },
       provider: {
         "@id": "https://www.movibox.com.ar/#movingcompany",
@@ -78,14 +78,14 @@ const jsonLd = {
     {
       "@type": "Service",
       "@id":
-        "https://www.movibox.com.ar/mudanzas#commercial-moving",
-      name: "Mudanzas Comerciales en Córdoba",
+        "https://www.movibox.com.ar/mudanzas-larga-distancia#commercial-moving",
+      name: "Mudanzas comerciales de larga distancia",
       description:
-        "Mudanzas de oficinas, locales y establecimientos comerciales. Personal especializado en traslado de equipamiento empresarial.",
+        "Mudanzas de oficinas, locales y equipamiento comercial entre provincias y dentro de Argentina.",
       serviceType: "Mudanzas comerciales",
       areaServed: {
-        "@type": "City",
-        name: "Córdoba",
+        "@type": "Country",
+        name: "Argentina",
       },
       provider: {
         "@id": "https://www.movibox.com.ar/#movingcompany",
@@ -94,14 +94,14 @@ const jsonLd = {
     },
     {
       "@type": "Service",
-      "@id": "https://www.movibox.com.ar/mudanzas#freight-service",
-      name: "Fletes en Córdoba",
+      "@id": "https://www.movibox.com.ar/mudanzas-larga-distancia#freight-service",
+      name: "Traslados y fletes de larga distancia",
       description:
-        "Transporte de objetos individuales, muebles y cargas puntuales en Córdoba Capital y provincia. Vehículos adaptados para cada tipo de carga.",
+        "Traslado de muebles, electrodomésticos, cajas y cargas puntuales a larga distancia, entre provincias y dentro de Argentina.",
       serviceType: "Fletes",
       areaServed: {
-        "@type": "City",
-        name: "Córdoba",
+        "@type": "Country",
+        name: "Argentina",
       },
       provider: {
         "@id": "https://www.movibox.com.ar/#movingcompany",
@@ -124,8 +124,8 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Mudanzas en Córdoba",
-          item: "https://www.movibox.com.ar/mudanzas",
+          name: "Mudanzas de larga distancia",
+          item: "https://www.movibox.com.ar/mudanzas-larga-distancia",
         },
       ],
     },
@@ -184,6 +184,13 @@ export default function MudanzasPage() {
       href: null,
     },
     {
+      icon: ShieldCheck,
+      title: "Seguro opcional",
+      description:
+        "Podés sumar un seguro al traslado para contar con mayor tranquilidad durante el viaje.",
+      href: null,
+    },
+    {
       icon: CheckCircle2,
       title: "Precio exacto",
       description:
@@ -194,59 +201,59 @@ export default function MudanzasPage() {
 
   const faqItems = [
     {
-      question: "¿Cuánto cuesta una mudanza?",
+      question: "¿Cuánto cuesta una mudanza de larga distancia?",
       answer:
-        "Dentro de Córdoba Capital, el precio se calcula por hora. Te informamos el valor antes de comenzar.",
+        "Las mudanzas de larga distancia se cotizan según origen, destino, cantidad de pertenencias, volumen, fecha y necesidades de carga y descarga. Te damos un presupuesto antes de reservar.",
     },
     {
       question: "¿La cotización tiene costo?",
       answer:
-        "No. La cotización es totalmente gratuita y respondemos por WhatsApp en menos de 5 minutos.",
+        "No. La cotización es gratuita. Nos pasás los datos del viaje y te respondemos por WhatsApp.",
     },
     {
-      question: "¿Trabajan fines de semana?",
+      question: "¿Qué días realizan mudanzas?",
       answer:
-        "Sí. Realizamos mudanzas de lunes a domingo, incluidos feriados.",
+        "Coordinamos mudanzas según disponibilidad, incluyendo fines de semana y feriados.",
     },
     {
-      question: "¿Suben muebles por escalera?",
+      question: "¿La carga y descarga están incluidas?",
       answer:
-        "Sí, nuestros ayudantes pueden subir los muebles por escalera.",
+        "La carga y descarga se coordinan según las condiciones de cada traslado. Indicános si hay escaleras, ascensor o alguna dificultad de acceso para incluirlo en la cotización.",
     },
     {
       question: "¿Desarman y arman muebles?",
       answer:
-        "Sí, podemos desarmar y armar los muebles durante la mudanza.",
+        "Sí, podemos coordinar desmontaje y armado de muebles cuando el servicio lo requiere.",
     },
     {
-      question: "¿Embalar objetos frágiles está incluido?",
+      question: "¿Protegen los muebles durante el viaje?",
       answer:
-        "No. El embalaje de objetos frágiles tiene un valor adicional.",
+        "Sí. Utilizamos elementos de protección para reducir riesgos durante la carga, traslado y descarga. El embalaje especial puede cotizarse según lo que necesites.",
     },
     {
-      question: "¿Aceptan transferencias o efectivo?",
+      question: "¿Cómo se calcula el presupuesto?",
       answer:
-        "Sí, aceptamos transferencias bancarias y efectivo.",
+        "Consideramos distancia, volumen, fecha, accesos y servicios adicionales. Por eso necesitamos conocer origen y destino antes de darte un precio.",
     },
     {
-      question: "¿Qué zonas cubren?",
+      question: "¿A qué destinos realizan mudanzas?",
       answer:
-        "Realizamos mudanzas en toda Córdoba Capital.",
+        "Realizamos mudanzas entre provincias y dentro de Argentina. La disponibilidad y el presupuesto dependen del origen, destino, fecha y volumen.",
     },
     {
-      question: "¿Qué sucede si llueve?",
+      question: "¿Pueden viajar entre provincias?",
       answer:
-        "Dependiendo del lugar y las condiciones, somos flexibles y coordinamos la mudanza con vos.",
+        "Sí. Coordinamos viajes largos entre distintas provincias, sujeto a disponibilidad y coordinación previa.",
     },
     {
       question: "¿Realizan mudanzas de oficinas?",
       answer:
-        "Sí, realizamos mudanzas de oficinas y locales comerciales.",
+        "Sí, podemos coordinar mudanzas de oficinas, locales y equipamiento comercial a larga distancia.",
     },
     {
-      question: "¿Pueden guardar los muebles temporalmente?",
+      question: "¿Qué información necesitan para cotizar?",
       answer:
-        "Sí, contamos con servicio de guardamuebles.",
+        "Origen, destino, fecha aproximada y una descripción o fotos de lo que necesitás trasladar. También es importante indicar escaleras, ascensor y accesos si corresponde.",
     },
   ];
 
@@ -269,7 +276,7 @@ export default function MudanzasPage() {
 
           <Image
             src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
-            alt="Camión de mudanzas de Movibox Mudanzas"
+            alt="Camión de Movibox para mudanzas de larga distancia"
             fill
             className="object-cover object-center md:hidden"
             priority
@@ -279,7 +286,7 @@ export default function MudanzasPage() {
 
           <Image
             src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=800&height=1200"
-            alt="Camión de mudanzas de Movibox Mudanzas"
+            alt="Camión de Movibox para mudanzas de larga distancia"
             fill
             className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
             priority
@@ -287,37 +294,39 @@ export default function MudanzasPage() {
             sizes="100vw"
           />
 
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/35 md:to-black/20" />
 
           <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
 
-            <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
+            <div className="flex flex-col items-center text-center md:w-7/12 md:items-start md:text-left">
 
-              <div className="space-y-6 md:max-w-2xl">
+              <div className="space-y-6 md:max-w-3xl">
 
-                <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90 border border-white/20">
-                  Mudanzas y Fletes en Córdoba
+                <span className="inline-flex items-center justify-center gap-2 rounded-full border border-secondary-300/40 bg-secondary-500/20 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-secondary-100">
+                  Servicio de larga distancia
                 </span>
 
-                <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
-                  Mudanzas en Córdoba Capital
+                <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
+                  Mudanzas de larga distancia
                   <br />
                   <span className="text-secondary-400">
-                    Con ayudantes y atención personalizada.
+                    Entre provincias y dentro de Argentina.
                   </span>
                 </h1>
 
-                <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                  Atención inmediata y cotización gratuita por WhatsApp.
+                <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
+                  Coordinamos carga, protección, traslado y descarga de casas,
+                  departamentos, oficinas y muebles. Decinos origen, destino y fecha:
+                  te enviamos un presupuesto claro y sin cargo.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
-                  <HeroButtons />
+                <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start md:items-center">
+                  <HeroButtons
+                    whatsappMessage="Hola 👋, quería consultar por una mudanza de larga distancia."
+                  />
                 </div>
 
-                <p className="text-xs text-white/70">
-                  Respuesta en menos de 5 minutos · Atención directa
-                </p>
+
 
               </div>
             </div>
@@ -355,7 +364,7 @@ export default function MudanzasPage() {
 
               <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
                 Nos encargamos de principio a fin. Presupuesto rápido y
-                atención por WhatsApp en Córdoba Capital y toda la provincia.
+                atención por WhatsApp según tu origen y destino.
               </p>
             </ScrollAnimation>
 
@@ -447,7 +456,7 @@ export default function MudanzasPage() {
 
                     <Image
                       src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F676ba5d5151c479483d7f7ad5e3444af?format=webp&width=800&height=1200"
-                      alt="Camión de mudanzas en Córdoba - Movibox Mudanzas"
+                      alt="Camión de Movibox para viajes largos y mudanzas"
                       fill
                       unoptimized
                       className="object-contain"
@@ -510,7 +519,7 @@ export default function MudanzasPage() {
                       className="w-full"
                     >
                       <WhatsAppConversionLink
-                        href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20cuentan%20c%C3%B3mo%20trabajan%20y%20me%20pasan%20un%20presupuesto%3F"
+                        href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza%20de%20larga%20distancia."
                       >
                         <Image
                           src={wsp}
@@ -555,19 +564,19 @@ export default function MudanzasPage() {
                   step: "1",
                   title: "Nos contactás",
                   description:
-                    "Por WhatsApp o llamada. Nos contás origen, destino, qué necesitás trasladar y la fecha.",
+                    "Nos escribís por WhatsApp y nos indicás ciudad de origen, destino, fecha aproximada y qué necesitás trasladar.",
                 },
                 {
                   step: "2",
                   title: "Coordinamos tu mudanza",
                   description:
-                    "Te damos el presupuesto y, si estás de acuerdo, reservamos día y horario sin pedir seña.",
+                    "Analizamos el traslado, te pasamos el presupuesto y coordinamos día y horario.",
                 },
                 {
                   step: "3",
                   title: "Realizamos el traslado",
                   description:
-                    "El día acordado llegamos, cargamos y trasladamos tus pertenencias hasta el destino, para que vos no tengas que preocuparte por nada.",
+                    "Llegamos en la fecha acordada, cargamos, protegemos y trasladamos tus pertenencias hasta el destino.",
                 },
               ].map((item) => (
 
@@ -596,6 +605,44 @@ export default function MudanzasPage() {
 
               ))}
 
+            </div>
+          </div>
+        </section>
+
+        {/* =====================================================
+            DATOS PARA COTIZAR
+        ====================================================== */}
+
+        <section className="bg-white py-16 sm:py-24 overflow-x-hidden">
+          <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+            <ScrollAnimation animation="fade-up" className="text-center space-y-5 mb-12">
+              <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
+                Cotización rápida
+              </span>
+              <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
+                Decinos de dónde a dónde te mudás
+              </h2>
+              <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+                Para cotizar un viaje largo necesitamos origen, destino, fecha aproximada
+                y una descripción de lo que vas a trasladar.
+              </p>
+            </ScrollAnimation>
+
+            <div className="grid gap-5 md:grid-cols-4">
+              {[
+                ["01", "Origen", "Ciudad y localidad desde donde cargamos."],
+                ["02", "Destino", "Ciudad y localidad donde descargamos."],
+                ["03", "Fecha", "Día aproximado en el que necesitás viajar."],
+                ["04", "Carga", "Muebles, cajas, electrodomésticos y demás pertenencias."],
+              ].map(([number, title, description]) => (
+                <ScrollAnimation key={number} animation="fade-up">
+                  <article className="h-full rounded-md border border-neutral-300 bg-neutral-50 p-6">
+                    <div className="text-sm font-black text-secondary-600 mb-3">{number}</div>
+                    <h3 className="text-lg font-bold text-primary mb-2">{title}</h3>
+                    <p className="text-sm leading-relaxed text-neutral-600">{description}</p>
+                  </article>
+                </ScrollAnimation>
+              ))}
             </div>
           </div>
         </section>
@@ -748,11 +795,11 @@ export default function MudanzasPage() {
     >
 
       <h2 className="text-4xl font-black sm:text-5xl leading-tight">
-        ¿Necesitás una mudanza?
+        ¿Necesitás una mudanza de larga distancia?
       </h2>
 
       <p className="text-lg leading-relaxed text-white/90 max-w-2xl mx-auto">
-        Escribinos por WhatsApp y te pasamos tu presupuesto sin compromiso.
+        Pasanos origen, destino y fecha aproximada. Te enviamos tu presupuesto sin compromiso.
       </p>
 
       <div className="flex justify-center pt-2">
@@ -765,7 +812,7 @@ export default function MudanzasPage() {
         >
 
           <WhatsAppConversionLink
-            href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20pasan%20un%20presupuesto%3F"
+            href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza%20de%20larga%20distancia."
             className="flex items-center gap-3"
           >
 
@@ -792,45 +839,6 @@ export default function MudanzasPage() {
 
   </div>
 </section>
-
-        {/* =====================================================
-            GUARDAMUEBLES
-        ====================================================== */}
-
-        <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
-
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-
-            <ScrollAnimation
-              animation="fade-up"
-              className="text-center space-y-6 mb-12"
-            >
-
-              <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-                ¿También necesitás guardar tus muebles?
-              </h2>
-
-              <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-                Si además de mudanza necesitás almacenamiento temporal o de
-                largo plazo, contamos con guardamuebles propio con vigilancia
-                24/7.
-              </p>
-
-              <Button
-                asChild
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                <Link href="/guardamuebles">
-                  Conocer nuestro guardamuebles
-                </Link>
-              </Button>
-
-            </ScrollAnimation>
-
-          </div>
-        </section>
 
         {/* =====================================================
             FAQ

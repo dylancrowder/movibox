@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import wsp from "@/public/images/iconos/whatsapp.webp";
@@ -7,10 +7,12 @@ import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 interface HeroButtonsProps {
   whatsappMessage?: string;
+  whatsappLabel?: string;
 }
 
 export default function HeroButtons({
   whatsappMessage = "Hola 👋, quería consultar por una mudanza. ¿Me cuentan cómo trabajan y me pasan un presupuesto?",
+  whatsappLabel = "Solicitar presupuesto por WhatsApp",
 }: HeroButtonsProps) {
   const whatsappUrl = `https://wa.me/5493512586221?text=${encodeURIComponent(
     whatsappMessage
@@ -35,7 +37,7 @@ export default function HeroButtons({
             height={32}
             priority
           />
-          WhatsApp
+          {whatsappLabel}
         </WhatsAppConversionLink>
       </Button>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle2, MapPin, Truck, Users } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
@@ -198,8 +199,18 @@ export default function PreciosMudanzasPage() {
                     Las mudanzas hacia otras localidades tienen un valor diferente. Consultanos por WhatsApp y te pasamos un presupuesto según el destino y las características de la mudanza.
                   </p>
                 </div>
-                <div>
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <WhatsAppButton href={whatsappOutsideUrl} className="w-full sm:w-auto" />
+                  <Button
+                    asChild
+                    variant="secondary"
+                    size="lg"
+                    className="w-full sm:w-auto"
+                  >
+                    <Link href="/mudanzas-larga-distancia">
+                      Ver mudanzas de larga distancia
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </article>

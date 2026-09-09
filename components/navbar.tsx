@@ -77,7 +77,7 @@ export function Navbar() {
 
           {/* Navegación escritorio */}
           <nav
-            className="hidden items-center space-x-8 md:flex"
+            className="hidden items-center space-x-6 lg:flex"
             role="navigation"
             aria-label="Navegación principal"
           >
@@ -98,7 +98,7 @@ export function Navbar() {
 
           {/* Menú móvil */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="md:hidden">
+            <SheetTrigger asChild className="lg:hidden">
               <Button
                 variant="ghost"
                 className="text-foreground hover:bg-primary/10 hover:text-primary"
