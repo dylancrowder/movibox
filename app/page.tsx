@@ -76,6 +76,14 @@ const services = [
     href: "/mudanzas",
   },
   {
+    icon: Truck,
+    title: "Minifletes en Córdoba",
+    description:
+      "Traslados rápidos de bajo volumen para mascotas, bicicletas, motos, compras grandes y muebles pequeños.",
+    image: "/images/camion/imagen_camion.webp",
+    href: "/fletes",
+  },
+  {
     icon: Warehouse,
     title: "Guardamuebles y Almacenamiento",
     description:
@@ -338,9 +346,7 @@ export default function Home() {
                       {/* Descripción */}
                       <p className="text-sm text-slate-600 mb-6">
 
-                        {service.title === "Mudanzas y Fletes en Córdoba"
-                          ? "Trasladamos tus pertenencias dentro de Córdoba Capital y provincia con vehículos adaptados a cada tipo de carga, asegurando rapidez y cuidado. Equipo profesional con asistencia completa en embalaje y desembalaje."
-                          : "Guardamos tus pertenencias en instalaciones seguras, con control de acceso y entrega flexible según tu necesidad. Vigilancia 24/7, inventario digital y seguimiento transparente de cada paquete."}
+                        {service.description}
                       </p>
 
                       {/* CTA */}
