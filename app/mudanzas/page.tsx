@@ -3,12 +3,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  CheckCircle2,
-  Clock,
-  ShieldCheck,
-  Truck,
-  Star,
+  BadgeCheck,
   ChevronDown,
+  CircleDollarSign,
+  Clock3,
+  PackageCheck,
+  ShieldCheck,
+  Star,
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
@@ -156,21 +157,21 @@ const reviews = [
 export default function MudanzasPage() {
   const benefits = [
     {
-      icon: Truck,
+      icon: PackageCheck,
       title: "Protección y embalaje",
       description:
         "Llevamos mantas, film, cajas, fajas y herramientas para proteger y trasladar tus pertenencias con seguridad.",
       href: null,
     },
     {
-      icon: Clock,
+      icon: Clock3,
       title: "Puntualidad garantizada",
       description:
         "Llegamos a la hora acordada. Sin demoras ni sorpresas.",
       href: null,
     },
     {
-      icon: ShieldCheck,
+      icon: BadgeCheck,
       title: "Cuidado profesional",
       description:
         "Protegemos tus muebles y pertenencias con máxima responsabilidad.",
@@ -184,7 +185,7 @@ export default function MudanzasPage() {
       href: null,
     },
     {
-      icon: CheckCircle2,
+      icon: CircleDollarSign,
       title: "Precio exacto",
       description:
         "Te decimos el valor antes de comenzar. Sin sorpresas.",
@@ -303,7 +304,7 @@ export default function MudanzasPage() {
                   Mudanzas en Córdoba Capital
                   <br />
                   <span className="text-secondary-400">
-                    Con ayudantes y atención personalizada.
+                    Con ayudantes.
                   </span>
                 </h1>
 
@@ -364,11 +365,9 @@ export default function MudanzasPage() {
               {benefits.map((benefit, index) => {
 
                 const card = (
-                  <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
+                  <article className="h-full rounded-md border border-neutral-300 bg-white p-8 text-left shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
 
-                    <div className="rounded-full bg-secondary-500 w-fit p-3 text-white mb-4">
-                      <benefit.icon className="h-6 w-6" />
-                    </div>
+                    <benefit.icon className="mb-6 h-12 w-12 text-secondary-500" />
 
                     <h3 className="text-lg font-semibold text-primary mb-3">
                       {benefit.title}

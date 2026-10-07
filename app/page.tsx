@@ -3,6 +3,7 @@ import Image from "next/image";
 import {
   Truck,
   MapPin,
+  PackageCheck,
   ChevronDown,
   CheckCircle2,
   ShieldCheck,
@@ -76,10 +77,10 @@ const services = [
     href: "/mudanzas",
   },
   {
-    icon: Truck,
-    title: "Minifletes en Córdoba",
+    icon: PackageCheck,
+    title: "Fletes y minifletes en Córdoba",
     description:
-      "Traslados rápidos de bajo volumen para mascotas, bicicletas, motos, compras grandes y muebles pequeños.",
+      "Trasladamos desde objetos y compras puntuales hasta muebles y cargas de mayor volumen. Podés sumar un ayudante para cargar y descargar.",
     image: "/images/camion/imagen_camion.webp",
     href: "/fletes",
   },

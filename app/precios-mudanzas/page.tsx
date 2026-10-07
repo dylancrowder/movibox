@@ -109,7 +109,7 @@ export default function PreciosMudanzasPage() {
                 Mudanzas dentro de Córdoba Capital
               </p>
               <p className="mt-4 text-5xl font-black leading-none text-primary sm:text-7xl">
-                $75.000
+                $90.000
               </p>
               <p className="mt-3 text-xl font-bold text-primary sm:text-2xl">por hora</p>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600">

@@ -6,7 +6,7 @@ import logo from "../public/images/iconos/logo-movibox.svg";
 const quickLinks = [
   { label: "Inicio", href: "/" },
   { label: "Mudanzas", href: "/mudanzas" },
-  { label: "Minifletes", href: "/fletes" },
+  { label: "Flete", href: "/fletes" },
   { label: "Guardamuebles", href: "/guardamuebles" },
   { label: "Blog", href: "/blog" },
   { label: "FAQ", href: "/faq" },

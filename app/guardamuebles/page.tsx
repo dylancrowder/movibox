@@ -3,18 +3,24 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
+  BadgeCheck,
+  Building2,
   CheckCircle2,
-  Clock,
-  ShieldCheck,
-  Warehouse,
-  Truck,
-  Building,
+  ChevronDown,
+  CircleDollarSign,
+  Clock3,
+  Hammer,
+  Home,
   MapPin,
   MessageCircle,
   Package,
-  Ruler,
+  PackageCheck,
   Phone,
-  ChevronDown,
+  Ruler,
+  ShieldCheck,
+  Sofa,
+  Truck,
+  Warehouse,
 } from "lucide-react";
 
 
@@ -197,7 +203,7 @@ export default function GuardamueblesPage() {
         "Cámaras 24/7, control de acceso y personal en el lugar. Depósito propio.",
     },
     {
-      icon: Clock,
+      icon: CircleDollarSign,
       title: "Precio claro",
       description:
         "El valor se calcula por volumen real. Sin sorpresas ni costos ocultos.",
@@ -215,13 +221,13 @@ export default function GuardamueblesPage() {
         "Podemos buscar y devolver tus cosas cuando lo necesites.",
     },
     {
-      icon: Building,
+      icon: Building2,
       title: "Galpón propio",
       description:
         "Estamos en Córdoba Capital. Podés visitarnos y verificar.",
     },
     {
-      icon: CheckCircle2,
+      icon: BadgeCheck,
       title: "Sin contrato",
       description:
         "Guardás el tiempo que necesites. Cancelás cuando quieras.",
@@ -230,32 +236,32 @@ export default function GuardamueblesPage() {
 
   const faqItems = [
     {
-      question: "🔒 ¿Mis cosas están seguras?",
+      question: "¿Mis cosas están seguras?",
       answer:
         "100% seguras. Vigilancia 24/7 con cámaras, alarmas monitoreadas, control de acceso registrado y personal en el lugar.",
     },
     {
-      question: "📦 ¿Qué se puede guardar?",
+      question: "¿Qué se puede guardar?",
       answer:
         "Lo que sea: muebles, cajas, cosas variadas, depósito personal. Cada cliente tiene su espacio claramente separado del de otros.",
     },
     {
-      question: "💰 ¿El precio cambia?",
+      question: "¿El precio cambia?",
       answer:
         "No. Una vez acordado el presupuesto, ese es tu precio durante el período. Sin sorpresas ni aumentos ocultos.",
     },
     {
-      question: "📅 ¿Plazo mínimo o máximo?",
+      question: "¿Plazo mínimo o máximo?",
       answer:
         "Ninguno. Guardá 1 mes o el tiempo que necesites. Cancelás cuando quieras sin penalizaciones.",
     },
     {
-      question: "🔄 ¿Puedo cambiar el espacio?",
+      question: "¿Puedo cambiar el espacio?",
       answer:
         "Claro. Si necesitás más o menos espacio, ajustamos el presupuesto según lo que uses.",
     },
     {
-      question: "✅ ¿Cómo contratar?",
+      question: "¿Cómo contratar?",
       answer: "Mandá un WhatsApp contando qué necesitás guardar.",
     },
   ];
@@ -502,9 +508,7 @@ export default function GuardamueblesPage() {
             {benefits.map((b, index) => (
               <ScrollAnimation key={b.title} animation="fade-up" delay={index * 120}>
                 <article className="h-full rounded-lg border border-neutral-300 bg-neutral-50 p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1">
-                  <div className="rounded-full bg-secondary-500 w-fit p-3 text-white mb-4">
-                    <b.icon className="h-6 w-6" />
-                  </div>
+                  <b.icon className="mb-6 h-12 w-12 text-secondary-500" />
                   <h3 className="text-lg font-semibold text-primary mb-3">{b.title}</h3>
                   <p className="text-sm leading-relaxed text-neutral-600">
                     {b.description}
@@ -680,7 +684,7 @@ export default function GuardamueblesPage() {
 
                   <div className="flex gap-4 items-start">
                     <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-secondary/80 text-white shadow-md shadow-secondary/30">
-                      <Clock className="h-5 w-5" aria-hidden="true" />
+                      <Clock3 className="h-5 w-5" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-semibold text-primary mb-1">Horario</p>
@@ -741,42 +745,40 @@ export default function GuardamueblesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: "🔨",
+                icon: Hammer,
                 title: "Guardar muebles por refacción",
                 description: "Realizando trabajos en tu casa? Guardamos tus muebles el tiempo que necesites mientras se hacen las refacciones y los devolvemos al terminar.",
               },
               {
-                icon: "⏱️",
+                icon: Clock3,
                 title: "Almacenamiento temporal",
                 description: "Entre mudanzas, cambio de vivienda o espacio temporal? Guardamos tus cosas días, semanas o meses sin contrato mínimo.",
               },
               {
-                icon: "📦",
+                icon: PackageCheck,
                 title: "Almacenamiento de largo plazo",
                 description: "Necesitás guardar muebles por meses o años? Nuestro depósito seguro mantiene tus pertenencias protegidas indefinidamente.",
               },
               {
-                icon: "🏠",
+                icon: Home,
                 title: "Cambio de vivienda",
                 description: "Nueva casa no está lista? Guardamos todo tu contenido hasta que puedas mudarte. Buscamos, guardamos y entregamos sin cargo.",
               },
               {
-                icon: "🛋️",
+                icon: Sofa,
                 title: "Muebles de familia",
                 description: "Heredaste muebles pero no tenés lugar? Guardamos herencias, reliquias familiares y objetos especiales con máximo cuidado.",
               },
               {
-                icon: "🚚",
+                icon: Truck,
                 title: "Alojamiento en mudanza",
                 description: "Mudanza de otra provincia? Almacenamos temporalmente mientras buscás vivienda en Córdoba.",
               },
             ].map((item, index) => (
               <ScrollAnimation key={item.title} animation="fade-up" delay={index * 80}>
                 <div className="bg-accent rounded-2xl p-6 border border-primary/70 shadow-sm">
-                  <div className="flex gap-3 items-start mb-4">
-                    <span className="text-3xl flex-shrink-0">{item.icon}</span>
-                    <h3 className="font-bold text-foreground text-lg">{item.title}</h3>
-                  </div>
+                  <item.icon className="mb-6 h-12 w-12 text-secondary-500" />
+                  <h3 className="mb-3 text-lg font-bold text-foreground">{item.title}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                 </div>
               </ScrollAnimation>

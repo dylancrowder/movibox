@@ -88,7 +88,7 @@ export function Navbar() {
               Mudanzas
             </Link>
             <Link href="/fletes" className={linkClass("/fletes")}>
-              Minifletes
+              Flete
             </Link>
             <Link href="/guardamuebles" className={linkClass("/guardamuebles")}>
               Guardamuebles
@@ -142,7 +142,7 @@ export function Navbar() {
                   className={linkClassMobile("/fletes")}
                   aria-current={pathname === "/fletes" ? "page" : undefined}
                 >
-                  Minifletes
+                  Flete
                 </Link>
                 <Link
                   href="/guardamuebles"
