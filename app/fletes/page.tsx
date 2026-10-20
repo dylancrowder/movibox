@@ -87,14 +87,14 @@ const jsonLd = {
 const reviews = [
   {
     name: "Ludmila Bustos",
-    text: "Excelente el servicio!!! Nos encantó, los chicos cargaron y embalaron todo con mucho cuidado. El camión un lujo, están muy bien preparados y se nota que tienen muchísima experiencia.\n\nMuchas gracias por todo 🙌🏻",
+    text: "Excelente el servicio. Los chicos cargaron y embalaron todo con mucho cuidado.",
     rating: 5,
     image: "/images/reviews/fotogoogle.png",
     googleUrl: "https://maps.app.goo.gl/PsUtQbGTV6SiYhsG9",
   },
   {
     name: "Pedro César Costa",
-    text: "Excelente, muy rápido, eficiente, el camión mucho espacio y los chicos trataron todo con mucho cuidado. Muy recomendable!!!",
+    text: "Excelente, muy rápido y eficiente. Trataron todo con mucho cuidado.",
     rating: 5,
     image: "/images/reviews/fp.png",
     googleUrl: "https://maps.app.goo.gl/FUxGnmCGp4zV8smr8",
@@ -105,19 +105,19 @@ const highlights = [
   {
     title: "Para distintos traslados",
     description:
-      "Desde una compra grande o un objeto puntual hasta muebles y cargas de mayor volumen.",
+      "Objetos, compras y cargas grandes.",
     icon: PackageCheck,
   },
   {
     title: "Coordinación flexible",
     description:
-      "Consultamos disponibilidad y coordinamos día y horario según el recorrido y el tamaño de la carga.",
+      "Coordinamos día y horario según disponibilidad.",
     icon: Clock3,
   },
   {
     title: "Ayuda para cargar",
     description:
-      "El servicio incluye chofer. Si necesitás asistencia, podés sumar un ayudante para la carga y descarga.",
+      "Chofer incluido; ayudante opcional.",
     icon: UsersRound,
   },
 ];
@@ -126,27 +126,24 @@ const faqs = [
   {
     question: "¿Qué diferencia hay entre un flete y un miniflete?",
     answer:
-      "Coordinamos tanto traslados de objetos puntuales y compras grandes como cargas de mayor volumen. Te recomendamos la opción adecuada cuando nos cuentes qué necesitás llevar.",
+      "Contanos qué trasladás y te recomendamos la opción adecuada.",
   },
   {
     question: "¿Puedo agregar un ayudante?",
-    answer:
-      "Sí. El servicio incluye chofer y podés sumar un ayudante si necesitás apoyo para cargar o descargar. Lo incluimos en el presupuesto.",
+    answer: "Sí, podés sumar un ayudante para cargar y descargar.",
   },
   {
     question: "¿Trasladan mascotas?",
-    answer:
-      "Sí, también trasladamos mascotas. Escribinos para contarnos qué mascota necesitás llevar y desde dónde hasta dónde, así coordinamos los detalles del viaje.",
+    answer: "Sí. Consultanos por WhatsApp para coordinar el traslado.",
   },
   {
     question: "¿Hay disponibilidad inmediata?",
-    answer:
-      "La disponibilidad depende del recorrido y el horario. Escribinos para coordinar el traslado; reservar con anticipación ayuda a asegurar el lugar.",
+    answer: "Depende del recorrido y el horario. Consultanos para confirmar.",
   },
   {
     question: "¿Cómo consulto disponibilidad y precio?",
     answer:
-      "Escribinos por WhatsApp con el origen, el destino, qué necesitás trasladar y si querés sumar un ayudante. Te confirmamos disponibilidad y presupuesto.",
+      "Mandanos origen, destino y qué necesitás trasladar. Te pasamos disponibilidad y precio.",
   },
 ];
 
@@ -196,10 +193,8 @@ export default function FletesPage() {
                 </h1>
 
                 <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
-                  Desde una compra voluminosa o un objeto puntual hasta muebles
-                  y cargas de mayor tamaño, coordinamos el traslado según lo que
-                  necesitás llevar. Si hace falta, podés sumar un ayudante para
-                  la carga y descarga.
+                  Trasladamos muebles, compras y cargas en Córdoba. Podés sumar un
+                  ayudante para cargar y descargar.
                 </p>
 
                 <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start md:items-center">
@@ -210,7 +205,7 @@ export default function FletesPage() {
                 </div>
 
                 <p className="text-xs text-white/70">
-                  Atención directa · Chofer y ayudante opcional
+                  Chofer incluido · Ayudante opcional
                 </p>
               </div>
             </div>
@@ -223,17 +218,9 @@ export default function FletesPage() {
               animation="fade-up"
               className="mb-16 space-y-6"
             >
-              <span className="inline-block rounded-full bg-secondary-100 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-secondary-700">
-                Fletes y minifletes
-              </span>
               <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
                 Una opción para cada tipo de carga
               </h2>
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">
-                Coordinamos viajes para objetos individuales, compras, muebles y
-                cargas de mayor volumen en Córdoba. También podés agregar un
-                ayudante para la carga y descarga.
-              </p>
             </ScrollAnimation>
 
             <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
@@ -264,16 +251,9 @@ export default function FletesPage() {
               animation="fade-up"
               className="mb-16 space-y-6 text-center"
             >
-              <span className="inline-block rounded-full bg-secondary-100 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-secondary-700">
-                Nuestro vehículo
-              </span>
               <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
-                Un vehículo preparado para tus fletes
+                Nuestro vehículo
               </h2>
-              <p className="mx-auto max-w-2xl text-lg text-neutral-600">
-                Trasladamos muebles, compras y cargas puntuales con un servicio
-                coordinado para que cada envío llegue a destino de forma segura.
-              </p>
             </ScrollAnimation>
 
             <div className="mx-auto max-w-3xl">
@@ -290,15 +270,11 @@ export default function FletesPage() {
                     />
                   </div>
                   <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8">
-                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-neutral-600">
-                      Un vehículo versátil para trasladar distintos tipos de carga.
-                    </h3>
                     <ul className="mb-6 space-y-3">
                       {[
-                        "Espacio para muebles y cargas voluminosas",
-                        "Traslado de objetos y compras puntuales",
-                        "Carga sujeta y protegida durante el viaje",
-                        "Chofer y ayudante opcional para carga y descarga",
+                        "Espacio para muebles y cargas grandes",
+                        "Carga protegida durante el viaje",
+                        "Chofer incluido; ayudante opcional",
                       ].map((benefit) => (
                         <li key={benefit} className="flex items-start gap-2">
                           <span className="mt-0.5 font-bold text-secondary-500">
@@ -355,22 +331,19 @@ export default function FletesPage() {
                 {
                   step: "1",
                   title: "Nos contactás",
-                  description:
-                    "Contanos qué necesitás trasladar y desde dónde hasta dónde.",
+                  description: "Decinos qué trasladar y el recorrido.",
                   icon: MapPin,
                 },
                 {
                   step: "2",
                   title: "Coordinamos",
-                  description:
-                    "Te confirmamos disponibilidad y coordinamos el horario del viaje.",
+                  description: "Confirmamos disponibilidad y horario.",
                   icon: Clock3,
                 },
                 {
                   step: "3",
                   title: "Hacemos el traslado",
-                  description:
-                    "Realizamos el flete con el chofer y el ayudante que hayas solicitado.",
+                  description: "Hacemos el traslado acordado.",
                   icon: Truck,
                 },
               ].map((item) => (
@@ -405,9 +378,7 @@ export default function FletesPage() {
               <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
                 Lo que dicen nuestros clientes
               </h2>
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">
-                Opiniones reales de clientes que confiaron en Movibox.
-              </p>
+
             </ScrollAnimation>
 
             <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
@@ -494,10 +465,7 @@ export default function FletesPage() {
               <h2 className="text-4xl font-black leading-tight sm:text-5xl">
                 ¿Necesitás coordinar un flete?
               </h2>
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90">
-                Contanos qué necesitás trasladar y si querés sumar un
-                ayudante. Coordinamos el servicio según disponibilidad.
-              </p>
+
               <Button
                 asChild
                 variant="whatsapp"

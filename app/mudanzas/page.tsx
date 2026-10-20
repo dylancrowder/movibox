@@ -269,23 +269,13 @@ export default function MudanzasPage() {
         <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
 
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=1200&height=1800"
             alt="Camión de mudanzas de Movibox Mudanzas"
             fill
-            className="object-cover object-center md:hidden"
-            priority
-            unoptimized
-            sizes="100vw"
-          />
-
-          <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=800&height=1200"
-            alt="Camión de mudanzas de Movibox Mudanzas"
-            fill
-            className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
+            className="object-cover object-center md:left-1/2 md:w-1/2"
             priority
             quality={70}
-            sizes="100vw"
+            sizes="(min-width: 768px) 50vw, 100vw"
           />
 
           <div className="absolute inset-0 bg-black/60" />
@@ -448,9 +438,9 @@ export default function MudanzasPage() {
                       src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F676ba5d5151c479483d7f7ad5e3444af?format=webp&width=800&height=1200"
                       alt="Camión de mudanzas en Córdoba - Movibox Mudanzas"
                       fill
-                      unoptimized
+                      quality={70}
                       className="object-contain"
-                      sizes="(max-width: 768px) 100vw, 50vw"
+                      sizes="(max-width: 800px) calc(100vw - 2rem), 768px"
                     />
 
                   </div>
