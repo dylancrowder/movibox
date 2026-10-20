@@ -161,7 +161,7 @@ export default function FletesPage() {
       <article className="flex min-h-screen flex-col overflow-x-hidden bg-white">
         <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-24">
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
+            src="/images/header/flota.png"
             alt="Vehículo de Movibox preparado para realizar fletes"
             fill
             className="object-cover object-center md:hidden"
@@ -170,7 +170,7 @@ export default function FletesPage() {
             sizes="100vw"
           />
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=800&height=1200"
+            src="/images/header/flota.png"
             alt="Vehículo de Movibox preparado para realizar fletes"
             fill
             className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
@@ -281,7 +281,7 @@ export default function FletesPage() {
                 <article className="overflow-hidden rounded-md border border-neutral-300 shadow-card transition hover:shadow-card-hover">
                   <div className="relative aspect-[903/763] w-full bg-neutral-100">
                     <Image
-                      src="/images/camion/imagen_camion2.webp"
+                      src="/images/fletes/fiorinoflete.png"
                       alt="Vehículo de Movibox para fletes y minifletes en Córdoba"
                       fill
                       unoptimized

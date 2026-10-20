@@ -31,8 +31,8 @@ import { ImageCarousel } from "@/components/image-carousel";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import image_header from "@/public/galpon.webp";
 import wsp from "@/public/images/iconos/whatsapp.webp";
-
-
+import box from "@/public/images/guardamuebles/box.jpg";
+import box2 from "@/public/images/guardamuebles/box2.jpeg";
 export const metadata: Metadata = {
   title: "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
 
@@ -606,13 +606,13 @@ export default function GuardamueblesPage() {
             <ImageCarousel
               images={[
                 {
-                  src: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=800&height=1200",
+                  src: box2.src,
                   alt: "Guardamuebles Córdoba - Almacenamiento seguro de muebles en depósito vigilado",
                 },
                 {
-                  src: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200",
-                  alt: "Guardar muebles Córdoba - Almacenamiento con vigilancia de equipamiento y bicicletas",
-                },
+                  src: box.src,
+                  alt: "Guardamuebles Córdoba - Almacenamiento seguro de muebles en depósito vigilado",
+                }
               ]}
             />
           </ScrollAnimation>

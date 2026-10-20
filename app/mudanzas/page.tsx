@@ -269,7 +269,7 @@ export default function MudanzasPage() {
         <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
 
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fd3a2d7e220454406b3a2fa6ac186b834?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=800&height=1200"
             alt="Camión de mudanzas de Movibox Mudanzas"
             fill
             className="object-cover object-center md:hidden"
@@ -279,7 +279,7 @@ export default function MudanzasPage() {
           />
 
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=800&height=1200"
+            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=800&height=1200"
             alt="Camión de mudanzas de Movibox Mudanzas"
             fill
             className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
