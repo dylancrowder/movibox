@@ -16,6 +16,7 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import { VehicleImageCarousel } from "@/components/vehicle-image-carousel";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export const metadata: Metadata = {
@@ -432,18 +433,7 @@ export default function MudanzasPage() {
 
                 <article className="rounded-md border border-neutral-300 shadow-card hover:shadow-card-hover transition">
 
-                  <div className="relative aspect-[903/763] w-full bg-neutral-100">
-
-                    <Image
-                      src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F676ba5d5151c479483d7f7ad5e3444af?format=webp&width=800&height=1200"
-                      alt="Camión de mudanzas en Córdoba - Movibox Mudanzas"
-                      fill
-                      quality={70}
-                      className="object-contain"
-                      sizes="(max-width: 800px) calc(100vw - 2rem), 768px"
-                    />
-
-                  </div>
+                  <VehicleImageCarousel initialIndex={1} />
 
                   <div className="p-8 bg-gradient-to-br from-primary-50 to-secondary-50">
 

@@ -14,10 +14,11 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import { VehicleImageCarousel } from "@/components/vehicle-image-carousel";
 
 const pageUrl = "https://www.movibox.com.ar/fletes";
 const whatsappMessage =
-  "Hola, quería consultar por un flete o miniflete. ¿Me pasan un presupuesto?";
+  "Hola, quería consultar por un flete. ¿Me pasan un presupuesto?";
 
 export const metadata: Metadata = {
   title: "Fletes y Minifletes en Córdoba | Movibox",
@@ -259,16 +260,7 @@ export default function FletesPage() {
             <div className="mx-auto max-w-3xl">
               <ScrollAnimation animation="fade-up">
                 <article className="overflow-hidden rounded-md border border-neutral-300 shadow-card transition hover:shadow-card-hover">
-                  <div className="relative aspect-[903/763] w-full bg-neutral-100">
-                    <Image
-                      src="/images/fletes/fiorinoflete.webp"
-                      alt="Vehículo de Movibox para fletes y minifletes en Córdoba"
-                      fill
-                      unoptimized
-                      className="object-contain"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
+                  <VehicleImageCarousel />
                   <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8">
                     <ul className="mb-6 space-y-3">
                       {[
@@ -312,7 +304,7 @@ export default function FletesPage() {
           </div>
         </section>
 
-        <section className="bg-white py-16 sm:py-32">
+        <section className="bg-primary-50 py-16 sm:py-32">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <ScrollAnimation
               animation="fade-up"
