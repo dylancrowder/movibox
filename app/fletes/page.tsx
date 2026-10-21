@@ -158,7 +158,7 @@ export default function FletesPage() {
       <article className="flex min-h-screen flex-col overflow-x-hidden bg-white">
         <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-24">
           <Image
-            src="/images/header/flota.png"
+            src="/images/header/flota.webp"
             alt="Vehículo de Movibox preparado para realizar fletes"
             fill
             className="object-cover object-center md:hidden"
@@ -167,7 +167,7 @@ export default function FletesPage() {
             sizes="100vw"
           />
           <Image
-            src="/images/header/flota.png"
+            src="/images/header/flota.webp"
             alt="Vehículo de Movibox preparado para realizar fletes"
             fill
             className="hidden object-cover object-center md:left-1/2 md:block md:w-1/2"
@@ -185,10 +185,10 @@ export default function FletesPage() {
                 </span>
 
                 <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
-                  Fletes y minifletes
+                  Fletes y mudanzas
                   <br />
                   <span className="text-secondary-400">
-                    Traslados a tu medida en Córdoba.
+                    en Córdoba Capital
                   </span>
                 </h1>
 
@@ -261,7 +261,7 @@ export default function FletesPage() {
                 <article className="overflow-hidden rounded-md border border-neutral-300 shadow-card transition hover:shadow-card-hover">
                   <div className="relative aspect-[903/763] w-full bg-neutral-100">
                     <Image
-                      src="/images/fletes/fiorinoflete.png"
+                      src="/images/fletes/fiorinoflete.webp"
                       alt="Vehículo de Movibox para fletes y minifletes en Córdoba"
                       fill
                       unoptimized
