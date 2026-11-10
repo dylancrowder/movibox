@@ -15,9 +15,9 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 const SLUG = "mudanzas-y-fletes";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Mudanzas y Fletes en Córdoba | Guía Completa 2024 | Movibox Mudanzas",
+  title: "Mudanzas y fletes en Córdoba | Movibox",
   description:
-    "Guía completa de mudanzas y fletes en Córdoba Capital. Servicio profesional con personal capacitado, vehículos equipados y presupuesto sin cargo. Tips para tu mudanza.",
+    "Guía de mudanzas y fletes en Córdoba Capital: consejos para planificar tu traslado y conocer las opciones de servicio.",
   keywords: [
     "mudanzas Córdoba",
     "mudanzas Córdoba Capital",
@@ -202,7 +202,7 @@ export default function MudanzasYFletesPage() {
                   </p>
 
                   <p className="text-sm text-muted-foreground mt-4 italic">
-                    <strong>Para ver nuestras tarifas detalladas,</strong> consulta la <a href="/precios" className="text-primary font-medium hover:underline">página de Precios y Tarifas</a>.
+                    <strong>Para ver nuestras tarifas detalladas,</strong> consulta la <a href="/precios-mudanzas" className="text-primary font-medium hover:underline">página de Precios y Tarifas</a>.
                   </p>
                 </div>
 

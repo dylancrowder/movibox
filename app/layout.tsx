@@ -18,10 +18,7 @@ const inter = Inter({
 // ✅ Metadata usando la API de Next 14
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.movibox.com.ar'),
-  title: {
-    default: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
-    template: "%s | Movibox Mudanzas"
-  },
+  title: "Mudanzas en Córdoba Capital | Movibox",
   description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
   authors: [{ name: "Movibox Mudanzas", url: "https://www.movibox.com.ar" }],
   creator: "Movibox Mudanzas",
@@ -45,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.movibox.com.ar/",
-    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    title: "Mudanzas en Córdoba Capital | Movibox",
     description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
     siteName: "Movibox Mudanzas",
     images: [
@@ -61,7 +58,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    title: "Mudanzas en Córdoba Capital | Movibox",
     description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
     images: ["/images/header/headerchacra.webp"],
   },

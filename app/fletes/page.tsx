@@ -26,6 +26,15 @@ export const metadata: Metadata = {
     "Traslados en Córdoba para objetos puntuales, muebles y cargas de distintos tamaños. Consultá por un ayudante para carga y descarga.",
   alternates: { canonical: pageUrl },
   robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fletes y Minifletes en Córdoba | Movibox",
+    description:
+      "Coordinamos traslados en Córdoba para cargas chicas o voluminosas. También podés sumar un ayudante para carga y descarga.",
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+    ],
+  },
   openGraph: {
     type: "website",
     title: "Fletes y Minifletes en Córdoba | Movibox",

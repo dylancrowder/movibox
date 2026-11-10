@@ -8,9 +8,9 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
-  title: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",
+  title: "Preguntas frecuentes sobre mudanzas | Movibox",
   description:
-    "Preguntas frecuentes sobre mudanzas, guardamuebles, fletes y almacenamiento en Córdoba. Resuelve tus dudas sobre traslados, seguridad y precios. Respuestas de expertos.",
+    "Respuestas sobre mudanzas, fletes y guardamuebles en Córdoba: cobertura, seguridad, precios y cómo organizar tu traslado.",
   alternates: { canonical: "https://www.movibox.com.ar/faq" },
   openGraph: {
     type: "website",

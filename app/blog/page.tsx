@@ -12,9 +12,9 @@ import image_header from "@/public/logisticas.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
-  title: "Blog de Movibox Mudanzas | Mudanzas, Guardamuebles y Fletes",
+  title: "Blog de Mudanzas y Guardamuebles | Movibox",
   description:
-    "Artículos, guías y consejos prácticos sobre mudanzas en Córdoba, guardamuebles seguro, fletes y transporte. Tips de expertos en logística local. Aprende cómo mudarte sin estrés.",
+    "Consejos prácticos sobre mudanzas en Córdoba, fletes y guardamuebles. Guías para organizar tu traslado, embalar y elegir almacenamiento seguro.",
   keywords: [
     "blog transporte cordoba",
     "mudanzas cordoba",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    title: "Blog de Movibox Mudanzas | Mudanzas, Guardamuebles y Fletes",
+    title: "Blog de Mudanzas y Guardamuebles | Movibox",
     description:
       "Guías y consejos sobre mudanzas en Córdoba, guardamuebles y almacenamiento seguro. Tips de expertos en logística local.",
     url: "https://www.movibox.com.ar/blog",

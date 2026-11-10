@@ -12,7 +12,7 @@ import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 const SLUG = "errores-comunes-al-contratar-una-mudanza";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Errores Comunes al Contratar Mudanzas | Evita Sobrecostos y Daños",
+  title: "Errores al contratar una mudanza | Movibox",
   description:
     "Guía de errores comunes al contratar mudanzas en Córdoba. Evita sobrecostos, daños y demoras con estos consejos de expertos.",
   keywords: [

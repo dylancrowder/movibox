@@ -15,9 +15,9 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 const SLUG = "deposito-guardamuebles";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Depósito y Guardamuebles en Córdoba | Guía de Almacenamiento",
+  title: "Depósito y guardamuebles en Córdoba | Movibox",
   description:
-    "Guía de guardamuebles en Córdoba Capital: bauleras, depósitos con vigilancia 24/7, planes mensuales y retiro a domicilio. Consejos para elegir almacenamiento seguro.",
+    "Guía para elegir guardamuebles en Córdoba: opciones de depósito, seguridad, retiro a domicilio y consejos para guardar tus muebles.",
   keywords: [
     "guardamuebles en córdoba capital",
     "alquiler de bauleras en córdoba",

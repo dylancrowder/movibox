@@ -23,7 +23,7 @@ import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
   title:
-    "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    "Mudanzas en Córdoba Capital | Movibox",
   description:
     "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
   alternates: { canonical: "https://www.movibox.com.ar/" },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title:
-      "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+      "Mudanzas en Córdoba Capital | Movibox",
     description:
       "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     url: "https://www.movibox.com.ar/",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+    title: "Mudanzas en Córdoba Capital | Movibox",
     description:
       "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
     images: ["https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630"],

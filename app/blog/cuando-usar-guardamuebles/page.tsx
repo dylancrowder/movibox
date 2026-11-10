@@ -11,7 +11,7 @@ import { blogArticleMetadata, blogPostJsonLd } from "@/lib/seo";
 const SLUG = "cuando-usar-guardamuebles";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Cuándo Conviene Usar un Guardamuebles | Guía y Casos Reales",
+  title: "Cuándo usar un guardamuebles | Movibox",
   description:
     "Descubre cuándo es recomendable alquilar un guardamuebles en Córdoba. Casos reales donde el almacenamiento temporal te ahorra dinero y soluciona problemas.",
   keywords: [

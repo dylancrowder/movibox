@@ -34,7 +34,7 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 import box from "@/public/images/guardamuebles/box.jpg";
 import box2 from "@/public/images/guardamuebles/box2.jpeg";
 export const metadata: Metadata = {
-  title: "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
+  title: "Guardamuebles en Córdoba | Movibox",
 
   description:
     "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
@@ -52,8 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.movibox.com.ar/guardamuebles", // ⚠️ siempre absoluta
-    title:
-      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
+    title: "Guardamuebles en Córdoba | Movibox",
     description:
       "Guardamuebles con servicio de mudanza en Córdoba Capital. Almacenamiento seguro, búsqueda y entrega. Presupuesto gratis.",
     images: [
@@ -68,8 +67,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "Guardamuebles con Servicio de Mudanza en Córdoba | Movibox Mudanzas",
+    title: "Guardamuebles en Córdoba | Movibox",
     description:
       "Guardamuebles seguro en Córdoba Capital con vigilancia 24/7 y servicio de mudanza.",
     images: [
