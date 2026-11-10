@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.movibox.com.ar/</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/como-empacar-para-una-mudanza</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/como-organizar-una-mudanza-sin-estres</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/cuando-usar-guardamuebles</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/deposito-guardamuebles</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/errores-comunes-al-contratar-una-mudanza</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/mejor-momento-para-mudarse</loc></url>
-  <url><loc>https://www.movibox.com.ar/blog/mudanzas-y-fletes</loc></url>
-  <url><loc>https://www.movibox.com.ar/contacto</loc></url>
-  <url><loc>https://www.movibox.com.ar/faq</loc></url>
-  <url><loc>https://www.movibox.com.ar/fletes</loc></url>
-  <url><loc>https://www.movibox.com.ar/guardamuebles</loc></url>
-  <url><loc>https://www.movibox.com.ar/mudanzas</loc></url>
-  <url><loc>https://www.movibox.com.ar/mudanzas-larga-distancia</loc></url>
-  <url><loc>https://www.movibox.com.ar/precios-mudanzas</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://www.movibox.com.ar/blog/como-organizar-una-mudanza-sin-estres</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/errores-comunes-al-contratar-una-mudanza</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/mudanzas-y-fletes</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/faq</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/contacto</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/fletes</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/mudanzas-larga-distancia</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/guardamuebles</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/precios-mudanzas</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/mudanzas</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/mejor-momento-para-mudarse</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/cuando-usar-guardamuebles</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/deposito-guardamuebles</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.movibox.com.ar/blog/como-empacar-para-una-mudanza</loc><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
