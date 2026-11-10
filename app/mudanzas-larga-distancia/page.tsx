@@ -28,6 +28,15 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mudanzas de larga distancia | Movibox",
+    description:
+      "Mudanzas entre provincias y dentro de Argentina. Coordinamos carga, traslado y descarga. Pedí tu presupuesto gratis por WhatsApp.",
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+    ],
+  },
   openGraph: {
     type: "website",
     title: "Mudanzas de larga distancia | Presupuesto gratis",

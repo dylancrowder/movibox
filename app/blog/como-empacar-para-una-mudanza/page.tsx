@@ -11,7 +11,7 @@ const SLUG = "como-empacar-para-una-mudanza";
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
   title: "Cómo Empacar para una Mudanza | Guía Completa | Movibox",
   description:
-    "Guía completa sobre cómo empacar correctamente para una mudanza. Materiales, técnicas y tips para proteger tus pertenencias durante el transporte en Córdoba.",
+    "Aprendé a empacar para una mudanza: materiales, técnicas y consejos para proteger tus pertenencias durante el traslado en Córdoba.",
   keywords: [
     "cómo empacar mudanza",
     "embalaje mudanza profesional",

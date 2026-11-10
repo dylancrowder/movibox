@@ -34,9 +34,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: "Contacto Movibox Mudanzas | Presupuesto Mudanzas y Guardamuebles",
+  title: "Contacto y Presupuestos | Movibox",
   description:
-    "Contactá a Movibox Mudanzas para mudanzas en Córdoba Capital y provincia, guardamuebles seguro. Presupuesto gratis en menos de 24 horas. WhatsApp y formulario de contacto.",
+    "Contactá a Movibox para cotizar mudanzas y guardamuebles en Córdoba Capital y provincia. Escribinos por WhatsApp o completá el formulario.",
   keywords: [
     "contacto movibox mudanzas",
     "presupuesto mudanzas cordoba",

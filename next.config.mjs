@@ -45,6 +45,11 @@ const nextConfig = {
         destination: '/mudanzas',
         permanent: true,
       },
+      {
+        source: '/precios',
+        destination: '/precios-mudanzas',
+        permanent: true,
+      },
     ]
   },
 }

@@ -20,15 +20,24 @@ import { VehicleImageCarousel } from "@/components/vehicle-image-carousel";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export const metadata: Metadata = {
-  title: "Mudanzas en Córdoba Capital y Provincia | Movibox Mudanzas",
+  title: "Mudanzas en Córdoba Capital | Movibox",
   description:
-    "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp. Servicio seguro y al mejor precio.",
+    "Mudanzas en Córdoba Capital y provincia. Traslados residenciales con camión y ayudantes. Pedí un presupuesto gratis por WhatsApp.",
   alternates: {
     canonical: "https://www.movibox.com.ar/mudanzas",
   },
   robots: {
     index: true,
     follow: true,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mudanzas en Córdoba Capital | Movibox",
+    description:
+      "Mudanzas en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
+    images: [
+      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+    ],
   },
   openGraph: {
     type: "website",

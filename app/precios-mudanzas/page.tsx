@@ -13,7 +13,7 @@ const whatsappOutsideUrl =
   "https://wa.me/5493512586221?text=Hola%2C%20mi%20mudanza%20es%20fuera%20de%20C%C3%B3rdoba%20Capital.%20Quiero%20consultar%20por%20un%20presupuesto.";
 
 export const metadata: Metadata = {
-  title: "Precios de Mudanzas en Córdoba Capital | Movibox",
+  title: "Precios de Mudanzas en Córdoba | Movibox",
   description:
     "Conocé el precio de una mudanza en Córdoba Capital: $75.000 por hora con camión y 2 ayudantes. Consultá por WhatsApp sin compromiso.",
   keywords: [
@@ -25,6 +25,12 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "https://www.movibox.com.ar/precios-mudanzas" },
   robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "Precios de Mudanzas en Córdoba | Movibox",
+    description:
+      "Mudanzas dentro de Córdoba Capital por $75.000 la hora, con camión y 2 ayudantes.",
+  },
   openGraph: {
     type: "website",
     title: "Precios de mudanzas en Córdoba | Movibox",

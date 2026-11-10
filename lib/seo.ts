@@ -58,8 +58,8 @@ export function blogPostJsonLd(options: BlogPostJsonLdOptions) {
           "@type": "Organization",
           name: "Movibox Mudanzas",
         },
-        datePublished: options.datePublished ?? "2024-01-15",
-        dateModified: options.dateModified ?? "2024-12-01",
+        ...(options.datePublished ? { datePublished: options.datePublished } : {}),
+        ...(options.dateModified ? { dateModified: options.dateModified } : {}),
       },
       createBreadcrumbJsonLd([
         { name: "Inicio", path: "/" },

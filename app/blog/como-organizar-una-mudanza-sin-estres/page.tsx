@@ -13,7 +13,7 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 const SLUG = "como-organizar-una-mudanza-sin-estres";
 
 export const metadata: Metadata = blogArticleMetadata(SLUG, {
-  title: "Cómo Organizar una Mudanza sin Estrés en Córdoba | Guía Completa",
+  title: "Cómo organizar una mudanza en Córdoba | Movibox",
   description:
     "Guía paso a paso para planificar tu mudanza en Córdoba. Aprende a organizar tiempos, embalaje y traslado de forma segura. Consejos prácticos de expertos.",
   keywords: [

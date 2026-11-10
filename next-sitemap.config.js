@@ -4,6 +4,7 @@ module.exports = {
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 7000,
-  exclude: ["/servicios"],
+  autoLastmod: false,
+  exclude: ["/servicios", "/precios"],
   outDir: "public",
 };
