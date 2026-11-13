@@ -381,46 +381,6 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 sm:py-24">
-        <div className="container mx-auto max-w-7xl px-4 md:px-6">
-          <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
-            <h2 className="text-3xl font-bold text-primary sm:text-4xl">
-              Guardamuebles, depósito y almacenamiento temporal
-            </h2>
-            <p className="text-lg leading-relaxed text-neutral-600">
-              Los términos pueden describir servicios distintos. Antes de contratar, verificá el tipo de espacio, el plazo y qué condiciones incluye cada propuesta.
-            </p>
-          </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            <article className="rounded-lg border border-neutral-300 p-6">
-              <h3 className="text-xl font-semibold text-primary">Guardamuebles</h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                En Movibox, el servicio ofrece espacios cerrados para cada cliente, dentro de un galpón sectorizado, con contratación mensual.
-              </p>
-            </article>
-            <article className="rounded-lg border border-neutral-300 p-6">
-              <h3 className="text-xl font-semibold text-primary">Depósito para muebles</h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                Es una forma general de referirse a un lugar para guardar bienes. Consultá si el espacio es individual, cómo se controla el establecimiento y cuáles son las condiciones de acceso.
-              </p>
-            </article>
-            <article className="rounded-lg border border-neutral-300 p-6">
-              <h3 className="text-xl font-semibold text-primary">Almacenamiento temporal</h3>
-              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-                Puede resolver un período entre dos alquileres, una mudanza o una reforma. La duración y el precio se acuerdan según el espacio y la contratación mensual.
-              </p>
-            </article>
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm font-semibold">
-            <Link href="/blog/cuando-usar-guardamuebles" className="text-primary hover:underline">
-              Cuándo conviene usar un guardamuebles
-            </Link>
-            <Link href="/blog/deposito-guardamuebles" className="text-primary hover:underline">
-              Cómo elegir un depósito para muebles
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* BENEFICIOS */}
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
