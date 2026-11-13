@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description:
       "Mudanzas de casas, departamentos y oficinas en Córdoba Capital y provincia. Consultá por WhatsApp.",
     images: [
-      "https://www.movibox.com.ar/images/header/headerchacra.webp",
+      "https://www.movibox.com.ar/images/header/flota.webp",
     ],
   },
   openGraph: {
@@ -48,10 +48,8 @@ export const metadata: Metadata = {
     url: "https://www.movibox.com.ar/mudanzas",
     images: [
       {
-        url: "https://www.movibox.com.ar/images/header/headerchacra.webp",
-        width: 1200,
-        height: 800,
-        alt: "Camión de mudanzas de Movibox Mudanzas en Córdoba",
+        url: "https://www.movibox.com.ar/images/header/flota.webp",
+        alt: "Flota de Movibox para mudanzas en Córdoba",
       },
     ],
   },
@@ -67,7 +65,7 @@ const jsonLd = {
       description:
         "Mudanzas de casas, departamentos y oficinas en Córdoba Capital y provincia, con cotizaciones por WhatsApp.",
       url: "https://www.movibox.com.ar/mudanzas",
-      primaryImageOfPage: "https://www.movibox.com.ar/images/header/headerchacra.webp",
+      primaryImageOfPage: "https://www.movibox.com.ar/images/header/flota.webp",
     },
     {
       "@type": "Service",

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "Coordinamos traslados en Córdoba para cargas chicas o voluminosas. También podés sumar un ayudante para carga y descarga.",
     images: [
-      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+      "https://www.movibox.com.ar/images/header/flota.webp",
     ],
   },
   openGraph: {
@@ -44,9 +44,8 @@ export const metadata: Metadata = {
     url: pageUrl,
     images: [
       {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
-        width: 1200,
-        height: 630,
+        url: "https://www.movibox.com.ar/images/header/flota.webp",
+
         alt: "Servicio de fletes y minifletes de Movibox en Córdoba",
       },
     ],
@@ -63,6 +62,7 @@ const jsonLd = {
       description:
         "Traslados en Córdoba para objetos puntuales, muebles y cargas de distintos tamaños, con opción de sumar un ayudante.",
       url: pageUrl,
+      primaryImageOfPage: "https://www.movibox.com.ar/images/header/flota.webp",
     },
     {
       "@type": "Service",

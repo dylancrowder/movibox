@@ -58,10 +58,8 @@ export const metadata: Metadata = {
       "Espacios cerrados en un galpón sectorizado, con contratación mensual para guardar muebles y pertenencias en Córdoba.",
     images: [
       {
-        url: "https://www.movibox.com.ar/galpon.webp",
-        width: 1200,
-        height: 800,
-        alt: "Galpón de guardamuebles de Movibox en Córdoba",
+        url: "https://www.movibox.com.ar/images/guardamuebles/box2.jpeg",
+        alt: "Espacio de guardamuebles de Movibox en Córdoba",
       },
     ],
   },
@@ -71,7 +69,7 @@ export const metadata: Metadata = {
     title: "Alquiler de guardamuebles en Córdoba | Movibox",
     description:
       "Espacios cerrados en un galpón sectorizado, con contratación mensual en Córdoba.",
-    images: ["https://www.movibox.com.ar/galpon.webp"],
+    images: ["https://www.movibox.com.ar/images/guardamuebles/box2.jpeg"],
   },
 };
 const jsonLd = {
@@ -85,7 +83,7 @@ const jsonLd = {
       description:
         "Alquiler mensual de guardamuebles en Córdoba, en espacios cerrados dentro de un galpón sectorizado.",
       url: "https://www.movibox.com.ar/guardamuebles",
-      primaryImageOfPage: "https://www.movibox.com.ar/galpon.webp"
+      primaryImageOfPage: "https://www.movibox.com.ar/images/guardamuebles/box2.jpeg"
     },
 
     {

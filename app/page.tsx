@@ -14,7 +14,7 @@ import {
 import { ScrollAnimation } from "@/components/scroll-animation";
 import HeroButtons from "@/components/HeroButtons";
 import Link from "next/link";
-import img from "../public/images/header/headerchacra.webp";
+import img from "../public/images/header/flota.webp";
 import { Button } from "@/components/ui/button";
 import mudanza_imagen from "@/public/images/camion/imagen_fish2.webp"
 import wsp from "@/public/images/iconos/whatsapp.webp";
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://www.movibox.com.ar/",
     images: [
       {
-        url: "https://www.movibox.com.ar/images/header/headerchacra.webp",
+        url: "https://www.movibox.com.ar/images/header/flota.webp",
         alt: "Mudanzas y Guardamuebles en Córdoba Capital - Movibox Mudanzas",
       },
     ],
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: "Mudanzas y guardamuebles en Córdoba | Movibox",
     description:
       "Conocé los servicios de mudanza y guardamuebles de Movibox en Córdoba.",
-    images: ["https://www.movibox.com.ar/images/header/headerchacra.webp"],
+    images: ["https://www.movibox.com.ar/images/header/flota.webp"],
   },
   robots: { index: true, follow: true },
 };
@@ -70,7 +70,7 @@ const services = [
     title: "Mudanzas en Córdoba",
     description:
       "Mudanzas de viviendas, departamentos y oficinas en Córdoba Capital y provincia. Conocé el servicio y pedí una cotización.",
-    image: "/images/camion/imagen_camion.webp",
+    image: "/images/header/flota.webp",
     href: "/mudanzas",
   },
   {
@@ -78,7 +78,7 @@ const services = [
     title: "Fletes y minifletes en Córdoba",
     description:
       "Trasladamos desde objetos y compras puntuales hasta muebles y cargas de mayor volumen. Podés sumar un ayudante para cargar y descargar.",
-    image: "/images/camion/imagen_camion.webp",
+    image: "/images/header/flota.webp",
     href: "/fletes",
   },
   {
@@ -86,7 +86,7 @@ const services = [
     title: "Guardamuebles y Almacenamiento",
     description:
       "Espacios cerrados en un galpón sectorizado para guardar muebles y pertenencias con contratación mensual.",
-    image: "/galpon.webp",
+    image: "/images/guardamuebles/box2.jpeg",
     href: "/guardamuebles",
   },
 ];
@@ -123,10 +123,11 @@ const homePageSchema = {
   "@graph": [
     {
       "@type": "WebPage",
-      name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
+      name: "Mudanzas y Guardamuebles en Córdoba",
       description:
-        "Servicios de mudanza y guardamuebles de Movibox en Córdoba Capital y provincia.",
+        "Servicios de mudanza y guardamuebles en Córdoba Capital y provincia.",
       url: "https://www.movibox.com.ar/",
+      primaryImageOfPage: "https://www.movibox.com.ar/images/header/flota.webp",
       mainEntity: {
         "@id": "https://www.movibox.com.ar/#movingcompany"
       }
@@ -159,7 +160,7 @@ export default function Home() {
       <section className="relative flex min-h-[100svh] items-center overflow-hidden pt-24">
         <Image
           src={img}
-          alt="Camión de Movibox Mudanzas realizando mudanza en Córdoba"
+          alt="Flota de Movibox para mudanzas y fletes en Córdoba"
           fill
           className="object-cover"
           priority
