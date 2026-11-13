@@ -8,6 +8,7 @@ import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Navbar } from "@/components/navbar";
 import { Suspense } from "react";
 import Script from "next/script";
+import { ConversionTracking } from "@/components/ConversionTracking";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,16 +16,14 @@ const inter = Inter({
   preload: true
 });
 
-// ✅ Metadata usando la API de Next 14
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.movibox.com.ar'),
-  title: "Mudanzas en Córdoba Capital | Movibox",
-  description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
+  title: "Movibox | Mudanzas y guardamuebles en Córdoba",
+  description:
+    "Movibox ofrece servicios de mudanza y guardamuebles en Córdoba Capital y la provincia. Conocé cada servicio y pedí una cotización por WhatsApp.",
   authors: [{ name: "Movibox Mudanzas", url: "https://www.movibox.com.ar" }],
   creator: "Movibox Mudanzas",
   publisher: "Movibox Mudanzas",
-
-  alternates: { canonical: "https://www.movibox.com.ar/" },
 
   robots: {
     index: true,
@@ -42,8 +41,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://www.movibox.com.ar/",
-    title: "Mudanzas en Córdoba Capital | Movibox",
-    description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
+    title: "Movibox | Mudanzas y guardamuebles en Córdoba",
+    description:
+      "Servicios de mudanza y guardamuebles en Córdoba Capital y la provincia.",
     siteName: "Movibox Mudanzas",
     images: [
       {
@@ -58,8 +58,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital | Movibox",
-    description: "Mudanzas en Córdoba Capital con camión propio, ayudantes y guardamuebles. Presupuesto gratuito por WhatsApp y atención rápida.",
+    title: "Movibox | Mudanzas y guardamuebles en Córdoba",
+    description:
+      "Servicios de mudanza y guardamuebles en Córdoba Capital y la provincia.",
     images: ["/images/header/headerchacra.webp"],
   },
 
@@ -76,7 +77,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // ✅ Structured Data JSON-LD optimizado para Organization y WebSite
   const structuredData = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -87,36 +87,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         url: 'https://www.movibox.com.ar',
         telephone: '+5493512586221',
         email: 'movibox.cba@gmail.com',
-        description: 'Mudanzas, fletes y guardamuebles en Córdoba Capital y toda la provincia.',
+        description:
+          'Servicios de mudanzas, fletes y guardamuebles en Córdoba Capital y la provincia.',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Camino Chacra de la Merced Km 1/2',
           addressLocality: 'Córdoba',
           addressRegion: 'Córdoba',
-          postalCode: '5000',
           addressCountry: 'AR',
         },
-        geo: {
-          '@type': 'GeoCoordinates',
-          latitude: -31.403489,
-          longitude: -64.137619,
-        },
-        hasMap: 'https://www.google.com/maps/place/Movibox+Mudanzas+Cordoba',
-        openingHoursSpecification: [
-          {
-            '@type': 'OpeningHoursSpecification',
-            dayOfWeek: [
-              'Monday',
-              'Tuesday',
-              'Wednesday',
-              'Thursday',
-              'Friday',
-              'Saturday',
-            ],
-            opens: '08:00',
-            closes: '18:00',
-          },
-        ],
+        hasMap: 'https://maps.app.goo.gl/yBe3szNXrV9ugbWNA',
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'Customer Service',
@@ -130,18 +110,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         },
         areaServed: [
           {
+            '@type': 'City',
+            name: 'Córdoba',
+          },
+          {
             '@type': 'State',
             name: 'Córdoba',
           },
         ],
-        paymentAccepted: [
-          'Cash',
-          'Visa',
-          'MasterCard',
-          'Transferencia',
-        ],
-        currenciesAccepted: ['ARS'],
-        priceRange: '$$',
+        sameAs: ['https://www.instagram.com/moviboxcba'],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: 'Servicios Movibox',
@@ -167,19 +144,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         '@type': 'WebSite',
         '@id': 'https://www.movibox.com.ar/#website',
         url: 'https://www.movibox.com.ar',
-        name: 'Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba',
+        name: 'Movibox Mudanzas',
         inLanguage: 'es-AR',
         publisher: {
           '@id': 'https://www.movibox.com.ar/#movingcompany',
         },
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://www.movibox.com.ar/buscar?q={search_term_string}',
-          'query-input': 'required name=search_term_string',
-        },
-        sameAs: [
-          'https://www.instagram.com/moviboxcba',
-        ],
       },
     ],
   };
@@ -231,6 +200,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Navbar />
+          <ConversionTracking />
 
           {/* Google Tag Manager (noscript) */}
           <noscript>

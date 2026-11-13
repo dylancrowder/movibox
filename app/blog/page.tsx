@@ -8,8 +8,11 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 import mudanzaImage from "@/public/images/webimages/pexels-tima-miroshnichenko-6169181.webp"
 import camion from "@/public/images/webimages/camion_blog.webp"
 import deposito from "@/public/images/webimages/hombre-de-tiro-medio-trabajando-en-almacen.webp"
+import guardamueblesImage from "@/public/images/guardamuebles/box.jpg";
 import image_header from "@/public/logisticas.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { createBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog de Mudanzas y Guardamuebles | Movibox",
@@ -54,58 +57,80 @@ export const metadata: Metadata = {
 export default function BlogHomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Blog",
-    name: "Blog de Movibox Mudanzas",
-    description:
-      "Artículos, guías y consejos sobre transporte, logística y mudanzas en Argentina.",
-    publisher: {
-      "@type": "Organization",
-      name: "Movibox Mudanzas",
-      url: "https://www.movibox.com.ar",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
+    "@graph": [
+      {
+        "@type": "Blog",
+        name: "Blog de Movibox Mudanzas",
+        description:
+          "Artículos, guías y consejos sobre transporte, logística y mudanzas en Argentina.",
+        publisher: {
+          "@type": "Organization",
+          name: "Movibox Mudanzas",
+          url: "https://www.movibox.com.ar",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://www.movibox.com.ar/images/iconos/logo-movibox.svg",
+          },
+        },
+        url: "https://www.movibox.com.ar/blog",
       },
-    },
-    url: "https://www.movibox.com.ar/blog",
+      createBreadcrumbJsonLd([
+        { name: "Inicio", path: "/" },
+        { name: "Blog", path: "/blog" },
+      ]),
+    ],
   };
 
   const posts = [
     {
       title: "Cómo organizar una mudanza sin estrés en Córdoba",
       description:
-        "Guía paso a paso para planificar tiempos, embalaje y traslado de forma segura. Aprende estrategias de expertos para una mudanza sin complicaciones.",
+          "Una guía para ordenar fechas, tareas y datos que conviene preparar antes de un traslado.",
       link: "/blog/como-organizar-una-mudanza-sin-estres",
       image: mudanzaImage,
     },
     {
       title: "Cómo empacar para una mudanza",
       description:
-        "Técnicas profesionales, materiales necesarios y tips de expertos para embalaje seguro. Protege tus pertenencias correctamente durante el transporte.",
+          "Ideas para clasificar, proteger y etiquetar tus pertenencias antes de trasladarlas.",
       link: "/blog/como-empacar-para-una-mudanza",
       image: mudanzaImage,
     },
     {
       title: "¿Cuál es el mejor momento para mudarse?",
       description:
-        "Análisis de épocas, temporadas y días ideales. Descubre cuándo ahorrar dinero y evitar complicaciones al mudarte en Córdoba.",
+          "Aspectos prácticos para elegir la fecha y coordinar una mudanza con anticipación.",
       link: "/blog/mejor-momento-para-mudarse",
       image: deposito,
     },
     {
       title: "Cuándo conviene usar un guardamuebles",
       description:
-        "Casos reales donde el almacenamiento temporal ahorra dinero y resuelve problemas. Descubre si un guardamuebles es la solución que necesitas.",
+          "Situaciones en las que puede servir guardar muebles temporalmente durante una mudanza, reforma o cambio de vivienda.",
       link: "/blog/cuando-usar-guardamuebles",
       image: deposito,
     },
     {
       title: "Errores comunes al contratar una mudanza",
       description:
-        "Evita sobrecostos, daños y demoras. Aprende qué debes preguntar y verificar al contratar profesionales para tu traslado.",
+          "Preguntas y datos útiles para comparar presupuestos y acordar el alcance de un traslado.",
       link: "/blog/errores-comunes-al-contratar-una-mudanza",
       image: camion,
     },
+      {
+        title: "Cuánto cuesta un guardamuebles en Córdoba",
+        description:
+          "Precios mensuales publicados para espacios de 5, 10 y 15 m³ y consejos para estimar el volumen que necesitás.",
+        link: "/blog/deposito-guardamuebles",
+        image: guardamueblesImage,
+      },
+      {
+        title: "Mudanza o flete: diferencias y cómo elegir",
+        description:
+          "Una guía para distinguir un traslado puntual de una mudanza y preparar los datos para cotizar.",
+        link: "/blog/mudanzas-y-fletes",
+        image: camion,
+      },
   ];
 
   return (
@@ -129,11 +154,14 @@ export default function BlogHomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
+          <div className="mb-6 text-left">
+            <Breadcrumb items={[]} currentPage="Blog" inverted />
+          </div>
           <h1 className="text-4xl font-bold text-white drop-shadow-lg md:text-6xl">
             Blog de Movibox Mudanzas
           </h1>
           <p className="mt-4 text-lg text-white/85 md:text-xl">
-            Consejos prácticos, guías completas y tips sobre <strong>mudanzas en Córdoba</strong>, <strong>guardamuebles seguro</strong> y <strong>fletes especializados</strong>.
+            Guías prácticas para organizar mudanzas, comparar servicios de traslado y guardar muebles en Córdoba.
           </p>
         </div>
       </section>
@@ -149,7 +177,7 @@ export default function BlogHomePage() {
               Artículos sobre mudanzas y logística
             </h2>
             <p className="text-lg text-muted-foreground">
-              Descubrí estrategias para planificar tu mudanza, optimizar rutas de transporte y proteger tu mercadería durante el almacenamiento.
+              Encontrá información para preparar un traslado, estimar el espacio de guardado y saber qué consultar antes de contratar.
             </p>
           </ScrollAnimation>
 

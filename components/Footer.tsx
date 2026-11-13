@@ -52,8 +52,7 @@ const Footer = () => {
             />
 
             <p className="max-w-sm text-sm leading-relaxed text-foreground/70">
-              Mudanzas residenciales, departamentos y oficinas con seguimiento personalizado.
-              Guardamuebles seguro con vigilancia 24/7 e inventario digital.
+              Mudanzas residenciales y comerciales en Córdoba. Guardamuebles mensual en espacios cerrados dentro de un galpón sectorizado.
             </p>
           </div>
 

@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://www.movibox.com.ar/
-
-# Sitemaps
-Sitemap: https://www.movibox.com.ar/sitemap.xml

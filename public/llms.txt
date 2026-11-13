@@ -5,18 +5,20 @@ Empresa: Movibox
 
 ## Servicios
 
-- [Mudanzas y fletes](https://www.movibox.com.ar/mudanzas): Mudanzas residenciales, comerciales y traslado de objetos.
-- [Guardamuebles y almacenamiento](https://www.movibox.com.ar/guardamuebles): Almacenamiento seguro en Córdoba.
-- [Todos los servicios](https://www.movibox.com.ar/servicios): Información general de los servicios de Movibox Mudanzas.
+- [Mudanzas en Córdoba](https://www.movibox.com.ar/mudanzas): Mudanzas de viviendas, departamentos, oficinas y locales en Córdoba Capital y provincia.
+- [Guardamuebles en Córdoba](https://www.movibox.com.ar/guardamuebles): Espacios cerrados en galpón sectorizado, con contratación mensual.
+- [Precios de mudanzas](https://www.movibox.com.ar/precios-mudanzas): Tarifa por hora para mudanzas dentro de Córdoba Capital.
+- [Mudanzas de larga distancia](https://www.movibox.com.ar/mudanzas-larga-distancia): Consultas para traslados fuera de Córdoba Capital.
+- [Fletes](https://www.movibox.com.ar/fletes): Transporte de objetos y cargas puntuales.
 
 ## Información
 
-- [Inicio](https://www.movibox.com.ar/): Presentación de Movibox Mudanzas y sus servicios.
+- [Inicio](https://www.movibox.com.ar/): Presentación general de Movibox.
 - [Preguntas frecuentes](https://www.movibox.com.ar/faq): Respuestas sobre mudanzas, fletes y guardamuebles.
-- [Contacto](https://www.movibox.com.ar/contacto): Solicitar un presupuesto o comunicarse con el equipo.
-- [Blog](https://www.movibox.com.ar/blog): Consejos e información sobre mudanzas y almacenamiento.
+- [Contacto](https://www.movibox.com.ar/contacto): Solicitar una cotización por formulario, teléfono o WhatsApp.
+- [Blog](https://www.movibox.com.ar/blog): Guías prácticas sobre mudanzas y almacenamiento.
 
 ## Contacto
 
 - Teléfono y WhatsApp: +54 9 351 2586221
-- Ubicación: Córdoba, Argentina
+- Ubicación: Camino Chacra de la Merced Km 1/2, Córdoba, Argentina

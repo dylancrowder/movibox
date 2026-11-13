@@ -22,34 +22,31 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 
 export const metadata: Metadata = {
-  title:
-    "Mudanzas en Córdoba Capital | Movibox",
+  title: "Mudanzas y guardamuebles en Córdoba | Movibox",
   description:
-    "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
+    "Conocé los servicios de mudanza y guardamuebles de Movibox en Córdoba Capital y provincia. Consultá por WhatsApp cuál se adapta a tu necesidad.",
   alternates: { canonical: "https://www.movibox.com.ar/" },
 
   openGraph: {
     type: "website",
     title:
-      "Mudanzas en Córdoba Capital | Movibox",
+      "Mudanzas y guardamuebles en Córdoba | Movibox",
     description:
-      "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
+      "Conocé los servicios de mudanza y guardamuebles de Movibox en Córdoba Capital y provincia.",
     url: "https://www.movibox.com.ar/",
     images: [
       {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630",
-        width: 1200,
-        height: 630,
+        url: "https://www.movibox.com.ar/images/header/headerchacra.webp",
         alt: "Mudanzas y Guardamuebles en Córdoba Capital - Movibox Mudanzas",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mudanzas en Córdoba Capital | Movibox",
+    title: "Mudanzas y guardamuebles en Córdoba | Movibox",
     description:
-      "Mudanzas en Córdoba Capital y provincia. Servicio profesional con camión equipado. Presupuesto gratis por WhatsApp.",
-    images: ["https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2Fa9eaffe9e866466ba711000ec1f0ae5e?format=webp&width=1200&height=630"],
+      "Conocé los servicios de mudanza y guardamuebles de Movibox en Córdoba.",
+    images: ["https://www.movibox.com.ar/images/header/headerchacra.webp"],
   },
   robots: { index: true, follow: true },
 };
@@ -57,22 +54,22 @@ export const metadata: Metadata = {
 const stats = [
   { icon: Truck, label: "Transporte", value: "Camión" },
   { icon: MapPin, label: "Cobertura", value: "Córdoba" },
-  { icon: Clock, label: "Presupuesto", value: "Sin cargo" },
+  { icon: Clock, label: "Consultas", value: "Por WhatsApp" },
 ];
 
 const aboutHighlights = [
   "Mudanzas y fletes en Córdoba Capital y provincia",
-  "Guardamuebles en galpón propio con almacenamiento seguro",
-  "Retiro, traslado y entrega a domicilio",
+  "Guardamuebles en espacios cerrados dentro de un galpón sectorizado",
+  "Contratación mensual para almacenamiento temporal",
   "Camión equipado para mudanzas residenciales y comerciales",
 ];
 //h
 const services = [
   {
     icon: Truck,
-    title: "Mudanzas y Fletes en Córdoba",
+    title: "Mudanzas en Córdoba",
     description:
-      "Mudanzas completas de viviendas, departamentos y oficinas. Fletes de objetos individuales o grandes volúmenes en Córdoba Capital y provincia.",
+      "Mudanzas de viviendas, departamentos y oficinas en Córdoba Capital y provincia. Conocé el servicio y pedí una cotización.",
     image: "/images/camion/imagen_camion.webp",
     href: "/mudanzas",
   },
@@ -88,7 +85,7 @@ const services = [
     icon: Warehouse,
     title: "Guardamuebles y Almacenamiento",
     description:
-      "Servicio de almacenamiento seguro con vigilancia 24/7. Buscamos, almacenamos y entregamos cuando lo necesites sin costo adicional.",
+      "Espacios cerrados en un galpón sectorizado para guardar muebles y pertenencias con contratación mensual.",
     image: "/galpon.webp",
     href: "/guardamuebles",
   },
@@ -109,15 +106,15 @@ const benefits = [
   },
   {
     icon: Warehouse,
-    title: "Almacenamiento seguro y vigilado",
+    title: "Guardamuebles en córdoba",
     description:
-      "Depósito propio con control de acceso, vigilancia 24/7 y seguimiento digital para total transparencia.",
+      "Galpón sectorizado con espacios cerrados para cada cliente y monitoreo y control del establecimiento.",
   },
   {
     icon: MapPin,
     title: "Cobertura en Córdoba y provincia",
     description:
-      "Servicio especializado en traslados dentro de Córdoba Capital y toda la provincia con respuesta rápida.",
+      "Consultá disponibilidad para traslados en Córdoba Capital y localidades de la provincia.",
   },
 ];
 
@@ -125,25 +122,10 @@ const homePageSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebSite",
-      "@id": "https://www.movibox.com.ar/#website",
-      url: "https://www.movibox.com.ar",
-      name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
-      inLanguage: "es-AR",
-      publisher: {
-        "@id": "https://www.movibox.com.ar/#movingcompany"
-      },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: "https://www.movibox.com.ar/buscar?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
       "@type": "WebPage",
       name: "Movibox Mudanzas - Mudanzas y Guardamuebles en Córdoba",
       description:
-        "Mudanzas y guardamuebles en Córdoba Capital y provincia. Camión y galpón.",
+        "Servicios de mudanza y guardamuebles de Movibox en Córdoba Capital y provincia.",
       url: "https://www.movibox.com.ar/",
       mainEntity: {
         "@id": "https://www.movibox.com.ar/#movingcompany"
@@ -201,8 +183,7 @@ export default function Home() {
               </h1>
 
               <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                En <strong>Movibox Mudanzas</strong> estamos especializados en mudanzas y guardamuebles
-                en Córdoba. Ofrecemos traslados seguros y almacenamiento con vigilancia 24/7.
+                En <strong>Movibox Mudanzas</strong> ofrecemos servicios de mudanza en Córdoba Capital y provincia, además de guardamuebles con espacios cerrados en un galpón sectorizado.
               </p>
 
               <div className="flex flex-col items-center gap-4 sm:flex-row md:items-start">

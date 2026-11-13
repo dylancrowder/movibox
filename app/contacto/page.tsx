@@ -9,27 +9,29 @@ import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import wsp from "@/public/images/iconos/whatsapp.webp";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { createBreadcrumbJsonLd } from "@/lib/seo";
 
 const faqs = [
   {
     question: "¿Realizan mudanzas en toda Córdoba Capital y provincia?",
     answer:
-      "Sí. Ofrecemos servicio de mudanzas completas en Córdoba Capital y toda la provincia, con equipo profesional y vehículos equipados para cada tipo de carga.",
+      "Sí. Ofrecemos mudanzas en Córdoba Capital y la provincia. Para traslados de larga distancia, consultá el recorrido.",
   },
   {
     question: "¿Puedo alquilar un depósito temporal?",
     answer:
-      "Contamos con guardamuebles propio con vigilancia 24/7, control de acceso digital e inventario actualizado. Planes flexibles según tu necesidad de almacenamiento.",
+      "Sí. El guardamuebles ofrece espacios cerrados para cada cliente en un galpón sectorizado, con contratación mensual.",
   },
   {
     question: "¿Cómo sigo mi mudanza o flete?",
     answer:
-      "Brindamos comunicación permanente y seguimiento personalizado para que sepas en qué etapa se encuentra tu servicio en todo momento.",
+      "Podés comunicarte por WhatsApp para coordinar el servicio y consultar sobre el traslado.",
   },
   {
     question: "¿Cuánto demora una mudanza en Córdoba?",
     answer:
-      "Una mudanza en Córdoba Capital suele completarse entre 4 a 8 horas dependiendo del volumen y accesos. Evaluamos cada caso para darte un estimado certero.",
+      "El tiempo depende del volumen, la distancia y las condiciones de acceso. Compartí esos datos al pedir una cotización.",
   },
 ];
 
@@ -78,7 +80,7 @@ const contactMethods = [
     icon: Phone,
     title: "Teléfono directo",
     value: "+54 9 351 258-6221",
-    description: "Atención personalizada de lunes a sábado.",
+    description: "Llamanos para consultar por los servicios y la disponibilidad.",
     href: "tel:+5493512586221",
     action: "Llamar",
   },
@@ -86,7 +88,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: "WhatsApp",
     value: "+54 9 351 258-6221",
-    description: "Respuesta inmediata y seguimiento en vivo.",
+    description: "Escribinos para consultar por una mudanza o un guardamuebles.",
     href: "https://wa.me/5493512586221",
     external: true,
     action: "Enviar WhatsApp",
@@ -112,36 +114,21 @@ const contactMethods = [
 export default function ContactoPage() {
   const contactPageSchema = {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    name: "Contacto - Movibox Mudanzas",
-    description: "Página de contacto para solicitar presupuestos de mudanzas y transporte en Córdoba",
-    url: "https://www.movibox.com.ar/contacto",
-    mainEntity: {
-      "@type": "MovingCompany",
-      name: "Movibox Mudanzas",
-      telephone: "+54-351-258-6221",
-      email: "movibox.cba@gmail.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Camino Chacra de la Merced Km 1/2",
-        addressLocality: "Córdoba",
-        addressRegion: "Córdoba",
-        addressCountry: "AR",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        name: "Contacto - Movibox Mudanzas",
+        description: "Página de contacto para solicitar presupuestos de mudanzas y transporte en Córdoba",
+        url: "https://www.movibox.com.ar/contacto",
+        mainEntity: {
+          "@id": "https://www.movibox.com.ar/#movingcompany",
+        },
       },
-    },
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqs.map(faq => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
-    })),
+      createBreadcrumbJsonLd([
+        { name: "Inicio", path: "/" },
+        { name: "Contacto", path: "/contacto" },
+      ]),
+    ],
   };
 
   return (
@@ -151,11 +138,6 @@ export default function ContactoPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-
       {/* Hero Sections */}
       <section className="relative flex min-h-[70vh] items-center justify-center overflow-hidden text-center">
         <Image
@@ -170,12 +152,15 @@ export default function ContactoPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-br from-black/85 via-black/75 to-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4">
+          <div className="mb-6 text-left">
+            <Breadcrumb items={[]} currentPage="Contacto" inverted />
+          </div>
           <h1 className="text-5xl font-black text-white drop-shadow-lg md:text-7xl leading-tight">
             Contacto Movibox Mudanzas
           </h1>
           <p className="mt-6 text-lg text-white/90 md:text-xl text-left max-w-prose leading-relaxed">
-            Coordiná tu mudanza, flete o guardamuebles con nuestro equipo especializado.
-            Dejanos tus datos y recibí un presupuesto rápido, claro y sin compromiso.
+            Coordiná una consulta sobre mudanzas, fletes o guardamuebles en Córdoba.
+            Dejanos tus datos y contanos qué servicio necesitás.
           </p>
         </div>
       </section>
@@ -195,7 +180,7 @@ export default function ContactoPage() {
             </h2>
           <p className="text-lg leading-relaxed text-foreground/80">
 
-              Hablá con nosotros por teléfono, WhatsApp o correo electrónico y coordiná tu mudanza o flete de manera rápida y segura.
+              Hablá con nosotros por teléfono, WhatsApp o correo electrónico para consultar sobre los servicios.
             </p>
           </ScrollAnimation>
 
@@ -256,9 +241,7 @@ export default function ContactoPage() {
                       <Clock className="mt-1 h-5 w-5 text-primary" aria-hidden="true" />
                       <div>
                         <p className="font-semibold text-foreground">Horarios de atención</p>
-                        <p>Lunes a Viernes: 8:00 – 18:00</p>
-                        <p>Sábados: 9:00 – 13:00</p>
-                        <p className="mt-1 text-primary">Guardia WhatsApp 24/7 para urgencias.</p>
+                        <p>Consultá por teléfono o WhatsApp la disponibilidad de atención y de fechas.</p>
                       </div>
                     </div>
 
@@ -281,7 +264,7 @@ export default function ContactoPage() {
                   <div className="p-6">
                     <h3 className="text-xl font-semibold text-foreground">Nuestra base en Córdoba</h3>
                     <p className="mt-2 text-sm text-muted-foreground">
-                      Visitá nuestro centro logístico para coordinar retiros, embalaje y almacenamiento de manera segura y confiable.
+                      Consultá la ubicación y coordiná una visita antes de acercarte.
                     </p>
                   </div>
                   <div className="relative w-full" style={{ paddingTop: "56.25%" }}>

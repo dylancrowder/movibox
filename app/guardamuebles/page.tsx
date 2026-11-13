@@ -23,23 +23,24 @@ import {
   Warehouse,
 } from "lucide-react";
 
-
 import FAQ from "@/components/FAQ";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { ImageCarousel } from "@/components/image-carousel";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import {
+  STORAGE_MONTHLY_PLANS,
+  formatARS,
+} from "@/lib/commercial-data";
 import image_header from "@/public/galpon.webp";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import box from "@/public/images/guardamuebles/box.jpg";
 import box2 from "@/public/images/guardamuebles/box2.jpeg";
 export const metadata: Metadata = {
-  title: "Guardamuebles en Córdoba | Movibox",
-
+  title: "Alquiler de guardamuebles en Córdoba | Movibox",
   description:
-    "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
-
-
+    "Alquiler mensual de guardamuebles en Córdoba, en espacios cerrados dentro de un galpón sectorizado. Opciones de 5, 10 y 15 m³ para muebles y pertenencias.",
   alternates: {
     canonical: "https://www.movibox.com.ar/guardamuebles",
   },
@@ -52,27 +53,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "https://www.movibox.com.ar/guardamuebles", // ⚠️ siempre absoluta
-    title: "Guardamuebles en Córdoba | Movibox",
+    title: "Alquiler de guardamuebles en Córdoba | Movibox",
     description:
-      "Guardamuebles con servicio de mudanza en Córdoba Capital. Almacenamiento seguro, búsqueda y entrega. Presupuesto gratis.",
+      "Espacios cerrados en un galpón sectorizado, con contratación mensual para guardar muebles y pertenencias en Córdoba.",
     images: [
       {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200",
+        url: "https://www.movibox.com.ar/galpon.webp",
         width: 1200,
-        height: 630,
-        alt: "Guardamuebles en Córdoba con vigilancia 24/7 - Movibox Mudanzas",
+        height: 800,
+        alt: "Galpón de guardamuebles de Movibox en Córdoba",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Guardamuebles en Córdoba | Movibox",
+    title: "Alquiler de guardamuebles en Córdoba | Movibox",
     description:
-      "Guardamuebles seguro en Córdoba Capital con vigilancia 24/7 y servicio de mudanza.",
-    images: [
-      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200",
-    ],
+      "Espacios cerrados en un galpón sectorizado, con contratación mensual en Córdoba.",
+    images: ["https://www.movibox.com.ar/galpon.webp"],
   },
 };
 const jsonLd = {
@@ -82,50 +81,39 @@ const jsonLd = {
     {
       "@type": "WebPage",
       "@id": "https://www.movibox.com.ar/guardamuebles#webpage",
-      name: "Guardamuebles con Servicio de Mudanza en Córdoba",
-      description: "Guardamuebles en Córdoba Capital y provincia. Galpón, almacenamiento seguro, retiro y entrega a domicilio. Presupuesto sin cargo por WhatsApp.",
+      name: "Alquiler de guardamuebles en Córdoba",
+      description:
+        "Alquiler mensual de guardamuebles en Córdoba, en espacios cerrados dentro de un galpón sectorizado.",
       url: "https://www.movibox.com.ar/guardamuebles",
-      primaryImageOfPage: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5a3dd389d784483191199e72753cc676?format=webp&width=800&height=1200"
+      primaryImageOfPage: "https://www.movibox.com.ar/galpon.webp"
     },
 
-    // 1️⃣ SERVICIO
     {
       "@type": "Service",
       "@id": "https://www.movibox.com.ar/guardamuebles#service",
-      name: "Guardamuebles en Córdoba",
-      description: "Servicio de guardamuebles con vigilancia 24/7 y retiro a domicilio en Córdoba Capital.",
+      name: "Alquiler mensual de guardamuebles",
+      serviceType: "Almacenamiento temporal de muebles y pertenencias",
+      description:
+        "Espacios cerrados para cada cliente en un galpón sectorizado en Córdoba.",
       provider: {
         "@id": "https://www.movibox.com.ar/#movingcompany"
       },
       areaServed: {
         "@type": "City",
         name: "Córdoba Capital"
-      }
+      },
+      offers: STORAGE_MONTHLY_PLANS.map((plan) => ({
+        "@type": "Offer",
+        name: `Guardamuebles ${plan.volumeM3} m³ por mes`,
+        price: plan.monthlyPriceARS,
+        priceCurrency: "ARS",
+        itemOffered: {
+          "@type": "Service",
+          name: `Espacio de guardamuebles de ${plan.volumeM3} m³`,
+        },
+      })),
     },
 
-    // 2️⃣ INSTALACIÓN FÍSICA
-    {
-      "@type": "SelfStorage",
-      "@id": "https://www.movibox.com.ar/guardamuebles#storage",
-      name: "Guardamuebles Movibox Mudanzas",
-      url: "https://www.movibox.com.ar/guardamuebles",
-      provider: {
-        "@id": "https://www.movibox.com.ar/#movingcompany"
-      },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Camino Chacra de la Merced Km 1/2",
-        addressLocality: "Córdoba",
-        addressRegion: "Córdoba",
-        addressCountry: "AR"
-      },
-      amenityFeature: [
-        { "@type": "LocationFeatureSpecification", name: "Vigilancia 24/7" },
-        { "@type": "LocationFeatureSpecification", name: "Ambientes secos y ventilados" }
-      ]
-    },
-
-    // 3️⃣ BREADCRUMB
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
@@ -146,121 +134,70 @@ const jsonLd = {
   ]
 };
 export default function GuardamueblesPage() {
-  const plans = [
-    {
-      name: "Monoambiente",
-      size: "Poco espacio",
-      volume: "~10 m³",
-      items: [
-        "Cama simple",
-        "Ropero pequeño",
-        "Escritorio",
-        "Mesita de luz",
-        "Sillas",
-        "Heladera",
-        "Cajas de mudanza",
-      ],
-    },
-    {
-      name: "1 Dormitorio",
-      size: "Volumen medio",
-      volume: "~18 m³",
-      items: [
-        "Cama matrimonial",
-        "Ropero grande",
-        "Comedor (mesa + sillas)",
-        "Heladera",
-        "Lavarropa",
-        "Cocina o horno",
-        "Escritorio",
-        "Cajas de mudanza",
-      ],
-    },
-    {
-      name: "2 Dormitorios",
-      size: "Mayor volumen",
-      volume: "~25 m³",
-      items: [
-        "2 camas matrimoniales",
-        "2 roperos",
-        "Comedor completo",
-        "Cocina integral",
-        "Heladera",
-        "Lavarropa",
-        "TV y mueble",
-        "Cajas y otros enseres",
-      ],
-    },
-  ];
-
   const benefits = [
     {
       icon: ShieldCheck,
-      title: "Seguridad real",
+      title: "Monitoreo del establecimiento",
       description:
-        "Cámaras 24/7, control de acceso y personal en el lugar. Depósito propio.",
+        "El establecimiento cuenta con monitoreo y control.",
     },
     {
       icon: CircleDollarSign,
-      title: "Precio claro",
+      title: "Opciones por volumen",
       description:
-        "El valor se calcula por volumen real. Sin sorpresas ni costos ocultos.",
+        "Consultá los espacios de 5, 10 y 15 m³ y el precio mensual de cada uno.",
     },
     {
       icon: Warehouse,
       title: "Espacio separado",
       description:
-        "Cada cliente tiene su espacio identificado. No se mezclan pertenencias.",
+        "Cada cliente dispone de un espacio cerrado dentro de un galpón sectorizado.",
     },
     {
       icon: Truck,
-      title: "Retiro opcional",
+      title: "Útil durante una mudanza",
       description:
-        "Podemos buscar y devolver tus cosas cuando lo necesites.",
+        "Una alternativa para guardar muebles mientras coordinás el traslado o resolvés el cambio de vivienda.",
     },
     {
       icon: Building2,
-      title: "Galpón propio",
+      title: "En Córdoba",
       description:
-        "Estamos en Córdoba Capital. Podés visitarnos y verificar.",
+        "Consultá la ubicación y coordiná una visita al establecimiento.",
     },
     {
       icon: BadgeCheck,
-      title: "Sin contrato",
+      title: "Contratación mensual",
       description:
-        "Guardás el tiempo que necesites. Cancelás cuando quieras.",
+        "El servicio se contrata por mes. Consultá disponibilidad y condiciones vigentes.",
     },
   ];
 
   const faqItems = [
     {
-      question: "¿Mis cosas están seguras?",
+      question: "¿Cómo se organizan los espacios?",
       answer:
-        "100% seguras. Vigilancia 24/7 con cámaras, alarmas monitoreadas, control de acceso registrado y personal en el lugar.",
+        "El galpón está sectorizado y cada cliente cuenta con un espacio cerrado. El establecimiento tiene monitoreo y control.",
     },
     {
       question: "¿Qué se puede guardar?",
       answer:
-        "Lo que sea: muebles, cajas, cosas variadas, depósito personal. Cada cliente tiene su espacio claramente separado del de otros.",
+        "Se pueden consultar espacios para guardar muebles, electrodomésticos, herramientas, cajas y otras pertenencias.",
     },
     {
-      question: "¿El precio cambia?",
+      question: "¿Cuánto cuesta el guardamuebles?",
       answer:
-        "No. Una vez acordado el presupuesto, ese es tu precio durante el período. Sin sorpresas ni aumentos ocultos.",
+        "Los precios mensuales publicados corresponden a espacios de 5, 10 y 15 m³. Escribinos para confirmar disponibilidad y las condiciones de contratación.",
     },
     {
-      question: "¿Plazo mínimo o máximo?",
+      question: "¿Cómo es la contratación?",
       answer:
-        "Ninguno. Guardá 1 mes o el tiempo que necesites. Cancelás cuando quieras sin penalizaciones.",
+        "La contratación es mensual. Para cotizar, contanos qué necesitás guardar y durante cuánto tiempo.",
     },
     {
-      question: "¿Puedo cambiar el espacio?",
+      question: "¿Sirve para guardar muebles entre dos alquileres?",
       answer:
-        "Claro. Si necesitás más o menos espacio, ajustamos el presupuesto según lo que uses.",
-    },
-    {
-      question: "¿Cómo contratar?",
-      answer: "Mandá un WhatsApp contando qué necesitás guardar.",
+        "Sí. El guardamuebles puede servir como almacenamiento temporal entre viviendas o durante una mudanza.",
     },
   ];
 
@@ -275,7 +212,7 @@ export default function GuardamueblesPage() {
       <section className="relative flex min-h-[100svh] items-center pt-24 overflow-hidden">
         <Image
           src={image_header}
-          alt="Guardamuebles en Córdoba - Almacenamiento seguro de muebles con vigilancia 24/7"
+          alt="Galpón de Movibox para guardar muebles en Córdoba"
           fill
           className="object-cover"
           priority
@@ -295,15 +232,14 @@ export default function GuardamueblesPage() {
               </span>
 
               <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
-                Guardamuebles en Córdoba Capital con Servicio de Mudanza
+                Alquiler de guardamuebles en Córdoba
               </h1>
 
-              {/* --- CAMBIO AQUÍ: Bullets sutiles en lugar de párrafo --- */}
               <ul className="space-y-3">
                 {[
-                  "Cámaras y control de acceso",
-                  "Retiro y entrega a domicilio",
-                  "Sin contrato de tiempo mínimo"
+                  "Espacios cerrados en un galpón sectorizado",
+                  "Monitoreo y control del establecimiento",
+                  "Contratación mensual",
                 ].map((text, index) => (
                   <li key={index} className="flex items-center gap-3 text-white/90 text-lg sm:text-xl">
                     <CheckCircle2 className="h-5 w-5 text-secondary-500 flex-shrink-0" />
@@ -311,7 +247,6 @@ export default function GuardamueblesPage() {
                   </li>
                 ))}
               </ul>
-              {/* ----------------------------------------------------- */}
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
                 {/* WhatsApp - Verde */}
@@ -350,6 +285,10 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
+      <div className="container mx-auto px-4 py-4 md:px-6">
+        <Breadcrumb items={[]} currentPage="Guardamuebles" />
+      </div>
+
       {/* ESPACIOS DE 5, 10 Y 15 METROS CÚBICOS */}
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">
@@ -361,70 +300,23 @@ export default function GuardamueblesPage() {
               Guardamuebles de 5 m³, 10 m³ y 15 m³
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Elige el tamaño de espacio que necesitas. Todos los boxes son individuales, están señalizados y cuentan con acceso controlado. Consultá disponibilidad y precio exacto por WhatsApp.
+              Elegí entre espacios de 5, 10 y 15 m³. Los precios indicados son mensuales; escribinos para consultar disponibilidad y condiciones.
             </p>
           </ScrollAnimation>
 
           <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                size: "5 m³",
-                badge: "Ideal para monoambientes",
-                description: "Box compacto",
-                dimensions: "2 m × 1,25 m × 2 m",
-                icon: Package,
-                items: [
-                  "Habitación de monoambiente",
-                  "Pequeño ropero o biblioteca",
-                  "Cajas y equipaje",
-                  "Bicicleta o moto",
-                  "Sillas y mesas pequeñas",
-                  "Objetos personales varios",
-                ],
-                price: "$79.900",
-              },
-              {
-                size: "10 m³",
-                badge: "Ideal para 1 dormitorio",
-                description: "Box estándar",
-                dimensions: "2,5 m × 2 m × 2 m",
-                icon: Warehouse,
-                items: [
-                  "1 dormitorio completo",
-                  "Comedor con sillas",
-                  "Heladera y lavarropa",
-                  "Escritorio y biblioteca",
-                  "Equipos y electrónica",
-                  "Cajas de mudanza",
-                ],
-                price: "$129.900",
-              },
-              {
-                size: "15 m³",
-                badge: "Ideal para mudanzas completas",
-                description: "Box amplio",
-                dimensions: "3 m × 2,5 m × 2 m",
-                icon: Truck,
-                items: [
-                  "2 dormitorios completos",
-                  "Sala de estar completa",
-                  "Cocina y comedor",
-                  "Electrodomésticos grandes",
-                  "Equipos de oficina",
-                  "Múltiples cajas y muebles",
-                ],
-                price: "$179.900",
-              },
-            ].map((space, index) => (
-              <ScrollAnimation key={space.size} animation="fade-up" delay={index * 120}>
+            {STORAGE_MONTHLY_PLANS.map((space, index) => {
+              const SpaceIcon = [Package, Warehouse, Truck][index];
+              return (
+              <ScrollAnimation key={space.volumeM3} animation="fade-up" delay={index * 120}>
                 <article className="h-full rounded-lg p-6 sm:p-8 border border-neutral-300 bg-white flex flex-col justify-between shadow-card hover:shadow-card-hover hover:-translate-y-1 overflow-hidden relative">
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="rounded-full bg-primary-50 p-3 text-primary flex-shrink-0">
-                        <space.icon className="h-6 w-6" />
+                        <SpaceIcon className="h-6 w-6" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-primary">{space.size}</h3>
+                        <h3 className="text-2xl font-bold text-primary">{space.volumeM3} m³</h3>
                         <p className="text-sm text-neutral-600 mt-1">{space.description}</p>
                       </div>
                     </div>
@@ -448,8 +340,10 @@ export default function GuardamueblesPage() {
                       <p className="text-xs font-semibold text-neutral-600 uppercase tracking-wide mb-1">
                         Precio mensual
                       </p>
-                      <p className="text-2xl font-bold text-secondary-600">{space.price}</p>
-                      <p className="text-xs text-neutral-600 mt-2">*Presupuesto exacto por WhatsApp</p>
+                      <p className="text-2xl font-bold text-secondary-600">
+                        {formatARS(space.monthlyPriceARS)}
+                      </p>
+                      <p className="text-xs text-neutral-600 mt-2">Por mes</p>
                     </div>
 
                     <div>
@@ -474,7 +368,7 @@ export default function GuardamueblesPage() {
                     className="mt-8 w-full"
                   >
                     <WhatsAppConversionLink
-                      href={`https://wa.me/5493512586221?text=Hola%20quiero%20saber%20el%20precio%20para%20un%20espacio%20de%20${space.size}`}
+                      href={`https://wa.me/5493512586221?text=${encodeURIComponent(`Hola, quiero consultar por un espacio de ${space.volumeM3} m³.`)}`}
                     >
                       <Image src={wsp} alt="WhatsApp" width={28} height={28} />
                       Consultar precio
@@ -482,13 +376,51 @@ export default function GuardamueblesPage() {
                   </Button>
                 </article>
               </ScrollAnimation>
-            ))}
+            )})}
           </div>
         </div>
       </section>
 
-
-
+      <section className="bg-white py-16 sm:py-24">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mx-auto mb-12 max-w-3xl space-y-4 text-center">
+            <h2 className="text-3xl font-bold text-primary sm:text-4xl">
+              Guardamuebles, depósito y almacenamiento temporal
+            </h2>
+            <p className="text-lg leading-relaxed text-neutral-600">
+              Los términos pueden describir servicios distintos. Antes de contratar, verificá el tipo de espacio, el plazo y qué condiciones incluye cada propuesta.
+            </p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <article className="rounded-lg border border-neutral-300 p-6">
+              <h3 className="text-xl font-semibold text-primary">Guardamuebles</h3>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                En Movibox, el servicio ofrece espacios cerrados para cada cliente, dentro de un galpón sectorizado, con contratación mensual.
+              </p>
+            </article>
+            <article className="rounded-lg border border-neutral-300 p-6">
+              <h3 className="text-xl font-semibold text-primary">Depósito para muebles</h3>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                Es una forma general de referirse a un lugar para guardar bienes. Consultá si el espacio es individual, cómo se controla el establecimiento y cuáles son las condiciones de acceso.
+              </p>
+            </article>
+            <article className="rounded-lg border border-neutral-300 p-6">
+              <h3 className="text-xl font-semibold text-primary">Almacenamiento temporal</h3>
+              <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+                Puede resolver un período entre dos alquileres, una mudanza o una reforma. La duración y el precio se acuerdan según el espacio y la contratación mensual.
+              </p>
+            </article>
+          </div>
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm font-semibold">
+            <Link href="/blog/cuando-usar-guardamuebles" className="text-primary hover:underline">
+              Cuándo conviene usar un guardamuebles
+            </Link>
+            <Link href="/blog/deposito-guardamuebles" className="text-primary hover:underline">
+              Cómo elegir un depósito para muebles
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* BENEFICIOS */}
       <section className="bg-white py-16 sm:py-32 overflow-x-hidden">
@@ -544,12 +476,12 @@ export default function GuardamueblesPage() {
               {
                 step: "2",
                 title: "Presupuesto sin compromiso",
-                description: "Te damos el precio real basado en el volumen que necesitás. Sin sorpresas ni costos ocultos.",
+                description: "Elegí un volumen de 5, 10 o 15 m³ y consultá las condiciones mensuales vigentes.",
               },
               {
                 step: "3",
                 title: "Guardá en nuestro galpón",
-                description: "Retiramos o traes tus cosas. Se guardan en tu espacio identificado. Visita cuando quieras.",
+                description: "Coordiná el ingreso de tus pertenencias y consultá las condiciones de acceso al espacio.",
               },
             ].map((item) => (
               <ScrollAnimation key={item.step} animation="fade-up">
@@ -571,24 +503,24 @@ export default function GuardamueblesPage() {
         <div className="container px-4 md:px-6 grid gap-8 sm:gap-16 lg:grid-cols-2 items-center max-w-7xl mx-auto">
           <ScrollAnimation animation="fade-up" className="space-y-8">
             <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-600 bg-secondary/10 px-3 py-1.5 rounded-full">
-              Galpón propio
+              Espacios para cada cliente
             </span>
 
             <h2 className="text-h2-mobile sm:text-h2-tablet lg:text-h2-desktop leading-tight text-primary">
-              Buscamos tus cosas y las guardamos a salvo por el tiempo que necesites
+              Un espacio cerrado para tus muebles y pertenencias
             </h2>
 
             <p className="text-lg leading-relaxed text-neutral-600">
-              Tenemos un galpón propio en <strong>Camino Chacra de la Merced Km 1/2</strong>, Córdoba Capital. Cada cliente tiene su espacio claramente identificado y separado. Guardamos lo que sea: muebles, cajas, ropa, depósito personal, lo que necesites.
+              El galpón está sectorizado y cada cliente dispone de un espacio cerrado. Podés consultar por almacenamiento de muebles, electrodomésticos, herramientas, cajas y otras pertenencias.
             </p>
 
             <ul className="space-y-4">
               {[
-                "Tu espacio identificado y separado del de otros",
-                "Cámaras de seguridad en todas las áreas",
-                "Espacios secos, protegidos de humedad",
-                "Personal presente en horarios de atención",
-                "Puedes visitarlo para verificar",
+                "Espacios cerrados para cada cliente",
+                "Galpón sectorizado",
+                "Monitoreo y control del establecimiento",
+                "Contratación mensual",
+                "Consultá cómo coordinar una visita",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3">
                   <span className="mt-1 rounded-full bg-secondary-500 p-1.5 text-white flex-shrink-0">
@@ -605,11 +537,11 @@ export default function GuardamueblesPage() {
               images={[
                 {
                   src: box2.src,
-                  alt: "Guardamuebles Córdoba - Almacenamiento seguro de muebles en depósito vigilado",
+                  alt: "Espacio de guardamuebles para muebles y pertenencias en Córdoba",
                 },
                 {
                   src: box.src,
-                  alt: "Guardamuebles Córdoba - Almacenamiento seguro de muebles en depósito vigilado",
+                  alt: "Interior del galpón sectorizado de guardamuebles de Movibox",
                 }
               ]}
             />
@@ -745,32 +677,32 @@ export default function GuardamueblesPage() {
               {
                 icon: Hammer,
                 title: "Guardar muebles por refacción",
-                description: "Realizando trabajos en tu casa? Guardamos tus muebles el tiempo que necesites mientras se hacen las refacciones y los devolvemos al terminar.",
+                description: "Durante una refacción, podés consultar por un espacio mensual para guardar muebles y liberar ambientes de trabajo.",
               },
               {
                 icon: Clock3,
                 title: "Almacenamiento temporal",
-                description: "Entre mudanzas, cambio de vivienda o espacio temporal? Guardamos tus cosas días, semanas o meses sin contrato mínimo.",
+                description: "Si las fechas de salida y entrada a una vivienda no coinciden, consultá disponibilidad para guardar tus pertenencias por mes.",
               },
               {
                 icon: PackageCheck,
                 title: "Almacenamiento de largo plazo",
-                description: "Necesitás guardar muebles por meses o años? Nuestro depósito seguro mantiene tus pertenencias protegidas indefinidamente.",
+                description: "Para guardar muebles durante más de un mes, consultá las condiciones de renovación y el volumen que necesitás.",
               },
               {
                 icon: Home,
                 title: "Cambio de vivienda",
-                description: "Nueva casa no está lista? Guardamos todo tu contenido hasta que puedas mudarte. Buscamos, guardamos y entregamos sin cargo.",
+                description: "Si todavía no podés ingresar a tu nueva vivienda, un espacio de guardamuebles puede servirte durante la transición.",
               },
               {
                 icon: Sofa,
-                title: "Muebles de familia",
-                description: "Heredaste muebles pero no tenés lugar? Guardamos herencias, reliquias familiares y objetos especiales con máximo cuidado.",
+                title: "Muebles y pertenencias",
+                description: "Consultá por el volumen disponible para guardar muebles, electrodomésticos, herramientas y cajas.",
               },
               {
                 icon: Truck,
-                title: "Alojamiento en mudanza",
-                description: "Mudanza de otra provincia? Almacenamos temporalmente mientras buscás vivienda en Córdoba.",
+                title: "Almacenamiento durante una mudanza",
+                description: "Si necesitás guardar tus cosas mientras coordinás un traslado, consultá los espacios y la contratación mensual.",
               },
             ].map((item, index) => (
               <ScrollAnimation key={item.title} animation="fade-up" delay={index * 80}>

@@ -45,21 +45,15 @@ export function Navbar() {
 
   return (
     <header
-      itemScope
-      itemType="https://schema.org/Organization"
       className={`fixed top-0 left-0 right-0 z-50 border-b-2 border-primary/10 bg-white/85 shadow-lg shadow-primary/5 backdrop-blur-md transition-transform duration-300 supports-[backdrop-filter]:bg-white/75 ${
         isVisible ? "translate-y-0" : "lg:-translate-y-full"
       }`}
     >
-      <meta itemProp="name" content="Movibox Mudanzas" />
-      <meta itemProp="url" content="https://www.movibox.com.ar" />
-
       <div className="container px-4 md:px-6">
         <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link
             href="/"
-            itemProp="logo"
             title="Ir al inicio"
             className="flex items-center"
           >

@@ -10,6 +10,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import {
+  serviceInterestFromFormValue,
+  trackContactEvent,
+} from "@/lib/analytics";
 
 const ContactoSchema = z.object({
   nombre: z.string().min(1, "El nombre es obligatorio"),
@@ -56,6 +60,12 @@ export default function ContactoForm() {
         throw new Error("No se pudo enviar el mensaje");
       }
 
+      trackContactEvent(
+        "movibox_form_submit",
+        serviceInterestFromFormValue(data.servicio),
+        "form"
+      );
+
       // Fire Google Ads conversion event
       if (typeof window !== "undefined" && (window as any).gtag) {
         (window as any).gtag('event', 'conversion', {
@@ -81,8 +91,7 @@ export default function ContactoForm() {
       <div className="space-y-2">
         <h2 className="text-2xl font-bold text-foreground">Enviá tu consulta</h2>
         <p className="text-sm leading-relaxed text-foreground/70">
-          Completá tus datos y contanos qué necesitás. Respondemos cada solicitud en menos de 24 horas
-          con un presupuesto personalizado.
+          Completá tus datos y contanos qué servicio necesitás para que podamos evaluar tu consulta.
         </p>
       </div>
 

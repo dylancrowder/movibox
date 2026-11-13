@@ -43,17 +43,6 @@ export const metadata: Metadata = {
   },
 };
 
-const searchSchema = {
-  "@context": "https://schema.org",
-  "@type": "SearchResultsPage",
-  url: "https://www.movibox.com.ar/buscar",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.movibox.com.ar/buscar?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
-};
-
 export default function SearchPage({
   searchParams,
 }: {
@@ -66,11 +55,6 @@ export default function SearchPage({
 
   return (
     <main className="flex min-h-screen flex-col overflow-x-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(searchSchema) }}
-      />
-
       <section className="relative flex min-h-[55vh] items-center overflow-hidden text-center">
         <Image
           src={image_header}

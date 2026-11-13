@@ -11,6 +11,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
@@ -116,10 +117,6 @@ const jsonLd = {
         "@id": "https://www.movibox.com.ar/#movingcompany",
       },
       telephone: "+5493512586221",
-    },
-    {
-      "@type": "MovingCompany",
-      "@id": "https://www.movibox.com.ar/#movingcompany",
     },
     {
       "@type": "BreadcrumbList",
@@ -310,6 +307,11 @@ export default function MudanzasPage() {
             <div className="flex flex-col items-center text-center md:w-7/12 md:items-start md:text-left">
 
               <div className="space-y-6 md:max-w-3xl">
+                <Breadcrumb
+                  items={[]}
+                  currentPage="Mudanzas de larga distancia"
+                  inverted
+                />
 
                 <span className="inline-flex items-center justify-center gap-2 rounded-full border border-secondary-300/40 bg-secondary-500/20 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-secondary-100">
                   Servicio de larga distancia

@@ -4,8 +4,14 @@ import Link from "next/link";
 import { CheckCircle2, MapPin, Truck, Users } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { createBreadcrumbJsonLd } from "@/lib/seo";
 import { Button } from "@/components/ui/button";
 import wsp from "@/public/images/iconos/whatsapp.webp";
+import {
+  MOVING_HOURLY_PRICE_ARS,
+  formatARS,
+} from "@/lib/commercial-data";
 
 const whatsappPriceUrl =
   "https://wa.me/5493512586221?text=Hola%2C%20quiero%20coordinar%20una%20mudanza%20dentro%20de%20C%C3%B3rdoba%20Capital.%20%C2%BFQu%C3%A9%20fechas%20tienen%20disponibles%3F";
@@ -15,7 +21,7 @@ const whatsappOutsideUrl =
 export const metadata: Metadata = {
   title: "Precios de Mudanzas en Córdoba | Movibox",
   description:
-    "Conocé el precio de una mudanza en Córdoba Capital: $75.000 por hora con camión y 2 ayudantes. Consultá por WhatsApp sin compromiso.",
+    `Tarifa de mudanzas dentro de Córdoba Capital: ${formatARS(MOVING_HOURLY_PRICE_ARS)} por hora. Consultá por WhatsApp el precio para otros recorridos.`,
   keywords: [
     "precios de mudanzas en Córdoba",
     "cuánto cuesta una mudanza en Córdoba",
@@ -29,13 +35,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Precios de Mudanzas en Córdoba | Movibox",
     description:
-      "Mudanzas dentro de Córdoba Capital por $75.000 la hora, con camión y 2 ayudantes.",
+      `Mudanzas dentro de Córdoba Capital por ${formatARS(MOVING_HOURLY_PRICE_ARS)} la hora. Consultá por otros recorridos.`,
   },
   openGraph: {
     type: "website",
     title: "Precios de mudanzas en Córdoba | Movibox",
     description:
-      "Mudanzas dentro de Córdoba Capital por $75.000 la hora, con camión y 2 ayudantes.",
+      `Mudanzas dentro de Córdoba Capital por ${formatARS(MOVING_HOURLY_PRICE_ARS)} la hora. Consultá por otros recorridos.`,
     url: "https://www.movibox.com.ar/precios-mudanzas",
   },
 };
@@ -47,7 +53,7 @@ const pricingSchema = {
       "@type": "WebPage",
       name: "Precios de mudanzas en Córdoba",
       description:
-        "Precio de mudanzas dentro de Córdoba Capital: $75.000 por hora con camión y 2 ayudantes.",
+        `Tarifa de mudanzas dentro de Córdoba Capital: ${formatARS(MOVING_HOURLY_PRICE_ARS)} por hora.`,
       url: "https://www.movibox.com.ar/precios-mudanzas",
     },
     {
@@ -58,11 +64,15 @@ const pricingSchema = {
       provider: { "@id": "https://www.movibox.com.ar/#movingcompany" },
       offers: {
         "@type": "Offer",
-        price: "75000",
+        price: MOVING_HOURLY_PRICE_ARS,
         priceCurrency: "ARS",
-        description: "Precio por hora con camión y 2 ayudantes.",
+        description: "Tarifa por hora para mudanzas dentro de Córdoba Capital.",
       },
     },
+    createBreadcrumbJsonLd([
+      { name: "Inicio", path: "/" },
+      { name: "Precios de mudanzas", path: "/precios-mudanzas" },
+    ]),
   ],
 };
 
@@ -93,6 +103,13 @@ export default function PreciosMudanzasPage() {
 
       <section className="bg-primary-700 pb-16 pt-32 text-white sm:pb-24 sm:pt-40">
         <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mb-8">
+            <Breadcrumb
+              items={[]}
+              currentPage="Precios de mudanzas"
+              inverted
+            />
+          </div>
           <ScrollAnimation animation="fade-up" className="mx-auto max-w-3xl text-center">
             <span className="inline-block rounded-full border border-white/20 bg-white/15 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-white/90">
               Precios transparentes
@@ -115,17 +132,17 @@ export default function PreciosMudanzasPage() {
                 Mudanzas dentro de Córdoba Capital
               </p>
               <p className="mt-4 text-5xl font-black leading-none text-primary sm:text-7xl">
-                $90.000
+                {formatARS(MOVING_HOURLY_PRICE_ARS)}
               </p>
               <p className="mt-3 text-xl font-bold text-primary sm:text-2xl">por hora</p>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-neutral-600">
-                Precio por hora para mudanzas dentro de Córdoba Capital.
+                Tarifa por hora para mudanzas dentro de Córdoba Capital. Consultá el presupuesto para otros recorridos y necesidades.
               </p>
 
               <div className="mx-auto mt-8 grid max-w-3xl gap-4 text-left sm:grid-cols-3">
                 {[
                   { icon: Truck, text: "Camión" },
-                  { icon: Users, text: "2 ayudantes" },
+                  { icon: Users, text: "Ayudantes para carga y descarga" },
                   { icon: MapPin, text: "Córdoba Capital" },
                 ].map((item) => (
                   <div

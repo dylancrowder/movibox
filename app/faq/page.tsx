@@ -6,11 +6,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import wsp from "@/public/images/iconos/whatsapp.webp";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import { Breadcrumb } from "@/components/Breadcrumb";
+import { createBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Preguntas frecuentes sobre mudanzas | Movibox",
   description:
-    "Respuestas sobre mudanzas, fletes y guardamuebles en Córdoba: cobertura, seguridad, precios y cómo organizar tu traslado.",
+    "Respuestas prácticas sobre cotizaciones, servicios, cobertura y contratación de mudanzas, fletes y guardamuebles en Córdoba.",
   alternates: { canonical: "https://www.movibox.com.ar/faq" },
   openGraph: {
     type: "website",
@@ -39,76 +41,61 @@ const faqs = {
     {
       question: "¿Cuánto tiempo demora una mudanza en Córdoba?",
       answer:
-        "Una mudanza en Córdoba Capital suele completarse entre 4 a 8 horas, dependiendo del volumen, cantidad de pisos, accesibilidad y distancia. Mudanzas más complejas o de grandes volúmenes pueden requerir 1 o 2 días. Realizamos una evaluación previa para darte un estimado certero.",
+        "El tiempo depende del volumen, la distancia y las condiciones de acceso. Compartí esos datos al pedir una cotización para que se evalúe tu caso.",
     },
     {
       question: "¿Incluyen embalaje en el servicio de mudanza?",
       answer:
-        "Ofrecemos embalaje profesional como servicio adicional. Nuestro equipo utiliza materiales de calidad para proteger tus muebles y objetos. También podemos asesorarte sobre cómo preparar y embalar tus pertenencias para minimizar riesgos durante el traslado.",
+        "No todos los servicios incluyen embalaje. Consultá qué tareas y materiales corresponden a tu presupuesto antes de confirmar.",
     },
     {
       question: "¿Qué tipos de carga transportan?",
       answer:
-        "Transportamos todo tipo de carga residencial y comercial: muebles, electrodomésticos, libros, cuadros, plantas, objetos frágiles, equipos de oficina y más. Tenemos experiencia en traslados especiales como pianos, obras de arte y objetos de valor que requieren cuidado extra.",
+        "Realizamos mudanzas de viviendas, departamentos, oficinas y locales. Indicá qué querés trasladar para confirmar si el servicio se adapta a la carga.",
     },
     {
       question: "¿Cómo es el proceso de una mudanza?",
       answer:
-        "El proceso es simple: 1) Contactanos y describimos tu mudanza (cantidad de muebles, pisos, distancia). 2) Realizamos una evaluación y planificamos el traslado. 3) El día de la mudanza, nuestro equipo busca tus pertenencias, embala, carga, transporta y desembala en el nuevo domicilio. 4) Realizamos seguimiento y confirmar entrega.",
+        "Contanos la fecha, el origen, el destino, qué necesitás trasladar y las condiciones de acceso. Con esa información se define el alcance y el presupuesto.",
     },
     {
       question: "¿Realizan mudanzas fuera de la provincia de Córdoba?",
       answer:
-        "No. Nuestro servicio de mudanzas y fletes está limitado a Córdoba Capital y toda la provincia de Córdoba. Si necesitás guardar muebles mientras definís tu próximo hogar en la provincia, podemos ayudarte con guardamuebles.",
+        "Sí, podés consultar por mudanzas de larga distancia. El presupuesto se prepara según el origen, el destino y el servicio solicitado.",
     },
   ],
   guardamuebles: [
     {
       question: "¿Cómo funciona el servicio de guardamuebles?",
       answer:
-        "Nuestro servicio de guardamuebles es integral: buscamos tus pertenencias en tu domicilio, las transportamos a nuestro depósito seguro, las almacenamos en excelentes condiciones, realizamos control de inventario digital y las entregamos cuando las necesites. Sin costo adicional por búsqueda y entrega.",
+        "Ofrecemos espacios cerrados para cada cliente en un galpón sectorizado. La contratación es mensual y hay opciones de 5, 10 y 15 m³.",
     },
     {
       question: "¿Cuánto tiempo puedo guardar mis muebles?",
       answer:
-        "Puedes guardar tus pertenencias el tiempo que necesites: días, semanas, meses o años. Planes totalmente flexibles sin compromisos de tiempo mínimo. Contactanos para cotizar el almacenamiento según tu período.",
+        "El servicio se contrata por mes. Consultá las condiciones vigentes si necesitás guardar tus pertenencias durante varios meses.",
     },
     {
       question: "¿Qué medidas de seguridad tiene el depósito?",
       answer:
-        "Nuestro depósito cuenta con vigilancia 24/7 con cámaras de seguridad, control de acceso digital, cerco perímetral y personal de seguridad. Cada cliente tiene un espacio independiente y seguro para sus pertenencias.",
+        "El galpón está sectorizado y cada cliente dispone de un espacio cerrado. El establecimiento cuenta con monitoreo y control.",
     },
     {
       question: "¿Qué pasa si necesito acceder a mis cosas guardadas?",
       answer:
-        "Puedes solicitar acceso a tu espacio de almacenamiento dentro de nuestros horarios de atención (lunes a viernes 8:00-18:00, sábados 9:00-13:00). Mantenemos un inventario digital de todas tus pertenencias para que sepas exactamente qué tienes guardado.",
-    },
-    {
-      question: "¿Cómo puedo saber el estado de mis muebles guardados?",
-      answer:
-        "Realizamos seguimiento digital de tu almacenamiento. Puedes consultar en cualquier momento el estado de tu depósito, acceder a fotos de tus pertenencias y recibir actualizaciones sobre cualquier cambio. Disponible en horario de atención.",
-    },
-    {
-      question: "¿Qué ocurre si tengo que extender el tiempo de guardado?",
-      answer:
-        "Sin problemas. Puedes extender el período de almacenamiento en cualquier momento contactándonos. Nuestros planes son flexibles y se adaptan a tus necesidades cambiantes.",
+        "Consultá cómo coordinar una visita o el acceso a tu espacio antes de contratar.",
     },
   ],
   fletes: [
     {
       question: "¿Cuál es la diferencia entre flete y mudanza?",
       answer:
-        "Un flete es el transporte de objetos específicos o cargas puntuales (una heladera, un escritorio, etc). Una mudanza es un traslado integral de todo el contenido de un domicilio o local. Ofrecemos ambos servicios con profesionalismo y cuidado.",
+        "Un flete suele referirse al traslado de objetos o cargas puntuales; una mudanza, al traslado de los muebles y pertenencias de una vivienda o espacio de trabajo.",
     },
     {
       question: "¿Realizan fletes de objetos individuales?",
       answer:
-        "Sí, realizamos fletes de objetos específicos en Córdoba Capital y provincia. Transportamos desde un mueble hasta grandes volúmenes. Contamos con vehículos adaptados para cada tipo de carga.",
-    },
-    {
-      question: "¿Atienden urgencias o fletes con poco tiempo?",
-      answer:
-        "Tenemos disponibilidad para fletes urgentes. Contactanos por teléfono o WhatsApp y evaluamos tu necesidad. Contamos con una guardia de WhatsApp 24/7 para consultas de emergencia.",
+        "Podés consultar por el traslado de objetos y cargas puntuales en Córdoba Capital y provincia.",
     },
   ],
   cobertura: [
@@ -120,72 +107,51 @@ const faqs = {
     {
       question: "¿Hay costo adicional por mudanzas a lugares lejanos?",
       answer:
-        "El costo se ajusta según distancia, volumen y accesibilidad de la zona. Realizamos una evaluación previa del trabajo para darte un presupuesto justo y transparente, sin sorpresas.",
+        "El precio depende del origen, el destino, el volumen y las condiciones del servicio. Pedí una cotización con esos datos.",
     },
   ],
   horarios: [
     {
       question: "¿Cuál es el horario de atención?",
       answer:
-        "Atendemos de lunes a viernes de 8:00 a 18:00 horas, y sábados de 9:00 a 13:00. Para urgencias, contáctanos por WhatsApp y evaluamos disponibilidad. Disponemos de guardia 24/7 para consultas.",
+        "Consultá por teléfono o WhatsApp la disponibilidad de atención y de fechas para el servicio que necesitás.",
     },
     {
       question: "¿Realizan mudanzas en fin de semana?",
       answer:
-        "Realizamos mudanzas los sábados según disponibilidad. Contactanos para evaluar tu necesidad específica de horario y coordinar.",
+        "La disponibilidad depende de la fecha. Escribinos para consultar opciones.",
     },
     {
       question: "¿Puedo agendar una mudanza con anticipación?",
       answer:
-        "Sí, recomendamos agendar con al menos 3-5 días de anticipación para coordinar mejor. Sin embargo, también atendemos solicitudes con menos tiempo según disponibilidad de nuestro equipo.",
+        "Sí. Compartí la fecha que tenés prevista y consultá la disponibilidad para coordinar.",
     },
   ],
   seguimiento: [
     {
       question: "¿Cómo hago seguimiento de mi mudanza?",
       answer:
-        "Brindamos comunicación permanente durante todo el proceso. Nuestro equipo te contacta antes de iniciar, durante el traslado y al finalizar. Puedes llamar o enviar WhatsApp en cualquier momento para consultar el estado.",
-    },
-    {
-      question: "¿Qué pasa si encuentro daños después de la mudanza?",
-      answer:
-        "Realizamos un reporte detallado al finalizar la mudanza. Si encuentras daños, reportalos dentro de las 48 horas. Documentamos todo y nos hacemos cargo de la responsabilidad según corresponda.",
+        "Podés comunicarte por WhatsApp para coordinar el servicio y consultar sobre el traslado.",
     },
   ],
 };
 
 export default function FAQPage() {
-  const allFaqs = [
-    ...faqs.mudanzas,
-    ...faqs.guardamuebles,
-    ...faqs.fletes,
-    ...faqs.cobertura,
-    ...faqs.horarios,
-    ...faqs.seguimiento,
-  ];
-
   const faqPageSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "WebPage",
         "@id": "https://www.movibox.com.ar/faq#webpage",
-        name: "Preguntas Frecuentes | Mudanzas y Guardamuebles en Córdoba",
+        name: "Preguntas frecuentes sobre mudanzas y guardamuebles en Córdoba",
         description:
-          "Preguntas frecuentes sobre mudanzas, guardamuebles, fletes y almacenamiento en Córdoba. Resuelve tus dudas sobre traslados, seguridad y precios. Respuestas de expertos.",
+          "Preguntas y respuestas prácticas sobre cotizaciones, servicios y contratación en Córdoba.",
         url: "https://www.movibox.com.ar/faq",
       },
-      {
-        "@type": "FAQPage",
-        mainEntity: allFaqs.map((faq) => ({
-          "@type": "Question",
-          name: faq.question,
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: faq.answer,
-          },
-        })),
-      },
+      createBreadcrumbJsonLd([
+        { name: "Inicio", path: "/" },
+        { name: "Preguntas frecuentes", path: "/faq" },
+      ]),
     ],
   };
 
@@ -199,6 +165,13 @@ export default function FAQPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary/95 to-primary/80 py-20">
         <div className="container px-4 md:px-6">
+          <div className="mb-8">
+            <Breadcrumb
+              items={[]}
+              currentPage="Preguntas frecuentes"
+              inverted
+            />
+          </div>
           <ScrollAnimation animation="fade-up" className="space-y-6 text-center">
             <h1 className="text-5xl font-black text-white sm:text-6xl leading-tight">
               Preguntas Frecuentes
@@ -218,11 +191,11 @@ export default function FAQPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-black text-foreground">Mudanzas en Córdoba</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Todo lo que necesitas saber sobre nuestros{" "}
+                Información sobre nuestros{" "}
                 <Link href="/mudanzas" className="text-primary font-medium hover:underline">
                   servicios de mudanzas
                 </Link>{" "}
-                completas, residenciales y comerciales en Córdoba.
+                servicios de mudanza en Córdoba.
               </p>
             </div>
             <FAQ faqs={faqs.mudanzas} />
@@ -237,7 +210,7 @@ export default function FAQPage() {
                 <Link href="/guardamuebles" className="text-primary font-medium hover:underline">
                   servicio de guardamuebles
                 </Link>{" "}
-                y almacenamiento seguro con vigilancia 24/7.
+                y contratación mensual.
               </p>
             </div>
             <FAQ faqs={faqs.guardamuebles} />
@@ -279,9 +252,9 @@ export default function FAQPage() {
           {/* Seguimiento */}
           <ScrollAnimation animation="fade-up" className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-3xl font-black text-foreground">Seguimiento y Garantías</h2>
+              <h2 className="text-3xl font-black text-foreground">Coordinación del servicio</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Cómo hacemos seguimiento de tu mudanza y qué garantías ofrecemos.
+                Cómo coordinar una mudanza y mantener el contacto durante el traslado.
               </p>
             </div>
             <FAQ faqs={faqs.seguimiento} />
@@ -296,7 +269,7 @@ export default function FAQPage() {
             <div className="space-y-4">
               <h2 className="text-3xl font-black text-foreground">¿No encontraste tu respuesta?</h2>
               <p className="mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed">
-                Si tienes una pregunta específica que no está en nuestro FAQ, contactanos directamente. Nuestro equipo está siempre disponible para resolver tus dudas.
+                Si tenés una pregunta específica que no está en este listado, contactanos por WhatsApp o completá el formulario.
               </p>
             </div>
 

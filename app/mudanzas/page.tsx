@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
@@ -22,7 +23,7 @@ import wsp from "@/public/images/iconos/whatsapp.webp";
 export const metadata: Metadata = {
   title: "Mudanzas en Córdoba Capital | Movibox",
   description:
-    "Mudanzas en Córdoba Capital y provincia. Traslados residenciales con camión y ayudantes. Pedí un presupuesto gratis por WhatsApp.",
+    "Mudanzas en Córdoba Capital y provincia para casas, departamentos y oficinas. Camión, ayudantes para carga y descarga y cotizaciones por WhatsApp.",
   alternates: {
     canonical: "https://www.movibox.com.ar/mudanzas",
   },
@@ -34,22 +35,22 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mudanzas en Córdoba Capital | Movibox",
     description:
-      "Mudanzas en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
+      "Mudanzas de casas, departamentos y oficinas en Córdoba Capital y provincia. Consultá por WhatsApp.",
     images: [
-      "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+      "https://www.movibox.com.ar/images/header/headerchacra.webp",
     ],
   },
   openGraph: {
     type: "website",
-    title: "Mudanzas en Córdoba | Rápidas, Seguras y al Mejor Precio",
+    title: "Mudanzas en Córdoba Capital y provincia | Movibox",
     description:
-      "Mudanzas en Córdoba Capital y provincia. Servicio completo con personal capacitado. Presupuesto gratuito por WhatsApp.",
+      "Mudanzas de casas, departamentos y oficinas en Córdoba Capital y provincia. Camión, ayudantes para carga y descarga y cotizaciones por WhatsApp.",
     url: "https://www.movibox.com.ar/mudanzas",
     images: [
       {
-        url: "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+        url: "https://www.movibox.com.ar/images/header/headerchacra.webp",
         width: 1200,
-        height: 630,
+        height: 800,
         alt: "Camión de mudanzas de Movibox Mudanzas en Córdoba",
       },
     ],
@@ -64,10 +65,9 @@ const jsonLd = {
       "@id": "https://www.movibox.com.ar/mudanzas#webpage",
       name: "Mudanzas en Córdoba Capital y Provincia",
       description:
-        "Mudanzas en Córdoba Capital y toda la provincia. Camión, fletes y traslados residenciales. Cotización gratuita por WhatsApp.",
+        "Mudanzas de casas, departamentos y oficinas en Córdoba Capital y provincia, con cotizaciones por WhatsApp.",
       url: "https://www.movibox.com.ar/mudanzas",
-      primaryImageOfPage:
-        "https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F5e96d8e8ca404994b620cb04ec9e66bd?format=webp&width=1200&height=630",
+      primaryImageOfPage: "https://www.movibox.com.ar/images/header/headerchacra.webp",
     },
     {
       "@type": "Service",
@@ -75,7 +75,7 @@ const jsonLd = {
         "https://www.movibox.com.ar/mudanzas#residential-moving",
       name: "Mudanzas Residenciales en Córdoba",
       description:
-        "Servicio completo de mudanzas para casas y departamentos en Córdoba Capital y provincia. Incluye desmontaje, embalaje, traslado y montaje.",
+        "Mudanzas de casas y departamentos en Córdoba Capital y provincia, con camión y ayudantes para carga y descarga.",
       serviceType: "Mudanzas residenciales",
       areaServed: {
         "@type": "City",
@@ -92,7 +92,7 @@ const jsonLd = {
         "https://www.movibox.com.ar/mudanzas#commercial-moving",
       name: "Mudanzas Comerciales en Córdoba",
       description:
-        "Mudanzas de oficinas, locales y establecimientos comerciales. Personal especializado en traslado de equipamiento empresarial.",
+        "Mudanzas de oficinas y locales en Córdoba Capital y provincia.",
       serviceType: "Mudanzas comerciales",
       areaServed: {
         "@type": "City",
@@ -102,26 +102,6 @@ const jsonLd = {
         "@id": "https://www.movibox.com.ar/#movingcompany",
       },
       telephone: "+5493512586221",
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.movibox.com.ar/mudanzas#freight-service",
-      name: "Fletes en Córdoba",
-      description:
-        "Transporte de objetos individuales, muebles y cargas puntuales en Córdoba Capital y provincia. Vehículos adaptados para cada tipo de carga.",
-      serviceType: "Fletes",
-      areaServed: {
-        "@type": "City",
-        name: "Córdoba",
-      },
-      provider: {
-        "@id": "https://www.movibox.com.ar/#movingcompany",
-      },
-      telephone: "+5493512586221",
-    },
-    {
-      "@type": "MovingCompany",
-      "@id": "https://www.movibox.com.ar/#movingcompany",
     },
     {
       "@type": "BreadcrumbList",
@@ -170,14 +150,14 @@ export default function MudanzasPage() {
       icon: PackageCheck,
       title: "Protección y embalaje",
       description:
-        "Llevamos mantas, film, cajas, fajas y herramientas para proteger y trasladar tus pertenencias con seguridad.",
+        "Protegemos los muebles con mantas, fajas y cinchas. Consultá por separado si necesitás embalaje de objetos o pertenencias.",
       href: null,
     },
     {
       icon: Clock3,
-      title: "Puntualidad garantizada",
+      title: "Atención personalizada",
       description:
-        "Llegamos a la hora acordada. Sin demoras ni sorpresas.",
+        "Coordinamos el alcance del servicio según el origen, el destino, la fecha y lo que necesitás trasladar.",
       href: null,
     },
     {
@@ -191,14 +171,14 @@ export default function MudanzasPage() {
       icon: ShieldCheck,
       title: "Seguro contra accidentes personales",
       description:
-        "Contamos con cobertura de seguros para accidentes personales durante la mudanza, para mayor tranquilidad y responsabilidad.",
+        "El servicio contempla seguro contra accidentes personales.",
       href: null,
     },
     {
       icon: CircleDollarSign,
-      title: "Precio exacto",
+      title: "Presupuesto según tu traslado",
       description:
-        "Te decimos el valor antes de comenzar. Sin sorpresas.",
+        "El precio depende del recorrido y de las características del servicio. Consultá las condiciones antes de reservar.",
       href: "/precios-mudanzas",
     },
   ];
@@ -207,47 +187,32 @@ export default function MudanzasPage() {
     {
       question: "¿Cuánto cuesta una mudanza?",
       answer:
-        "Dentro de Córdoba Capital, el precio se calcula por hora. Te informamos el valor antes de comenzar.",
+        "La tarifa para mudanzas dentro de Córdoba Capital se publica por hora. Para otras localidades, el presupuesto depende del recorrido y del servicio.",
     },
     {
-      question: "¿La cotización tiene costo?",
+      question: "¿Qué información necesito para pedir una cotización?",
       answer:
-        "No. La cotización es totalmente gratuita y respondemos por WhatsApp en menos de 5 minutos.",
+        "Contanos la fecha, el origen y el destino, qué necesitás trasladar y las condiciones de acceso. Así podemos orientarte sobre el servicio.",
     },
     {
-      question: "¿Trabajan fines de semana?",
+      question: "¿Cómo se protegen los muebles?",
       answer:
-        "Sí. Realizamos mudanzas de lunes a domingo, incluidos feriados.",
+        "Usamos mantas, fajas y cinchas para proteger y sujetar muebles durante el traslado. Consultá si necesitás embalaje adicional.",
     },
     {
-      question: "¿Suben muebles por escalera?",
+      question: "¿El embalaje está incluido?",
       answer:
-        "Sí, nuestros ayudantes pueden subir los muebles por escalera.",
+        "No todos los servicios incluyen embalaje. Contanos qué objetos necesitás embalar para que se aclare en el presupuesto.",
     },
     {
-      question: "¿Desarman y arman muebles?",
+      question: "¿Qué pasa si hay escaleras o accesos difíciles?",
       answer:
-        "Sí, podemos desarmar y armar los muebles durante la mudanza.",
-    },
-    {
-      question: "¿Embalar objetos frágiles está incluido?",
-      answer:
-        "No. El embalaje de objetos frágiles tiene un valor adicional.",
-    },
-    {
-      question: "¿Aceptan transferencias o efectivo?",
-      answer:
-        "Sí, aceptamos transferencias bancarias y efectivo.",
+        "Incluí esa información al pedir la cotización para que se tenga en cuenta al definir el alcance del trabajo.",
     },
     {
       question: "¿Qué zonas cubren?",
       answer:
-        "Realizamos mudanzas en toda Córdoba Capital.",
-    },
-    {
-      question: "¿Qué sucede si llueve?",
-      answer:
-        "Dependiendo del lugar y las condiciones, somos flexibles y coordinamos la mudanza con vos.",
+        "Atendemos Córdoba Capital y localidades de la provincia. También podés consultar por mudanzas de larga distancia.",
     },
     {
       question: "¿Realizan mudanzas de oficinas?",
@@ -257,7 +222,7 @@ export default function MudanzasPage() {
     {
       question: "¿Pueden guardar los muebles temporalmente?",
       answer:
-        "Sí, contamos con servicio de guardamuebles.",
+        "Sí. Consultá los espacios y la contratación mensual en nuestra página de guardamuebles.",
     },
   ];
 
@@ -297,7 +262,7 @@ export default function MudanzasPage() {
               <div className="space-y-6 md:max-w-2xl">
 
                 <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90 border border-white/20">
-                  Mudanzas y Fletes en Córdoba
+                  Mudanzas residenciales y comerciales
                 </span>
 
                 <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
@@ -309,16 +274,16 @@ export default function MudanzasPage() {
                 </h1>
 
                 <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                  Atención inmediata y cotización gratuita por WhatsApp.
+                  Mudanzas de casas, departamentos, oficinas y locales en Córdoba Capital y provincia.
+                </p>
+
+                <p className="text-sm leading-relaxed text-white/80">
+                  Trabajamos con camión y ayudantes para carga y descarga. Protegemos los muebles con mantas, fajas y cinchas; consultá por embalaje al pedir tu presupuesto.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
                   <HeroButtons />
                 </div>
-
-                <p className="text-xs text-white/70">
-                  Respuesta en menos de 5 minutos · Atención directa
-                </p>
 
               </div>
             </div>
@@ -333,6 +298,10 @@ export default function MudanzasPage() {
           </a>
 
         </section>
+
+        <div className="container mx-auto px-4 py-4 md:px-6">
+          <Breadcrumb items={[]} currentPage="Mudanzas" />
+        </div>
 
         {/* =====================================================
             POR QUÉ ELEGIRNOS
@@ -355,8 +324,7 @@ export default function MudanzasPage() {
               </h2>
 
               <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-                Nos encargamos de principio a fin. Presupuesto rápido y
-                atención por WhatsApp en Córdoba Capital y toda la provincia.
+                Coordinamos el traslado según el volumen, los accesos, el recorrido y la fecha. Consultá por WhatsApp el alcance del servicio para tu mudanza.
               </p>
             </ScrollAnimation>
 
@@ -390,7 +358,7 @@ export default function MudanzasPage() {
                       <Link
                         href={benefit.href}
                         className="block h-full"
-                        aria-label="Ver precios de mudanzas"
+                        aria-label="Consultar precios de mudanzas"
                       >
                         {card}
                       </Link>
@@ -430,8 +398,7 @@ export default function MudanzasPage() {
               </h2>
 
               <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-                Realizamos mudanzas y fletes con un servicio pensado para que
-                tu traslado sea simple y sin complicaciones.
+                Contamos con camión para realizar mudanzas y traslados. Consultá qué servicio se adapta al volumen de tus pertenencias.
               </p>
 
             </ScrollAnimation>
@@ -447,8 +414,7 @@ export default function MudanzasPage() {
                   <div className="p-8 bg-gradient-to-br from-primary-50 to-secondary-50">
 
                     <h3 className="text-sm text-neutral-600 font-semibold uppercase tracking-wide mb-4">
-                      Nos ocupamos de que tus pertenencias lleguen en perfecto
-                      estado.
+                      Organizamos el traslado y tomamos recaudos para proteger tus muebles.
                     </h3>
 
                     <ul className="space-y-3 mb-6">
@@ -467,7 +433,7 @@ export default function MudanzasPage() {
                           ✓
                         </span>
                         <span className="text-sm text-neutral-700">
-                          Herramientas adecuadas para cada mudanza
+                          Mantas, fajas y cinchas para proteger y sujetar muebles
                         </span>
                       </li>
 
@@ -549,13 +515,13 @@ export default function MudanzasPage() {
                   step: "2",
                   title: "Coordinamos tu mudanza",
                   description:
-                    "Te damos el presupuesto y, si estás de acuerdo, reservamos día y horario sin pedir seña.",
+                    "Revisamos el presupuesto y coordinamos fecha y horario si decidís avanzar.",
                 },
                 {
                   step: "3",
                   title: "Realizamos el traslado",
                   description:
-                    "El día acordado llegamos, cargamos y trasladamos tus pertenencias hasta el destino, para que vos no tengas que preocuparte por nada.",
+                    "El equipo realiza la carga, el traslado y la descarga de acuerdo con lo coordinado.",
                 },
               ].map((item) => (
 
@@ -773,7 +739,7 @@ export default function MudanzasPage() {
       </div>
 
       <p className="text-xs text-white/70 pt-2">
-        📞 351 258-6221 · Respondemos rápido
+        📞 351 258-6221 · Consultas por WhatsApp
       </p>
 
     </ScrollAnimation>
@@ -800,8 +766,8 @@ export default function MudanzasPage() {
 
               <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
                 Si además de mudanza necesitás almacenamiento temporal o de
-                largo plazo, contamos con guardamuebles propio con vigilancia
-                24/7.
+                largo plazo, consultá nuestro guardamuebles con espacios cerrados
+                y contratación mensual.
               </p>
 
               <Button

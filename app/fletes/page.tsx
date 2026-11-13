@@ -10,6 +10,7 @@ import {
   UsersRound,
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
+import { Breadcrumb } from "@/components/Breadcrumb";
 import FAQ from "@/components/FAQ";
 import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
@@ -190,6 +191,8 @@ export default function FletesPage() {
           <div className="container relative z-10 px-4 pb-24 pt-16 md:px-6">
             <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
               <div className="space-y-6 md:max-w-2xl">
+                <Breadcrumb items={[]} currentPage="Fletes" inverted />
+
                 <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90">
                   Fletes y minifletes en Córdoba
                 </span>

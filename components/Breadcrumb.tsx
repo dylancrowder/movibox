@@ -9,40 +9,50 @@ interface BreadcrumbItem {
 interface BreadcrumbProps {
   items: BreadcrumbItem[];
   currentPage: string;
+  inverted?: boolean;
 }
 
-export function Breadcrumb({ items, currentPage }: BreadcrumbProps) {
+export function Breadcrumb({
+  items,
+  currentPage,
+  inverted = false,
+}: BreadcrumbProps) {
+  const textColor = inverted ? "text-white/80" : "text-foreground/70";
+  const currentPageColor = inverted ? "text-white" : "text-foreground";
+  const hoverColor = inverted ? "hover:text-white" : "hover:text-primary";
+
   return (
     <nav
       aria-label="Breadcrumb"
-      className="flex items-center gap-2 text-sm text-foreground/70"
+      className={`flex flex-wrap items-center gap-2 text-sm ${textColor}`}
     >
       <Link
         href="/"
-        className="hover:text-primary transition-colors"
+        className={`${hoverColor} transition-colors`}
       >
         Inicio
       </Link>
 
-      {items.map((item, index) => (
+      {items.map((item) => (
         <div key={item.href} className="flex items-center gap-2">
           <ChevronRight className="h-4 w-4" aria-hidden="true" />
-          {index === items.length - 1 ? (
-            <span className="text-foreground font-medium">{item.label}</span>
-          ) : (
-            <Link
-              href={item.href}
-              className="hover:text-primary transition-colors"
-            >
-              {item.label}
-            </Link>
-          )}
+          <Link
+            href={item.href}
+            className={`${hoverColor} transition-colors`}
+          >
+            {item.label}
+          </Link>
         </div>
       ))}
 
       <div className="flex items-center gap-2">
         <ChevronRight className="h-4 w-4" aria-hidden="true" />
-        <span className="text-foreground font-medium">{currentPage}</span>
+        <span
+          aria-current="page"
+          className={`${currentPageColor} font-medium`}
+        >
+          {currentPage}
+        </span>
       </div>
     </nav>
   );
