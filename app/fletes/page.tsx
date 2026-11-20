@@ -112,49 +112,61 @@ const reviews = [
   },
 ];
 
-const highlights = [
+const loads = [
   {
-    title: "Para distintos traslados",
-    description:
-      "Objetos, compras y cargas grandes.",
-    icon: PackageCheck,
+    title: "Electrodomésticos",
+    description: "Heladeras, lavarropas, cocinas y otros electrodomésticos.",
+    image: "https://images.pexels.com/photos/33679977/pexels-photo-33679977.jpeg?auto=compress&cs=tinysrgb&w=640",
+    alt: "Carga de electrodomésticos para su traslado",
   },
   {
-    title: "Coordinación flexible",
-    description:
-      "Coordinamos día y horario según disponibilidad.",
-    icon: Clock3,
+    title: "Muebles",
+    description: "Sillones, camas, mesas, placares y muebles en general.",
+    image: "https://images.pexels.com/photos/7464722/pexels-photo-7464722.jpeg?auto=compress&cs=tinysrgb&w=640",
+    alt: "Traslado de un sillón",
   },
   {
-    title: "Ayuda para cargar",
-    description:
-      "Chofer incluido; ayudante opcional.",
-    icon: UsersRound,
+    title: "Compras",
+    description: "Traslados desde comercios de muebles y electrodomésticos.",
+    image: "/images/webimages/pexels-tima-miroshnichenko-6169181.webp",
+    alt: "Preparación de una entrega de compras",
+  },
+  {
+    title: "Mercadería",
+    description: "Cajas, bultos, mercadería comercial y cargas generales.",
+    image: "/images/webimages/hombre_subiendo_caja.webp",
+    alt: "Carga de cajas para su traslado",
   },
 ];
 
 const faqs = [
   {
-    question: "¿Qué diferencia hay entre un flete y un miniflete?",
-    answer:
-      "Contanos qué trasladás y te recomendamos la opción adecuada.",
+    question: "¿Cuánto cuesta contratar un flete?",
+    answer: "Depende del recorrido, la carga y las características del trabajo. Consultanos para recibir un presupuesto.",
   },
   {
-    question: "¿Puedo agregar un ayudante?",
-    answer: "Sí, podés sumar un ayudante para cargar y descargar.",
+    question: "¿Cobran por hora o por traslado?",
+    answer: "Trabajamos con ambas modalidades, según las necesidades del servicio.",
   },
   {
-    question: "¿Trasladan mascotas?",
-    answer: "Sí. Consultanos por WhatsApp para coordinar el traslado.",
+    question: "¿Puedo contratar ayudantes?",
+    answer: "Sí, podés solicitar ayudantes para la carga y descarga según lo que necesites trasladar.",
   },
   {
-    question: "¿Hay disponibilidad inmediata?",
-    answer: "Depende del recorrido y el horario. Consultanos para confirmar.",
+    question: "¿Qué tipo de objetos transportan?",
+    answer: "Trasladamos muebles, electrodomésticos, compras, cajas y mercadería.",
   },
   {
-    question: "¿Cómo consulto disponibilidad y precio?",
-    answer:
-      "Mandanos origen, destino y qué necesitás trasladar. Te pasamos disponibilidad y precio.",
+    question: "¿Realizan fletes dentro de Córdoba Capital?",
+    answer: "Sí, realizamos fletes en Córdoba Capital. Consultanos por tu recorrido.",
+  },
+  {
+    question: "¿Puedo solicitar un flete para una compra?",
+    answer: "Sí, trasladamos compras de muebles y electrodomésticos desde comercios.",
+  },
+  {
+    question: "¿Cómo puedo consultar disponibilidad?",
+    answer: "Escribinos por WhatsApp con el origen, destino y lo que necesitás trasladar.",
   },
 ];
 
@@ -198,22 +210,21 @@ export default function FletesPage() {
                 </span>
 
                 <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
-                  Fletes y mudanzas
+                  Fletes y minifletes
                   <br />
                   <span className="text-secondary-400">
-                    en Córdoba Capital
+                    en Córdoba
                   </span>
                 </h1>
 
                 <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
-                  Trasladamos muebles, compras y cargas en Córdoba. Podés sumar un
-                  ayudante para cargar y descargar.
+                  Trasladamos muebles, electrodomésticos, compras y mercadería. Con chofer incluido y ayudantes según lo que necesites trasladar.
                 </p>
 
-                <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start md:items-center">
+                <div className="flex w-full flex-col items-center gap-4 sm:flex-row sm:items-start md:items-center [&_a]:h-auto [&_a]:min-h-12 [&_a]:whitespace-normal [&_a]:px-4">
                   <HeroButtons
                     whatsappMessage={whatsappMessage}
-                    whatsappLabel="Consultar por WhatsApp"
+                    whatsappLabel="Solicitar presupuesto por WhatsApp"
                   />
                 </div>
 
@@ -236,25 +247,57 @@ export default function FletesPage() {
               </h2>
             </ScrollAnimation>
 
-            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
-              {highlights.map((item, index) => (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+              {loads.map((item, index) => (
                 <ScrollAnimation
                   key={item.title}
                   animation="fade-up"
                   delay={index * 100}
                 >
-                  <article className="h-full rounded-md border border-neutral-300 bg-white p-8 text-left shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
-                    <item.icon className="mb-6 h-12 w-12 text-secondary-500" />
-                    <h3 className="mb-3 text-xl font-semibold text-primary">
-                      {item.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-neutral-600">
-                      {item.description}
-                    </p>
+                  <article className="h-full overflow-hidden rounded-md border border-neutral-300 bg-white text-left shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
+                    <div className="relative aspect-[4/3] bg-neutral-100">
+                      <Image src={item.image} alt={item.alt} fill unoptimized={item.image.startsWith("https://")} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" className="object-cover" />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="mb-3 text-xl font-semibold text-primary">{item.title}</h3>
+                      <p className="text-sm leading-relaxed text-neutral-600">{item.description}</p>
+                    </div>
                   </article>
                 </ScrollAnimation>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-16 sm:py-32">
+          <div className="container mx-auto max-w-7xl px-4 md:px-6">
+            <ScrollAnimation animation="fade-up" className="mb-12 space-y-6 text-center">
+              <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">Modalidades de contratación</h2>
+              <p className="mx-auto max-w-2xl text-neutral-600">Cotizamos tu flete según las características de cada trabajo.</p>
+            </ScrollAnimation>
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              <ScrollAnimation animation="fade-up">
+                <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card">
+                  <Clock3 className="mb-6 h-12 w-12 text-secondary-500" />
+                  <h3 className="mb-3 text-xl font-semibold text-primary">Fletes por hora</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">Ideal para trabajos donde el tiempo de carga, descarga y traslado determina el costo.</p>
+                </article>
+              </ScrollAnimation>
+              <ScrollAnimation animation="fade-up" delay={100}>
+                <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card">
+                  <MapPin className="mb-6 h-12 w-12 text-secondary-500" />
+                  <h3 className="mb-3 text-xl font-semibold text-primary">Fletes con precio por traslado</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">Se cotizan según el origen, el destino, el tipo de carga y las características del trabajo.</p>
+                </article>
+              </ScrollAnimation>
+            </div>
+            <ScrollAnimation animation="fade-up" className="mt-8">
+              <article className="rounded-md border border-neutral-300 bg-primary-50 p-8 text-center">
+                <UsersRound className="mx-auto mb-4 h-10 w-10 text-secondary-500" />
+                <h3 className="mb-3 text-xl font-semibold text-primary">Ayudantes según lo que necesites</h3>
+                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-neutral-600">Cada traslado es diferente. Podés solicitar el servicio con chofer o agregar ayudantes para realizar la carga y descarga, según lo que necesites transportar.</p>
+              </article>
+            </ScrollAnimation>
           </div>
         </section>
 
@@ -269,7 +312,7 @@ export default function FletesPage() {
               </h2>
             </ScrollAnimation>
 
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto max-w-4xl">
               <ScrollAnimation animation="fade-up">
                 <article className="overflow-hidden rounded-md border border-neutral-300 shadow-card transition hover:shadow-card-hover">
                   <VehicleImageCarousel />
@@ -294,7 +337,7 @@ export default function FletesPage() {
                       asChild
                       variant="primary"
                       size="lg"
-                      className="w-full"
+                      className="h-auto min-h-12 w-full whitespace-normal px-4 py-2 text-center"
                     >
                       <WhatsAppConversionLink
                         href={`https://wa.me/5493512586221?text=${encodeURIComponent(whatsappMessage)}`}
@@ -326,28 +369,34 @@ export default function FletesPage() {
                 Así de fácil
               </span>
               <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
-                Coordiná tu traslado en tres pasos
+                Coordiná tu traslado en cuatro pasos
               </h2>
             </ScrollAnimation>
 
-            <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {[
                 {
                   step: "1",
-                  title: "Nos contactás",
-                  description: "Decinos qué trasladar y el recorrido.",
-                  icon: MapPin,
+                  title: "Nos contás",
+                  description: "Contanos qué necesitás trasladar.",
+                  icon: PackageCheck,
                 },
                 {
                   step: "2",
-                  title: "Coordinamos",
-                  description: "Confirmamos disponibilidad y horario.",
-                  icon: Clock3,
+                  title: "Evaluamos el trabajo",
+                  description: "Revisamos el origen, destino y características de la carga.",
+                  icon: MapPin,
                 },
                 {
                   step: "3",
-                  title: "Hacemos el traslado",
-                  description: "Hacemos el traslado acordado.",
+                  title: "Coordinamos",
+                  description: "Te pasamos un presupuesto y coordinamos el servicio.",
+                  icon: Clock3,
+                },
+                {
+                  step: "4",
+                  title: "Realizamos el traslado",
+                  description: "Realizamos el traslado acordado.",
                   icon: Truck,
                 },
               ].map((item) => (

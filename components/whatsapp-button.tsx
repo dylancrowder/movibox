@@ -2,6 +2,8 @@
 
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
+import Image from "next/image";
 
 const whatsappMessages: Record<string, string> = {
   "/":
@@ -14,7 +16,7 @@ const whatsappMessages: Record<string, string> = {
     "Hola 👋, quería consultar por una mudanza. ¿Me cuentan cómo trabajan y me pasan un presupuesto?",
 
   "/fletes":
-    "Hola, necesito flete en Córdoba para trasladar muebles o mercadería",
+    "Hola, quería consultar por un flete. ¿Me pasan un presupuesto?",
 
   "/guardamuebles":
     "Hola, estoy buscando un guardamuebles en Córdoba. ¿Tienen disponibilidad? Me gustaría recibir información y ayuda para cotizar.",
@@ -32,6 +34,19 @@ export function WhatsAppButton() {
   const handleClick = () => {
     window.open(`https://wa.me/5493512586221?text=${encodedMessage}`, "_blank");
   };
+
+  if (pathname === "/fletes") {
+    return (
+      <Button asChild variant="whatsapp" size="icon" className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-lg hover:scale-110 active:scale-95">
+        <WhatsAppConversionLink
+          href={`https://wa.me/5493512586221?text=${encodedMessage}`}
+          title="Solicitar presupuesto de flete por WhatsApp"
+        >
+          <Image src="/images/iconos/whatsapp.webp" alt="Solicitar presupuesto de flete por WhatsApp" width={48} height={48} />
+        </WhatsAppConversionLink>
+      </Button>
+    );
+  }
 
   return (
     <Button
