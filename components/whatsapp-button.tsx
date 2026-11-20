@@ -35,14 +35,18 @@ export function WhatsAppButton() {
     window.open(`https://wa.me/5493512586221?text=${encodedMessage}`, "_blank");
   };
 
-  if (pathname === "/fletes") {
+  if (pathname === "/fletes" || pathname === "/mudanzas") {
+    const title = pathname === "/fletes"
+      ? "Solicitar presupuesto de flete por WhatsApp"
+      : "Solicitar presupuesto de mudanza por WhatsApp";
+
     return (
       <Button asChild variant="whatsapp" size="icon" className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-lg hover:scale-110 active:scale-95">
         <WhatsAppConversionLink
           href={`https://wa.me/5493512586221?text=${encodedMessage}`}
-          title="Solicitar presupuesto de flete por WhatsApp"
+          title={title}
         >
-          <Image src="/images/iconos/whatsapp.webp" alt="Solicitar presupuesto de flete por WhatsApp" width={48} height={48} />
+          <Image src="/images/iconos/whatsapp.webp" alt={title} width={48} height={48} />
         </WhatsAppConversionLink>
       </Button>
     );

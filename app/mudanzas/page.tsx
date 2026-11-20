@@ -3,13 +3,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  BadgeCheck,
+  CalendarDays,
   ChevronDown,
-  CircleDollarSign,
   Clock3,
+  MapPin,
+  MessageCircle,
   PackageCheck,
   ShieldCheck,
   Star,
+  Truck,
+  UsersRound,
 } from "lucide-react";
 import { ScrollAnimation } from "@/components/scroll-animation";
 import FAQ from "@/components/FAQ";
@@ -18,12 +21,14 @@ import { Button } from "@/components/ui/button";
 import HeroButtons from "@/components/HeroButtons";
 import { WhatsAppConversionLink } from "@/components/WhatsAppConversionLink";
 import { VehicleImageCarousel } from "@/components/vehicle-image-carousel";
+
+
 import wsp from "@/public/images/iconos/whatsapp.webp";
 
 export const metadata: Metadata = {
-  title: "Mudanzas en Córdoba Capital | Movibox",
+  title: "Mudanzas en Córdoba Capital y Provincia | Movibox",
   description:
-    "Mudanzas en Córdoba Capital y provincia para casas, departamentos y oficinas. Camión, ayudantes para carga y descarga y cotizaciones por WhatsApp.",
+    "Empresa de mudanzas en Córdoba para casas, departamentos y oficinas. Camión, ayudantes y protección de muebles. Coordiná tu presupuesto por WhatsApp.",
   alternates: {
     canonical: "https://www.movibox.com.ar/mudanzas",
   },
@@ -145,82 +150,64 @@ const reviews = [
 export default function MudanzasPage() {
   const benefits = [
     {
-      icon: PackageCheck,
-      title: "Protección y embalaje",
-      description:
-        "Protegemos los muebles con mantas, fajas y cinchas. Consultá por separado si necesitás embalaje de objetos o pertenencias.",
-      href: null,
+      icon: Truck,
+      title: "Camión para el traslado",
+      description: "Un vehículo de Movibox destinado a realizar la mudanza acordada.",
     },
     {
-      icon: Clock3,
-      title: "Atención personalizada",
-      description:
-        "Coordinamos el alcance del servicio según el origen, el destino, la fecha y lo que necesitás trasladar.",
-      href: null,
-    },
-    {
-      icon: BadgeCheck,
-      title: "Cuidado profesional",
-      description:
-        "Protegemos tus muebles y pertenencias con máxima responsabilidad.",
-      href: null,
+      icon: UsersRound,
+      title: "Carga y descarga",
+      description: "Personal para acompañar las tareas de carga y descarga de tus pertenencias.",
     },
     {
       icon: ShieldCheck,
-      title: "Seguro contra accidentes personales",
-      description:
-        "El servicio contempla seguro contra accidentes personales.",
-      href: null,
+      title: "Protección de muebles",
+      description: "Mantas, film, fajas y herramientas para proteger y sujetar los muebles durante el traslado.",
     },
     {
-      icon: CircleDollarSign,
-      title: "Presupuesto según tu traslado",
-      description:
-        "El precio depende del recorrido y de las características del servicio. Consultá las condiciones antes de reservar.",
-      href: "/precios-mudanzas",
+      icon: PackageCheck,
+      title: "Organización del servicio",
+      description: "Coordinamos origen, destino, fecha y detalles del traslado antes de comenzar.",
+    },
+    {
+      icon: MessageCircle,
+      title: "Coordinación directa",
+      description: "Podés consultar y coordinar los detalles de tu mudanza por WhatsApp.",
     },
   ];
 
   const faqItems = [
     {
-      question: "¿Cuánto cuesta una mudanza?",
-      answer:
-        "La tarifa para mudanzas dentro de Córdoba Capital se publica por hora. Para otras localidades, el presupuesto depende del recorrido y del servicio.",
+      question: "¿Qué incluye el servicio de mudanza?",
+      answer: "Incluye camión, personal para carga y descarga, organización del traslado y protección de muebles con mantas, film, fajas y herramientas.",
     },
     {
-      question: "¿Qué información necesito para pedir una cotización?",
-      answer:
-        "Contanos la fecha, el origen y el destino, qué necesitás trasladar y las condiciones de acceso. Así podemos orientarte sobre el servicio.",
+      question: "¿Los ayudantes están incluidos?",
+      answer: "Sí, el servicio contempla personal para la carga y descarga. Coordinamos el trabajo según lo que necesitás trasladar.",
     },
     {
-      question: "¿Cómo se protegen los muebles?",
-      answer:
-        "Usamos mantas, fajas y cinchas para proteger y sujetar muebles durante el traslado. Consultá si necesitás embalaje adicional.",
+      question: "¿Cómo se calcula el precio?",
+      answer: "En Córdoba Capital hay una tarifa por hora. Para otros recorridos, el presupuesto se define según el trayecto y las características de la mudanza.",
     },
     {
-      question: "¿El embalaje está incluido?",
-      answer:
-        "No todos los servicios incluyen embalaje. Contanos qué objetos necesitás embalar para que se aclare en el presupuesto.",
+      question: "¿El presupuesto tiene algún compromiso?",
+      answer: "El presupuesto es sin compromiso. Si decidís avanzar, coordinamos la fecha y el alcance del servicio.",
     },
     {
-      question: "¿Qué pasa si hay escaleras o accesos difíciles?",
-      answer:
-        "Incluí esa información al pedir la cotización para que se tenga en cuenta al definir el alcance del trabajo.",
+      question: "¿Cómo se coordina la fecha?",
+      answer: "Escribinos por WhatsApp con la fecha que tenés en mente, el origen, el destino y qué necesitás trasladar para coordinar el servicio.",
     },
     {
-      question: "¿Qué zonas cubren?",
-      answer:
-        "Atendemos Córdoba Capital y localidades de la provincia. También podés consultar por mudanzas de larga distancia.",
+      question: "¿Realizan mudanzas dentro y fuera de Córdoba?",
+      answer: "Sí, trabajamos en Córdoba Capital y distintas localidades de la provincia. Consultanos por tu recorrido.",
     },
     {
-      question: "¿Realizan mudanzas de oficinas?",
-      answer:
-        "Sí, realizamos mudanzas de oficinas y locales comerciales.",
+      question: "¿Cómo protegen los muebles durante el traslado?",
+      answer: "Usamos mantas, film, fajas y herramientas para proteger y sujetar los muebles durante la mudanza.",
     },
     {
-      question: "¿Pueden guardar los muebles temporalmente?",
-      answer:
-        "Sí. Consultá los espacios y la contratación mensual en nuestra página de guardamuebles.",
+      question: "¿Cuánto tiempo puede durar una mudanza?",
+      answer: "Depende del volumen, el recorrido y las condiciones de acceso. Al pedir el presupuesto, contanos esos detalles para coordinar mejor.",
     },
   ];
 
@@ -242,12 +229,12 @@ export default function MudanzasPage() {
         <section className="relative flex min-h-screen items-center overflow-hidden overflow-x-hidden bg-black pt-24">
 
           <Image
-            src="https://cdn.builder.io/api/v1/image/assets%2F1d05692a989447279efcc4793855eda2%2F09cb2742168f45e3860c636d19483011?format=webp&width=1200&height=1800"
-            alt="Camión de mudanzas de Movibox Mudanzas"
+            src="/images/header/flota.webp"
+            alt="Vehículos de Movibox para realizar mudanzas"
             fill
             className="object-cover object-center md:left-1/2 md:w-1/2"
             priority
-            quality={70}
+            unoptimized
             sizes="(min-width: 768px) 50vw, 100vw"
           />
 
@@ -258,31 +245,32 @@ export default function MudanzasPage() {
             <div className="flex flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
 
               <div className="space-y-6 md:max-w-2xl">
-
-                <span className="inline-flex items-center justify-center gap-2 rounded-full bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90 border border-white/20">
-                  Mudanzas residenciales y comerciales
+                <Breadcrumb items={[]} currentPage="Mudanzas" inverted />
+                <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90">
+                  Casas · Departamentos · Oficinas
                 </span>
-
-                <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
-                  Mudanzas en Córdoba Capital
+                <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
+                  Mudanzas en Córdoba
                   <br />
-                  <span className="text-secondary-400">
-                    Con ayudantes.
-                  </span>
+                  <span className="text-secondary-400">sin complicaciones</span>
                 </h1>
-
-                <p className="text-lg text-white/90 sm:text-xl leading-relaxed">
-                  Mudanzas de casas, departamentos, oficinas y locales en Córdoba Capital y provincia.
+                <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
+                  Nos encargamos de organizar tu mudanza, con camión, ayudantes y protección para tus muebles. Vos no tenés que preocuparte por nada.
                 </p>
-
                 <p className="text-sm leading-relaxed text-white/80">
-                  Trabajamos con camión y ayudantes para carga y descarga. Protegemos los muebles con mantas, fajas y cinchas; consultá por embalaje al pedir tu presupuesto.
+                  Trabajamos en Córdoba Capital y localidades de la provincia. Coordinamos cada detalle directamente por WhatsApp.
                 </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
-                  <HeroButtons />
+                <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-start md:items-center [&_a]:h-auto [&_a]:min-h-12 [&_a]:whitespace-normal [&_a]:px-4">
+                  <HeroButtons
+                    whatsappMessage="Hola, quiero solicitar un presupuesto para una mudanza. Origen: ... Destino: ... Fecha: ..."
+                    whatsappLabel="Solicitar presupuesto por WhatsApp"
+                  />
                 </div>
-
+                <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-medium text-white/90 md:justify-start">
+                  <span>Camión para el traslado</span>
+                  <span>Personal para carga y descarga</span>
+                  <span>Protección de muebles</span>
+                </div>
               </div>
             </div>
           </div>
@@ -297,9 +285,6 @@ export default function MudanzasPage() {
 
         </section>
 
-        <div className="container mx-auto px-4 py-4 md:px-6">
-          <Breadcrumb items={[]} currentPage="Mudanzas" />
-        </div>
 
         {/* =====================================================
             POR QUÉ ELEGIRNOS
@@ -313,59 +298,36 @@ export default function MudanzasPage() {
               animation="fade-up"
               className="space-y-6 mb-20"
             >
-              <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
-                Por qué elegirnos
+              <span className="inline-block rounded-full bg-secondary-100 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-secondary-700">
+                Servicio de mudanza
               </span>
-
-              <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-                Todo listo para el traslado
+              <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
+                Qué incluye tu mudanza
               </h2>
-
-              <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
-                Coordinamos el traslado según el volumen, los accesos, el recorrido y la fecha. Consultá por WhatsApp el alcance del servicio para tu mudanza.
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">
+                Organizamos el traslado para que sepas qué esperar desde el primer contacto hasta la descarga.
               </p>
             </ScrollAnimation>
 
             <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
 
-              {benefits.map((benefit, index) => {
-
-                const card = (
+              {benefits.map((benefit, index) => (
+                <ScrollAnimation
+                  key={benefit.title}
+                  animation="fade-up"
+                  delay={index * 100}
+                >
                   <article className="h-full rounded-md border border-neutral-300 bg-white p-8 text-left shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
-
                     <benefit.icon className="mb-6 h-12 w-12 text-secondary-500" />
-
-                    <h3 className="text-lg font-semibold text-primary mb-3">
+                    <h3 className="mb-3 text-lg font-semibold text-primary">
                       {benefit.title}
                     </h3>
-
                     <p className="text-sm leading-relaxed text-neutral-600">
                       {benefit.description}
                     </p>
-
                   </article>
-                );
-
-                return (
-                  <ScrollAnimation
-                    key={benefit.title}
-                    animation="fade-up"
-                    delay={index * 100}
-                  >
-                    {benefit.href ? (
-                      <Link
-                        href={benefit.href}
-                        className="block h-full"
-                        aria-label="Consultar precios de mudanzas"
-                      >
-                        {card}
-                      </Link>
-                    ) : (
-                      card
-                    )}
-                  </ScrollAnimation>
-                );
-              })}
+                </ScrollAnimation>
+              ))}
 
             </div>
           </div>
@@ -388,11 +350,11 @@ export default function MudanzasPage() {
             >
 
               <span className="inline-block text-sm font-bold uppercase tracking-widest text-secondary-700 bg-secondary-100 px-3 py-1.5 rounded-full">
-                Nuestro camión
+                Fotos reales de nuestros vehículos
               </span>
 
               <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-                Camión equipado para tu mudanza
+                Vehículos de Movibox
               </h2>
 
               <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -431,7 +393,7 @@ export default function MudanzasPage() {
                           ✓
                         </span>
                         <span className="text-sm text-neutral-700">
-                          Mantas, fajas y cinchas para proteger y sujetar muebles
+                          Mantas, film, fajas y herramientas para proteger y sujetar muebles
                         </span>
                       </li>
 
@@ -500,26 +462,31 @@ export default function MudanzasPage() {
               </h2>
             </ScrollAnimation>
 
-            <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-3">
-
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
               {[
                 {
                   step: "1",
-                  title: "Nos contactás",
-                  description:
-                    "Por WhatsApp o llamada. Nos contás origen, destino, qué necesitás trasladar y la fecha.",
+                  title: "Nos contactás por WhatsApp",
+                  description: "Iniciamos la conversación para conocer qué necesitás.",
+                  icon: MessageCircle,
                 },
                 {
                   step: "2",
-                  title: "Coordinamos tu mudanza",
-                  description:
-                    "Revisamos el presupuesto y coordinamos fecha y horario si decidís avanzar.",
+                  title: "Nos contás los detalles",
+                  description: "Compartinos qué trasladás, el origen, el destino y la fecha.",
+                  icon: PackageCheck,
                 },
                 {
                   step: "3",
-                  title: "Realizamos el traslado",
-                  description:
-                    "El equipo realiza la carga, el traslado y la descarga de acuerdo con lo coordinado.",
+                  title: "Presupuestamos y coordinamos",
+                  description: "Te enviamos el presupuesto y coordinamos la fecha del servicio.",
+                  icon: CalendarDays,
+                },
+                {
+                  step: "4",
+                  title: "Realizamos la mudanza",
+                  description: "Hacemos la carga, el traslado y la descarga según lo coordinado.",
+                  icon: Truck,
                 },
               ].map((item) => (
 
@@ -530,11 +497,11 @@ export default function MudanzasPage() {
 
                   <article className="h-full rounded-md border-2 border-primary-700 bg-white p-6 sm:p-8 text-center shadow-card hover:shadow-card-hover hover:-translate-y-1">
 
-                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-secondary-500 text-white font-bold text-lg mb-4">
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-secondary-500 text-lg font-bold text-white">
                       {item.step}
                     </div>
-
-                    <h3 className="text-xl font-semibold text-primary mb-3">
+                    <item.icon className="mx-auto mb-4 h-6 w-6 text-secondary-500" />
+                    <h3 className="mb-3 text-xl font-semibold text-primary">
                       {item.title}
                     </h3>
 
@@ -691,98 +658,37 @@ export default function MudanzasPage() {
             CTA PRINCIPAL
         ====================================================== */}
 
-      <section className="bg-gradient-to-b from-primary-700 to-primary-800 py-16 sm:py-32 overflow-x-hidden text-white">
-  <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
-
-    <ScrollAnimation
-      animation="fade-up"
-      className="space-y-7"
-    >
-
-      <h2 className="text-4xl font-black sm:text-5xl leading-tight">
-        ¿Necesitás una mudanza?
-      </h2>
-
-      <p className="text-lg leading-relaxed text-white/90 max-w-2xl mx-auto">
-        Escribinos por WhatsApp y te pasamos tu presupuesto sin compromiso.
-      </p>
-
-      <div className="flex justify-center pt-2">
-
-        <Button
-          asChild
-          variant="whatsapp"
-          size="lg"
-          className="w-full sm:w-auto"
-        >
-
-          <WhatsAppConversionLink
-            href="https://wa.me/5493512586221?text=Hola%20%F0%9F%91%8B%2C%20quer%C3%ADa%20consultar%20por%20una%20mudanza.%20%C2%BFMe%20pasan%20un%20presupuesto%3F"
-            className="flex items-center gap-3"
-          >
-
-            <Image
-              src={wsp}
-              alt="WhatsApp"
-              width={32}
-              height={32}
-            />
-
-            Solicitar presupuesto por WhatsApp
-
-          </WhatsAppConversionLink>
-
-        </Button>
-
-      </div>
-
-      <p className="text-xs text-white/70 pt-2">
-        📞 351 258-6221 · Consultas por WhatsApp
-      </p>
-
-    </ScrollAnimation>
-
-  </div>
-</section>
-
-        {/* =====================================================
-            GUARDAMUEBLES
-        ====================================================== */}
-
-        <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
-
-          <div className="container mx-auto px-4 md:px-6 max-w-7xl">
-
-            <ScrollAnimation
-              animation="fade-up"
-              className="text-center space-y-6 mb-12"
-            >
-
-              <h2 className="text-4xl font-black sm:text-5xl leading-tight text-primary">
-                ¿También necesitás guardar tus muebles?
-              </h2>
-
-              <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-                Si además de mudanza necesitás almacenamiento temporal o de
-                largo plazo, consultá nuestro guardamuebles con espacios cerrados
-                y contratación mensual.
-              </p>
-
-              <Button
-                asChild
-                variant="primary"
-                size="lg"
-                className="w-full sm:w-auto"
-              >
-                <Link href="/guardamuebles">
-                  Conocer nuestro guardamuebles
-                </Link>
+      <section className="bg-white py-16 sm:py-32">
+        <div className="container mx-auto max-w-7xl px-4 md:px-6">
+          <ScrollAnimation animation="fade-up" className="mb-12 space-y-6 text-center">
+            <span className="inline-block rounded-full bg-secondary-100 px-3 py-1.5 text-sm font-bold uppercase tracking-widest text-secondary-700">Presupuesto previo</span>
+            <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">Precios y presupuestos claros</h2>
+            <p className="mx-auto max-w-2xl text-lg leading-relaxed text-neutral-600">El costo se define según el recorrido y las características de la mudanza. Te compartimos el presupuesto antes de realizar el servicio.</p>
+          </ScrollAnimation>
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+            <article className="rounded-md border border-neutral-300 bg-neutral-100 p-8 text-center shadow-card">
+              <Clock3 className="mx-auto mb-4 h-10 w-10 text-secondary-500" />
+              <h3 className="mb-3 text-xl font-semibold text-primary">Dentro de Córdoba Capital</h3>
+              <p className="mb-6 text-sm leading-relaxed text-neutral-600">Consultá la tarifa por hora vigente y qué contempla el servicio.</p>
+              <Button asChild variant="primary" size="lg" className="w-full whitespace-normal sm:w-auto">
+                <Link href="/precios-mudanzas">Ver precios de mudanzas</Link>
               </Button>
-
-            </ScrollAnimation>
-
+            </article>
+            <article className="rounded-md border border-neutral-300 bg-neutral-100 p-8 text-center shadow-card">
+              <MapPin className="mx-auto mb-4 h-10 w-10 text-secondary-500" />
+              <h3 className="mb-3 text-xl font-semibold text-primary">Otras localidades</h3>
+              <p className="mb-6 text-sm leading-relaxed text-neutral-600">El presupuesto se prepara según el recorrido y los detalles de tu mudanza.</p>
+              <Button asChild variant="whatsapp" size="lg" className="w-full whitespace-normal sm:w-auto">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%2C%20quiero%20consultar%20un%20presupuesto%20para%20una%20mudanza%20fuera%20de%20C%C3%B3rdoba%20Capital.%20Origen%3A%20...%20Destino%3A%20...">
+                  <Image src={wsp} alt="WhatsApp" width={28} height={28} />
+                  Solicitar presupuesto
+                </WhatsAppConversionLink>
+              </Button>
+            </article>
           </div>
-        </section>
+        </div>
+      </section>
+
 
         {/* =====================================================
             FAQ
@@ -805,6 +711,21 @@ export default function MudanzasPage() {
 
             <FAQ faqs={faqItems} />
 
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-b from-primary-700 to-primary-800 py-16 text-white sm:py-24">
+          <div className="container mx-auto max-w-3xl px-4 text-center md:px-6">
+            <ScrollAnimation animation="fade-up" className="space-y-7">
+              <h2 className="text-4xl font-black leading-tight sm:text-5xl">¿Listo para organizar tu mudanza?</h2>
+              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-white/90">Contanos origen, destino y qué necesitás trasladar. Te enviamos el presupuesto y coordinamos por WhatsApp.</p>
+              <Button asChild variant="whatsapp" size="lg" className="h-auto min-h-12 w-full whitespace-normal px-4 sm:w-auto">
+                <WhatsAppConversionLink href="https://wa.me/5493512586221?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20una%20mudanza.%20Origen%3A%20...%20Destino%3A%20...%20Fecha%3A%20..." className="flex items-center gap-3">
+                  <Image src={wsp} alt="WhatsApp" width={28} height={28} />
+                  Solicitar presupuesto por WhatsApp
+                </WhatsAppConversionLink>
+              </Button>
+            </ScrollAnimation>
           </div>
         </section>
 
