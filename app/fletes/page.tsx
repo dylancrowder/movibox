@@ -115,25 +115,25 @@ const reviews = [
 const loads = [
   {
     title: "Electrodomésticos",
-    description: "Heladeras, lavarropas, cocinas y otros electrodomésticos.",
+    description: "Heladeras, lavarropas y cocinas.",
     image: "https://images.pexels.com/photos/33679977/pexels-photo-33679977.jpeg?auto=compress&cs=tinysrgb&w=640",
     alt: "Carga de electrodomésticos para su traslado",
   },
   {
     title: "Muebles",
-    description: "Sillones, camas, mesas, placares y muebles en general.",
+    description: "Sillones, camas, mesas y placares.",
     image: "https://images.pexels.com/photos/7464722/pexels-photo-7464722.jpeg?auto=compress&cs=tinysrgb&w=640",
     alt: "Traslado de un sillón",
   },
   {
     title: "Compras",
-    description: "Traslados desde comercios de muebles y electrodomésticos.",
+    description: "Trasladamos productos adquiridos en comercios.",
     image: "/images/webimages/pexels-tima-miroshnichenko-6169181.webp",
     alt: "Preparación de una entrega de compras",
   },
   {
     title: "Mercadería",
-    description: "Cajas, bultos, mercadería comercial y cargas generales.",
+    description: "Cajas, bultos y cargas comerciales.",
     image: "/images/webimages/hombre_subiendo_caja.webp",
     alt: "Carga de cajas para su traslado",
   },
@@ -142,19 +142,23 @@ const loads = [
 const faqs = [
   {
     question: "¿Cuánto cuesta contratar un flete?",
-    answer: "Depende del recorrido, la carga y las características del trabajo. Consultanos para recibir un presupuesto.",
+    answer: "El costo depende de la modalidad y las características del trabajo. Escribinos con los detalles para pedir un presupuesto.",
   },
   {
-    question: "¿Cobran por hora o por traslado?",
-    answer: "Trabajamos con ambas modalidades, según las necesidades del servicio.",
+    question: "¿Cómo se cotiza el precio por hora?",
+    answer: "En los trabajos por hora, el tiempo del servicio determina el costo. Contanos qué necesitás para consultar.",
+  },
+  {
+    question: "¿Cómo se cotiza por traslado?",
+    answer: "Consideramos el origen, el destino, el tipo de carga y las características del trabajo.",
   },
   {
     question: "¿Puedo contratar ayudantes?",
-    answer: "Sí, podés solicitar ayudantes para la carga y descarga según lo que necesites trasladar.",
+    answer: "Sí, podés solicitar ayudantes para cargar y descargar, según las necesidades de cada trabajo.",
   },
   {
     question: "¿Qué tipo de objetos transportan?",
-    answer: "Trasladamos muebles, electrodomésticos, compras, cajas y mercadería.",
+    answer: "Trasladamos heladeras, lavarropas, cocinas, muebles, compras de comercios, cajas, bultos y cargas comerciales.",
   },
   {
     question: "¿Realizan fletes dentro de Córdoba Capital?",
@@ -272,22 +276,22 @@ export default function FletesPage() {
         <section className="bg-white py-16 sm:py-32">
           <div className="container mx-auto max-w-7xl px-4 md:px-6">
             <ScrollAnimation animation="fade-up" className="mb-12 space-y-6 text-center">
-              <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">Modalidades de contratación</h2>
+              <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">¿Cómo cotizamos tu flete?</h2>
               <p className="mx-auto max-w-2xl text-neutral-600">Cotizamos tu flete según las características de cada trabajo.</p>
             </ScrollAnimation>
             <div className="grid gap-6 md:grid-cols-2 md:gap-8">
               <ScrollAnimation animation="fade-up">
                 <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card">
                   <Clock3 className="mb-6 h-12 w-12 text-secondary-500" />
-                  <h3 className="mb-3 text-xl font-semibold text-primary">Fletes por hora</h3>
-                  <p className="text-sm leading-relaxed text-neutral-600">Ideal para trabajos donde el tiempo de carga, descarga y traslado determina el costo.</p>
+                  <h3 className="mb-3 text-xl font-semibold text-primary">Por hora</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">Ideal para trabajos donde el tiempo de servicio determina el costo.</p>
                 </article>
               </ScrollAnimation>
               <ScrollAnimation animation="fade-up" delay={100}>
                 <article className="h-full rounded-md border border-neutral-300 bg-white p-8 shadow-card">
                   <MapPin className="mb-6 h-12 w-12 text-secondary-500" />
-                  <h3 className="mb-3 text-xl font-semibold text-primary">Fletes con precio por traslado</h3>
-                  <p className="text-sm leading-relaxed text-neutral-600">Se cotizan según el origen, el destino, el tipo de carga y las características del trabajo.</p>
+                  <h3 className="mb-3 text-xl font-semibold text-primary">Por traslado</h3>
+                  <p className="text-sm leading-relaxed text-neutral-600">Cotizamos según el origen, el destino, el tipo de carga y las características del trabajo.</p>
                 </article>
               </ScrollAnimation>
             </div>
@@ -295,7 +299,7 @@ export default function FletesPage() {
               <article className="rounded-md border border-neutral-300 bg-primary-50 p-8 text-center">
                 <UsersRound className="mx-auto mb-4 h-10 w-10 text-secondary-500" />
                 <h3 className="mb-3 text-xl font-semibold text-primary">Ayudantes según lo que necesites</h3>
-                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-neutral-600">Cada traslado es diferente. Podés solicitar el servicio con chofer o agregar ayudantes para realizar la carga y descarga, según lo que necesites transportar.</p>
+                <p className="mx-auto max-w-2xl text-sm leading-relaxed text-neutral-600">Podés contratar el traslado con chofer o solicitar ayudantes para cargar y descargar, dependiendo de las necesidades de cada trabajo.</p>
               </article>
             </ScrollAnimation>
           </div>
@@ -319,7 +323,7 @@ export default function FletesPage() {
                   <div className="bg-gradient-to-br from-primary-50 to-secondary-50 p-8">
                     <ul className="mb-6 space-y-3">
                       {[
-                        "Espacio para muebles y cargas grandes",
+                        "Vehículos para trasladar distintos tipos de carga",
                         "Carga protegida durante el viaje",
                         "Chofer incluido; ayudante opcional",
                       ].map((benefit) => (
@@ -369,34 +373,28 @@ export default function FletesPage() {
                 Así de fácil
               </span>
               <h2 className="text-4xl font-black leading-tight text-primary sm:text-5xl">
-                Coordiná tu traslado en cuatro pasos
+                Coordiná tu traslado en tres pasos
               </h2>
             </ScrollAnimation>
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
               {[
                 {
                   step: "1",
-                  title: "Nos contás",
-                  description: "Contanos qué necesitás trasladar.",
+                  title: "Nos contás qué necesitás",
+                  description: "Compartinos qué necesitás trasladar.",
                   icon: PackageCheck,
                 },
                 {
                   step: "2",
-                  title: "Evaluamos el trabajo",
-                  description: "Revisamos el origen, destino y características de la carga.",
+                  title: "Evaluamos y cotizamos",
+                  description: "Consideramos origen, destino, tipo de carga y si necesitás ayudantes para pasarte un presupuesto.",
                   icon: MapPin,
                 },
                 {
                   step: "3",
-                  title: "Coordinamos",
-                  description: "Te pasamos un presupuesto y coordinamos el servicio.",
-                  icon: Clock3,
-                },
-                {
-                  step: "4",
-                  title: "Realizamos el traslado",
-                  description: "Realizamos el traslado acordado.",
+                  title: "Coordinamos el traslado",
+                  description: "Coordinamos el servicio y realizamos el traslado acordado.",
                   icon: Truck,
                 },
               ].map((item) => (
