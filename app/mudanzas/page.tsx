@@ -249,8 +249,13 @@ export default function MudanzasPage() {
                 <span className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/15 px-4 py-2.5 text-xs font-bold uppercase tracking-widest text-white/90">
                   Casas · Departamentos · Oficinas
                 </span>
+                  
                 <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
-                  Mudanzas en Córdoba
+                   <span className="text-secondary-400">
+                    Mudanzas
+                  </span> en Córdoba
+                  <br />
+                
                 </h1>
                 <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
                   Nos encargamos de organizar tu mudanza, con camión, ayudantes y protección para tus muebles. Vos no tenés que preocuparte por nada.
