@@ -251,8 +251,6 @@ export default function MudanzasPage() {
                 </span>
                 <h1 className="text-4xl font-black leading-tight text-white sm:text-6xl">
                   Mudanzas en Córdoba
-                  <br />
-                  <span className="text-secondary-400">sin complicaciones</span>
                 </h1>
                 <p className="text-lg leading-relaxed text-white/90 sm:text-xl">
                   Nos encargamos de organizar tu mudanza, con camión, ayudantes y protección para tus muebles. Vos no tenés que preocuparte por nada.

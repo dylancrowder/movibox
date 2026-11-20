@@ -35,12 +35,12 @@ export function Navbar() {
 
   const linkClass = (href: string) =>
     pathname === href
-      ? `${baseLinkClass} text-primary after:scale-x-100`
+      ? `${baseLinkClass} font-extrabold text-primary after:scale-x-100`
       : `${baseLinkClass} text-foreground/70 hover:text-primary hover:after:scale-x-100`;
 
   const linkClassMobile = (href: string) =>
     pathname === href
-      ? "text-primary font-semibold text-lg"
+      ? "text-primary font-bold text-lg"
       : "text-foreground/80 font-semibold text-lg hover:text-primary transition-colors";
 
   return (
