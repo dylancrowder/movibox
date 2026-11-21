@@ -116,7 +116,7 @@ const loads = [
   {
     title: "Electrodomésticos",
     description: "Heladeras, lavarropas y cocinas.",
-    image: "https://images.pexels.com/photos/33679977/pexels-photo-33679977.jpeg?auto=compress&cs=tinysrgb&w=640",
+    image: "/images/fletes/fiorinocargada.jpeg",
     alt: "Carga de electrodomésticos para su traslado",
   },
   {
