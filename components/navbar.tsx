@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import Image from "next/image";
 import logo from "../public/images/iconos/logo-movibox.svg";
 
@@ -31,12 +31,22 @@ export function Navbar() {
   const handleLinkClick = () => setIsOpen(false);
 
   const baseLinkClass =
-    "relative font-semibold text-sm uppercase tracking-[0.14em] transition-colors after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 after:content-['']";
+    "relative whitespace-nowrap text-[13px] font-semibold tracking-[-0.01em] transition-colors after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:rounded-full after:bg-secondary after:transition-transform after:duration-200 after:content-['']";
 
   const linkClass = (href: string) =>
     pathname === href
-      ? `${baseLinkClass} font-extrabold text-primary after:scale-x-100`
-      : `${baseLinkClass} text-foreground/70 hover:text-primary hover:after:scale-x-100`;
+      ? `${baseLinkClass} font-bold text-primary after:scale-x-100`
+      : `${baseLinkClass} text-foreground/75 hover:text-primary hover:after:scale-x-100`;
+
+  const navigationLinks = [
+    { label: "Inicio", href: "/" },
+    { label: "Mudanzas", href: "/mudanzas" },
+    { label: "Fletes", href: "/fletes" },
+    { label: "Guardamuebles", href: "/guardamuebles" },
+    { label: "Blog", href: "/blog" },
+    { label: "Preguntas frecuentes", href: "/faq" },
+    { label: "Contacto", href: "/contacto" },
+  ];
 
   const linkClassMobile = (href: string) =>
     pathname === href
@@ -45,12 +55,12 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b-2 border-primary/10 bg-white/85 shadow-lg shadow-primary/5 backdrop-blur-md transition-transform duration-300 supports-[backdrop-filter]:bg-white/75 ${
-        isVisible ? "translate-y-0" : "lg:-translate-y-full"
+      className={`fixed inset-x-0 top-0 z-50 border-b border-primary/10 bg-white/90 shadow-[0_8px_32px_rgba(22,57,84,0.07)] backdrop-blur-xl transition-transform duration-300 supports-[backdrop-filter]:bg-white/80 ${
+        isVisible ? "translate-y-0" : "xl:-translate-y-full"
       }`}
     >
       <div className="container px-4 md:px-6">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex min-h-[76px] items-center justify-between gap-6 py-3">
           {/* Logo */}
           <Link
             href="/"
@@ -71,94 +81,57 @@ export function Navbar() {
 
           {/* Navegación escritorio */}
           <nav
-            className="hidden items-center space-x-6 lg:flex"
-            role="navigation"
+            className="hidden items-center gap-5 xl:flex"
             aria-label="Navegación principal"
           >
-            <Link href="/" className={linkClass("/")}>
-              Inicio
-            </Link>
-            <Link href="/mudanzas" className={linkClass("/mudanzas")}>
-              Mudanzas
-            </Link>
-            <Link href="/fletes" className={linkClass("/fletes")}>
-              Flete
-            </Link>
-            <Link href="/guardamuebles" className={linkClass("/guardamuebles")}>
-              Guardamuebles
-            </Link>
-
-            <Link href="/contacto" className={linkClass("/contacto")}>
-              Contacto
-            </Link>
+            {navigationLinks.map(({ label, href }) => (
+              <Link
+                key={href}
+                href={href}
+                className={linkClass(href)}
+                aria-current={pathname === href ? "page" : undefined}
+              >
+                {label}
+              </Link>
+            ))}
           </nav>
 
-          {/* Menú móvil */}
+          <Button asChild size="sm" className="hidden rounded-full px-5 shadow-md shadow-primary/15 xl:inline-flex">
+            <Link href="/contacto">Solicitar presupuesto</Link>
+          </Button>
+
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild className="lg:hidden">
+            <SheetTrigger asChild className="xl:hidden">
               <Button
-                variant="ghost"
-                className="text-foreground hover:bg-primary/10 hover:text-primary"
+                variant="outline"
+                size="icon"
+                className="rounded-xl border-primary/15 text-primary hover:bg-primary/5"
                 aria-label="Abrir menú"
               >
-                <Menu className="!h-6 !w-6" />
+                <Menu />
               </Button>
             </SheetTrigger>
 
-            <SheetContent
-              side="right"
-              className="bg-white text-foreground"
-              aria-label="Menú móvil"
-            >
-              <div className="flex flex-col gap-6 mt-10">
-              
-                <Link
-                  href="/"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/")}
-                  aria-current={pathname === "/" ? "page" : undefined}
-                >
-                  Inicio
-                </Link>
-                <Link
-                  href="/mudanzas"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/mudanzas")}
-                  aria-current={
-                    pathname === "/mudanzas" ? "page" : undefined
-                  }
-                >
-                  Mudanzas
-                </Link>
-                <Link
-                  href="/fletes"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/fletes")}
-                  aria-current={pathname === "/fletes" ? "page" : undefined}
-                >
-                  Flete
-                </Link>
-                <Link
-                  href="/guardamuebles"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/guardamuebles")}
-                  aria-current={
-                    pathname === "/guardamuebles" ? "page" : undefined
-                  }
-                >
-                  Guardamuebles
-                </Link>
-                <Link
-                  href="/contacto"
-                  onClick={handleLinkClick}
-                  className={linkClassMobile("/contacto")}
-                  aria-current={
-                    pathname === "/contacto" ? "page" : undefined
-                  }
-                >
-                  Contacto
-                </Link>
-              </div>
+            <SheetContent side="right" className="bg-white text-foreground">
+              <SheetTitle className="sr-only">Navegación principal</SheetTitle>
+              <nav className="mt-10 flex flex-col gap-5" aria-label="Navegación móvil">
+                {navigationLinks.map(({ label, href }) => (
+                  <Link
+                    key={href}
+                    href={href}
+                    onClick={handleLinkClick}
+                    className={linkClassMobile(href)}
+                    aria-current={pathname === href ? "page" : undefined}
+                  >
+                    {label}
+                  </Link>
+                ))}
+                <Button asChild className="mt-3 w-full rounded-full">
+                  <Link href="/contacto" onClick={handleLinkClick}>
+                    Solicitar presupuesto
+                  </Link>
+                </Button>
+              </nav>
             </SheetContent>
           </Sheet>
         </div>

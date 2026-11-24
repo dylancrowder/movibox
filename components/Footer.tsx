@@ -36,7 +36,7 @@ const contactInfo = [
 
 const Footer = () => {
   return (
-    <footer className="border-t-2 border-primary/40 bg-white" style={{ contain: 'layout style paint' }}>
+    <footer className="site-footer border-t border-primary/20 bg-primary" style={{ contain: 'layout style paint' }}>
       <div className="container px-4 md:px-6 py-24 min-h-[400px]">
         {/* TOP */}
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1.6fr_1fr_1fr]">
