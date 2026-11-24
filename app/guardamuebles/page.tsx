@@ -283,10 +283,6 @@ export default function GuardamueblesPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-4 md:px-6">
-        <Breadcrumb items={[]} currentPage="Guardamuebles" />
-      </div>
-
       {/* ESPACIOS DE 5, 10 Y 15 METROS CÚBICOS */}
       <section className="bg-secondary-50 py-16 sm:py-32 overflow-x-hidden">
         <div className="container px-4 md:px-6 max-w-7xl mx-auto">

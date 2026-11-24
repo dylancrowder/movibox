@@ -7,7 +7,7 @@ export const MOVING_HOURLY_PRICE_ARS = 90_000;
 export const STORAGE_MONTHLY_PLANS = [
   {
     volumeM3: 5,
-    monthlyPriceARS: 89_900,
+    monthlyPriceARS: 89_999,
     badge: "Ideal para monoambientes",
     description: "Box compacto",
     dimensions: "2 m × 1,25 m × 2 m",
