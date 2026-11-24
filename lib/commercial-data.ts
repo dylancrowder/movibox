@@ -7,7 +7,7 @@ export const MOVING_HOURLY_PRICE_ARS = 90_000;
 export const STORAGE_MONTHLY_PLANS = [
   {
     volumeM3: 5,
-    monthlyPriceARS: 79_900,
+    monthlyPriceARS: 89_900,
     badge: "Ideal para monoambientes",
     description: "Box compacto",
     dimensions: "2 m × 1,25 m × 2 m",
@@ -20,7 +20,7 @@ export const STORAGE_MONTHLY_PLANS = [
   },
   {
     volumeM3: 10,
-    monthlyPriceARS: 129_900,
+    monthlyPriceARS: 139_900,
     badge: "Ideal para 1 dormitorio",
     description: "Box estándar",
     dimensions: "2,5 m × 2 m × 2 m",
@@ -33,7 +33,7 @@ export const STORAGE_MONTHLY_PLANS = [
   },
   {
     volumeM3: 15,
-    monthlyPriceARS: 179_900,
+    monthlyPriceARS: 189_900,
     badge: "Ideal para mudanzas completas",
     description: "Box amplio",
     dimensions: "3 m × 2,5 m × 2 m",
