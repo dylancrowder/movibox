@@ -230,7 +230,7 @@ export default function GuardamueblesPage() {
               </span>
 
               <h1 className="text-4xl font-black text-white sm:text-6xl leading-tight">
-                Alquiler de guardamuebles en Córdoba
+                Alquiler de guardamuebles
               </h1>
 
              
