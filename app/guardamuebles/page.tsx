@@ -233,18 +233,7 @@ export default function GuardamueblesPage() {
                 Alquiler de guardamuebles en Córdoba
               </h1>
 
-              <ul className="space-y-3">
-                {[
-                  "Espacios cerrados en un galpón sectorizado",
-                  "Monitoreo y control del establecimiento",
-                  "Contratación mensual",
-                ].map((text, index) => (
-                  <li key={index} className="flex items-center gap-3 text-white/90 text-lg sm:text-xl">
-                    <CheckCircle2 className="h-5 w-5 text-secondary-500 flex-shrink-0" />
-                    <span>{text}</span>
-                  </li>
-                ))}
-              </ul>
+             
 
               <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center sm:items-start md:items-center">
                 {/* WhatsApp - Verde */}
